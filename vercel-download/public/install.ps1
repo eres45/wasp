@@ -1,5 +1,5 @@
 # Wasp Code - One-Command Installation Script
-# Usage: irm https://wasp-code.vercel.app/install.ps1 | iex
+# Usage: irm https://wasp1.vercel.app/install.ps1 | iex
 
 Write-Host "Installing Wasp Code..." -ForegroundColor Cyan
 
