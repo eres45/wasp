@@ -6,7 +6,7 @@
  *
  * Features:
  * - CORS support for browser requests
- * - Rate limiting (100 requests per hour per user)
+ * - Rate limiting (10 requests per minute per user)
  * - Usage tracking
  * - Error handling
  * - Support for all 20 models
