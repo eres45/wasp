@@ -1,11 +1,6 @@
 {
-  "public": "public",
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    {
-      "source": "/install.ps1",
-      "destination": "/install.ps1"
-    }
-  ]
+  "buildCommand": "",
+  "outputDirectory": "public",
+  "cleanUrls": false,
+  "trailingSlash": false
 }

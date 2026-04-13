@@ -230,7 +230,7 @@
 
         <div class="install-section">
             <div class="install-label">One-Command Install</div>
-            <div class="install-command">irm https://wasp-code.vercel.app/install.ps1 | iex</div>
+            <div class="install-command">irm https://wasp1.vercel.app/install.ps1 | iex</div>
             <button class="copy-btn" onclick="copyCommand()">Copy Command</button>
         </div>
 
@@ -250,7 +250,7 @@
 
     <script>
         function copyCommand() {
-            const command = 'irm https://wasp-code.vercel.app/install.ps1 | iex';
+            const command = 'irm https://wasp1.vercel.app/install.ps1 | iex';
             navigator.clipboard.writeText(command).then(() => {
                 alert('Copied to clipboard!');
             });
