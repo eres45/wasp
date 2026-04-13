@@ -1,4 +1,4 @@
-import { AssistantUnrolled } from "@continuedev/config-yaml";
+﻿import { AssistantUnrolled } from "@continuedev/config-yaml";
 
 export type AssistantConfig = AssistantUnrolled;
 
@@ -70,3 +70,4 @@ export class Assistant {
       .join("\n");
   }
 }
+

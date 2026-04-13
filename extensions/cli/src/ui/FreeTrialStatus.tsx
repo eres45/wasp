@@ -1,4 +1,4 @@
-import { ModelConfig } from "@continuedev/config-yaml";
+﻿import { ModelConfig } from "@continuedev/config-yaml";
 import {
   DefaultApiInterface,
   GetFreeTrialStatus200Response,

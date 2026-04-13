@@ -1,4 +1,4 @@
-import { ToolImpl } from ".";
+﻿import { ToolImpl } from ".";
 import { fetchSearchResults } from "../../context/providers/WebContextProvider";
 import { getStringArg } from "../parseArgs";
 

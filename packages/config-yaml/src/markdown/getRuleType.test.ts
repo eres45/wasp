@@ -1,4 +1,4 @@
-import { getRuleType, RuleType } from "./getRuleType.js";
+﻿import { getRuleType, RuleType } from "./getRuleType.js";
 
 describe("getRuleType", () => {
   describe("Always type", () => {

@@ -1,4 +1,4 @@
-import { LLMInteraction } from "../../hooks/useLLMLog";
+﻿import { LLMInteraction } from "../../hooks/useLLMLog";
 import useLLMSummary from "../../hooks/useLLMSummary";
 import StatusIcon from "./StatusIcon";
 

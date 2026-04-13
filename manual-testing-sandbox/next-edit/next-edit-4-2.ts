@@ -1,4 +1,4 @@
-// A messy event tracker system
+﻿// A messy event tracker system
 // Difficulty: 2 - Multiple issues to fix
 
 type Event = {

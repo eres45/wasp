@@ -1,4 +1,4 @@
-export const DEFAULT_SYSTEM_MESSAGES_URL =
+﻿export const DEFAULT_SYSTEM_MESSAGES_URL =
   "https://github.com/continuedev/continue/blob/main/core/llm/defaultSystemMessages.ts";
 
 export const CODEBLOCK_FORMATTING_INSTRUCTIONS = `\

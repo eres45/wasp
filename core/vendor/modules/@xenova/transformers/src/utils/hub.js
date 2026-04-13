@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Utility functions to interact with the Hugging Face Hub (https://huggingface.co/models)
  *
  * @module utils/hub
@@ -689,3 +689,4 @@ function pathJoin(...parts) {
   });
   return parts.join("/");
 }
+

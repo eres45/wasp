@@ -1,4 +1,4 @@
-import {
+﻿import {
   AssistantUnrolled,
   AssistantUnrolledNonNullable,
   BLOCK_TYPES,

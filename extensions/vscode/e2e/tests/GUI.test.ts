@@ -1,4 +1,4 @@
-import { expect } from "chai";
+﻿import { expect } from "chai";
 import {
   By,
   EditorView,
@@ -380,7 +380,7 @@ describe.skip("GUI Test", () => {
   });
 
   describe("Chat Paths", () => {
-    it("Send many messages → chat auto scrolls → go to history → open previous chat → it is scrolled to the bottom", async () => {
+    it("Send many messages â†’ chat auto scrolls â†’ go to history â†’ open previous chat â†’ it is scrolled to the bottom", async () => {
       for (let i = 0; i <= 20; i++) {
         const { userMessage, llmResponse } =
           TestUtils.generateTestMessagePair(i);
@@ -442,7 +442,7 @@ describe.skip("GUI Test", () => {
       expect(isInViewport).to.eq(true);
     }).timeout(DEFAULT_TIMEOUT.XL * 1000);
 
-    it("Open chat and send message → press arrow up and arrow down to cycle through messages → submit another message → press arrow up and arrow down to cycle through messages", async () => {
+    it("Open chat and send message â†’ press arrow up and arrow down to cycle through messages â†’ submit another message â†’ press arrow up and arrow down to cycle through messages", async () => {
       await GUIActions.sendMessage({
         view,
         message: "MESSAGE 1",
@@ -498,7 +498,7 @@ describe.skip("GUI Test", () => {
       await driver.wait(until.elementTextIs(input2, ""), DEFAULT_TIMEOUT.SM);
     }).timeout(DEFAULT_TIMEOUT.XL);
 
-    it("Open chat and type → open history → press new session button → chat opens, empty and in focus", async () => {
+    it("Open chat and type â†’ open history â†’ press new session button â†’ chat opens, empty and in focus", async () => {
       const originalTextInput = await GUISelectors.getMessageInputFieldAtIndex(
         view,
         0,
@@ -528,7 +528,7 @@ describe.skip("GUI Test", () => {
       expect(textInputValue).to.equal("");
     }).timeout(DEFAULT_TIMEOUT.XL);
 
-    it("chat → history → chat", async () => {
+    it("chat â†’ history â†’ chat", async () => {
       const messagePair1 = TestUtils.generateTestMessagePair(1);
       await GUIActions.sendMessage({
         view,

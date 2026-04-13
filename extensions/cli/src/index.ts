@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 
 // MUST be the first import - intercepts console/stdout/stderr before any dependencies load
 import "./init.js";

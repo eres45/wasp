@@ -1,4 +1,4 @@
-import { ContextProviderDescription, SlashCommandSource } from "core";
+﻿import { ContextProviderDescription, SlashCommandSource } from "core";
 
 export type ComboBoxItemType =
   | "contextProvider"

@@ -1,4 +1,4 @@
-import path from "path";
+﻿import path from "path";
 
 import { Chunk, ChunkWithoutID } from "../../index.js";
 import { cleanupAsyncEncoders } from "../../llm/countTokens.js";

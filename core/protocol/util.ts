@@ -1,4 +1,4 @@
-import { FromWebviewProtocol } from ".";
+﻿import { FromWebviewProtocol } from ".";
 
 export interface ErrorWebviewMessage {
   status: "error";

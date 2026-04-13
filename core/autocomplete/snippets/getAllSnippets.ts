@@ -1,4 +1,4 @@
-import { IDE } from "../../index";
+﻿import { IDE } from "../../index";
 import { findUriInDirs } from "../../util/uri";
 import { ContextRetrievalService } from "../context/ContextRetrievalService";
 import { GetLspDefinitionsFunction } from "../types";

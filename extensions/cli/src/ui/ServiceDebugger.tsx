@@ -1,4 +1,4 @@
-import { Box, Text } from "ink";
+﻿import { Box, Text } from "ink";
 import React from "react";
 
 import {
@@ -35,9 +35,9 @@ const ServiceDebugger: React.FC<ServiceDebuggerProps> = ({
   servicesError,
 }) => {
   const getServiceStatus = (serviceName: string, service: any) => {
-    if (!service) return "❌ Not loaded";
-    if (service.error) return `❌ Error: ${service.error}`;
-    return "✅ Ready";
+    if (!service) return "âŒ Not loaded";
+    if (service.error) return `âŒ Error: ${service.error}`;
+    return "âœ… Ready";
   };
 
   const getServiceDetails = (serviceName: string, service: any) => {
@@ -64,14 +64,14 @@ const ServiceDebugger: React.FC<ServiceDebuggerProps> = ({
   return (
     <Box {...defaultBoxStyles("cyan")}>
       <Text bold color="cyan">
-        🔧 Service Debug Info
+        ðŸ”§ Service Debug Info
       </Text>
       <Text> </Text>
 
       <Text color="yellow">Overall Status:</Text>
-      <Text>Loading: {loading ? "🟡 Yes" : "✅ No"}</Text>
-      <Text>All Ready: {allReady ? "✅ Yes" : "❌ No"}</Text>
-      <Text>Services Loading: {servicesLoading ? "🟡 Yes" : "✅ No"}</Text>
+      <Text>Loading: {loading ? "ðŸŸ¡ Yes" : "âœ… No"}</Text>
+      <Text>All Ready: {allReady ? "âœ… Yes" : "âŒ No"}</Text>
+      <Text>Services Loading: {servicesLoading ? "ðŸŸ¡ Yes" : "âœ… No"}</Text>
 
       {error && <Text color="red">Error: {String(error)}</Text>}
 
@@ -103,10 +103,10 @@ const ServiceDebugger: React.FC<ServiceDebuggerProps> = ({
 
       <Text> </Text>
       <Text color="yellow">Intro Message Conditions:</Text>
-      <Text>Services ready: {allReady ? "✅" : "❌"}</Text>
-      <Text>Has config: {services.config?.config ? "✅" : "❌"}</Text>
-      <Text>Has model: {services.model?.model ? "✅" : "❌"}</Text>
-      <Text>Has MCP service: {services.mcp?.mcpService ? "✅" : "❌"}</Text>
+      <Text>Services ready: {allReady ? "âœ…" : "âŒ"}</Text>
+      <Text>Has config: {services.config?.config ? "âœ…" : "âŒ"}</Text>
+      <Text>Has model: {services.model?.model ? "âœ…" : "âŒ"}</Text>
+      <Text>Has MCP service: {services.mcp?.mcpService ? "âœ…" : "âŒ"}</Text>
 
       <Text> </Text>
       <Text color="gray" italic>

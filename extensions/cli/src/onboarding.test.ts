@@ -1,4 +1,4 @@
-import * as fs from "fs";
+﻿import * as fs from "fs";
 import * as os from "os";
 import * as path from "path";
 
@@ -219,7 +219,7 @@ describe("CONTINUE_USE_BEDROCK environment variable", () => {
     expect(result).toBe(true);
     expect(mockConsoleLog).toHaveBeenCalledWith(
       expect.stringContaining(
-        "✓ Using AWS Bedrock (CONTINUE_USE_BEDROCK detected)",
+        "âœ“ Using AWS Bedrock (CONTINUE_USE_BEDROCK detected)",
       ),
     );
   });
@@ -242,7 +242,7 @@ describe("CONTINUE_USE_BEDROCK environment variable", () => {
       const allCalls = mockConsoleLog.mock.calls.flat();
       const hasBedrockMessage = allCalls.some((call) =>
         String(call).includes(
-          "✓ Using AWS Bedrock (CONTINUE_USE_BEDROCK detected)",
+          "âœ“ Using AWS Bedrock (CONTINUE_USE_BEDROCK detected)",
         ),
       );
       expect(hasBedrockMessage).toBe(false);

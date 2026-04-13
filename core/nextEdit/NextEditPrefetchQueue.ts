@@ -1,4 +1,4 @@
-import { RangeInFile } from "..";
+﻿import { RangeInFile } from "..";
 import { NextEditProvider } from "./NextEditProvider";
 import { NextEditOutcome } from "./types";
 

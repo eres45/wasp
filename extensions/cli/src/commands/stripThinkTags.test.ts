@@ -1,4 +1,4 @@
-// Unit tests for the stripThinkTags function
+﻿// Unit tests for the stripThinkTags function
 
 // Since stripThinkTags is currently a private function in chat.ts,
 // we'll extract it for testing purposes. This follows the same pattern

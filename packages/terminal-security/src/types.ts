@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Policy for tool execution
  */
 export type ToolPolicy =

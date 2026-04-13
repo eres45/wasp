@@ -1,4 +1,4 @@
-import { fetchwithRequestOptions } from "@continuedev/fetch";
+﻿import { fetchwithRequestOptions } from "@continuedev/fetch";
 import * as openAiAdapters from "@continuedev/openai-adapters";
 import * as dotenv from "dotenv";
 import { beforeEach, describe, expect, test, vi } from "vitest";

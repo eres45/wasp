@@ -1,4 +1,4 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+﻿import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import { getGitDiffSnapshot } from "../util/git.js";
 import { logger } from "../util/logger.js";

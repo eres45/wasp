@@ -1,4 +1,4 @@
-/**
+﻿/**
  * I'm disabling this rule for the entire file under the assumption
  * that this is a one-time migration script. I'm expecting this
  * code to be removed in the future.

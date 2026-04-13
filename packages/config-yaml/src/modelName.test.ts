@@ -1,4 +1,4 @@
-import { parseProxyModelName } from "./modelName.js";
+﻿import { parseProxyModelName } from "./modelName.js";
 
 describe("parseProxyModelName", () => {
   it("parses a basic model name correctly", () => {

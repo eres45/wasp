@@ -1,4 +1,4 @@
-import { IDE } from "core";
+﻿import { IDE } from "core";
 import { walkDirs } from "core/indexing/walkDir";
 import { deduplicateArray, splitCamelCaseAndNonAlphaNumeric } from "core/util";
 // @ts-ignore

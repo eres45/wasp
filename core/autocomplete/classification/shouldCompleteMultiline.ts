@@ -1,4 +1,4 @@
-import { AutocompleteLanguageInfo } from "../constants/AutocompleteLanguageInfo";
+﻿import { AutocompleteLanguageInfo } from "../constants/AutocompleteLanguageInfo";
 import { HelperVars } from "../util/HelperVars";
 
 function isMidlineCompletion(prefix: string, suffix: string): boolean {

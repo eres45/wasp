@@ -1,4 +1,4 @@
-import { ModelProvider } from "../types.js";
+﻿import { ModelProvider } from "../types.js";
 
 export const MiniMax: ModelProvider = {
   models: [

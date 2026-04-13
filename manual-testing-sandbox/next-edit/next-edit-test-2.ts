@@ -1,4 +1,4 @@
-type DocumentNode = ParagraphNode | ListNode;
+﻿type DocumentNode = ParagraphNode | ListNode;
 
 abstract class Node {
   abstract render(): string;

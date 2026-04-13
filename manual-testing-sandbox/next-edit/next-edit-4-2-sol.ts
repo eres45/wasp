@@ -1,4 +1,4 @@
-// Event Tracker System - Refactored Solution
+﻿// Event Tracker System - Refactored Solution
 // Original: next-edit-4-2.ts
 // Refactored to follow SOLID principles
 

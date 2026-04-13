@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Converts OpenAI ChatCompletionMessageParam format to Vercel AI SDK CoreMessage format
  */
 

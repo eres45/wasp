@@ -1,4 +1,4 @@
-import { updateModelName } from "../../auth/workos.js";
+﻿import { updateModelName } from "../../auth/workos.js";
 import {
   SERVICE_NAMES,
   serviceContainer,

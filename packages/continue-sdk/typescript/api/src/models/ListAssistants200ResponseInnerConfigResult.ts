@@ -1,4 +1,4 @@
-/* tslint:disable */
+﻿/* tslint:disable */
 /* eslint-disable */
 /**
  * Continue Hub IDE API
@@ -94,3 +94,4 @@ export function ListAssistants200ResponseInnerConfigResultToJSONTyped(
     errors: value["errors"],
   };
 }
+

@@ -1,4 +1,4 @@
-import { ChatMessage, SlashCommand } from "../../../index.js";
+﻿import { ChatMessage, SlashCommand } from "../../../index.js";
 import { renderChatMessage } from "../../../util/messageContent.js";
 
 const prompt = `
@@ -8,7 +8,7 @@ const prompt = `
      Orderly Analysis: Address the code sequentially, from top to bottom, to ensure a thorough review without skipping any parts.
      Descriptive Feedback: Avoid referencing line numbers directly, as they may vary. Instead, describe the code sections or specific constructs that need attention, explaining the reasons clearly.
      Provide Examples: For each issue identified, offer an example of how the code could be improved or rewritten for better clarity, performance, or maintainability.
-     Your response should be structured to first identify the issue, then explain why it’s a problem, and finally, offer a solution with example code.`;
+     Your response should be structured to first identify the issue, then explain why itâ€™s a problem, and finally, offer a solution with example code.`;
 
 function getLastUserHistory(history: ChatMessage[]): string {
   const lastUserHistory = history

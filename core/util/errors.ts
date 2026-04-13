@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Recursively retrieves the root cause of an error by traversing through its `cause` property.
  *
  * @param err - The error object to analyze. It can be of any type.

@@ -1,4 +1,4 @@
-class ClipboardCache {
+﻿class ClipboardCache {
   private cache: Map<string, string>;
   private order: string[];
   private readonly maxSize = 30;

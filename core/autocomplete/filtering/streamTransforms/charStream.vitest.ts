@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import { stopAtStartOf, stopAtStopTokens } from "./charStream";
 
 async function* createMockStream(chunks: string[]): AsyncGenerator<string> {

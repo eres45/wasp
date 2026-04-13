@@ -1,4 +1,4 @@
-export namespace env {
+﻿export namespace env {
   export namespace backends {
     export { onnx_env as onnx };
     export let tfjs: {};
@@ -26,3 +26,4 @@ declare const WEB_CACHE_AVAILABLE: boolean;
 declare const DEFAULT_CACHE_DIR: any;
 export {};
 //# sourceMappingURL=env.d.ts.map
+

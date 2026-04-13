@@ -1,4 +1,4 @@
-import Handlebars from "handlebars";
+﻿import Handlebars from "handlebars";
 
 import { CompletionOptions } from "../..";
 import { AutocompleteLanguageInfo } from "../constants/AutocompleteLanguageInfo";

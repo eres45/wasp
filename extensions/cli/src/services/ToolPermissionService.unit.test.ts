@@ -1,4 +1,4 @@
-import { ToolPermissionService } from "./ToolPermissionService.js";
+﻿import { ToolPermissionService } from "./ToolPermissionService.js";
 
 describe("ToolPermissionService unit tests", () => {
   let service: ToolPermissionService;

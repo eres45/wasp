@@ -1,4 +1,4 @@
-import {
+﻿import {
   ApplyState,
   BrowserSerializedContinueConfig,
   ToolCallState,

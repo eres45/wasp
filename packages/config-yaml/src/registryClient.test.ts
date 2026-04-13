@@ -1,4 +1,4 @@
-import * as fs from "node:fs";
+﻿import * as fs from "node:fs";
 import * as http from "node:http";
 import { AddressInfo } from "node:net";
 import * as os from "node:os";
@@ -57,7 +57,7 @@ describe("RegistryClient", () => {
   describe("constructor", () => {
     it("should use default apiBase if not provided", () => {
       const client = new RegistryClient();
-      expect((client as any).apiBase).toBe("https://api.continue.dev/");
+      expect((client as any).apiBase).toBe("https://api.waspcode.dev/");
     });
 
     it("should append trailing slash to apiBase if missing", () => {

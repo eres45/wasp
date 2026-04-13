@@ -1,4 +1,4 @@
-import { RuleWithSource, SlashCommandWithSource } from "../..";
+﻿import { RuleWithSource, SlashCommandWithSource } from "../..";
 
 export function convertRuleBlockToSlashCommand(
   rule: RuleWithSource,

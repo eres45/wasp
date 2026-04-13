@@ -1,4 +1,4 @@
-import { ChatBubbleLeftIcon } from "@heroicons/react/24/outline";
+﻿import { ChatBubbleLeftIcon } from "@heroicons/react/24/outline";
 import { SlashCommandDescWithSource } from "core";
 
 interface ConversationStarterCardProps {

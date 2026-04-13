@@ -1,4 +1,4 @@
-import { Box, Text, useInput } from "ink";
+﻿import { Box, Text, useInput } from "ink";
 import React, { useMemo, useState } from "react";
 
 import type { ChatHistoryItem } from "../../../../core/index.js";
@@ -180,7 +180,7 @@ export function EditMessageSelector({
     if (editText.length === 0) {
       return (
         <Text italic color="gray">
-          ▋(empty message)
+          â–‹(empty message)
         </Text>
       );
     }
@@ -240,7 +240,7 @@ export function EditMessageSelector({
       <Text color="gray">
         {isEditing
           ? "Enter to submit, Esc to cancel, Shift+Enter for newline"
-          : "↑/↓ to navigate, Enter to edit, Esc to exit"}
+          : "â†‘/â†“ to navigate, Enter to edit, Esc to exit"}
       </Text>
       <Text> </Text>
 
@@ -250,7 +250,7 @@ export function EditMessageSelector({
           <Text> </Text>
           {userMessages.map((msg, index) => {
             const isSelected = index === selectedIndex;
-            const indicator = isSelected ? "➤ " : "  ";
+            const indicator = isSelected ? "âž¤ " : "  ";
             const color = isSelected ? "yellow" : "white";
             const content =
               typeof msg.item.message.content === "string"

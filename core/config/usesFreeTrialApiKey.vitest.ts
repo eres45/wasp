@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, test, vi } from "vitest";
+﻿import { beforeEach, describe, expect, test, vi } from "vitest";
 import { BrowserSerializedContinueConfig } from "..";
 
 // Create the mock before importing anything else

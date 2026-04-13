@@ -1,4 +1,4 @@
-import { longestCommonSubsequence as lcs } from "./lcs";
+﻿import { longestCommonSubsequence as lcs } from "./lcs";
 
 describe("longestCommonSubsequence", () => {
   test("should return the longest common subsequence for non-empty strings", () => {

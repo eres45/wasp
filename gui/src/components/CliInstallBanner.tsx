@@ -1,4 +1,4 @@
-import { CommandLineIcon, XMarkIcon } from "@heroicons/react/24/outline";
+﻿import { CommandLineIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useContext, useEffect, useRef, useState } from "react";
 import { CloseButton } from ".";
 import { IdeMessengerContext } from "../context/IdeMessenger";
@@ -111,20 +111,20 @@ export function CliInstallBanner({
           <div>
             <div className="text-foreground flex items-center gap-2 font-medium">
               <CommandLineIcon className="h-5 w-5 flex-shrink-0 text-gray-400" />
-              Try out the Continue CLI
+              Try out the WaspCode CLI
             </div>
             <div className="text-description mt-1 text-sm">
               Use{" "}
               <code className="bg-vsc-background rounded px-1.5 py-0.5">
                 cn
               </code>{" "}
-              in your terminal interactively and then deploy Continuous AI
+              in your terminal interactively and then deploy WaspCode AI
               workflows.{" "}
               <span
                 onClick={() =>
                   ideMessenger.post(
                     "openUrl",
-                    "https://docs.continue.dev/guides/cli",
+                    "https://docs.waspcode.dev/guides/cli",
                   )
                 }
                 className="cursor-pointer underline hover:brightness-125"

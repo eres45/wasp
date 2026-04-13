@@ -1,4 +1,4 @@
-declare const FeatureExtractor_base: new () => {
+﻿declare const FeatureExtractor_base: new () => {
   (...args: any[]): any;
   _call(...args: any[]): any;
 };
@@ -790,7 +790,7 @@ export class AutoProcessor {
 }
 /**
  * Named tuple to indicate the order we are using is (height x width), even though
- * the Graphics’ industry standard is (width x height).
+ * the Graphicsâ€™ industry standard is (width x height).
  */
 export type HeightWidth = [height: number, width: number];
 export type ImageFeatureExtractorResult = {
@@ -823,3 +823,4 @@ import { RawImage } from "./utils/image.js";
 import { Tensor } from "./utils/tensor.js";
 export {};
 //# sourceMappingURL=processors.d.ts.map
+

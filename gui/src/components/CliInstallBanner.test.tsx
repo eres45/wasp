@@ -1,4 +1,4 @@
-import {
+﻿import {
   act,
   fireEvent,
   render,
@@ -238,7 +238,7 @@ describe("CliInstallBanner", () => {
 
       expect(postSpy).toHaveBeenCalledWith(
         "openUrl",
-        "https://docs.continue.dev/guides/cli",
+        "https://docs.waspcode.dev/guides/cli",
       );
     });
 

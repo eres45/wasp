@@ -1,4 +1,4 @@
-import { vi } from "vitest";
+﻿import { vi } from "vitest";
 
 // Mock BaseLlmApi class to avoid inline class definitions
 class MockBaseLlmApi {}

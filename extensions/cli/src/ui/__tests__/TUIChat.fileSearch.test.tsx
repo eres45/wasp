@@ -1,4 +1,4 @@
-import { renderInMode, testSingleMode } from "./TUIChat.dualModeHelper.js";
+﻿import { renderInMode, testSingleMode } from "./TUIChat.dualModeHelper.js";
 import { waitForCondition } from "./TUIChat.testHelper.js";
 
 describe("TUIChat - @ File Search Tests", () => {
@@ -17,7 +17,7 @@ describe("TUIChat - @ File Search Tests", () => {
     const frame = lastFrame()!;
 
     // Should show @ character in input or show file search UI
-    const hasAtSymbol = frame.includes("@") || frame.includes("◉ @");
+    const hasAtSymbol = frame.includes("@") || frame.includes("â—‰ @");
     expect(hasAtSymbol).toBe(true);
 
     // Local mode specific UI expectations
@@ -46,7 +46,7 @@ describe("TUIChat - @ File Search Tests", () => {
       expect(frame).toContain("@READ");
 
       // Should show either navigation hints or at least indicate file search is working
-      const hasNavigationHints = frame!.includes("↑/↓ to navigate");
+      const hasNavigationHints = frame!.includes("â†‘/â†“ to navigate");
       const hasFileSearch = frame!.includes("@READ");
       expect(hasNavigationHints || hasFileSearch).toBe(true);
 
@@ -95,7 +95,7 @@ describe("TUIChat - @ File Search Tests", () => {
       expect(frame.length).toBeGreaterThan(0);
 
       // Should show either navigation hints or at least the @ character in file search
-      const hasNavigationHints = frame.includes("↑/↓ to navigate");
+      const hasNavigationHints = frame.includes("â†‘/â†“ to navigate");
       const hasFileSearchUI = frame.includes("@");
       expect(hasNavigationHints || hasFileSearchUI).toBe(true);
     },

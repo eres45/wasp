@@ -1,4 +1,4 @@
-import QuickLRU from "quick-lru";
+﻿import QuickLRU from "quick-lru";
 
 // The cache key and value are both a filepath string
 export type cacheElementType = string;

@@ -1,4 +1,4 @@
-import { expect, test } from "vitest";
+﻿import { expect, test } from "vitest";
 import { getNumberArg } from "../parseArgs";
 
 test("readFileRange should validate positive line number arguments", () => {

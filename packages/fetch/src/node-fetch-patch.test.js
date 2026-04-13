@@ -1,4 +1,4 @@
-import { Buffer } from "node:buffer";
+﻿import { Buffer } from "node:buffer";
 import { describe, expect, it } from "vitest";
 
 // Tests the boundary chunking patch to node fetch made in node-fetch-patch.js (see that file for details).

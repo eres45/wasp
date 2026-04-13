@@ -1,4 +1,4 @@
-import { Position } from "../..";
+﻿import { Position } from "../..";
 import { ContextRetrievalService } from "../../autocomplete/context/ContextRetrievalService";
 import { getAllSnippetsWithoutRace } from "../../autocomplete/snippets/getAllSnippets";
 import { AutocompleteCodeSnippet } from "../../autocomplete/snippets/types";

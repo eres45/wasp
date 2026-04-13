@@ -1,4 +1,4 @@
-import {
+﻿import {
   AssistantUnrolled,
   ContinueProperties,
 } from "@continuedev/config-yaml";
@@ -45,7 +45,7 @@ export function createOpenAIClient({
   models: assistantModels,
   organizationId,
   apiKey,
-  baseURL = "https://api.continue.dev/",
+  baseURL = "https://api.waspcode.dev/",
 }: OpenAIClientOptions): OpenAI {
   return new OpenAI({
     apiKey,
@@ -103,3 +103,4 @@ export function createOpenAIClient({
     },
   });
 }
+

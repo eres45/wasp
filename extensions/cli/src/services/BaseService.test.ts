@@ -1,4 +1,4 @@
-import { EventEmitter } from "events";
+﻿import { EventEmitter } from "events";
 
 import { beforeEach, describe, expect, test, vi } from "vitest";
 

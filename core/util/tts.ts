@@ -1,4 +1,4 @@
-import { exec, ChildProcess } from "child_process";
+﻿import { exec, ChildProcess } from "child_process";
 import os from "node:os";
 
 import { removeCodeBlocksAndTrim } from ".";

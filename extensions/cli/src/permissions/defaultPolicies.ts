@@ -1,4 +1,4 @@
-import { ToolPermissionPolicy } from "./types.js";
+﻿import { ToolPermissionPolicy } from "./types.js";
 
 /**
  * Default permission policies for all built-in tools.

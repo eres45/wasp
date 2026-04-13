@@ -1,4 +1,4 @@
-export default function createReleaseConfig(packageName) {
+﻿export default function createReleaseConfig(packageName) {
   return {
     branches: ["main"],
     tagFormat: `@continuedev/${packageName}@\${version}`,

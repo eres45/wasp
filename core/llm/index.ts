@@ -1,4 +1,4 @@
-import { ModelRole } from "@continuedev/config-yaml";
+﻿import { ModelRole } from "@continuedev/config-yaml";
 import { fetchwithRequestOptions } from "@continuedev/fetch";
 import { findLlmInfo } from "@continuedev/llm-info";
 import {
@@ -1187,7 +1187,7 @@ export abstract class BaseLLM implements ILLM {
 
     // Performance optimization: Use arrays instead of string concatenation.
     // String concatenation in loops creates new string objects for each operation,
-    // which is O(n²) for n chunks. Arrays with push() are O(1) per operation,
+    // which is O(nÂ²) for n chunks. Arrays with push() are O(1) per operation,
     // making the total O(n). We join() only once at the end.
     const thinking: string[] = [];
     const completion: string[] = [];

@@ -1,4 +1,4 @@
-import type { CompletionUsage } from "openai/resources/index.js";
+﻿import type { CompletionUsage } from "openai/resources/index.js";
 import {
   ChatCompletion,
   ChatCompletionAssistantMessageParam,

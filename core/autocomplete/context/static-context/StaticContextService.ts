@@ -1,4 +1,4 @@
-import path from "path";
+﻿import path from "path";
 import { pathToFileURL } from "url";
 import Parser from "web-tree-sitter";
 import { FileType, IDE, Position } from "../../../";
@@ -41,14 +41,14 @@ export class StaticContextService {
 
     console.log(`\nRelevant Types (${ctx.relevantTypes.size} files):`);
     ctx.relevantTypes.forEach((types, filepath) => {
-      console.log(`  📁 ${filepath}`);
-      types.forEach((type) => console.log(`    • ${type}`));
+      console.log(`  ðŸ“ ${filepath}`);
+      types.forEach((type) => console.log(`    â€¢ ${type}`));
     });
 
     console.log(`\nRelevant Headers (${ctx.relevantHeaders.size} files):`);
     ctx.relevantHeaders.forEach((headers, filepath) => {
-      console.log(`  📁 ${filepath}`);
-      headers.forEach((header) => console.log(`    • ${header}`));
+      console.log(`  ðŸ“ ${filepath}`);
+      headers.forEach((header) => console.log(`    â€¢ ${header}`));
     });
   }
 
@@ -229,7 +229,7 @@ export class StaticContextService {
     let paramsTypes = "";
     for (const c of captures) {
       const { name, node } = c;
-      // console.log(`${name} →`, node.text, node.startPosition, node.endPosition);
+      // console.log(`${name} â†’`, node.text, node.startPosition, node.endPosition);
 
       switch (name) {
         case "function.decl": {
@@ -719,7 +719,7 @@ export class StaticContextService {
       case "function_type": {
         const params = node.child(0); // formal_parameters
         const returnType =
-          node.childForFieldName("type") || node.namedChildren[1]; // function_type → parameters, =>, return
+          node.childForFieldName("type") || node.namedChildren[1]; // function_type â†’ parameters, =>, return
 
         const paramTypes =
           params?.namedChildren

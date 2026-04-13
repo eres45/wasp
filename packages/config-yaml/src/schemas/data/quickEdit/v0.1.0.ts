@@ -1,4 +1,4 @@
-import { quickEditEventAllSchema } from "./index.js";
+﻿import { quickEditEventAllSchema } from "./index.js";
 
 export const quickEditEventSchema_0_1_0 = quickEditEventAllSchema.pick({
   prompt: true,

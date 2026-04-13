@@ -1,4 +1,4 @@
-/* eslint-disable max-lines */
+﻿/* eslint-disable max-lines */
 
 import { type AssistantConfig } from "@continuedev/sdk";
 import { Box, Text, useApp, useInput } from "ink";
@@ -796,7 +796,7 @@ const UserInput: React.FC<UserInputProps> = ({
         <>
           {(inputMode || isWaitingForResponse) && (
             <Text italic color="gray">
-              ▋{placeholderText}
+              â–‹{placeholderText}
             </Text>
           )}
           {!inputMode && !isWaitingForResponse && (
@@ -886,7 +886,7 @@ const UserInput: React.FC<UserInputProps> = ({
           color={showBashMode ? "yellow" : isRemoteMode ? "cyan" : "blue"}
           bold
         >
-          {showBashMode ? "$ " : isRemoteMode ? "◉ " : "● "}
+          {showBashMode ? "$ " : isRemoteMode ? "â—‰ " : "â— "}
         </Text>
         {renderInputText()}
       </Box>

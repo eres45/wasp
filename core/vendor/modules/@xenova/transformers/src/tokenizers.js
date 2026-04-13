@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Tokenizers are used to prepare textual inputs for a model.
  *
  * **Example:** Create an `AutoTokenizer` and use it to tokenize a sentence.
@@ -593,12 +593,12 @@ const BYTES_TO_UNICODE = (() => {
       (_, i) => i + "!".charCodeAt(0),
     ),
     ...Array.from(
-      { length: "¬".charCodeAt(0) - "¡".charCodeAt(0) + 1 },
-      (_, i) => i + "¡".charCodeAt(0),
+      { length: "Â¬".charCodeAt(0) - "Â¡".charCodeAt(0) + 1 },
+      (_, i) => i + "Â¡".charCodeAt(0),
     ),
     ...Array.from(
-      { length: "ÿ".charCodeAt(0) - "®".charCodeAt(0) + 1 },
-      (_, i) => i + "®".charCodeAt(0),
+      { length: "Ã¿".charCodeAt(0) - "Â®".charCodeAt(0) + 1 },
+      (_, i) => i + "Â®".charCodeAt(0),
     ),
   ];
   const cs = bs.slice();
@@ -3165,7 +3165,7 @@ export class BloomTokenizer extends GPT2Tokenizer {
   }
 }
 
-const SPIECE_UNDERLINE = "▁";
+const SPIECE_UNDERLINE = "â–";
 
 export class LlamaTokenizer extends PreTrainedTokenizer {
   _default_chat_template = `{% if messages[0]['role'] == 'system' %}{% set loop_messages = messages[1:] %}{% set system_message = messages[0]['content'] %}{% elif USE_DEFAULT_PROMPT == true and not '<<SYS>>' in messages[0]['content'] %}{% set loop_messages = messages %}{% set system_message = 'DEFAULT_SYSTEM_MESSAGE' %}{% else %}{% set loop_messages = messages %}{% set system_message = false %}{% endif %}{% for message in loop_messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if loop.index0 == 0 and system_message != false %}{% set content = '<<SYS>>\n' + system_message + '\n<</SYS>>\n\n' + message['content'] %}{% else %}{% set content = message['content'] %}{% endif %}{% if message['role'] == 'user' %}{{ bos_token + '[INST] ' + content.strip() + ' [/INST]' }}{% elif message['role'] == 'system' %}{{ '<<SYS>>\n' + content.strip() + '\n<</SYS>>\n\n' }}{% elif message['role'] == 'assistant' %}{{ ' '  + content.strip() + ' ' + eos_token }}{% endif %}{% endfor %}`;
@@ -3322,7 +3322,7 @@ function _build_translation_inputs(
  *
  * No Language Left Behind (NLLB) is a first-of-its-kind, AI breakthrough project
  * that open-sources models capable of delivering high-quality translations directly
- * between any pair of 200+ languages — including low-resource languages like Asturian,
+ * between any pair of 200+ languages â€” including low-resource languages like Asturian,
  * Luganda, Urdu and more. It aims to help people communicate with anyone, anywhere,
  * regardless of their language preferences. For more information, check out their
  * [paper](https://arxiv.org/abs/2207.04672).
@@ -3976,8 +3976,8 @@ export class WhisperTokenizer extends PreTrainedTokenizer {
   combineTokensIntoWords(
     tokens,
     language,
-    prepend_punctionations = "\"'“¡¿([{-",
-    append_punctuations = "\"'.。,，!！?？:：”)]}、",
+    prepend_punctionations = "\"'â€œÂ¡Â¿([{-",
+    append_punctuations = "\"'.ã€‚,ï¼Œ!ï¼?ï¼Ÿ:ï¼šâ€)]}ã€",
   ) {
     language = language ?? "english";
 
@@ -4497,3 +4497,4 @@ export class AutoTokenizer {
     return new cls(tokenizerJSON, tokenizerConfig);
   }
 }
+

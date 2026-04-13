@@ -1,4 +1,4 @@
-import { Text } from "ink";
+﻿import { Text } from "ink";
 import React, { useMemo } from "react";
 
 import { useTerminalSize } from "../hooks/useTerminalSize.js";

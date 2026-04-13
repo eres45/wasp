@@ -1,4 +1,4 @@
-import { Box, Text, useInput } from "ink";
+﻿import { Box, Text, useInput } from "ink";
 import React, { useState } from "react";
 import { quote } from "shell-quote";
 
@@ -15,23 +15,23 @@ import { defaultBoxStyles } from "./styles.js";
 
 // Utility function to get status icon and color based on server connection
 const getServerStatusDisplay = (conn: MCPConnectionInfo) => {
-  let icon = "⚪️"; // note, white circle causes extra blank line bug
+  let icon = "âšªï¸"; // note, white circle causes extra blank line bug
   let color: "green" | "yellow" | "red" | "white" | "dim" = "white";
   let statusText = conn.status;
 
   if (conn.status === "connecting") {
-    icon = "🟡";
+    icon = "ðŸŸ¡";
     color = "yellow";
   } else if (conn.status === "error") {
-    icon = "🔴";
+    icon = "ðŸ”´";
     color = "red";
   } else if (conn.status === "connected") {
     if (conn.warnings && conn.warnings.length > 0) {
-      icon = "🟡";
+      icon = "ðŸŸ¡";
       color = "yellow";
       statusText = "connected (with warnings)" as MCPServerStatus;
     } else {
-      icon = "🟢";
+      icon = "ðŸŸ¢";
       color = "green";
     }
   }
@@ -94,10 +94,10 @@ export const MCPSelector: React.FC<MCPSelectorProps> = ({ onCancel }) => {
 
           const counts = [];
           if (toolsCount > 0) {
-            counts.push(`🔧${toolsCount}`);
+            counts.push(`ðŸ”§${toolsCount}`);
           }
           if (promptsCount > 0) {
-            counts.push(`📝${promptsCount}`);
+            counts.push(`ðŸ“${promptsCount}`);
           }
 
           if (counts.length > 0) {
@@ -113,14 +113,14 @@ export const MCPSelector: React.FC<MCPSelectorProps> = ({ onCancel }) => {
 
       // Add bulk actions
       options.push(
-        { label: "🔄 Restart all servers", value: "restart-all" },
-        { label: "⏹️  Stop all servers", value: "stop-all" },
+        { label: "ðŸ”„ Restart all servers", value: "restart-all" },
+        { label: "â¹ï¸  Stop all servers", value: "stop-all" },
       );
     }
 
     // Add "Explore MCP Servers" option at the bottom
     options.push({
-      label: "🔍 Explore MCP Servers",
+      label: "ðŸ” Explore MCP Servers",
       value: "explore-mcp-servers",
     });
 
@@ -137,12 +137,12 @@ export const MCPSelector: React.FC<MCPSelectorProps> = ({ onCancel }) => {
     if (!serverInfo) return [];
 
     const items: MCPMenuItem[] = [
-      { label: "🔄 Restart server", value: "restart" },
+      { label: "ðŸ”„ Restart server", value: "restart" },
     ];
 
     // Only show stop server if it's connected
     if (serverInfo.status === "connected") {
-      items.push({ label: "⏹️  Stop server", value: "stop" });
+      items.push({ label: "â¹ï¸  Stop server", value: "stop" });
     }
 
     return items;
@@ -161,7 +161,7 @@ export const MCPSelector: React.FC<MCPSelectorProps> = ({ onCancel }) => {
         {serverInfo.status === "error" && serverInfo.error && (
           <Box flexDirection="column" marginBottom={1}>
             <Text color="red" bold>
-              🚫 Error:
+              ðŸš« Error:
             </Text>
             <Text color="red">{serverInfo.error}</Text>
           </Box>
@@ -171,11 +171,11 @@ export const MCPSelector: React.FC<MCPSelectorProps> = ({ onCancel }) => {
         {serverInfo.warnings.length > 0 && (
           <Box flexDirection="column" marginBottom={1}>
             <Text color="yellow" bold>
-              ⚠️ Warnings:
+              âš ï¸ Warnings:
             </Text>
             {serverInfo.warnings.map((warning, index) => (
               <Text key={index} color="yellow">
-                • {warning}
+                â€¢ {warning}
               </Text>
             ))}
           </Box>
@@ -184,10 +184,10 @@ export const MCPSelector: React.FC<MCPSelectorProps> = ({ onCancel }) => {
         {/* Add prompts if any */}
         {serverInfo.prompts.length > 0 && (
           <Box flexDirection="column" marginBottom={1}>
-            <Text color="blue">📝 Prompts: {serverInfo.prompts.length}</Text>
+            <Text color="blue">ðŸ“ Prompts: {serverInfo.prompts.length}</Text>
             {serverInfo.prompts.map((prompt, index) => (
               <Text key={index} color="dim">
-                • {prompt.name}
+                â€¢ {prompt.name}
               </Text>
             ))}
           </Box>
@@ -196,10 +196,10 @@ export const MCPSelector: React.FC<MCPSelectorProps> = ({ onCancel }) => {
         {/* Add tools if any */}
         {serverInfo.tools.length > 0 && (
           <Box flexDirection="column" marginBottom={1}>
-            <Text color="blue">🔧 Tools: {serverInfo.tools.length}</Text>
+            <Text color="blue">ðŸ”§ Tools: {serverInfo.tools.length}</Text>
             {serverInfo.tools.map((tool, index) => (
               <Text key={index} color="dim">
-                • {tool.name}
+                â€¢ {tool.name}
               </Text>
             ))}
           </Box>
@@ -288,7 +288,7 @@ export const MCPSelector: React.FC<MCPSelectorProps> = ({ onCancel }) => {
       case "explore-mcp-servers":
         // Open the MCP servers hub in the default browser
         const open = (await import("open")).default;
-        await open("https://continue.dev/hub?type=mcpServers");
+        await open("https://waspcode.dev/hub?type=mcpServers");
         setMessage("Opened MCP servers hub in browser");
         break;
       case "back":
@@ -350,11 +350,11 @@ export const MCPSelector: React.FC<MCPSelectorProps> = ({ onCancel }) => {
               const { command, args } = serverInfo.config;
               const cmd = command ? quote([command, ...(args ?? [])]) : "";
               if (cmd) {
-                configText = ` • Command: ${cmd}`;
+                configText = ` â€¢ Command: ${cmd}`;
               }
             } else {
               const { url } = serverInfo.config;
-              configText = ` • URL: ${url}`;
+              configText = ` â€¢ URL: ${url}`;
             }
             configText = configText.replace(/\$\{\{.*\}\}/, "(secret)");
 
@@ -398,7 +398,7 @@ export const MCPSelector: React.FC<MCPSelectorProps> = ({ onCancel }) => {
                 color={isSelected ? "blue" : "white"}
                 bold={isSelected}
               >
-                {isSelected ? "➤ " : "  "}
+                {isSelected ? "âž¤ " : "  "}
                 {item.label}
               </Text>
             );
@@ -408,7 +408,7 @@ export const MCPSelector: React.FC<MCPSelectorProps> = ({ onCancel }) => {
 
       <Box marginTop={1}>
         <Text color="dim">
-          ↑/↓ to navigate, Enter to select, Esc to go back
+          â†‘/â†“ to navigate, Enter to select, Esc to go back
         </Text>
       </Box>
     </Box>

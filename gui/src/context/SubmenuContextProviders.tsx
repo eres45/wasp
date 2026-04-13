@@ -1,4 +1,4 @@
-import {
+﻿import {
   ContextProviderDescription,
   ContextProviderName,
   ContextSubmenuItemWithProvider,

@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/order
+﻿// eslint-disable-next-line import/order
 import { vi } from "vitest";
 
 vi.mock("node:os", () => ({

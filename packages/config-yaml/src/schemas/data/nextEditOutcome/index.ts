@@ -1,4 +1,4 @@
-import { z } from "zod";
+﻿import { z } from "zod";
 import { baseDevDataAllSchema } from "../base.js";
 
 export const nextEditOutcomeEventAllSchema = baseDevDataAllSchema.extend({

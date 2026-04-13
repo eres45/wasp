@@ -1,4 +1,4 @@
-import { ChatCompletionCreateParams } from "openai/resources/index";
+﻿import { ChatCompletionCreateParams } from "openai/resources/index";
 
 import { OpenAIConfig } from "../types.js";
 import { OpenAIApi } from "./OpenAI.js";
@@ -11,7 +11,7 @@ export interface OpenRouterConfig extends OpenAIConfig {
 // TODO: Extract detailed error info from OpenRouter's error.metadata.raw to surface better messages
 
 const OPENROUTER_HEADERS: Record<string, string> = {
-  "HTTP-Referer": "https://www.continue.dev/",
+  "HTTP-Referer": "https://www.waspcode.dev/",
   "X-Title": "Continue",
 };
 

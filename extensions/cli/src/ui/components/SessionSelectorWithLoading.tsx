@@ -1,4 +1,4 @@
-import { Box, Text } from "ink";
+﻿import { Box, Text } from "ink";
 import React from "react";
 
 import { logger } from "src/util/logger.js";

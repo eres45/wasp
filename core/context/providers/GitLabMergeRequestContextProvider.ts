@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance } from "axios";
+﻿import { AxiosError, AxiosInstance } from "axios";
 
 import {
   ContextItem,
@@ -77,7 +77,7 @@ class GitLabMergeRequestContextProvider extends BaseContextProvider {
   };
 
   get deprecationMessage() {
-    return "The Gitlab Merge Request context provider is now deprecated and will be removed in a later version. Please consider using the GitLab MCP (https://continue.dev/docker/mcp-gitlab) instead.";
+    return "The Gitlab Merge Request context provider is now deprecated and will be removed in a later version. Please consider using the GitLab MCP (https://waspcode.dev/docker/mcp-gitlab) instead.";
   }
 
   private async getApi(): Promise<AxiosInstance> {

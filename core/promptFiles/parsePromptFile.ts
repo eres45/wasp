@@ -1,4 +1,4 @@
-import * as YAML from "yaml";
+﻿import * as YAML from "yaml";
 
 import { getLastNPathParts } from "../util/uri";
 

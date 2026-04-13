@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Helper module for `Tensor` processing.
  *
  * These functions and classes are only used internally,
@@ -1195,3 +1195,4 @@ export function ones(size) {
 export function ones_like(tensor) {
   return ones(tensor.dims);
 }
+

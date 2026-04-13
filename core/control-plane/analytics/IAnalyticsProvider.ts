@@ -1,4 +1,4 @@
-import { AnalyticsConfig } from "../..";
+﻿import { AnalyticsConfig } from "../..";
 
 export interface AnalyticsMetadata {
   extensionVersion: string;

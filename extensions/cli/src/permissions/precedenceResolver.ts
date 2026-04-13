@@ -1,4 +1,4 @@
-import { getDefaultToolPolicies } from "./defaultPolicies.js";
+﻿import { getDefaultToolPolicies } from "./defaultPolicies.js";
 import {
   loadPermissionsYaml,
   yamlConfigToPolicies,

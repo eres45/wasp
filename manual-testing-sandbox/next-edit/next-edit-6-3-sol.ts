@@ -1,4 +1,4 @@
-// Refactored file upload and management system following SOLID principles
+﻿// Refactored file upload and management system following SOLID principles
 // Original: next-edit-6-3.ts
 
 // Types

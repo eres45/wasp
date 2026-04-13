@@ -1,4 +1,4 @@
-export function parseOtelHeaders(headersStr: string): Record<string, string> {
+﻿export function parseOtelHeaders(headersStr: string): Record<string, string> {
   const headers: Record<string, string> = {};
   if (!headersStr) return headers;
 

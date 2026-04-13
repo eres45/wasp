@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { type PlacesType } from "react-tooltip";
 import { HeaderButton } from "..";
 import { ToolTip } from "./Tooltip";

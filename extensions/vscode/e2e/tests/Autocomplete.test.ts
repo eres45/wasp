@@ -1,4 +1,4 @@
-import { expect } from "chai";
+﻿import { expect } from "chai";
 import { EditorView, TextEditor } from "vscode-extension-tester";
 
 import { AutocompleteActions } from "../actions/Autocomplete.actions";

@@ -1,4 +1,4 @@
-// Refactored shopping cart implementation following SOLID principles
+﻿// Refactored shopping cart implementation following SOLID principles
 
 // Types and interfaces
 interface Product {

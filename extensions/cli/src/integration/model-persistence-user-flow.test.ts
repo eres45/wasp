@@ -1,4 +1,4 @@
-import * as fs from "fs";
+﻿import * as fs from "fs";
 import * as os from "os";
 import * as path from "path";
 
@@ -150,6 +150,6 @@ describe("Model Persistence User Flow", () => {
     // EXPECTATION: Should restore Claude 3.5 Sonnet
     expect(newState.model?.name).toBe("Claude 3.5 Sonnet");
     expect(newState.model?.provider).toBe("anthropic");
-    console.log("✅ Model persisted correctly!\n");
+    console.log("âœ… Model persisted correctly!\n");
   });
 });

@@ -1,4 +1,4 @@
-import * as fs from "fs";
+﻿import * as fs from "fs";
 import * as path from "path";
 
 import chalk from "chalk";
@@ -122,7 +122,9 @@ export async function autoSelectOrganizationAndConfig(
           configUri,
         );
         saveAuthConfig(updatedConfig);
-        console.log(chalk.green("✓ Automatically selected personal assistant"));
+        console.log(
+          chalk.green("âœ“ Automatically selected personal assistant"),
+        );
         return updatedConfig;
       }
     } catch {
@@ -137,7 +139,7 @@ export async function autoSelectOrganizationAndConfig(
         `file://${path.join(env.continueHome, "config.yaml")}`,
       );
       saveAuthConfig(updatedConfig);
-      console.log(chalk.green("✓ Using local config.yaml"));
+      console.log(chalk.green("âœ“ Using local config.yaml"));
       return updatedConfig;
     }
 

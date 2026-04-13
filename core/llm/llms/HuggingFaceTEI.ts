@@ -1,4 +1,4 @@
-import { Chunk, LLMOptions } from "../../index.js";
+﻿import { Chunk, LLMOptions } from "../../index.js";
 import { BaseLLM } from "../index.js";
 
 class HuggingFaceTEIEmbeddingsProvider extends BaseLLM {

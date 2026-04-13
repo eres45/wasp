@@ -1,4 +1,4 @@
-import { isModelCapable } from "./modelCapability.js";
+﻿import { isModelCapable } from "./modelCapability.js";
 
 describe("isModelCapable", () => {
   describe("OpenAI models", () => {

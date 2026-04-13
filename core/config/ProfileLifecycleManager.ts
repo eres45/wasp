@@ -1,4 +1,4 @@
-import {
+﻿import {
   ConfigResult,
   ConfigValidationError,
   FullSlug,

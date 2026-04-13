@@ -1,4 +1,4 @@
-import { WebView } from "vscode-extension-tester";
+﻿import { WebView } from "vscode-extension-tester";
 
 import { ApplySelectors } from "../selectors/Apply.selectors";
 import { TestUtils } from "../TestUtils";

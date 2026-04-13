@@ -1,4 +1,4 @@
-import { ToolCallDelta } from "core";
+﻿import { ToolCallDelta } from "core";
 import { createRuleBlock } from "core/tools/definitions/createRuleBlock";
 import { CreateRuleBlockArgs } from "core/tools/implementations/createRuleBlock";
 import { useCallback, useContext, useState } from "react";

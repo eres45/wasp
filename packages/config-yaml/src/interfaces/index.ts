@@ -1,4 +1,4 @@
-import { SecretLocation, SecretResult, SecretType } from "./SecretResult.js";
+﻿import { SecretLocation, SecretResult, SecretType } from "./SecretResult.js";
 import {
   FQSN,
   PackageIdentifier,

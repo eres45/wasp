@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: waspcode-api
+    runtime: node
+    rootDir: services/waspcode-api
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: DATABASE_URL
+        fromDatabase:
+          name: waspcode-db
+          property: connectionString
+      - key: MINIMAX_API_BASE
+        value: https://api.minimax.io/v1
+      - key: MINIMAX_API_KEY
+        sync: false
+      - key: WASPCODE_STARTER_CREDIT_CENTS
+        value: "2000"
+      - key: WASPCODE_PROMO_CODE
+        value: rumax100
+      - key: WASPCODE_PROMO_CREDIT_CENTS
+        value: "10000"
+      - key: WASPCODE_REQUEST_COST_CENTS
+        value: "5"
+      - key: WASPCODE_ALLOWED_MODELS
+        value: MiniMax-M2.7,MiniMax-M2.5,MiniMax-M2.1
+    buildFilter:
+      paths:
+        - services/waspcode-api/**
+        - render.yaml
+databases:
+  - name: waspcode-db
+    plan: free

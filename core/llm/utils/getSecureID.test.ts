@@ -1,4 +1,4 @@
-import { getSecureID } from "./getSecureID";
+﻿import { getSecureID } from "./getSecureID";
 
 describe("getSecureID", () => {
   beforeEach(() => {

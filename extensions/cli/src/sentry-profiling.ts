@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Optional profiling integration loader
  * This module handles the optional @sentry/profiling-node dependency
  * which contains native bindings and may not be available in all environments

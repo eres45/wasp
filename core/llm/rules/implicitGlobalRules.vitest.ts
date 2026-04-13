@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import { RuleWithSource, UserChatMessage } from "../..";
 import { getApplicableRules } from "./getSystemMessageWithRules";
 

@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it } from "vitest";
+﻿import { beforeEach, describe, expect, it } from "vitest";
 
 import { serviceContainer } from "./ServiceContainer.js";
 import type { ToolPermissionServiceState } from "./ToolPermissionService.js";

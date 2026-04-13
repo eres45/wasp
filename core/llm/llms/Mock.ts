@@ -1,4 +1,4 @@
-import { ChatMessage, CompletionOptions, LLMOptions } from "../../index.js";
+﻿import { ChatMessage, CompletionOptions, LLMOptions } from "../../index.js";
 import { BaseLLM } from "../index.js";
 
 type MockMessage =

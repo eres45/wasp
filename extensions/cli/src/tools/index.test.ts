@@ -1,4 +1,4 @@
-import { extractToolCalls, getToolDisplayName } from "./index.js";
+﻿import { extractToolCalls, getToolDisplayName } from "./index.js";
 
 describe("tools/index utilities", () => {
   describe("getToolDisplayName", () => {

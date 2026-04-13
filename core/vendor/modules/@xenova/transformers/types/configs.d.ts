@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Base class for all configuration classes. For more information, see the corresponding
  * [Python documentation](https://huggingface.co/docs/transformers/main/en/main_classes/configuration#transformers.PretrainedConfig).
  */
@@ -59,3 +59,4 @@ export class AutoConfig {
 }
 export type PretrainedOptions = import("./utils/hub.js").PretrainedOptions;
 //# sourceMappingURL=configs.d.ts.map
+

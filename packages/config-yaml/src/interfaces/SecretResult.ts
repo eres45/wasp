@@ -1,4 +1,4 @@
-import { FQSN, PackageSlug, encodePackageSlug } from "./slugs.js";
+﻿import { FQSN, PackageSlug, encodePackageSlug } from "./slugs.js";
 
 export enum SecretType {
   User = "user",

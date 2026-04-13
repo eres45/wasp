@@ -1,4 +1,4 @@
-/* tslint:disable */
+﻿/* tslint:disable */
 /* eslint-disable */
 /**
  * Continue Hub IDE API
@@ -76,3 +76,4 @@ export function GetPolicy200ResponseToJSONTyped(
     orgSlug: value["orgSlug"],
   };
 }
+

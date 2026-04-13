@@ -1,4 +1,4 @@
-import { ChatMessage } from "..";
+﻿import { ChatMessage } from "..";
 
 export function messageHasToolCalls(msg: ChatMessage): boolean {
   return msg.role === "assistant" && !!msg.toolCalls;

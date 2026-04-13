@@ -1,4 +1,4 @@
-import {
+﻿import {
   ContextItem,
   ContextProviderDescription,
   ContextProviderExtras,

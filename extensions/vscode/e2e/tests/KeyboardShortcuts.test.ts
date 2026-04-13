@@ -1,4 +1,4 @@
-import { expect } from "chai";
+﻿import { expect } from "chai";
 import {
   EditorView,
   InputBox,
@@ -138,7 +138,7 @@ describe("Keyboard Shortcuts", () => {
     await GUIActions.executeFocusContinueInputShortcut(driver);
   }).timeout(DEFAULT_TIMEOUT.XL);
 
-  it("Fresh VS Code window → sidebar closed → cmd+L with no code highlighted → opens sidebar and focuses input → cmd+L closes sidebar", async () => {
+  it("Fresh VS Code window â†’ sidebar closed â†’ cmd+L with no code highlighted â†’ opens sidebar and focuses input â†’ cmd+L closes sidebar", async () => {
     await GUIActions.executeFocusContinueInputShortcut(driver);
     ({ view } = await GUIActions.switchToReactIframe());
     const textInput = await TestUtils.waitForSuccess(() =>
@@ -156,7 +156,7 @@ describe("Keyboard Shortcuts", () => {
     expect(await textInput.isDisplayed()).to.equal(false);
   }).timeout(DEFAULT_TIMEOUT.XL);
 
-  it("Send a message → focus code editor (not sidebar) → cmd+L → should focus sidebar and start a new session", async () => {
+  it("Send a message â†’ focus code editor (not sidebar) â†’ cmd+L â†’ should focus sidebar and start a new session", async () => {
     await GUIActions.executeFocusContinueInputShortcut(driver);
     ({ view } = await GUIActions.switchToReactIframe());
 

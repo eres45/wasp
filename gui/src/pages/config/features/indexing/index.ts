@@ -1,1 +1,1 @@
-export { default } from "./IndexingProgress";
+﻿export { default } from "./IndexingProgress";

@@ -1,4 +1,4 @@
-import { AuthenticatedConfig } from "src/auth/workos-types.js";
+﻿import { AuthenticatedConfig } from "src/auth/workos-types.js";
 
 import {
   login as doLogin,

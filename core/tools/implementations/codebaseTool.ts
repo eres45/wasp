@@ -1,4 +1,4 @@
-import { ToolImpl } from ".";
+﻿import { ToolImpl } from ".";
 import { RangeInFile } from "../..";
 import { retrieveContextItemsFromEmbeddings } from "../../context/retrieval/retrieval";
 import { getStringArg } from "../parseArgs";

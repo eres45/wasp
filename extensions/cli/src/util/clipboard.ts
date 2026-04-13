@@ -1,4 +1,4 @@
-import { exec } from "child_process";
+﻿import { exec } from "child_process";
 import { readFile, unlink } from "fs/promises";
 import os from "os";
 import path from "path";
@@ -20,8 +20,8 @@ export async function checkClipboardForImage(): Promise<boolean> {
       // macOS: Check clipboard using osascript
       const { stdout } = await execAsync('osascript -e "clipboard info"');
       return (
-        stdout.includes("«class PNGf»") ||
-        stdout.includes("«class TIFF»") ||
+        stdout.includes("Â«class PNGfÂ»") ||
+        stdout.includes("Â«class TIFFÂ»") ||
         stdout.includes("picture")
       );
     } else if (platform === "win32") {
@@ -65,7 +65,7 @@ export async function getClipboardImage(): Promise<Buffer | null> {
     if (platform === "darwin") {
       // macOS: Save clipboard image using osascript
       await execAsync(
-        `osascript -e 'set the clipboard to (the clipboard as «class PNGf»)' -e 'set png_data to (the clipboard as «class PNGf»)' -e 'set file_ref to open for access "${tempImagePath}" with write permission' -e 'write png_data to file_ref' -e 'close access file_ref'`,
+        `osascript -e 'set the clipboard to (the clipboard as Â«class PNGfÂ»)' -e 'set png_data to (the clipboard as Â«class PNGfÂ»)' -e 'set file_ref to open for access "${tempImagePath}" with write permission' -e 'write png_data to file_ref' -e 'close access file_ref'`,
       );
     } else if (platform === "win32") {
       // Windows: Use PowerShell to save clipboard image

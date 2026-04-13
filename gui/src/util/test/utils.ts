@@ -1,4 +1,4 @@
-import { screen, waitFor } from "@testing-library/dom";
+﻿import { screen, waitFor } from "@testing-library/dom";
 import { act } from "@testing-library/react";
 import { Editor } from "@tiptap/core";
 import { ChatMessage } from "core";
@@ -14,7 +14,7 @@ function logDomText() {
     "",
   );
   cleaned = cleaned?.replace(
-    /[⌘Ctrl]+⏎ (?:No )?[Aa]ctive file⏎ Enter⏎Log in to access a free trial of theModels Add-OnLog in to Continue HubOr, configure your own models/,
+    /[âŒ˜Ctrl]+âŽ (?:No )?[Aa]ctive fileâŽ EnterâŽLog in to access a free trial of theModels Add-OnLog in to Continue HubOr, configure your own models/,
     "",
   );
   cleaned = cleaned.replaceAll("Select model", "");

@@ -1,4 +1,4 @@
-import * as fs from "node:fs";
+﻿import * as fs from "node:fs";
 
 import { FQSN, SecretResult, SecretType } from "@continuedev/config-yaml";
 import { beforeEach, describe, expect, it, vi } from "vitest";

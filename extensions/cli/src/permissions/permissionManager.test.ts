@@ -1,4 +1,4 @@
-import { ToolPermissionManager } from "./permissionManager.js";
+﻿import { ToolPermissionManager } from "./permissionManager.js";
 import { ToolCallRequest } from "./types.js";
 
 describe("ToolPermissionManager", () => {

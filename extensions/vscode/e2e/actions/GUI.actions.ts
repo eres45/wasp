@@ -1,4 +1,4 @@
-import {
+﻿import {
   InputBox,
   Key,
   WebDriver,
@@ -42,7 +42,7 @@ export class GUIActions {
     for (let i = 0; i < iframes.length; i++) {
       const iframe = iframes[i];
       const src = await iframe.getAttribute("src");
-      if (src.includes("extensionId=Continue.continue")) {
+      if (src.includes("extensionId=waspcode.continue")) {
         continueIFrame = iframe;
         break;
       }
@@ -73,7 +73,7 @@ export class GUIActions {
 
   public static toggleGui = async () => {
     return TestUtils.waitForSuccess(() =>
-      new Workbench().executeCommand("continue.focusContinueInput"),
+      new Workbench().executeCommand("waspcode.focusContinueInput"),
     );
   };
 

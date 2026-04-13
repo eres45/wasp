@@ -1,4 +1,4 @@
-import OpenAI from "./OpenAI.js";
+﻿import OpenAI from "./OpenAI.js";
 
 import type { CompletionOptions, LLMOptions } from "../../index.js";
 

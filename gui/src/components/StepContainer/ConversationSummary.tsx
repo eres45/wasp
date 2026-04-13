@@ -1,4 +1,4 @@
-import { TrashIcon } from "@heroicons/react/24/outline";
+﻿import { TrashIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 import { ChatHistoryItem } from "core";
 import { useState } from "react";

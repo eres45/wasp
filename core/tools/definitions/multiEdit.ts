@@ -1,4 +1,4 @@
-import { Tool } from "../..";
+﻿import { Tool } from "../..";
 import { validateMultiEdit } from "../../edit/searchAndReplace/multiEditValidation";
 import { executeMultiFindAndReplace } from "../../edit/searchAndReplace/performReplace";
 import { validateSearchAndReplaceFilepath } from "../../edit/searchAndReplace/validateArgs";

@@ -1,4 +1,4 @@
-import { Chunk } from "../../index";
+﻿import { Chunk } from "../../index";
 import { deduplicateArray } from "../../util/index";
 
 export function deduplicateChunks(chunks: Chunk[]): Chunk[] {

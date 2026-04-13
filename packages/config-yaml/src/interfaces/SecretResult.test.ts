@@ -1,4 +1,4 @@
-import {
+﻿import {
   SecretType,
   decodeSecretLocation,
   encodeSecretLocation,

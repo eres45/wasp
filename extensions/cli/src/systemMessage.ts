@@ -1,4 +1,4 @@
-import { execSync } from "child_process";
+﻿import { execSync } from "child_process";
 import * as fs from "fs";
 import * as path from "path";
 
@@ -222,9 +222,9 @@ export async function constructSystemMessage(
     // Check if commit signature is disabled via environment variable
     if (!process.env.CONTINUE_CLI_DISABLE_COMMIT_SIGNATURE) {
       systemMessage += `\n<context name="commitSignature">When creating commits using any CLI or tool, include the following in the commit message:
-Generated with [Continue](https://continue.dev)
+Generated with [Continue](https://waspcode.dev)
 
-Co-Authored-By: Continue <noreply@continue.dev>
+Co-Authored-By: Continue <noreply@waspcode.dev>
 </context>\n`;
     }
   }

@@ -1,4 +1,4 @@
-import Handlebars from "handlebars";
+﻿import Handlebars from "handlebars";
 import { NEXT_EDIT_MODELS } from "../../llm/constants";
 import {
   INSTINCT_USER_PROMPT_PREFIX,

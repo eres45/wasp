@@ -1,4 +1,4 @@
-import {
+﻿import {
   BedrockRuntimeClient,
   ContentBlock,
   ContentBlockDelta,

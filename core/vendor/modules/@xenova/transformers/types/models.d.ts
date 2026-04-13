@@ -1,4 +1,4 @@
-declare const PreTrainedModel_base: new () => {
+﻿declare const PreTrainedModel_base: new () => {
   (...args: any[]): any;
   _call(...args: any[]): any;
 };
@@ -3492,3 +3492,4 @@ declare function encoderForward(self: any, model_inputs: any): Promise<any>;
 import { Tensor } from "./utils/tensor.js";
 export {};
 //# sourceMappingURL=models.d.ts.map
+

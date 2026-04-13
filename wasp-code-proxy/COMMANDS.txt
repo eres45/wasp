@@ -1,0 +1,78 @@
+# 🚀 EXACT COMMANDS TO RUN - Copy & Paste
+
+# ============================================
+# STEP 1: Install Wrangler (Cloudflare CLI)
+# ============================================
+npm install -g wrangler
+
+# ============================================
+# STEP 2: Login to Cloudflare
+# ============================================
+wrangler login
+# Browser will open - login and authorize
+
+# ============================================
+# STEP 3: Navigate to Proxy Folder
+# ============================================
+cd continue/wasp-code-proxy
+
+# ============================================
+# STEP 4: Install Dependencies
+# ============================================
+npm install
+
+# ============================================
+# STEP 5: Add Your Frenix API Key
+# ============================================
+wrangler secret put FRENIX_API_KEY
+# When prompted, paste: sk-frenix-160cc0c813c7678d814e9feb4a443cbb
+
+# ============================================
+# STEP 6: Deploy to Cloudflare
+# ============================================
+npm run deploy
+
+# ============================================
+# STEP 7: Copy Your Worker URL
+# ============================================
+# You'll see output like:
+# https://wasp-code-proxy.YOUR_USERNAME.workers.dev
+# COPY THIS URL!
+
+# ============================================
+# STEP 8: Test Your Proxy
+# ============================================
+# First, edit test-proxy.js and replace:
+# const PROXY_URL = 'https://wasp-code-proxy.YOUR_USERNAME.workers.dev';
+# With your actual URL from step 7
+
+# Then run:
+npm test
+
+# ============================================
+# STEP 9: Update Extension Config (Automatic)
+# ============================================
+node update-extension-config.js
+# Enter your worker URL when prompted
+
+# ============================================
+# STEP 10: Rebuild Extension
+# ============================================
+cd ../extensions/vscode
+npm run package
+
+# ============================================
+# STEP 11: Test Extension Locally
+# ============================================
+code --install-extension wasp-code-*.vsix
+
+# ============================================
+# STEP 12: Publish to VS Code Marketplace
+# ============================================
+vsce publish
+
+# ============================================
+# DONE! 🎉
+# ============================================
+# Your proxy is live and extension is published!
+# Users can now install and use with ZERO setup!

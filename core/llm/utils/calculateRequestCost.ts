@@ -1,4 +1,4 @@
-import { Usage } from "../..";
+﻿import { Usage } from "../..";
 
 export interface CostBreakdown {
   cost: number;
@@ -99,14 +99,14 @@ function calculateAnthropicCost(
   // Input tokens breakdown
   if (usage.promptTokens > 0) {
     breakdownParts.push(
-      `Input: ${usage.promptTokens.toLocaleString()} tokens × $${modelPricing.input}/MTok = $${inputCost.toFixed(6)}`,
+      `Input: ${usage.promptTokens.toLocaleString()} tokens Ã— $${modelPricing.input}/MTok = $${inputCost.toFixed(6)}`,
     );
   }
 
   // Output tokens breakdown
   if (usage.completionTokens > 0) {
     breakdownParts.push(
-      `Output: ${usage.completionTokens.toLocaleString()} tokens × $${modelPricing.output}/MTok = $${outputCost.toFixed(6)}`,
+      `Output: ${usage.completionTokens.toLocaleString()} tokens Ã— $${modelPricing.output}/MTok = $${outputCost.toFixed(6)}`,
     );
   }
 
@@ -120,7 +120,7 @@ function calculateAnthropicCost(
         (cacheWriteTokens / 1_000_000) * modelPricing.cacheWrite;
       cacheCost += cacheWriteCost;
       breakdownParts.push(
-        `Cache Write: ${cacheWriteTokens.toLocaleString()} tokens × $${modelPricing.cacheWrite}/MTok = $${cacheWriteCost.toFixed(6)}`,
+        `Cache Write: ${cacheWriteTokens.toLocaleString()} tokens Ã— $${modelPricing.cacheWrite}/MTok = $${cacheWriteCost.toFixed(6)}`,
       );
     }
 
@@ -128,7 +128,7 @@ function calculateAnthropicCost(
       const cacheReadCost = (cachedTokens / 1_000_000) * modelPricing.cacheRead;
       cacheCost += cacheReadCost;
       breakdownParts.push(
-        `Cache Read: ${cachedTokens.toLocaleString()} tokens × $${modelPricing.cacheRead}/MTok = $${cacheReadCost.toFixed(6)}`,
+        `Cache Read: ${cachedTokens.toLocaleString()} tokens Ã— $${modelPricing.cacheRead}/MTok = $${cacheReadCost.toFixed(6)}`,
       );
     }
   }
@@ -197,13 +197,13 @@ function calculateOpenAICost(
 
   if (usage.promptTokens > 0) {
     breakdownParts.push(
-      `Input: ${usage.promptTokens.toLocaleString()} tokens × $${modelPricing.input}/MTok = $${inputCost.toFixed(6)}`,
+      `Input: ${usage.promptTokens.toLocaleString()} tokens Ã— $${modelPricing.input}/MTok = $${inputCost.toFixed(6)}`,
     );
   }
 
   if (usage.completionTokens > 0) {
     breakdownParts.push(
-      `Output: ${usage.completionTokens.toLocaleString()} tokens × $${modelPricing.output}/MTok = $${outputCost.toFixed(6)}`,
+      `Output: ${usage.completionTokens.toLocaleString()} tokens Ã— $${modelPricing.output}/MTok = $${outputCost.toFixed(6)}`,
     );
   }
 

@@ -1,4 +1,4 @@
-import { ChunkWithoutID } from "../../index.js";
+﻿import { ChunkWithoutID } from "../../index.js";
 import { countTokensAsync } from "../../llm/countTokens.js";
 
 export async function* basicChunker(

@@ -1,4 +1,4 @@
-import { Box, Text, useInput } from "ink";
+﻿import { Box, Text, useInput } from "ink";
 import React, { useState } from "react";
 
 import { defaultBoxStyles } from "../styles.js";
@@ -119,7 +119,7 @@ export const QuizPrompt: React.FC<QuizPromptProps> = ({
             return (
               <Box key={index}>
                 <Text color={isSelected ? "cyan" : "white"} bold={isSelected}>
-                  {isSelected ? "❯ " : "  "}
+                  {isSelected ? "â¯ " : "  "}
                   {option}
                 </Text>
               </Box>
@@ -136,9 +136,9 @@ export const QuizPrompt: React.FC<QuizPromptProps> = ({
       {isCustomMode && (
         <Box marginLeft={2} flexDirection="column">
           <Box>
-            <Text color="cyan">❯ </Text>
+            <Text color="cyan">â¯ </Text>
             <Text>{customInput}</Text>
-            <Text color="gray">▊</Text>
+            <Text color="gray">â–Š</Text>
           </Box>
           {defaultAnswer && !customInput && (
             <Box marginTop={1}>
@@ -153,7 +153,7 @@ export const QuizPrompt: React.FC<QuizPromptProps> = ({
       <Box marginTop={1}>
         <Text color="gray" dimColor>
           {hasOptions && !isCustomMode
-            ? "↑/↓ navigate, Enter select"
+            ? "â†‘/â†“ navigate, Enter select"
             : "Type answer, Enter submit"}
         </Text>
       </Box>

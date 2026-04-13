@@ -1,4 +1,4 @@
-import { afterEach, beforeEach, describe, expect, it } from "vitest";
+﻿import { afterEach, beforeEach, describe, expect, it } from "vitest";
 
 import { CONTINUE_ASCII_ART, getDisplayableAsciiArt } from "./asciiArt.js";
 
@@ -33,7 +33,7 @@ describe("asciiArt", () => {
 
       const result = getDisplayableAsciiArt();
 
-      expect(result).toContain("██████╗");
+      expect(result).toContain("â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—");
 
       expect(result).not.toBe(CONTINUE_ASCII_ART);
       // Should be much shorter than the full ASCII art
@@ -46,7 +46,7 @@ describe("asciiArt", () => {
 
       const result = getDisplayableAsciiArt();
 
-      expect(result).toContain("██████╗");
+      expect(result).toContain("â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—");
 
       expect(result).not.toBe(CONTINUE_ASCII_ART);
     });

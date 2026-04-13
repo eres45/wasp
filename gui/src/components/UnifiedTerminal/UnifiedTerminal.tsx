@@ -1,4 +1,4 @@
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+﻿import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Anser, { AnserJsonEntry } from "anser";
 import { ToolCallState } from "core";
 import { escapeCarriageReturn } from "escape-carriage";
@@ -18,7 +18,7 @@ const blinkCursor = keyframes`
 
 const BlinkingCursor = styled.span`
   &::after {
-    content: "█";
+    content: "â–ˆ";
     animation: ${blinkCursor} 1s infinite;
     color: var(--foreground);
   }

@@ -1,4 +1,4 @@
-import { ChatBubbleLeftIcon } from "@heroicons/react/24/outline";
+﻿import { ChatBubbleLeftIcon } from "@heroicons/react/24/outline";
 import { NodeViewProps } from "@tiptap/react";
 import { useContext } from "react";
 import { IdeMessengerContext } from "../../../../../context/IdeMessenger";

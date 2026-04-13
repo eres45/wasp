@@ -1,4 +1,4 @@
-import { jest } from "@jest/globals";
+﻿import { jest } from "@jest/globals";
 
 import { IndexTag } from "../..";
 import { IContinueServerClient } from "../../continueServer/interface";

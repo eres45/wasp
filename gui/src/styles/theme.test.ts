@@ -1,4 +1,4 @@
-import { getRecursiveVar } from "./theme";
+﻿import { getRecursiveVar } from "./theme";
 
 test("getRecursiveVar returns single var with default for one variable", () => {
   const vars = ["--test-var"];

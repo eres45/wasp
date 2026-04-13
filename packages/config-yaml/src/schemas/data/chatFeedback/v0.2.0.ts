@@ -1,4 +1,4 @@
-import { chatFeedbackEventAllSchema } from "./index.js";
+﻿import { chatFeedbackEventAllSchema } from "./index.js";
 
 export const chatFeedbackEventSchema_0_2_0 = chatFeedbackEventAllSchema.pick({
   // base

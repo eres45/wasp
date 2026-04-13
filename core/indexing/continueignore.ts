@@ -1,4 +1,4 @@
-import fs from "fs";
+﻿import fs from "fs";
 import { IDE } from "..";
 import { getGlobalContinueIgnorePath } from "../util/paths";
 import { gitIgArrayFromFile } from "./ignore";

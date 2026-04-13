@@ -1,4 +1,4 @@
-/*
+﻿/*
   Formats the output of a grep search to reduce unnecessary indentation, lines, etc
   Assumes a command with these params
     ripgrep -i --ignore-file .continueignore --ignore-file .gitignore -C 2 --heading -m 100 -e <query> .

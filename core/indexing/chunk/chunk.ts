@@ -1,4 +1,4 @@
-import { Chunk, ChunkWithoutID } from "../../index.js";
+﻿import { Chunk, ChunkWithoutID } from "../../index.js";
 import { countTokensAsync } from "../../llm/countTokens.js";
 import { supportedLanguages } from "../../util/treeSitter.js";
 import { getUriFileExtension, getUriPathBasename } from "../../util/uri.js";

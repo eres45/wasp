@@ -1,4 +1,4 @@
-import fetch from "node-fetch";
+﻿import fetch from "node-fetch";
 
 import { afterAll, describe, expect, test } from "vitest";
 import { contextProviderClassFromName } from ".";

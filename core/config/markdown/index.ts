@@ -1,1 +1,1 @@
-export * from "./loadMarkdownRules";
+﻿export * from "./loadMarkdownRules";

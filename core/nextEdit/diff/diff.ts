@@ -1,4 +1,4 @@
-import { Position } from "shiki";
+﻿import { Position } from "shiki";
 import { DiffLine } from "../..";
 import { myersDiff } from "../../diff/myers";
 

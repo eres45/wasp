@@ -1,4 +1,4 @@
-/*
+﻿/*
     This is a patch for outputing markdown code that contains codeblocks
 
     It notices markdown blocks (including GitHub-specific variants),

@@ -1,4 +1,4 @@
-import { Chunk } from "../../../";
+﻿import { Chunk } from "../../../";
 import { Telemetry } from "../../../util/posthog";
 import { findUriInDirs } from "../../../util/uri";
 import { requestFilesFromRepoMap } from "../repoMapRequest";

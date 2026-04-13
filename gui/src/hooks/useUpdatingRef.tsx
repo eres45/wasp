@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+﻿import { useEffect, useRef } from "react";
 
 function useUpdatingRef<T>(value: T, deps: any[] = []) {
   const ref = useRef(value);

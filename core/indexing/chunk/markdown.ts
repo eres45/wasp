@@ -1,4 +1,4 @@
-import { ChunkWithoutID } from "../../";
+﻿import { ChunkWithoutID } from "../../";
 import { countTokens } from "../../llm/countTokens";
 
 import { basicChunker } from "./basic";
@@ -48,7 +48,7 @@ export function cleanHeader(header: string | undefined): string | undefined {
   // Remove all special characters except alphanumeric, hyphen, space, and underscore
   header = header
     .replace(/[^\w-\s]/g, "")
-    .replace("¶", "")
+    .replace("Â¶", "")
     .trim();
 
   return header;

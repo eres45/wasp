@@ -1,4 +1,4 @@
-import {
+﻿import {
   decodePackageIdentifier,
   mergeUnrolledAssistants,
   ModelRole,

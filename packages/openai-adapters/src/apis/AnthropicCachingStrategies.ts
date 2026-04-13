@@ -1,4 +1,4 @@
-import { MessageCreateParams } from "@anthropic-ai/sdk/resources";
+﻿import { MessageCreateParams } from "@anthropic-ai/sdk/resources";
 
 import { addCacheControlToLastTwoUserMessages } from "./AnthropicUtils.js";
 

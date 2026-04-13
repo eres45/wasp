@@ -1,4 +1,4 @@
-import * as JSONC from "comment-json";
+﻿import * as JSONC from "comment-json";
 import { ContinueRcJson, FileType, IDE } from "../..";
 import { joinPathsToUri } from "../../util/uri";
 

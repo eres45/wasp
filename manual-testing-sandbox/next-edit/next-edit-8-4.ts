@@ -1,4 +1,4 @@
-// User management system with mixed concerns and entangled logic
+﻿// User management system with mixed concerns and entangled logic
 // Difficulty: 4/5
 
 type UserStatus = "active" | "inactive" | "suspended" | "deleted";

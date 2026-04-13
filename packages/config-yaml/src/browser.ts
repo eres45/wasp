@@ -1,4 +1,4 @@
-// Browser-compatible exports (excludes RegistryClient which uses Node.js APIs)
+﻿// Browser-compatible exports (excludes RegistryClient which uses Node.js APIs)
 export * from "./converter.js";
 export * from "./interfaces/index.js";
 export * from "./interfaces/SecretResult.js";

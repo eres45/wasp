@@ -1,4 +1,4 @@
-import type { Session } from "core/index.js";
+﻿import type { Session } from "core/index.js";
 import { format, isThisWeek, isThisYear, isToday, isYesterday } from "date-fns";
 import { Box, Text, useInput } from "ink";
 import React, { useEffect, useMemo, useState } from "react";
@@ -133,19 +133,21 @@ export function SessionSelector({
           {sessions.length > displaySessions.length &&
             `(${selectedIndex + 1}/${sessions.length})`}
         </Text>
-        <Text color="gray">↑/↓ to navigate, Enter to select, Esc to exit</Text>
+        <Text color="gray">
+          â†‘/â†“ to navigate, Enter to select, Esc to exit
+        </Text>
         <Text> </Text>
 
         {hasMoreAbove && (
           <Text color="gray" italic>
-            ⬆ {scrollOffset} more sessions above...
+            â¬† {scrollOffset} more sessions above...
           </Text>
         )}
 
         {displaySessions.map((session, index) => {
           const globalIndex = index + scrollOffset;
           const isSelected = globalIndex === selectedIndex;
-          const indicator = isSelected ? "➤ " : "  ";
+          const indicator = isSelected ? "âž¤ " : "  ";
           const color = isSelected ? "blue" : "white";
 
           return (
@@ -171,7 +173,7 @@ export function SessionSelector({
 
         {hasMoreBelow && (
           <Text color="gray" italic>
-            ⬇ {sessions.length - scrollOffset - displaySessions.length} more
+            â¬‡ {sessions.length - scrollOffset - displaySessions.length} more
             sessions below...
           </Text>
         )}

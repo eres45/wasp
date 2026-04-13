@@ -1,4 +1,4 @@
-// A clean implementation of the price calculation utility
+﻿// A clean implementation of the price calculation utility
 // Solution for: next-edit-1-1.ts
 
 /**

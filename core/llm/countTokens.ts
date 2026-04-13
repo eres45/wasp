@@ -1,4 +1,4 @@
-import { Tiktoken, encodingForModel as _encodingForModel } from "js-tiktoken";
+﻿import { Tiktoken, encodingForModel as _encodingForModel } from "js-tiktoken";
 
 import {
   ChatMessage,

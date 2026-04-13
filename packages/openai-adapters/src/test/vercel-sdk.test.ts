@@ -1,4 +1,4 @@
-import * as dotenv from "dotenv";
+﻿import * as dotenv from "dotenv";
 import { vi } from "vitest";
 import { getLlmApi, testChat } from "./util.js";
 

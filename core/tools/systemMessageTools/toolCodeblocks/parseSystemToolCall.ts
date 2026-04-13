@@ -1,4 +1,4 @@
-import { ToolCallDelta } from "../../..";
+﻿import { ToolCallDelta } from "../../..";
 import { createDelta } from "../systemToolUtils";
 import { ToolCallParseState } from "../types";
 

@@ -1,4 +1,4 @@
-import { LineStream } from "../../../diff/util";
+﻿import { LineStream } from "../../../diff/util";
 
 import {
   collectAllLines,

@@ -1,4 +1,4 @@
-import { ToolImpl } from ".";
+﻿import { ToolImpl } from ".";
 import { loadMarkdownSkills } from "../../config/markdown/loadMarkdownSkills";
 import { ContinueError, ContinueErrorReason } from "../../util/errors";
 import { getStringArg } from "../parseArgs";

@@ -1,4 +1,4 @@
-import { SerializedContinueConfig } from "core";
+﻿import { SerializedContinueConfig } from "core";
 // import Mock from "core/llm/llms/Mock.js";
 import { FromIdeProtocol, ToIdeProtocol } from "core/protocol/index.js";
 import { IMessenger } from "core/protocol/messenger";

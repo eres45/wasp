@@ -1,4 +1,4 @@
-import { ConfigHandler } from "core/config/ConfigHandler";
+﻿import { ConfigHandler } from "core/config/ConfigHandler";
 import { applyCodeBlock } from "core/edit/lazy/applyCodeBlock";
 import { getUriPathBasename } from "core/util/uri";
 import * as vscode from "vscode";

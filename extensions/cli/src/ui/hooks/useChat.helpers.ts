@@ -1,4 +1,4 @@
-import * as path from "node:path";
+﻿import * as path from "node:path";
 
 import type { ChatHistoryItem } from "core/index.js";
 import { getLastNPathParts } from "core/util/uri.js";
@@ -317,18 +317,18 @@ async function handleRemoteApplyCommand(
 
       if (onShowStatusMessage) {
         onShowStatusMessage(
-          "✓ Successfully applied diff to local working tree",
+          "âœ“ Successfully applied diff to local working tree",
         );
       }
     } catch (gitError: any) {
       if (onShowStatusMessage) {
-        onShowStatusMessage(`✗ Failed to apply diff: ${gitError.message}`);
+        onShowStatusMessage(`âœ— Failed to apply diff: ${gitError.message}`);
       }
     }
   } catch (error: any) {
     logger.error("Failed to fetch diff from remote server:", error);
     if (onShowStatusMessage) {
-      onShowStatusMessage(`✗ Failed to fetch diff: ${error.message}`);
+      onShowStatusMessage(`âœ— Failed to fetch diff: ${error.message}`);
     }
   }
 }

@@ -1,4 +1,4 @@
-import { chatInteractionEventAllSchema } from "./index.js";
+﻿import { chatInteractionEventAllSchema } from "./index.js";
 
 export const chatInteractionEventSchema_0_2_0 =
   chatInteractionEventAllSchema.pick({

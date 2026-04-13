@@ -1,4 +1,4 @@
-import { Box } from "ink";
+﻿import { Box } from "ink";
 
 export const baseBoxStyles: React.ComponentProps<typeof Box> = {
   flexDirection: "column",

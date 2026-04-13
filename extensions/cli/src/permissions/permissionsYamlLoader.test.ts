@@ -1,4 +1,4 @@
-import {
+﻿import {
   parseToolPattern,
   yamlConfigToPolicies,
 } from "./permissionsYamlLoader.js";

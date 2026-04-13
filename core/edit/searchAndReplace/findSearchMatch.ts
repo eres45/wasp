@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Represents a basic match result with start and end character positions
  */
 interface BasicMatchResult {

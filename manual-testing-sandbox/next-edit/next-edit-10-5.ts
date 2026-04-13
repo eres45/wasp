@@ -1,4 +1,4 @@
-// A messy project management application with tangled dependencies and responsibilities
+﻿// A messy project management application with tangled dependencies and responsibilities
 // Difficulty: 5/5
 
 // Global state

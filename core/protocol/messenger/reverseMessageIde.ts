@@ -1,4 +1,4 @@
-import { IDE } from "../../index";
+﻿import { IDE } from "../../index";
 import { ToIdeFromWebviewOrCoreProtocol } from "../ide";
 
 import { Message } from ".";

@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from "uuid";
+﻿import { v4 as uuidv4 } from "uuid";
 import { ConfigHandler } from "../config/ConfigHandler.js";
 import { ChatMessage, IDE, ILLM, Range, RangeInFile } from "../index.js";
 import OpenAI from "../llm/llms/OpenAI.js";

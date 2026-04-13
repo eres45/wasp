@@ -1,4 +1,4 @@
-import ignore from "ignore";
+﻿import ignore from "ignore";
 
 import type { FileType, IDE, SlashCommand } from "../../..";
 import { getGlobalContinueIgArray } from "../../../indexing/continueignore";

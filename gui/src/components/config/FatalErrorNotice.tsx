@@ -1,4 +1,4 @@
-import { useContext, useMemo } from "react";
+﻿import { useContext, useMemo } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/Auth";
 import { IdeMessengerContext } from "../../context/IdeMessenger";
@@ -45,7 +45,7 @@ export const FatalErrorIndicator = () => {
           onClick={() => {
             ideMessenger.post(
               "openUrl",
-              "https://docs.continue.dev/troubleshooting",
+              "https://docs.waspcode.dev/troubleshooting",
             );
           }}
           className="cursor-pointer underline"

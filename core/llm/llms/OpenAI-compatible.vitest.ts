@@ -1,4 +1,4 @@
-import { createOpenAISubclassTests } from "./test-utils/openai-test-utils.js";
+﻿import { createOpenAISubclassTests } from "./test-utils/openai-test-utils.js";
 
 // Import all OpenAI-compatible providers
 import OpenAI from "./OpenAI.js";

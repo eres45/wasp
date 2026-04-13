@@ -1,4 +1,4 @@
-interface CustomGitlabIconProps extends React.SVGProps<SVGSVGElement> {
+﻿interface CustomGitlabIconProps extends React.SVGProps<SVGSVGElement> {
   size?: number;
 }
 

@@ -1,4 +1,4 @@
-import {
+﻿import {
   extractBase64FromDataUrl as extractBase64FromDataUrlFromAdapter,
   parseDataUrl as parseDataUrlFromAdapter,
 } from "@continuedev/openai-adapters";

@@ -1,4 +1,4 @@
-import { useStdout } from "ink";
+﻿import { useStdout } from "ink";
 import { useEffect, useState } from "react";
 
 const DEFAULT_ROWS = 24;

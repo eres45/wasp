@@ -1,4 +1,4 @@
-export class RawImage {
+﻿export class RawImage {
   /**
    * Helper method for reading an image from a variety of input types.
    * @param {RawImage|string|URL} input
@@ -123,3 +123,4 @@ export class RawImage {
   toSharp(): any;
 }
 //# sourceMappingURL=image.d.ts.map
+

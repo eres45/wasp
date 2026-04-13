@@ -1,4 +1,4 @@
-import fs from "fs/promises";
+﻿import fs from "fs/promises";
 import os from "os";
 import path from "path";
 
@@ -244,7 +244,7 @@ export async function pollUntilIdle(
         }
       }
     } catch {
-      // server not ready yet — retry
+      // server not ready yet â€” retry
     }
     await new Promise((r) => setTimeout(r, interval));
   }

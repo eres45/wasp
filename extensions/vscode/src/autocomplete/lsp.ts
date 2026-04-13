@@ -1,4 +1,4 @@
-import { AutocompleteLanguageInfo } from "core/autocomplete/constants/AutocompleteLanguageInfo";
+﻿import { AutocompleteLanguageInfo } from "core/autocomplete/constants/AutocompleteLanguageInfo";
 import {
   AutocompleteCodeSnippet,
   AutocompleteSnippetType,

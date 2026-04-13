@@ -1,4 +1,4 @@
-import {
+﻿import {
   ConfigValidationError,
   markdownToRule,
 } from "@continuedev/config-yaml";

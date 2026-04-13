@@ -1,4 +1,4 @@
-import { NextEditProvider } from "core/nextEdit/NextEditProvider";
+﻿import { NextEditProvider } from "core/nextEdit/NextEditProvider";
 import { NextEditOutcome } from "core/nextEdit/types";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import * as vscode from "vscode";
@@ -307,16 +307,16 @@ describe("JumpManager", () => {
       // Should set context
       expect(vscode.commands.executeCommand).toHaveBeenCalledWith(
         "setContext",
-        "continue.jumpDecorationVisible",
+        "waspcode.jumpDecorationVisible",
         true,
       );
       // Should register key listeners
       expect(vscode.commands.registerCommand).toHaveBeenCalledWith(
-        "continue.acceptJump",
+        "waspcode.acceptJump",
         expect.any(Function),
       );
       expect(vscode.commands.registerCommand).toHaveBeenCalledWith(
-        "continue.rejectJump",
+        "waspcode.rejectJump",
         expect.any(Function),
       );
     });
@@ -361,7 +361,7 @@ describe("JumpManager", () => {
       // Find the acceptJump command handler.
       const commandArgs = vi
         .mocked(vscode.commands.registerCommand)
-        .mock.calls.find((call: any) => call[0] === "continue.acceptJump");
+        .mock.calls.find((call: any) => call[0] === "waspcode.acceptJump");
       expect(commandArgs).toBeDefined();
       const acceptJumpHandler = commandArgs![1];
 
@@ -395,7 +395,7 @@ describe("JumpManager", () => {
       // Find the command handler
       const commandArgs = vi
         .mocked(vscode.commands.registerCommand)
-        .mock.calls.find((call: any) => call[0] === "continue.acceptJump");
+        .mock.calls.find((call: any) => call[0] === "waspcode.acceptJump");
       expect(commandArgs).toBeDefined();
       const acceptJumpHandler = commandArgs![1];
 
@@ -412,7 +412,7 @@ describe("JumpManager", () => {
       // Expect decoration to be cleared
       expect(vscode.commands.executeCommand).toHaveBeenCalledWith(
         "setContext",
-        "continue.jumpDecorationVisible",
+        "waspcode.jumpDecorationVisible",
         false,
       );
       // Expect inline suggest to be triggered
@@ -443,7 +443,7 @@ describe("JumpManager", () => {
       // Find the command handler
       const commandArgs = vi
         .mocked(vscode.commands.registerCommand)
-        .mock.calls.find((call: any) => call[0] === "continue.rejectJump");
+        .mock.calls.find((call: any) => call[0] === "waspcode.rejectJump");
       expect(commandArgs).toBeDefined();
       const rejectJumpHandler = commandArgs![1];
       expect(rejectJumpHandler).toBeDefined();
@@ -460,7 +460,7 @@ describe("JumpManager", () => {
       // Expect decoration to be cleared
       expect(vscode.commands.executeCommand).toHaveBeenCalledWith(
         "setContext",
-        "continue.jumpDecorationVisible",
+        "waspcode.jumpDecorationVisible",
         false,
       );
     });
@@ -499,7 +499,7 @@ describe("JumpManager", () => {
 
       // Should trigger reject jump
       expect(vscode.commands.executeCommand).toHaveBeenCalledWith(
-        "continue.rejectJump",
+        "waspcode.rejectJump",
       );
     });
   });
@@ -543,7 +543,7 @@ describe("JumpManager", () => {
       // We need to manually implement what the callback would do
       if ((jumpManager as any)._completionAfterJump) {
         vscode.commands.executeCommand(
-          "continue.showNextEditAfterJump",
+          "waspcode.showNextEditAfterJump",
           (jumpManager as any)._completionAfterJump,
         );
         (jumpManager as any)._completionAfterJump = null;
@@ -551,7 +551,7 @@ describe("JumpManager", () => {
 
       // Verify that the command was called with the completion data
       expect(vscode.commands.executeCommand).toHaveBeenCalledWith(
-        "continue.showNextEditAfterJump",
+        "waspcode.showNextEditAfterJump",
         completionData,
       );
 
@@ -588,7 +588,7 @@ describe("JumpManager", () => {
       // Expect context to be reset
       expect(vscode.commands.executeCommand).toHaveBeenCalledWith(
         "setContext",
-        "continue.jumpDecorationVisible",
+        "waspcode.jumpDecorationVisible",
         false,
       );
     });

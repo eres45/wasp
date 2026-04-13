@@ -1,4 +1,4 @@
-// A messy and tightly coupled event processing system with poor separation of concerns
+﻿// A messy and tightly coupled event processing system with poor separation of concerns
 // Difficulty: 4
 
 type EventType = "click" | "hover" | "scroll" | "keypress" | "resize" | "load";

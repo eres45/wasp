@@ -1,4 +1,4 @@
-import {
+﻿import {
   AssistantUnrolled,
   ConfigResult,
   FQSN,
@@ -20,7 +20,7 @@ export class ContinueHubClient implements IContinueHubClient {
 
   constructor(options: ContinueHubClientOptions) {
     this.apiKey = options.apiKey;
-    this.apiBase = options.apiBase ?? "https://api.continue.dev";
+    this.apiBase = options.apiBase ?? "https://api.waspcode.dev";
     this.fetchOptions = options.fetchOptions;
   }
 

@@ -1,4 +1,4 @@
-import { nextEditEventAllSchema } from "./index.js";
+﻿import { nextEditEventAllSchema } from "./index.js";
 
 export const nextEditEventSchema_0_2_0 = nextEditEventAllSchema.pick({
   // base

@@ -1,4 +1,4 @@
-import { ListenableGenerator } from "./ListenableGenerator";
+﻿import { ListenableGenerator } from "./ListenableGenerator";
 
 export class GeneratorReuseManager {
   currentGenerator: ListenableGenerator<string> | undefined;

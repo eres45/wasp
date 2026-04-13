@@ -1,4 +1,4 @@
-import * as fs from "fs";
+﻿import * as fs from "fs";
 
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 

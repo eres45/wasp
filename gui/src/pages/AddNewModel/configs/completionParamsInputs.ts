@@ -1,4 +1,4 @@
-import { InputDescriptor } from "./providers";
+﻿import { InputDescriptor } from "./providers";
 
 export const completionParamsInputs: Record<string, InputDescriptor> = {
   contextLength: {

@@ -1,4 +1,4 @@
-import chalk from "chalk";
+﻿import chalk from "chalk";
 
 // Track if we're in headless mode (default to false)
 let isHeadlessMode = false;

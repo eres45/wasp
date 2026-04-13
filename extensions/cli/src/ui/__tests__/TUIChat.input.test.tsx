@@ -1,4 +1,4 @@
-import { renderInMode, testBothModes } from "./TUIChat.dualModeHelper.js";
+﻿import { renderInMode, testBothModes } from "./TUIChat.dualModeHelper.js";
 import { waitForNextRender } from "./TUIChat.testHelper.js";
 
 describe("TUIChat - User Input Tests", () => {

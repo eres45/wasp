@@ -1,4 +1,4 @@
-import type { PermissionMode } from "../../permissions/types.js";
+﻿import type { PermissionMode } from "../../permissions/types.js";
 import { backgroundSignalManager } from "../../util/backgroundSignalManager.js";
 import {
   checkClipboardForImage,

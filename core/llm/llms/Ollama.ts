@@ -1,4 +1,4 @@
-import { Mutex } from "async-mutex";
+﻿import { Mutex } from "async-mutex";
 import { JSONSchema7, JSONSchema7Object } from "json-schema";
 import { v4 as uuidv4 } from "uuid";
 
@@ -468,7 +468,7 @@ class Ollama extends BaseLLM implements ModelInstaller {
   /**
    * Reorder messages so that system messages never appear directly after tool
    * messages. Some Ollama models (Mistral, Ministral) reject the sequence
-   * `tool → system` with "Unexpected role 'system' after role 'tool'".
+   * `tool â†’ system` with "Unexpected role 'system' after role 'tool'".
    * This moves such system messages to just before the preceding
    * assistant+tool block.
    */
@@ -491,7 +491,7 @@ class Ollama extends BaseLLM implements ModelInstaller {
 
         const [sysMsg] = result.splice(i, 1);
         result.splice(insertIdx, 0, sysMsg);
-        // Don't increment i — re-check current position after splice
+        // Don't increment i â€” re-check current position after splice
       }
     }
 

@@ -1,4 +1,4 @@
-import { Key, TextEditor, WebElement } from "vscode-extension-tester";
+﻿import { Key, TextEditor, WebElement } from "vscode-extension-tester";
 
 export class KeyboardShortcutsActions {
   /**

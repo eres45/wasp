@@ -1,4 +1,4 @@
-/* eslint-disable max-lines-per-function */
+﻿/* eslint-disable max-lines-per-function */
 /* lint is not useful for test classes */
 import { jest } from "@jest/globals";
 import { execSync } from "node:child_process";

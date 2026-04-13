@@ -1,4 +1,4 @@
-import { PlatformSecretStore, SecretStore } from "../interfaces/index.js";
+﻿import { PlatformSecretStore, SecretStore } from "../interfaces/index.js";
 import {
   SecretLocation,
   encodeSecretLocation,

@@ -1,4 +1,4 @@
-import { streamLines } from "../../../diff/util";
+﻿import { streamLines } from "../../../diff/util";
 import { HelperVars } from "../../util/HelperVars";
 
 import { stopAtStartOf, stopAtStopTokens } from "./charStream";

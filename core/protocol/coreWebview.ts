@@ -1,4 +1,4 @@
-import { ToCoreFromIdeOrWebviewProtocol } from "./core.js";
+﻿import { ToCoreFromIdeOrWebviewProtocol } from "./core.js";
 import { ToWebviewFromIdeOrCoreProtocol } from "./webview.js";
 
 export type ToCoreFromWebviewProtocol = ToCoreFromIdeOrWebviewProtocol & {

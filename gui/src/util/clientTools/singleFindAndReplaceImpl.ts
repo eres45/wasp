@@ -1,4 +1,4 @@
-import { validateSingleEdit } from "core/edit/searchAndReplace/findAndReplaceUtils";
+﻿import { validateSingleEdit } from "core/edit/searchAndReplace/findAndReplaceUtils";
 import { executeFindAndReplace } from "core/edit/searchAndReplace/performReplace";
 import { validateSearchAndReplaceFilepath } from "core/edit/searchAndReplace/validateArgs";
 import { v4 as uuid } from "uuid";

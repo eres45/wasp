@@ -1,4 +1,4 @@
-import chalk from "chalk";
+﻿import chalk from "chalk";
 
 import { login as workosLogin } from "../auth/workos.js";
 import { gracefulExit } from "../util/exit.js";
@@ -6,7 +6,7 @@ import { gracefulExit } from "../util/exit.js";
 import { chat } from "./chat.js";
 
 export async function login() {
-  console.info(chalk.yellow("Logging in to Continue..."));
+  console.info(chalk.yellow("Logging in to waspcode..."));
 
   try {
     await workosLogin();

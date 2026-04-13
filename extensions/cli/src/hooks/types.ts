@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Claude Code-compatible hooks system for Continue CLI.
  *
  * These types match the exact schemas from Claude Code so that any hook
@@ -45,7 +45,7 @@ interface HookHandlerBase {
   once?: boolean;
 }
 
-/** Command hook handler — runs a shell command */
+/** Command hook handler â€” runs a shell command */
 export interface CommandHookHandler extends HookHandlerBase {
   type: "command";
   /** Shell command to execute */
@@ -54,7 +54,7 @@ export interface CommandHookHandler extends HookHandlerBase {
   async?: boolean;
 }
 
-/** HTTP hook handler — sends a POST request */
+/** HTTP hook handler â€” sends a POST request */
 export interface HttpHookHandler extends HookHandlerBase {
   type: "http";
   /** URL to send the POST request to */
@@ -65,7 +65,7 @@ export interface HttpHookHandler extends HookHandlerBase {
   allowedEnvVars?: string[];
 }
 
-/** Prompt hook handler — single-turn LLM evaluation */
+/** Prompt hook handler â€” single-turn LLM evaluation */
 export interface PromptHookHandler extends HookHandlerBase {
   type: "prompt";
   /** Prompt text. Use $ARGUMENTS as a placeholder for hook input JSON */
@@ -74,7 +74,7 @@ export interface PromptHookHandler extends HookHandlerBase {
   model?: string;
 }
 
-/** Agent hook handler — multi-turn subagent with tool access */
+/** Agent hook handler â€” multi-turn subagent with tool access */
 export interface AgentHookHandler extends HookHandlerBase {
   type: "agent";
   /** Prompt text. Use $ARGUMENTS as a placeholder for hook input JSON */
@@ -110,7 +110,7 @@ export interface HookSettingsFile {
 }
 
 // ---------------------------------------------------------------------------
-// Hook input — JSON sent to hooks on stdin / as POST body
+// Hook input â€” JSON sent to hooks on stdin / as POST body
 // ---------------------------------------------------------------------------
 
 /** Common fields included in every hook event input */
@@ -262,7 +262,7 @@ export type HookInput =
   | WorktreeRemoveInput;
 
 // ---------------------------------------------------------------------------
-// Hook output — JSON returned by hooks on stdout / response body
+// Hook output â€” JSON returned by hooks on stdout / response body
 // ---------------------------------------------------------------------------
 
 /** PreToolUse-specific output */
@@ -412,7 +412,7 @@ export const MATCHER_FIELD_MAP: Partial<Record<HookEventName, string>> = {
 };
 
 /**
- * Events that don't support matchers — they always fire on every occurrence.
+ * Events that don't support matchers â€” they always fire on every occurrence.
  */
 export const NO_MATCHER_EVENTS: HookEventName[] = [
   "UserPromptSubmit",

@@ -1,4 +1,4 @@
-import { vi } from "vitest";
+﻿import { vi } from "vitest";
 
 export interface UITestContext {
   mockUseService: ReturnType<typeof vi.fn>;

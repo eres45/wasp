@@ -1,4 +1,4 @@
-import { describe, expect, it, test } from "vitest";
+﻿import { describe, expect, it, test } from "vitest";
 import { autodetectTemplateType, modelSupportsNextEdit } from "./autodetect";
 
 test("autodetectTemplateType returns 'codellama-70b' for CodeLlama 70B models", () => {

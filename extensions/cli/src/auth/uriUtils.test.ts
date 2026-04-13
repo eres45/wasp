@@ -1,4 +1,4 @@
-import { platform } from "os";
+﻿import { platform } from "os";
 import { normalize, resolve } from "path";
 
 import { describe, expect, it } from "vitest";
@@ -49,11 +49,11 @@ describe("uriUtils", () => {
     });
 
     it("should handle paths with Unicode characters", () => {
-      const unicodePath = "/home/user/文档/файл.txt";
+      const unicodePath = "/home/user/æ–‡æ¡£/Ñ„Ð°Ð¹Ð».txt";
       const result = pathToUri(unicodePath);
       expect(result).toMatch(/^file:\/\/\//);
       // Should handle Unicode properly
-      expect(result).toContain("%E6%96%87%E6%A1%A3"); // 文档 encoded
+      expect(result).toContain("%E6%96%87%E6%A1%A3"); // æ–‡æ¡£ encoded
     });
 
     it("should normalize mixed path separators", () => {
@@ -115,8 +115,8 @@ describe("uriUtils", () => {
       const result = uriToPath(uri);
       // Note: This test may fail on Windows if the URI lacks a drive letter
       if (result) {
-        expect(result).toContain("文档");
-        expect(result).toContain("文件.txt");
+        expect(result).toContain("æ–‡æ¡£");
+        expect(result).toContain("æ–‡ä»¶.txt");
       }
     });
 
@@ -171,7 +171,7 @@ describe("uriUtils", () => {
       "./relative/path/file.txt", // Relative
       "../parent/file.txt", // Parent relative
       "/tmp/file with spaces.txt", // Spaces
-      "/home/用户/文档/文件.txt", // Unicode
+      "/home/ç”¨æˆ·/æ–‡æ¡£/æ–‡ä»¶.txt", // Unicode
     ];
 
     // Add Windows-specific paths if running on Windows

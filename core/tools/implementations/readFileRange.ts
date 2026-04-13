@@ -1,4 +1,4 @@
-import { resolveInputPath } from "../../util/pathResolver";
+﻿import { resolveInputPath } from "../../util/pathResolver";
 import { getUriPathBasename } from "../../util/uri";
 
 import { ToolImpl } from ".";

@@ -1,4 +1,4 @@
-import { Box, Text } from "ink";
+﻿import { Box, Text } from "ink";
 import React, { useEffect, useState } from "react";
 
 import { LoadingAnimation } from "../../ui/LoadingAnimation.js";
@@ -20,7 +20,7 @@ interface ReviewProgressProps {
 function StatusIndicator({ status }: { status: ReviewState["status"] }) {
   switch (status) {
     case "pending":
-      return <Text dimColor>{"◌ Pending"}</Text>;
+      return <Text dimColor>{"â—Œ Pending"}</Text>;
     case "running":
       return (
         <Box>
@@ -29,11 +29,11 @@ function StatusIndicator({ status }: { status: ReviewState["status"] }) {
         </Box>
       );
     case "pass":
-      return <Text color="green">{"✓ Pass"}</Text>;
+      return <Text color="green">{"âœ“ Pass"}</Text>;
     case "fail":
-      return <Text color="red">{"✗ Fail"}</Text>;
+      return <Text color="red">{"âœ— Fail"}</Text>;
     case "error":
-      return <Text color="red">{"✗ Error"}</Text>;
+      return <Text color="red">{"âœ— Error"}</Text>;
   }
 }
 
@@ -47,7 +47,7 @@ function ElapsedTime({ check }: { check: ReviewState }) {
   }, [check.status]);
 
   if (check.status === "pending") {
-    return <Text dimColor>{"–"}</Text>;
+    return <Text dimColor>{"â€“"}</Text>;
   }
 
   const seconds =
@@ -75,12 +75,12 @@ export const ReviewProgress: React.FC<ReviewProgressProps> = ({
         <Text bold>cn review</Text>
         {baseBranch ? (
           <>
-            <Text dimColor>─</Text>
+            <Text dimColor>â”€</Text>
             <Text>
               {checks.length} review{checks.length === 1 ? "" : "s"} against{" "}
               {baseBranch}
             </Text>
-            <Text dimColor>─</Text>
+            <Text dimColor>â”€</Text>
             <Text>
               {changedFileCount} changed file
               {changedFileCount === 1 ? "" : "s"}
@@ -106,12 +106,12 @@ export const ReviewProgress: React.FC<ReviewProgressProps> = ({
           </Text>
         </Box>
 
-        <Text dimColor>{"─".repeat(COL_NAME + COL_STATUS + 6)}</Text>
+        <Text dimColor>{"â”€".repeat(COL_NAME + COL_STATUS + 6)}</Text>
 
         {loading && checks.length === 0 ? (
           <Box>
             <LoadingAnimation color="cyan" />
-            <Text dimColor>{" Loading reviews…"}</Text>
+            <Text dimColor>{" Loading reviewsâ€¦"}</Text>
           </Box>
         ) : (
           checks.map((check, i) => (

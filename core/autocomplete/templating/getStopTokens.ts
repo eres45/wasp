@@ -1,4 +1,4 @@
-import { CompletionOptions } from "../..";
+﻿import { CompletionOptions } from "../..";
 import { AutocompleteLanguageInfo } from "../constants/AutocompleteLanguageInfo";
 
 const DOUBLE_NEWLINE = "\n\n";

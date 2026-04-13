@@ -1,4 +1,4 @@
-import { SlashCommandDescWithSource } from "core";
+﻿import { SlashCommandDescWithSource } from "core";
 import { sortCommandsByBookmarkStatus } from "../utils";
 
 describe("sortCommandsByBookmarkStatus", () => {

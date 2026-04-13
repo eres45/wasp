@@ -1,4 +1,4 @@
-export interface HubSessionInfo {
+﻿export interface HubSessionInfo {
   AUTH_TYPE: AuthType.WorkOsProd | AuthType.WorkOsStaging;
   accessToken: string;
   account: {

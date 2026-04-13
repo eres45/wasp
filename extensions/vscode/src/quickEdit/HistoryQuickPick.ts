@@ -1,4 +1,4 @@
-import { QuickPickItem, window, ExtensionContext } from "vscode";
+﻿import { QuickPickItem, window, ExtensionContext } from "vscode";
 
 const HISTORY_KEY = "quickEditHistory";
 const MAX_HISTORY_LENGTH = 50;

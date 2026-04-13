@@ -1,4 +1,4 @@
-import { Position, RangeInFileWithNextEditInfo } from "../..";
+﻿import { Position, RangeInFileWithNextEditInfo } from "../..";
 import {
   BeforeAfterDiff,
   DiffFormatType,

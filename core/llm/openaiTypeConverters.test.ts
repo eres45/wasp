@@ -1,4 +1,4 @@
-import { toResponsesInput, isItemType } from "./openaiTypeConverters";
+﻿import { toResponsesInput, isItemType } from "./openaiTypeConverters";
 import { ChatMessage } from "..";
 import type {
   EasyInputMessage,
@@ -212,7 +212,7 @@ describe("openaiTypeConverters", () => {
 
         const result = toResponsesInput(messages);
 
-        // Orphaned — no function_call with call_id "call_abc123" exists
+        // Orphaned â€” no function_call with call_id "call_abc123" exists
         const outputs = getFunctionCallOutputs(result);
         expect(outputs.length).toBe(0);
       });
@@ -496,7 +496,7 @@ describe("openaiTypeConverters", () => {
             content: "",
             reasoning_details: [
               { type: "reasoning_id", id: "rs_001" },
-              // No encrypted_content — will be removed
+              // No encrypted_content â€” will be removed
             ],
             metadata: { reasoningId: "rs_001" },
           } as ChatMessage,
@@ -542,14 +542,14 @@ describe("openaiTypeConverters", () => {
 
       it("should strip msg_ id from message after removed reasoning", () => {
         // When reasoning is removed, a following message item's msg_ ID
-        // also references that reasoning — must be stripped too.
+        // also references that reasoning â€” must be stripped too.
         const messages: ChatMessage[] = [
           {
             role: "thinking",
             content: "",
             reasoning_details: [
               { type: "reasoning_id", id: "rs_001" },
-              // No encrypted_content — will be removed
+              // No encrypted_content â€” will be removed
             ],
             metadata: { reasoningId: "rs_001" },
           } as ChatMessage,
@@ -633,7 +633,7 @@ describe("openaiTypeConverters", () => {
             ],
             metadata: { reasoningId: "rs_001" },
           } as ChatMessage,
-          // No assistant/function_call follows — interrupted conversation
+          // No assistant/function_call follows â€” interrupted conversation
         ];
 
         const result = toResponsesInput(messages);

@@ -1,4 +1,4 @@
-import fs from "fs";
+﻿import fs from "fs";
 import path from "path";
 
 // Sets up the GLOBAL directory for testing - equivalent to ~/.continue

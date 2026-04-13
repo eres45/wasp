@@ -1,4 +1,4 @@
-import { isAbortError } from "../../util/isAbortError.js";
+﻿import { isAbortError } from "../../util/isAbortError.js";
 
 /**
  * Configuration options for the retry decorator
@@ -166,7 +166,7 @@ function calculateDelay(
       }
 
       // Apply small jitter to spread requests, then respect maxDelay as hard limit
-      const jitterMultiplier = 1 + (Math.random() * 0.1 - 0.05); // Small jitter ±5%
+      const jitterMultiplier = 1 + (Math.random() * 0.1 - 0.05); // Small jitter Â±5%
       const jitteredDelay = delayMs * jitterMultiplier;
       return Math.max(0, Math.floor(Math.min(jitteredDelay, maxDelay)));
     }

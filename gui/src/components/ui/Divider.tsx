@@ -1,4 +1,4 @@
-interface DividerProps {
+﻿interface DividerProps {
   className?: string;
 }
 

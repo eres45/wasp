@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Global configuration for tools system.
  * This stores command-line flags that affect tool availability.
  */

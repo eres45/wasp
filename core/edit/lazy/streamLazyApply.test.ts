@@ -1,4 +1,4 @@
-import { streamLazyApply } from "./streamLazyApply";
+﻿import { streamLazyApply } from "./streamLazyApply";
 
 // Mock LLM for testing
 class MockLLM {
@@ -15,9 +15,9 @@ class MockLLM {
       "",
       "```",
       ".",
-      "├── src/",
-      "│   └── main.js",
-      "└── package.json",
+      "â”œâ”€â”€ src/",
+      "â”‚   â””â”€â”€ main.js",
+      "â””â”€â”€ package.json",
       "```",
       "```",
     ];
@@ -152,10 +152,10 @@ class MockRegularMarkdownLLM {
       "## File Structure",
       "```",
       "debug-test-folder/",
-      "├── AdvancedPage.tsx",
-      "├── Calculator.java",
-      "├── Dockerfile",
-      "└── test.ts",
+      "â”œâ”€â”€ AdvancedPage.tsx",
+      "â”œâ”€â”€ Calculator.java",
+      "â”œâ”€â”€ Dockerfile",
+      "â””â”€â”€ test.ts",
       "```",
     ];
 
@@ -175,9 +175,9 @@ describe("streamLazyApply", () => {
 
 \`\`\`
 .
-├── src/
-│   └── main.js
-└── package.json
+â”œâ”€â”€ src/
+â”‚   â””â”€â”€ main.js
+â””â”€â”€ package.json
 \`\`\`
 \`\`\``;
     const filename = "README.md";
@@ -201,7 +201,7 @@ describe("streamLazyApply", () => {
     // Should contain the nested markdown content
     const allContent = diffLines.map((d) => d.line).join("\n");
     expect(allContent).toContain("```markdown README.md");
-    expect(allContent).toContain("└── package.json");
+    expect(allContent).toContain("â””â”€â”€ package.json");
 
     // Should not have been truncated at the first ```
     expect(allContent).toContain("src/");
@@ -420,10 +420,10 @@ The sole purpose of this folder is to open it when debugging.
 ## File Structure
 \`\`\`
 debug-test-folder/
-├── AdvancedPage.tsx
-├── Calculator.java
-├── Dockerfile
-└── test.ts
+â”œâ”€â”€ AdvancedPage.tsx
+â”œâ”€â”€ Calculator.java
+â”œâ”€â”€ Dockerfile
+â””â”€â”€ test.ts
 \`\`\``;
 
     const filename = "README.md";
@@ -449,8 +449,8 @@ debug-test-folder/
     expect(allContent).toContain("Debug Test Folder");
     expect(allContent).toContain("File Structure");
     expect(allContent).toContain("debug-test-folder/");
-    expect(allContent).toContain("├── AdvancedPage.tsx");
-    expect(allContent).toContain("└── test.ts");
+    expect(allContent).toContain("â”œâ”€â”€ AdvancedPage.tsx");
+    expect(allContent).toContain("â””â”€â”€ test.ts");
 
     // Should not have been truncated at the opening ```
     expect(allContent).toContain("Calculator.java");

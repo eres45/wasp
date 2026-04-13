@@ -1,4 +1,4 @@
-// Mock useTerminalSize hook
+﻿// Mock useTerminalSize hook
 vi.mock("./hooks/useTerminalSize.js", () => ({
   useTerminalSize: () => ({ columns: 80, rows: 24 }),
 }));
@@ -59,7 +59,7 @@ describe("UpdateNotification", () => {
   it("should show default message when no update is available", () => {
     const { lastFrame } = render(<UpdateNotification />);
 
-    expect(lastFrame()).toContain("◉ Continue CLI v1.0.0");
+    expect(lastFrame()).toContain("â—‰ Continue CLI v1.0.0");
   });
 
   it("should show update available message when update is available", () => {
@@ -79,7 +79,7 @@ describe("UpdateNotification", () => {
 
     const { lastFrame } = render(<UpdateNotification />);
 
-    expect(lastFrame()).toContain("◉ Update available: v1.0.1");
+    expect(lastFrame()).toContain("â—‰ Update available: v1.0.1");
   });
 
   it("should show checking message when checking for updates", () => {
@@ -99,7 +99,7 @@ describe("UpdateNotification", () => {
 
     const { lastFrame } = render(<UpdateNotification />);
 
-    expect(lastFrame()).toContain("◉ Checking for updates");
+    expect(lastFrame()).toContain("â—‰ Checking for updates");
   });
 
   it("should show updating message when updating", () => {
@@ -139,7 +139,7 @@ describe("UpdateNotification", () => {
 
     const { lastFrame } = render(<UpdateNotification />);
 
-    expect(lastFrame()).toContain("◉ Auto-updated to v1.0.1");
+    expect(lastFrame()).toContain("â—‰ Auto-updated to v1.0.1");
   });
 
   it("should show error message when update fails", () => {
@@ -159,7 +159,7 @@ describe("UpdateNotification", () => {
 
     const { lastFrame } = render(<UpdateNotification />);
 
-    expect(lastFrame()).toContain("◉ Update failed");
+    expect(lastFrame()).toContain("â—‰ Update failed");
   });
 
   it("should show remote mode when in remote mode and no update available", () => {
@@ -179,7 +179,7 @@ describe("UpdateNotification", () => {
 
     const { lastFrame } = render(<UpdateNotification isRemoteMode={true} />);
 
-    expect(lastFrame()).toContain("◉ Remote Mode");
+    expect(lastFrame()).toContain("â—‰ Remote Mode");
   });
 
   it("should show update message even in remote mode when update is available", () => {
@@ -199,7 +199,7 @@ describe("UpdateNotification", () => {
 
     const { lastFrame } = render(<UpdateNotification isRemoteMode={true} />);
 
-    expect(lastFrame()).toContain("◉ Update available: v1.0.1");
+    expect(lastFrame()).toContain("â—‰ Update available: v1.0.1");
   });
 
   it("should show default message when update service has no message", () => {
@@ -219,6 +219,6 @@ describe("UpdateNotification", () => {
 
     const { lastFrame } = render(<UpdateNotification />);
 
-    expect(lastFrame()).toContain("◉ Continue CLI");
+    expect(lastFrame()).toContain("â—‰ Continue CLI");
   });
 });

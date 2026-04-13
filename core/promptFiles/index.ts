@@ -1,4 +1,4 @@
-import { ContextProviderName } from "..";
+﻿import { ContextProviderName } from "..";
 
 export const DEFAULT_PROMPTS_FOLDER_V1 = ".prompts";
 export const DEFAULT_PROMPTS_FOLDER_V2 = ".continue/prompts";

@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
+﻿import { afterEach, describe, expect, it, vi } from "vitest";
 
 // ---------- Module mocks ----------
 
@@ -18,7 +18,7 @@ vi.mock("handlebars", () => {
   };
 });
 
-// Token utilities – we map 1 char = 1 token for simplicity
+// Token utilities â€“ we map 1 char = 1 token for simplicity
 vi.mock("../../../llm/countTokens", () => {
   const countTokens = (str: string) => str.length;
   const pruneLinesFromTop = (str: string, allowed: number) =>
@@ -35,7 +35,7 @@ vi.mock("../../../llm/countTokens", () => {
   };
 });
 
-// Snippet selection – configurable via constant return value
+// Snippet selection â€“ configurable via constant return value
 vi.mock("../filtering", () => ({
   getSnippets: () => [],
 }));
@@ -46,13 +46,13 @@ vi.mock("../formatting", () => ({
   formatSnippets: () => FORMATTED_SNIPPETS,
 }));
 
-// Stop tokens helper – we expose a variable so each test can override it
+// Stop tokens helper â€“ we expose a variable so each test can override it
 let stopTokenReturn: string[] = ["<STOP>"];
 vi.mock("../getStopTokens", () => ({
   getStopTokens: () => stopTokenReturn,
 }));
 
-// AutocompleteTemplate – provide overridable template + compiler + completionOptions
+// AutocompleteTemplate â€“ provide overridable template + compiler + completionOptions
 let templateOverride: any = "{{prefix}}|{{suffix}}";
 let compileFnOverride: ((...args: any[]) => [string, string]) | undefined;
 let completionOptionsOverride: Record<string, any> | undefined;

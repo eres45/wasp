@@ -1,126 +1,135 @@
 import { CheckIcon } from "@heroicons/react/24/outline";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Button } from "../..";
-import { useAuth } from "../../../context/Auth";
 import { IdeMessengerContext } from "../../../context/IdeMessenger";
-import { useAppDispatch } from "../../../redux/hooks";
-import { selectFirstHubProfile } from "../../../redux/thunks/selectFirstHubProfile";
+import { useCreditStatus } from "../../../hooks/useCredits";
+import {
+  WASPCODE_PROMO_CREDIT_CENTS,
+  WASPCODE_STARTER_CREDIT_CENTS,
+  formatCreditDollars,
+} from "../../../util/creditWallet";
 import { useOnboardingCard } from "../hooks/useOnboardingCard";
 
 /**
- * Models Add-On tab component with two-step onboarding:
- * 1. Create Account - Uses auth.login(true) to sign up and redirect back to IDE
- * 2. Purchase Credits - Opens /settings/billing to purchase credits
+ * WaspCode credits onboarding tab with a starter gift and promo redemption.
  */
 export function OnboardingModelsAddOnTab() {
   const ideMessenger = useContext(IdeMessengerContext);
   const { close } = useOnboardingCard();
-  const auth = useAuth();
-  const dispatch = useAppDispatch();
+  const { creditStatus, wallet, redeemPromoCode } = useCreditStatus();
+  const [promoCode, setPromoCode] = useState("");
+  const [promoMessage, setPromoMessage] = useState<string | null>(null);
+  const [isRedeeming, setIsRedeeming] = useState(false);
 
-  const isLoggedIn = !!auth.session;
-
-  function handleCreateAccount() {
-    void auth.login(true).then((success) => {
-      if (success) {
-        // A new assistant is created when the account is created
-        // Switch to it immediately
-        void dispatch(selectFirstHubProfile());
-        ideMessenger.post("showToast", ["info", "Account created!"]);
-      }
-    });
-  }
-
-  function handlePurchaseCredits() {
-    ideMessenger.post("controlPlane/openUrl", {
-      path: "settings/billing",
+  function handleSetupApiKeys() {
+    void ideMessenger.request("controlPlane/openUrl", {
+      path: "setup-models/api-keys",
+      orgSlug: undefined,
     });
     close();
   }
 
-  function openPricingPage() {
-    void ideMessenger.request("controlPlane/openUrl", {
-      path: "pricing",
-    });
+  async function handleRedeemPromo() {
+    setIsRedeeming(true);
+
+    try {
+      const result = await redeemPromoCode(promoCode);
+      setPromoMessage(result.message);
+
+      if (result.success) {
+        setPromoCode("");
+      }
+    } finally {
+      setIsRedeeming(false);
+    }
   }
 
   return (
     <div className="flex h-full w-full flex-col items-center justify-center text-center">
       <div className="mb-4 flex flex-col items-center text-center">
         <h2 className="text-foreground mb-1 text-2xl font-semibold">
-          Models Add-on
+          WaspCode Credits
         </h2>
 
         <span className="text-description text-xs">
-          Use a{" "}
-          <span
-            className="cursor-pointer underline hover:brightness-125"
-            onClick={openPricingPage}
-          >
-            variety of frontier models
-          </span>{" "}
-          at cost.
+          Every install starts with{" "}
+          {formatCreditDollars(WASPCODE_STARTER_CREDIT_CENTS)} of free credit.
+          Redeem promo codes to add more whenever you need it.
         </span>
       </div>
 
-      {/* Vertical step indicators */}
       <div className="flex w-full flex-col gap-4">
-        {/* Step 1: Create Account */}
-        <div className="flex flex-col gap-2">
-          <div className="flex items-center gap-2">
-            <div
-              className={`flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full text-xs font-medium ring-1 ring-inset ${
-                isLoggedIn
-                  ? "bg-green-500 text-white ring-green-500"
-                  : "text-foreground ring-foreground bg-transparent"
-              }`}
-            >
-              {isLoggedIn ? <CheckIcon className="h-3 w-3" /> : "1"}
+        <div className="grid grid-cols-2 gap-2 text-left">
+          <div className="rounded-md border border-solid border-gray-700 p-3">
+            <div className="text-description mb-1 text-xs">Current balance</div>
+            <div className="text-sm font-semibold">
+              {formatCreditDollars(creditStatus?.creditBalance ?? 0)}
             </div>
-            <span
-              className={`text-sm ${isLoggedIn ? "text-description" : "text-foreground font-medium"}`}
-            >
-              Create Account
-            </span>
           </div>
-          <div className="flex gap-2">
-            <div className="w-5 flex-shrink-0" />
-            <Button
-              onClick={handleCreateAccount}
-              className="flex-1"
-              disabled={isLoggedIn}
-            >
-              Create Account
-            </Button>
+          <div className="rounded-md border border-solid border-gray-700 p-3">
+            <div className="text-description mb-1 text-xs">Promo uses</div>
+            <div className="text-sm font-semibold">
+              {wallet?.promoRedemptions ?? 0}
+            </div>
           </div>
         </div>
 
-        {/* Step 2: Purchase Credits */}
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2">
-            <div
-              className={`flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full text-xs font-medium ring-1 ring-inset ${
-                isLoggedIn
-                  ? "text-foreground ring-foreground bg-transparent"
-                  : "text-description ring-description bg-transparent"
-              }`}
-            >
-              2
+            <div className="bg-foreground text-background flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full text-xs font-medium">
+              <CheckIcon className="h-3 w-3" />
             </div>
-            <span
-              className={`text-sm ${isLoggedIn ? "text-foreground font-medium" : "text-description"}`}
-            >
-              Purchase Credits
+            <span className="text-foreground text-sm font-medium">
+              Redeem promo code
             </span>
           </div>
-          <div className="flex gap-2">
-            <div className="w-5 flex-shrink-0" />
-            <Button
-              onClick={handlePurchaseCredits}
-              className="flex-1"
-              disabled={!isLoggedIn}
-            >
-              Purchase Credits
+          <div className="flex flex-col gap-2 pl-7">
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={promoCode}
+                onChange={(event) => {
+                  setPromoCode(event.target.value);
+                  if (promoMessage) {
+                    setPromoMessage(null);
+                  }
+                }}
+                placeholder="Enter promo code"
+                className="border-input-border bg-input text-input-foreground placeholder:text-input-placeholder focus:border-border-focus box-border flex-1 rounded-md border px-3 py-2 text-xs focus:outline-none"
+              />
+              <Button
+                onClick={handleRedeemPromo}
+                disabled={isRedeeming || !promoCode.trim()}
+                className="whitespace-nowrap"
+              >
+                Redeem
+              </Button>
+            </div>
+            <span className="text-description text-xs">
+              Each valid promo adds{" "}
+              {formatCreditDollars(WASPCODE_PROMO_CREDIT_CENTS)} to your local
+              WaspCode balance.
+            </span>
+            {promoMessage && (
+              <span className="text-foreground text-xs font-medium">
+                {promoMessage}
+              </span>
+            )}
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center gap-2">
+            <div className="text-foreground ring-foreground flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-transparent text-xs font-medium ring-1 ring-inset">
+              2
+            </div>
+            <span className="text-foreground text-sm font-medium">
+              Configure your models
+            </span>
+          </div>
+          <div className="flex gap-2 pl-7">
+            <Button onClick={handleSetupApiKeys} className="flex-1">
+              Setup API Keys
             </Button>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import {
+﻿import {
   prepareTemplatedFilepaths,
   registerHelpers,
   resolveHelperPromises,

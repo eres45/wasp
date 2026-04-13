@@ -1,4 +1,4 @@
-export function findLastIndex<T = any>(
+﻿export function findLastIndex<T = any>(
   arr: T[],
   criterion: (item: T) => boolean,
 ): number {

@@ -1,4 +1,4 @@
-import { JSDOM } from "jsdom";
+﻿import { JSDOM } from "jsdom";
 
 export async function findFaviconPath(url: URL): Promise<string | undefined> {
   const baseUrl = `${url.protocol}//${url.hostname}`;

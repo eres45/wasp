@@ -1,4 +1,4 @@
-import {
+﻿import {
   createRuleMarkdown,
   getRuleType,
   RuleType,

@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from "vitest";
+﻿import { describe, it, expect, beforeEach, vi } from "vitest";
 
 import { checkToolPermission } from "./permissionChecker.js";
 import { yamlConfigToPolicies } from "./permissionsYamlLoader.js";

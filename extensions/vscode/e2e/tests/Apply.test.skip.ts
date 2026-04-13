@@ -1,4 +1,4 @@
-import { TextEditor, VSBrowser, WebView } from "vscode-extension-tester";
+﻿import { TextEditor, VSBrowser, WebView } from "vscode-extension-tester";
 
 import { ApplyActions } from "../actions/Apply.actions";
 import { GlobalActions } from "../actions/Global.actions";

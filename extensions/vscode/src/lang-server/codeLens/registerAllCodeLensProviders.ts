@@ -1,4 +1,4 @@
-import { ContinueConfig } from "core";
+﻿import { ContinueConfig } from "core";
 import * as vscode from "vscode";
 
 import { VerticalDiffCodeLens } from "../../diff/vertical/manager";

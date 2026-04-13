@@ -1,4 +1,4 @@
-import { render } from "ink-testing-library";
+﻿import { render } from "ink-testing-library";
 import React from "react";
 
 import { ChecklistDisplay } from "./ChecklistDisplay.js";
@@ -14,8 +14,8 @@ describe("ChecklistDisplay", () => {
     const output = lastFrame();
 
     // The output should contain the checkbox symbols and text
-    expect(output).toContain("✓");
-    expect(output).toContain("○");
+    expect(output).toContain("âœ“");
+    expect(output).toContain("â—‹");
     expect(output).toContain("Completed task");
     expect(output).toContain("First incomplete task");
     expect(output).toContain("Second incomplete task");
@@ -38,7 +38,7 @@ describe("ChecklistDisplay", () => {
     const { lastFrame } = render(<ChecklistDisplay content={content} />);
     const output = lastFrame();
 
-    expect(output).toContain("✓");
+    expect(output).toContain("âœ“");
     expect(output).toContain("Completed task 1");
     expect(output).toContain("Completed task 2");
   });
@@ -57,7 +57,7 @@ describe("ChecklistDisplay", () => {
 
     expect(output).toContain("Important Tasks");
     expect(output).toContain("Other Tasks");
-    expect(output).toContain("✓");
-    expect(output).toContain("○");
+    expect(output).toContain("âœ“");
+    expect(output).toContain("â—‹");
   });
 });

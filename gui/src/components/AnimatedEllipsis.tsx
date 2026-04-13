@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+﻿import styled, { keyframes } from "styled-components";
 
 const ellipsisAnimation = keyframes`
   0% { width: 0; }

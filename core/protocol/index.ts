@@ -1,4 +1,4 @@
-import {
+﻿import {
   ToCoreFromWebviewProtocol,
   ToWebviewFromCoreProtocol,
 } from "./coreWebview";

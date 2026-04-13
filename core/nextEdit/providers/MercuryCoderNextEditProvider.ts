@@ -1,4 +1,4 @@
-import { HelperVars } from "../../autocomplete/util/HelperVars.js";
+﻿import { HelperVars } from "../../autocomplete/util/HelperVars.js";
 import { NEXT_EDIT_MODELS } from "../../llm/constants.js";
 import { getUriPathBasename } from "../../util/uri.js";
 import { MERCURY_SYSTEM_PROMPT, UNIQUE_TOKEN } from "../constants.js";

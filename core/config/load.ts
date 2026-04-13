@@ -1,4 +1,4 @@
-import { execSync } from "child_process";
+﻿import { execSync } from "child_process";
 import * as fs from "fs";
 import os from "os";
 import path from "path";
@@ -723,11 +723,11 @@ async function handleEsbuildInstallation(
       require(candidate);
       return true; // available via ~/.continue
     } catch {
-      // Not available → show friendly instructions and opt out of building
+      // Not available â†’ show friendly instructions and opt out of building
       await ide.showToast(
         "error",
         [
-          "config.ts has been deprecated and esbuild is no longer automatically installed by Continue.",
+          "config.ts has been deprecated and esbuild is no longer automatically installed by waspcode.",
           "To use config.ts, install esbuild manually:",
           "",
           `    ${installCmd}`,
@@ -813,7 +813,7 @@ async function buildConfigTsandReadConfigJs(ide: IDE, ideType: IdeType) {
   if (currentContent.trim() !== DEFAULT_CONFIG_TS_CONTENTS.trim()) {
     const ok = await handleEsbuildInstallation(ide, ideType);
     if (!ok) {
-      // esbuild not available → we already showed a friendly message; skip building
+      // esbuild not available â†’ we already showed a friendly message; skip building
       return;
     }
     await tryBuildConfigTs();

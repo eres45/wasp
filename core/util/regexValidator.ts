@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Validates and sanitizes regex patterns for use with ripgrep
  */
 

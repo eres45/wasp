@@ -1,4 +1,4 @@
-import { Tool } from "../..";
+﻿import { Tool } from "../..";
 import { validateSingleEdit } from "../../edit/searchAndReplace/findAndReplaceUtils";
 import { executeFindAndReplace } from "../../edit/searchAndReplace/performReplace";
 import { validateSearchAndReplaceFilepath } from "../../edit/searchAndReplace/validateArgs";

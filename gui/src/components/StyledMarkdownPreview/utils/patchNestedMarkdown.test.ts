@@ -1,4 +1,4 @@
-import { patchNestedMarkdown } from "./patchNestedMarkdown";
+﻿import { patchNestedMarkdown } from "./patchNestedMarkdown";
 
 describe("patchNestedMarkdown", () => {
   it("should return unchanged content when no markdown codeblocks are present", () => {
@@ -8,9 +8,9 @@ describe("patchNestedMarkdown", () => {
 
   it("should handle nested blocks without a type", () => {
     const source =
-      "```markdown README.md\n# Project Structure\n\n```\n.\n├── AdvancedPage.tsx\n├── Calculator.java\n├── Dockerfile\n├── calculator_test/\n│   ├── Calculator.java\n│   └── Main.java\n├── data.json\n├── example.ipynb\n├── logs/\n├── nested-folder/\n│   ├── helloNested.py\n│   ├── package.json\n│   └── rules.md\n├── program.cs\n├── query.sql\n├── react-calculator/\n├── readme.md\n├── requirements.txt\n├── test.css\n├── test.html\n├── test.js\n├── test.kt\n├── test.php\n├── test.py\n├── test.rb\n├── test.rs\n├── test.sh\n└── test.ts\n```\n```";
+      "```markdown README.md\n# Project Structure\n\n```\n.\nâ”œâ”€â”€ AdvancedPage.tsx\nâ”œâ”€â”€ Calculator.java\nâ”œâ”€â”€ Dockerfile\nâ”œâ”€â”€ calculator_test/\nâ”‚   â”œâ”€â”€ Calculator.java\nâ”‚   â””â”€â”€ Main.java\nâ”œâ”€â”€ data.json\nâ”œâ”€â”€ example.ipynb\nâ”œâ”€â”€ logs/\nâ”œâ”€â”€ nested-folder/\nâ”‚   â”œâ”€â”€ helloNested.py\nâ”‚   â”œâ”€â”€ package.json\nâ”‚   â””â”€â”€ rules.md\nâ”œâ”€â”€ program.cs\nâ”œâ”€â”€ query.sql\nâ”œâ”€â”€ react-calculator/\nâ”œâ”€â”€ readme.md\nâ”œâ”€â”€ requirements.txt\nâ”œâ”€â”€ test.css\nâ”œâ”€â”€ test.html\nâ”œâ”€â”€ test.js\nâ”œâ”€â”€ test.kt\nâ”œâ”€â”€ test.php\nâ”œâ”€â”€ test.py\nâ”œâ”€â”€ test.rb\nâ”œâ”€â”€ test.rs\nâ”œâ”€â”€ test.sh\nâ””â”€â”€ test.ts\n```\n```";
     const expected =
-      "~~~markdown README.md\n# Project Structure\n\n```\n.\n├── AdvancedPage.tsx\n├── Calculator.java\n├── Dockerfile\n├── calculator_test/\n│   ├── Calculator.java\n│   └── Main.java\n├── data.json\n├── example.ipynb\n├── logs/\n├── nested-folder/\n│   ├── helloNested.py\n│   ├── package.json\n│   └── rules.md\n├── program.cs\n├── query.sql\n├── react-calculator/\n├── readme.md\n├── requirements.txt\n├── test.css\n├── test.html\n├── test.js\n├── test.kt\n├── test.php\n├── test.py\n├── test.rb\n├── test.rs\n├── test.sh\n└── test.ts\n```\n~~~";
+      "~~~markdown README.md\n# Project Structure\n\n```\n.\nâ”œâ”€â”€ AdvancedPage.tsx\nâ”œâ”€â”€ Calculator.java\nâ”œâ”€â”€ Dockerfile\nâ”œâ”€â”€ calculator_test/\nâ”‚   â”œâ”€â”€ Calculator.java\nâ”‚   â””â”€â”€ Main.java\nâ”œâ”€â”€ data.json\nâ”œâ”€â”€ example.ipynb\nâ”œâ”€â”€ logs/\nâ”œâ”€â”€ nested-folder/\nâ”‚   â”œâ”€â”€ helloNested.py\nâ”‚   â”œâ”€â”€ package.json\nâ”‚   â””â”€â”€ rules.md\nâ”œâ”€â”€ program.cs\nâ”œâ”€â”€ query.sql\nâ”œâ”€â”€ react-calculator/\nâ”œâ”€â”€ readme.md\nâ”œâ”€â”€ requirements.txt\nâ”œâ”€â”€ test.css\nâ”œâ”€â”€ test.html\nâ”œâ”€â”€ test.js\nâ”œâ”€â”€ test.kt\nâ”œâ”€â”€ test.php\nâ”œâ”€â”€ test.py\nâ”œâ”€â”€ test.rb\nâ”œâ”€â”€ test.rs\nâ”œâ”€â”€ test.sh\nâ””â”€â”€ test.ts\n```\n~~~";
     expect(patchNestedMarkdown(source)).toBe(expected);
   });
 

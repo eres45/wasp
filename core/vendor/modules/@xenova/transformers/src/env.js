@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Module used to configure Transformers.js.
  *
  * **Example:** Disable remote models.
@@ -121,3 +121,4 @@ export const env = {
 function isEmpty(obj) {
   return Object.keys(obj).length === 0;
 }
+

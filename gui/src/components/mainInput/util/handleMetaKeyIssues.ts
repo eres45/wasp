@@ -1,4 +1,4 @@
-import { Editor } from "@tiptap/react";
+﻿import { Editor } from "@tiptap/react";
 import { KeyboardEvent } from "react";
 import { getPlatform, isWebEnvironment } from "../../../util";
 import { CodeBlock } from "../TipTapEditor/extensions";

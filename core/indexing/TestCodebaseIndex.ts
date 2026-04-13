@@ -1,4 +1,4 @@
-import { DatabaseConnection, SqliteDb } from "./refreshIndex.js";
+﻿import { DatabaseConnection, SqliteDb } from "./refreshIndex.js";
 import {
   IndexResultType,
   MarkCompleteCallback,

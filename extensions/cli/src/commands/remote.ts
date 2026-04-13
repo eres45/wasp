@@ -1,4 +1,4 @@
-import chalk from "chalk";
+﻿import chalk from "chalk";
 
 import { env } from "../env.js";
 import { telemetryService } from "../telemetry/telemetryService.js";
@@ -149,7 +149,7 @@ async function createAndConnectRemoteEnvironment(
   }
 
   console.info(
-    chalk.green("✅ Remote development environment created successfully!"),
+    chalk.green("âœ… Remote development environment created successfully!"),
   );
 
   if (!result.url) {

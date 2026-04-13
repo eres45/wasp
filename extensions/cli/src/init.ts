@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Early initialization that must happen before ANY other imports
  * This file intercepts console and stdout/stderr to prevent dependency logging
  */

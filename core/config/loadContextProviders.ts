@@ -1,4 +1,4 @@
-import {
+﻿import {
   AssistantUnrolledNonNullable,
   ConfigValidationError,
 } from "@continuedev/config-yaml";

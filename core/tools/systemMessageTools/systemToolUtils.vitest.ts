@@ -1,4 +1,4 @@
-import { describe, expect, test } from "vitest";
+﻿import { describe, expect, test } from "vitest";
 import { closeTag, splitAtCodeblocksAndNewLines } from "./systemToolUtils";
 
 describe("closeTag", () => {

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Definitions of all models available in Transformers.js.
  *
  * **Example:** Load and run an `AutoModel`.
@@ -6187,3 +6187,4 @@ export class VitsModelOutput extends ModelOutput {
     this.spectrogram = spectrogram;
   }
 }
+

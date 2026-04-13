@@ -1,4 +1,4 @@
-import { DiffLine, ILLM } from "../..";
+﻿import { DiffLine, ILLM } from "../..";
 import { generateLines } from "../../diff/util";
 import { supportedLanguages } from "../../util/treeSitter";
 import { getUriFileExtension } from "../../util/uri";

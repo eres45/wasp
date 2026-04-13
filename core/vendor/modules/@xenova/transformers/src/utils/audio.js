@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Helper module for audio processing.
  *
  * These functions and classes are only used internally,
@@ -730,3 +730,4 @@ export function window_function(
 
   return window;
 }
+

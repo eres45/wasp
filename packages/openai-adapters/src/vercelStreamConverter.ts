@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Converts Vercel AI SDK stream events to OpenAI ChatCompletionChunk format
  */
 

@@ -1,4 +1,4 @@
-import isLocalhost from "is-localhost-ip";
+﻿import isLocalhost from "is-localhost-ip";
 import {
   ContextItem,
   ContextProviderDescription,

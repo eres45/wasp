@@ -1,4 +1,4 @@
-export enum ModelProviderTags {
+﻿export enum ModelProviderTags {
   RequiresApiKey = "Requires API Key",
   Local = "Local",
   Free = "Free",

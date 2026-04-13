@@ -1,4 +1,4 @@
-import { AssistantUnrolled, ModelConfig } from "@continuedev/config-yaml";
+﻿import { AssistantUnrolled, ModelConfig } from "@continuedev/config-yaml";
 import {
   BaseLlmApi,
   constructLlmApi,

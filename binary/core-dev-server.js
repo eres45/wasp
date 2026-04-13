@@ -1,4 +1,4 @@
-const path = require("path");
+﻿const path = require("path");
 process.env.CONTINUE_DEVELOPMENT = true;
 
 process.env.CONTINUE_GLOBAL_DIR = path.join(

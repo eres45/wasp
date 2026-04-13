@@ -1,4 +1,4 @@
-import { expect, test, vi } from "vitest";
+﻿import { expect, test, vi } from "vitest";
 import { searchWebImpl } from "./searchWeb";
 
 // Mock the fetchSearchResults function

@@ -1,4 +1,4 @@
-import { describe, vi } from "vitest";
+﻿import { describe, vi } from "vitest";
 import { createAdapterTests } from "./adapter-test-utils.js";
 
 // Mock the fetch package (not needed for OpenAI but required by the shared test utils)

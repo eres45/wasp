@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Pipelines provide a high-level, easy to use, API for running machine learning models.
  *
  * **Example:** Instantiate pipeline using the `pipeline` function.
@@ -795,11 +795,11 @@ export class SummarizationPipeline
  *
  * ```javascript
  * const translator = await pipeline('translation', 'Xenova/nllb-200-distilled-600M');
- * const output = await translator('जीवन एक चॉकलेट बॉक्स की तरह है।', {
+ * const output = await translator('à¤œà¥€à¤µà¤¨ à¤à¤• à¤šà¥‰à¤•à¤²à¥‡à¤Ÿ à¤¬à¥‰à¤•à¥à¤¸ à¤•à¥€ à¤¤à¤°à¤¹ à¤¹à¥ˆà¥¤', {
  *   src_lang: 'hin_Deva', // Hindi
  *   tgt_lang: 'fra_Latn', // French
  * });
- * // [{ translation_text: 'La vie est comme une boîte à chocolat.' }]
+ * // [{ translation_text: 'La vie est comme une boÃ®te Ã  chocolat.' }]
  * ```
  *
  * **Example:** Multilingual translation w/ `Xenova/m2m100_418M`.
@@ -809,7 +809,7 @@ export class SummarizationPipeline
  *
  * ```javascript
  * const translator = await pipeline('translation', 'Xenova/m2m100_418M');
- * const output = await translator('生活就像一盒巧克力。', {
+ * const output = await translator('ç”Ÿæ´»å°±åƒä¸€ç›’å·§å…‹åŠ›ã€‚', {
  *   src_lang: 'zh', // Chinese
  *   tgt_lang: 'en', // English
  * });
@@ -823,7 +823,7 @@ export class SummarizationPipeline
  *
  * ```javascript
  * const translator = await pipeline('translation', 'Xenova/mbart-large-50-many-to-many-mmt');
- * const output = await translator('संयुक्त राष्ट्र के प्रमुख का कहना है कि सीरिया में कोई सैन्य समाधान नहीं है', {
+ * const output = await translator('à¤¸à¤‚à¤¯à¥à¤•à¥à¤¤ à¤°à¤¾à¤·à¥à¤Ÿà¥à¤° à¤•à¥‡ à¤ªà¥à¤°à¤®à¥à¤– à¤•à¤¾ à¤•à¤¹à¤¨à¤¾ à¤¹à¥ˆ à¤•à¤¿ à¤¸à¥€à¤°à¤¿à¤¯à¤¾ à¤®à¥‡à¤‚ à¤•à¥‹à¤ˆ à¤¸à¥ˆà¤¨à¥à¤¯ à¤¸à¤®à¤¾à¤§à¤¾à¤¨ à¤¨à¤¹à¥€à¤‚ à¤¹à¥ˆ', {
  *   src_lang: 'hi_IN', // Hindi
  *   tgt_lang: 'fr_XX', // French
  * });
@@ -1524,7 +1524,7 @@ export class ZeroShotAudioClassificationPipeline
  * const transcriber = await pipeline('automatic-speech-recognition', 'Xenova/whisper-small');
  * const url = 'https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/french-audio.mp3';
  * const output = await transcriber(url, { language: 'french', task: 'transcribe' });
- * // { text: " J'adore, j'aime, je n'aime pas, je déteste." }
+ * // { text: " J'adore, j'aime, je n'aime pas, je dÃ©teste." }
  * ```
  *
  * **Example:** Translate French to English.
@@ -3235,3 +3235,4 @@ async function loadItems(mapping, model, pretrainedOptions) {
 
   return result;
 }
+

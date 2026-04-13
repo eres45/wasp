@@ -1,4 +1,4 @@
-import * as si from "systeminformation";
+﻿import * as si from "systeminformation";
 import { Disposable, EventEmitter } from "vscode";
 
 const UPDATE_INTERVAL_MS = 1000;

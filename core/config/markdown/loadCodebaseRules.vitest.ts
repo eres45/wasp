@@ -1,4 +1,4 @@
-import { markdownToRule } from "@continuedev/config-yaml";
+﻿import { markdownToRule } from "@continuedev/config-yaml";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { IDE } from "../..";
 import { walkDirs } from "../../indexing/walkDir";

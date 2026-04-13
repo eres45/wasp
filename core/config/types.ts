@@ -1,4 +1,4 @@
-const Types = `
+﻿const Types = `
 declare global {
   import Parser from "web-tree-sitter";
   import { GetGhTokenArgs } from "./protocol/ide";
@@ -529,6 +529,7 @@ declare global {
     logger?: ILLMLogger;
     llmRequestHook?: (model: string, prompt: string) => any;
     apiKey?: string;
+    apiKeys?: string[];
     aiGatewaySlug?: string;
     apiBase?: string;
     cacheBehavior?: CacheBehavior;
@@ -1175,7 +1176,7 @@ declare global {
   
   // config.ts - give users simplified interfaces
   export interface Config {
-    /** If set to true, Continue will collect anonymous usage data to improve the product. If set to false, we will collect nothing. Read here to learn more: https://docs.continue.dev/telemetry */
+    /** If set to true, Continue will collect anonymous usage data to improve the product. If set to false, we will collect nothing. Read here to learn more: https://docs.waspcode.dev/telemetry */
     allowAnonymousTelemetry?: boolean;
     /** Each entry in this array will originally be a ModelDescription, the same object from your config.json, but you may add CustomLLMs.
      * A CustomLLM requires you only to define an AsyncGenerator that calls the LLM and yields string updates. You can choose to define either \`streamCompletion\` or \`streamChat\` (or both).

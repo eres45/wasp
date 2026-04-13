@@ -1,4 +1,4 @@
-import { MCPServerStatus, MCPTool } from "..";
+﻿import { MCPServerStatus, MCPTool } from "..";
 export function getMCPToolName(server: MCPServerStatus, tool: MCPTool) {
   return getToolNameFromMCPServer(server.name, tool.name);
 }

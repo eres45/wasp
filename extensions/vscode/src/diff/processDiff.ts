@@ -1,4 +1,4 @@
-import { Core } from "core/core";
+﻿import { Core } from "core/core";
 import { DataLogger } from "core/data/log";
 import { myersDiff } from "core/diff/myers";
 

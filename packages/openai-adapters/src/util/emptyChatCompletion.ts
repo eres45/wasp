@@ -1,4 +1,4 @@
-import { ChatCompletion } from "openai/resources/index";
+﻿import { ChatCompletion } from "openai/resources/index";
 
 export const EMPTY_CHAT_COMPLETION: ChatCompletion = {
   choices: [

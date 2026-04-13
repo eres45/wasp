@@ -1,4 +1,4 @@
-import { Tool } from "../..";
+﻿import { Tool } from "../..";
 import { closeTag } from "./systemToolUtils";
 import { SystemMessageToolsFramework } from "./types";
 

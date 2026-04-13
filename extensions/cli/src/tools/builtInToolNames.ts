@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Static list of built-in tool names.
  * Kept separate from allBuiltIns.ts to avoid circular dependency:
  * ToolPermissionService -> allBuiltIns -> runTerminalCommand -> services/index -> ToolPermissionService

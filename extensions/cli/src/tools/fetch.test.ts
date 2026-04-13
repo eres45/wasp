@@ -1,4 +1,4 @@
-import type { ContextItem } from "core/index.js";
+﻿import type { ContextItem } from "core/index.js";
 import { fetchUrlContentImpl } from "core/tools/implementations/fetchUrlContent.js";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 

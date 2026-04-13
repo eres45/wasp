@@ -1,4 +1,4 @@
-import { ProfileDescription } from "core/config/ProfileLifecycleManager";
+﻿import { ProfileDescription } from "core/config/ProfileLifecycleManager";
 import { KeyboardEvent as ReactKeyboardEvent } from "react";
 import { getLocalStorage } from "./localStorage";
 
@@ -34,14 +34,14 @@ export function isMetaEquivalentKeyPressed({
 }
 
 export function getMetaKeyLabel(): string {
-  return getPlatform() === "mac" ? "⌘" : "Ctrl";
+  return getPlatform() === "mac" ? "âŒ˜" : "Ctrl";
 }
 
 export function getAltKeyLabel(): string {
   const platform = getPlatform();
   switch (platform) {
     case "mac":
-      return "⌥";
+      return "âŒ¥";
     default:
       return "Alt";
   }

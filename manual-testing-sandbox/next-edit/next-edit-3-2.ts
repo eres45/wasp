@@ -1,4 +1,4 @@
-// A poorly structured todo list manager
+﻿// A poorly structured todo list manager
 // Difficulty: 2 - Multiple issues to fix
 
 // Global variables

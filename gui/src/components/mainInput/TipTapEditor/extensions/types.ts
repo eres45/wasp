@@ -1,4 +1,4 @@
-import { DOMOutputSpec, Node as ProseMirrorNode } from "@tiptap/pm/model";
+﻿import { DOMOutputSpec, Node as ProseMirrorNode } from "@tiptap/pm/model";
 import { SuggestionOptions } from "@tiptap/suggestion";
 
 export type MentionOptions = {

@@ -1,4 +1,4 @@
-import { render } from "ink-testing-library";
+﻿import { render } from "ink-testing-library";
 import React from "react";
 import { describe, expect, test } from "vitest";
 
@@ -43,7 +43,7 @@ describe("ModelCapabilityWarning", () => {
 
     const frame = lastFrame();
     if (frame) {
-      expect(frame).toContain("⚠️");
+      expect(frame).toContain("âš ï¸");
     }
   });
 });

@@ -1,4 +1,4 @@
-import { z } from "zod";
+﻿import { z } from "zod";
 import { ConfigYaml } from "../schemas/index.js";
 
 export const BLOCK_TYPES = [

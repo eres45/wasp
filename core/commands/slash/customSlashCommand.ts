@@ -1,4 +1,4 @@
-import { CustomCommand, SlashCommandWithSource } from "../..";
+﻿import { CustomCommand, SlashCommandWithSource } from "../..";
 
 export function convertCustomCommandToSlashCommand(
   customCommand: CustomCommand,

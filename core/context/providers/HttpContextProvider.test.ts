@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Tests for HttpContextProvider - specifically testing the fix for v1.0.19
  * where missing or null uri fields in server responses caused TypeErrors.
  *

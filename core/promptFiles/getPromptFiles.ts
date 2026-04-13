@@ -1,4 +1,4 @@
-import path from "path";
+﻿import path from "path";
 import {
   DEFAULT_PROMPTS_FOLDER_V1,
   DEFAULT_PROMPTS_FOLDER_V2,

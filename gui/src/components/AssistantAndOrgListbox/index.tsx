@@ -1,4 +1,4 @@
-import {
+﻿import {
   ArrowPathIcon,
   ArrowRightStartOnRectangleIcon,
   Cog6ToothIcon,
@@ -291,7 +291,7 @@ export function AssistantAndOrgListbox({
             <div>
               <div className="text-description flex items-center justify-start px-2 py-1">
                 <span className="block" style={{ fontSize: tinyFont }}>
-                  <code>{getMetaKeyLabel()} ⇧ '</code> to toggle config
+                  <code>{getMetaKeyLabel()} â‡§ '</code> to toggle config
                 </span>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import { vi } from "vitest";
+﻿import { vi } from "vitest";
 
 // Create mock objects that will be used by tests
 export const mockUseService = vi.fn();

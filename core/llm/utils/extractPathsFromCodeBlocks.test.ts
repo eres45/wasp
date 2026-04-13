@@ -1,4 +1,4 @@
-import { extractPathsFromCodeBlocks } from "./extractPathsFromCodeBlocks";
+﻿import { extractPathsFromCodeBlocks } from "./extractPathsFromCodeBlocks";
 
 describe("extractPathsFromCodeBlocks", () => {
   it("should extract paths from code blocks with language and filepath", () => {

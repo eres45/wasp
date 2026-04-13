@@ -1,4 +1,4 @@
-import { SlashCommand } from "../../../index.js";
+﻿import { SlashCommand } from "../../../index.js";
 import { renderChatMessage } from "../../../util/messageContent.js";
 
 const CommitMessageCommand: SlashCommand = {

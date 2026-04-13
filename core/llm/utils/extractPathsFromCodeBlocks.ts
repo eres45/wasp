@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Extracts file paths from markdown code blocks
  */
 export function extractPathsFromCodeBlocks(content: string): string[] {

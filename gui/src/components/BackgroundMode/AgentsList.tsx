@@ -1,4 +1,4 @@
-import { ArrowPathIcon, PlayIcon } from "@heroicons/react/24/outline";
+﻿import { ArrowPathIcon, PlayIcon } from "@heroicons/react/24/outline";
 import { useContext, useEffect, useState } from "react";
 import { normalizeRepoUrl } from "core/util/repoUrl";
 import { useAuth } from "../../context/Auth";
@@ -254,7 +254,7 @@ export function AgentsList({ isCreatingAgent = false }: AgentsListProps) {
               variant="ghost"
               className="text-link my-0 w-full py-0 text-center text-sm font-medium hover:underline"
             >
-              See all {totalCount} tasks →
+              See all {totalCount} tasks â†’
             </Button>
           </div>
         )}

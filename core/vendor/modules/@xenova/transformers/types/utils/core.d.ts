@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Core utility functions/classes for Transformers.js.
  *
  * These are only used internally, meaning an end-user shouldn't
@@ -97,3 +97,4 @@ export const Callable: new () => {
   _call(...args: any[]): any;
 };
 //# sourceMappingURL=core.d.ts.map
+

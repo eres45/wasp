@@ -1,4 +1,4 @@
-import { Command } from "commander";
+﻿import { Command } from "commander";
 
 // Function to add common options to any command
 export function addCommonOptions(command: Command): Command {

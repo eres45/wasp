@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Device authorization response from WorkOS
  */
 export interface DeviceAuthorizationResponse {

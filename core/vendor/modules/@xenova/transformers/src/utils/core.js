@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Core utility functions/classes for Transformers.js.
  *
  * These are only used internally, meaning an end-user shouldn't
@@ -175,3 +175,4 @@ export function product(...a) {
 export function calculateReflectOffset(i, w) {
   return Math.abs(((i + w) % (2 * w)) - w);
 }
+

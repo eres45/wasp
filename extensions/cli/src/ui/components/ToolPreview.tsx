@@ -1,4 +1,4 @@
-import { Box, Text } from "ink";
+﻿import { Box, Text } from "ink";
 import React from "react";
 
 import { getToolDisplayName } from "../../tools/index.js";
@@ -28,7 +28,7 @@ export const ToolPreview: React.FC<ToolPreviewProps> = ({
           if (preview.type === "text") {
             return (
               <Box key={index} paddingLeft={preview.paddingLeft ?? 0}>
-                {index === 0 && <Text color="dim">⎿ </Text>}
+                {index === 0 && <Text color="dim">âŽ¿ </Text>}
                 <Text color={preview.color ?? "dim"}>{preview.content}</Text>
               </Box>
             );
@@ -56,7 +56,7 @@ export const ToolPreview: React.FC<ToolPreviewProps> = ({
 
   return (
     <Box>
-      <Text color="dim">⎿ </Text>
+      <Text color="dim">âŽ¿ </Text>
       <Text color="dim">{message}</Text>
     </Box>
   );

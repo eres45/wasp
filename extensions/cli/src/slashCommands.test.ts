@@ -1,4 +1,4 @@
-import type { AssistantUnrolled } from "@continuedev/config-yaml";
+﻿import type { AssistantUnrolled } from "@continuedev/config-yaml";
 import {
   beforeEach,
   describe,
@@ -59,7 +59,7 @@ vi.mock("./util/logger.js", () => ({
 vi.mock("./env.js", () => ({
   env: {
     continueHome: "/home/test/.continue",
-    appUrl: "https://continue.dev",
+    appUrl: "https://waspcode.dev",
   },
 }));
 
@@ -120,7 +120,7 @@ describe("slashCommands", () => {
       expect(result).toBeDefined();
       expect(result?.output).toContain("Keyboard Shortcuts:");
       expect(result?.output).toContain("Navigation:");
-      expect(result?.output).toContain("↑/↓");
+      expect(result?.output).toContain("â†‘/â†“");
       expect(result?.output).toContain("Tab");
       expect(result?.output).toContain("Enter");
       expect(result?.output).toContain("Shift+Enter");

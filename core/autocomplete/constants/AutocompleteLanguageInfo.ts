@@ -1,4 +1,4 @@
-import { getUriFileExtension } from "../../util/uri";
+﻿import { getUriFileExtension } from "../../util/uri";
 import { BracketMatchingService } from "../filtering/BracketMatchingService";
 import {
   CharacterFilter,

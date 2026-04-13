@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 
 /**
  * Analyzes git commit history to find file hotspots (most commonly edited files)

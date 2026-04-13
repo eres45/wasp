@@ -1,4 +1,4 @@
-import type { ChildProcess } from "child_process";
+﻿import type { ChildProcess } from "child_process";
 import { EventEmitter } from "events";
 
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";

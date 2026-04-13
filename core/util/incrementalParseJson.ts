@@ -1,4 +1,4 @@
-import { parse } from "partial-json";
+﻿import { parse } from "partial-json";
 
 export function incrementalParseJson(raw: string): [boolean, any] {
   try {

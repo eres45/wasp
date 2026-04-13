@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, afterEach } from "vitest";
+﻿import { describe, it, expect, beforeEach, afterEach } from "vitest";
 
 import {
   createSmokeContext,
@@ -11,7 +11,7 @@ import {
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 
 describe.skipIf(!ANTHROPIC_API_KEY)(
-  "Smoke: Headless → real Anthropic API",
+  "Smoke: Headless â†’ real Anthropic API",
   () => {
     let ctx: SmokeTestContext;
 

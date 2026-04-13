@@ -1,4 +1,4 @@
-/* eslint-disable max-lines */
+﻿/* eslint-disable max-lines */
 /* eslint-disable max-statements   */
 import type { ChatHistoryItem, Session } from "core/index.js";
 import { useApp } from "ink";

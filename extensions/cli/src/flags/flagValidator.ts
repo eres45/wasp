@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Centralized command line flag validation
  * Provides consistent validation across all commands and proper error reporting
  */

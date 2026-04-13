@@ -1,4 +1,4 @@
-import {
+﻿import {
   COLLAPSE_SIZE,
   RAPID_INPUT_THRESHOLD,
   TextBuffer,

@@ -1,4 +1,4 @@
-import {
+﻿import {
   SharedConfigSchema,
   modifyAnyConfigWithSharedConfig,
 } from "core/config/sharedConfig";
@@ -94,7 +94,7 @@ export function IndexingSettingsSection() {
             <div className="mt-1 text-xs">
               Learn how to{" "}
               <a
-                href="https://docs.continue.dev/guides/codebase-documentation-awareness"
+                href="https://docs.waspcode.dev/guides/codebase-documentation-awareness"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-inherit underline hover:brightness-125"

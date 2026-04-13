@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+﻿import { useEffect, useRef, useState } from "react";
 import { LLMInteraction } from "../../hooks/useLLMLog";
 import useLLMSummary from "../../hooks/useLLMSummary";
 import End from "./End";

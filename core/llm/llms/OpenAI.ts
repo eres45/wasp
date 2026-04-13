@@ -1,4 +1,4 @@
-import {
+﻿import {
   ChatCompletionCreateParams,
   ChatCompletionMessageParam,
 } from "openai/resources/index";

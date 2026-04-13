@@ -1,4 +1,4 @@
-import { createPatch } from "diff";
+﻿import { createPatch } from "diff";
 import { getUriPathBasename } from "../../util/uri";
 
 export enum DiffFormatType {

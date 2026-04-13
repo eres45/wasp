@@ -1,0 +1,7 @@
+name = "wasp-code-proxy"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+workers_dev = true
+
+# Environment variables (secrets)
+# Add your Frenix API key with: wrangler secret put FRENIX_API_KEY

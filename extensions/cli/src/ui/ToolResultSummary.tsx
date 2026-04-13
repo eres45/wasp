@@ -1,4 +1,4 @@
-import path from "path";
+﻿import path from "path";
 
 import { Box, Text } from "ink";
 import React from "react";
@@ -22,7 +22,7 @@ const ToolResultSummary: React.FC<ToolResultSummaryProps> = ({
   if (!content) {
     return (
       <Box>
-        <Text color="dim">⎿ </Text>
+        <Text color="dim">âŽ¿ </Text>
         <Text color="dim"> No output</Text>
       </Box>
     );
@@ -37,7 +37,7 @@ const ToolResultSummary: React.FC<ToolResultSummaryProps> = ({
     return (
       <Box flexDirection="column">
         <Box marginBottom={1}>
-          <Text color="dim">⎿ </Text>
+          <Text color="dim">âŽ¿ </Text>
           <Text color="blue">Task List Updated</Text>
         </Box>
         <ChecklistDisplay content={`Task list status:\n${content}`} />
@@ -55,7 +55,7 @@ const ToolResultSummary: React.FC<ToolResultSummaryProps> = ({
       return (
         <Box flexDirection="column">
           <Box>
-            <Text color="dim">⎿ </Text>
+            <Text color="dim">âŽ¿ </Text>
             <Text color="green">
               {toolName === "Edit"
                 ? " File edited successfully"
@@ -81,7 +81,7 @@ const ToolResultSummary: React.FC<ToolResultSummaryProps> = ({
       return (
         <Box flexDirection="column">
           <Box>
-            <Text color="dim">⎿ </Text>
+            <Text color="dim">âŽ¿ </Text>
             <Text color="dim"> Terminal output:</Text>
           </Box>
           <Box paddingLeft={2}>
@@ -97,7 +97,7 @@ const ToolResultSummary: React.FC<ToolResultSummaryProps> = ({
       return (
         <Box flexDirection="column">
           <Box>
-            <Text color="dim">⎿ </Text>
+            <Text color="dim">âŽ¿ </Text>
             <Text color="dim"> Terminal output:</Text>
           </Box>
           <Box paddingLeft={2}>
@@ -124,7 +124,7 @@ const ToolResultSummary: React.FC<ToolResultSummaryProps> = ({
     if (!actualOutput) {
       return (
         <Box>
-          <Text color="dim">⎿ </Text>
+          <Text color="dim">âŽ¿ </Text>
           <Text color="dim"> Subagent executing...</Text>
         </Box>
       );
@@ -137,7 +137,7 @@ const ToolResultSummary: React.FC<ToolResultSummaryProps> = ({
       return (
         <Box flexDirection="column">
           <Box>
-            <Text color="dim">⎿ </Text>
+            <Text color="dim">âŽ¿ </Text>
             <Text color="dim"> Subagent output:</Text>
           </Box>
           <Box paddingLeft={2}>
@@ -150,7 +150,7 @@ const ToolResultSummary: React.FC<ToolResultSummaryProps> = ({
       return (
         <Box flexDirection="column">
           <Box>
-            <Text color="dim">⎿ </Text>
+            <Text color="dim">âŽ¿ </Text>
             <Text color="dim"> Subagent output:</Text>
           </Box>
           <Box paddingLeft={2}>
@@ -193,7 +193,7 @@ const ToolResultSummary: React.FC<ToolResultSummaryProps> = ({
     switch (toolName) {
       case "Read":
         // Try to extract file path from content if it contains line numbers
-        if (content.includes("→")) {
+        if (content.includes("â†’")) {
           const pathMatch = content.match(/^(.+?):/);
           const filePath = pathMatch ? pathMatch[1] : "file";
           return `${displayName} ${formatPath(filePath)} (${lines} lines)`;
@@ -234,7 +234,7 @@ const ToolResultSummary: React.FC<ToolResultSummaryProps> = ({
 
   return (
     <Box>
-      <Text color="dim">⎿ </Text>
+      <Text color="dim">âŽ¿ </Text>
       <Text color="dim"> {getSummary()}</Text>
     </Box>
   );

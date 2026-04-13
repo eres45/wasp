@@ -1,4 +1,4 @@
-import * as fs from "fs";
+﻿import * as fs from "fs";
 import * as os from "os";
 import * as path from "path";
 
@@ -477,7 +477,7 @@ export async function login(): Promise<AuthConfig> {
     };
   }
 
-  console.info(chalk.white("\nSigning in with Continue..."));
+  console.info(chalk.white("\nSigning in with waspcode..."));
 
   // Request device authorization
   const deviceAuth = await requestDeviceAuthorization();
@@ -509,7 +509,7 @@ export async function login(): Promise<AuthConfig> {
     deviceAuth.expires_in,
   );
 
-  console.info(chalk.white("✅ Success!"));
+  console.info(chalk.white("âœ… Success!"));
 
   return authConfig;
 }

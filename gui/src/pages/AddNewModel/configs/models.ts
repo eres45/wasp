@@ -1,4 +1,4 @@
-import { ILLM } from "core";
+﻿import { ILLM } from "core";
 import { ModelProviderTags } from "../../../components/modelSelection/utils";
 import { InputDescriptor } from "./providers";
 
@@ -191,7 +191,7 @@ export const models: { [key: string]: ModelPackage } = {
   gptOss120B: {
     title: "gpt-oss-120b",
     description:
-      "OpenAI's 120B flagship open-weight model built for complex, high‑reasoning agentic workflows.",
+      "OpenAI's 120B flagship open-weight model built for complex, highâ€‘reasoning agentic workflows.",
     refUrl: "https://huggingface.co/openai/gpt-oss-120b",
     params: {
       title: "gpt-oss-120b",
@@ -1198,7 +1198,7 @@ export const models: { [key: string]: ModelPackage } = {
   commandA032025: {
     title: "Command A 03-2025",
     description:
-      "Command A is Cohere’s most performant model to date, excelling at real world enterprise tasks including tool use, retrieval augmented generation (RAG), agents, and multilingual use cases.",
+      "Command A is Cohereâ€™s most performant model to date, excelling at real world enterprise tasks including tool use, retrieval augmented generation (RAG), agents, and multilingual use cases.",
     params: {
       model: "command-a-03-2025",
       contextLength: 256_000,
@@ -1226,7 +1226,7 @@ export const models: { [key: string]: ModelPackage } = {
   commandAReasoning082025: {
     title: "Command A Reasoning 08-2025",
     description:
-      "Command A Reasoning is Cohere’s first reasoning model, able to ‘think’ before generating an output in a way that allows it to perform well in certain kinds of nuanced problem-solving and agent-based tasks in 23 languages.",
+      "Command A Reasoning is Cohereâ€™s first reasoning model, able to â€˜thinkâ€™ before generating an output in a way that allows it to perform well in certain kinds of nuanced problem-solving and agent-based tasks in 23 languages.",
     params: {
       model: "command-a-reasoning-08-2025",
       contextLength: 256_000,
@@ -1240,7 +1240,7 @@ export const models: { [key: string]: ModelPackage } = {
   commandATranslate082025: {
     title: "Command A Translate 08-2025",
     description:
-      "Command A Translate is Cohere’s state of the art machine translation model, excelling at a variety of translation tasks on 23 languages",
+      "Command A Translate is Cohereâ€™s state of the art machine translation model, excelling at a variety of translation tasks on 23 languages",
     params: {
       model: "command-a-translate-08-2025",
       contextLength: 8_000,

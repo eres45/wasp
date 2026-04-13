@@ -1,4 +1,4 @@
-import { useAppDispatch, useAppSelector } from "../../../../redux/hooks";
+﻿import { useAppDispatch, useAppSelector } from "../../../../redux/hooks";
 import { selectPendingToolCalls } from "../../../../redux/selectors/selectToolCalls";
 import { callToolById } from "../../../../redux/thunks/callToolById";
 import { cancelToolCallThunk } from "../../../../redux/thunks/cancelToolCall";
@@ -60,7 +60,7 @@ export function PendingToolCallToolbar() {
               {/* JetBrains overrides cmd+backspace, so we have to use another shortcut */}
               {index === 0 && (
                 <span className="text-2xs mr-1">
-                  {jetbrains ? getAltKeyLabel() : getMetaKeyLabel()}⌫
+                  {jetbrains ? getAltKeyLabel() : getMetaKeyLabel()}âŒ«
                 </span>
               )}
               <span>Reject</span>
@@ -77,7 +77,7 @@ export function PendingToolCallToolbar() {
               )}
             >
               {index === 0 && (
-                <span className="text-2xs mr-1">{getMetaKeyLabel()}⏎</span>
+                <span className="text-2xs mr-1">{getMetaKeyLabel()}âŽ</span>
               )}
               <span>Accept</span>
             </Button>

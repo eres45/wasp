@@ -1,4 +1,4 @@
-import { ChatMessage, PromptTemplate } from "../../index.js";
+﻿import { ChatMessage, PromptTemplate } from "../../index.js";
 import { gptEditPrompt } from "./edit/gpt.js";
 
 const simplifiedEditPrompt = `Consider the following code:

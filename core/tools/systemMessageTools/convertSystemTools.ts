@@ -1,4 +1,4 @@
-import {
+﻿import {
   AssistantChatMessage,
   MessagePart,
   ToolCallState,

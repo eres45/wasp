@@ -1,4 +1,4 @@
-import * as fs from "fs/promises";
+﻿import * as fs from "fs/promises";
 import * as path from "path";
 
 import {
@@ -57,7 +57,7 @@ describe("E2E: Headless Mode with Dynamic Responses", () => {
     mockServer = await setupMockLLMTest(context, {
       response: (prompt: string) => {
         if (prompt.includes("weather")) {
-          return "It's sunny and 72°F today!";
+          return "It's sunny and 72Â°F today!";
         } else if (prompt.includes("time")) {
           return "The current time is 3:30 PM.";
         } else {
@@ -71,7 +71,7 @@ describe("E2E: Headless Mode with Dynamic Responses", () => {
       args: ["-p", "--config", context.configPath, "What's the weather like?"],
       timeout: 15000,
     });
-    expect(weatherResult.stdout).toContain("It's sunny and 72°F today!");
+    expect(weatherResult.stdout).toContain("It's sunny and 72Â°F today!");
 
     // Test time query
     const timeResult = await runCLI(context, {

@@ -1,4 +1,4 @@
-import { expect } from "chai";
+﻿import { expect } from "chai";
 import { TextEditor, VSBrowser, Workbench } from "vscode-extension-tester";
 
 import { DEFAULT_TIMEOUT } from "../constants";

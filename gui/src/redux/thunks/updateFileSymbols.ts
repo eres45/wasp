@@ -1,4 +1,4 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+﻿import { createAsyncThunk } from "@reduxjs/toolkit";
 import { ChatHistoryItem, ContextItemWithId } from "core";
 import { CodeBlock } from "../../components/mainInput/TipTapEditor/extensions";
 import { updateFileSymbols } from "../slices/sessionSlice";

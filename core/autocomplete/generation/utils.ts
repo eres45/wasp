@@ -1,4 +1,4 @@
-export async function* stopAfterMaxProcessingTime(
+﻿export async function* stopAfterMaxProcessingTime(
   stream: AsyncGenerator<string>,
   maxTimeMs: number,
   fullStop: () => void,

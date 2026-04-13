@@ -1,4 +1,4 @@
-import { render } from "ink-testing-library";
+﻿import { render } from "ink-testing-library";
 import React from "react";
 import { vi } from "vitest";
 
@@ -33,11 +33,11 @@ describe("FreeTrialTransitionUI - Rendering and Props Tests", () => {
       );
 
       const frame = lastFrame();
-      expect(frame).toContain("🚀 Free trial limit reached!");
-      expect(frame).toContain("1. 💳 Sign up for models add-on");
-      expect(frame).toContain("2. 🔑 Enter your Anthropic API key");
-      expect(frame).toContain("3. ⚙️ Switch to a different configuration");
-      expect(frame).toContain("↑/↓ to navigate or 1/2/3 to select");
+      expect(frame).toContain("ðŸš€ Free trial limit reached!");
+      expect(frame).toContain("1. ðŸ’³ Sign up for models add-on");
+      expect(frame).toContain("2. ðŸ”‘ Enter your Anthropic API key");
+      expect(frame).toContain("3. âš™ï¸ Switch to a different configuration");
+      expect(frame).toContain("â†‘/â†“ to navigate or 1/2/3 to select");
     });
 
     it("highlights first option by default", () => {
@@ -46,10 +46,10 @@ describe("FreeTrialTransitionUI - Rendering and Props Tests", () => {
       );
 
       const frame = lastFrame();
-      expect(frame).toContain("➤ 1. 💳 Sign up for models add-on");
-      expect(frame).not.toContain("➤ 2. 🔑 Enter your Anthropic API key");
+      expect(frame).toContain("âž¤ 1. ðŸ’³ Sign up for models add-on");
+      expect(frame).not.toContain("âž¤ 2. ðŸ”‘ Enter your Anthropic API key");
       expect(frame).not.toContain(
-        "➤ 3. ⚙️ Switch to a different configuration",
+        "âž¤ 3. âš™ï¸ Switch to a different configuration",
       );
     });
 
@@ -74,7 +74,7 @@ describe("FreeTrialTransitionUI - Rendering and Props Tests", () => {
       const frame = lastFrame();
       expect(frame).toBeDefined();
       expect(frame?.length).toBeGreaterThan(0);
-      expect(frame).toContain("3. ⚙️ Switch to a different configuration");
+      expect(frame).toContain("3. âš™ï¸ Switch to a different configuration");
     });
 
     it("includes proper user instructions", () => {
@@ -85,7 +85,7 @@ describe("FreeTrialTransitionUI - Rendering and Props Tests", () => {
       const frame = lastFrame();
       expect(frame).toContain("Choose how you'd like to continue:");
       expect(frame).toContain(
-        "↑/↓ to navigate or 1/2/3 to select, Enter to confirm",
+        "â†‘/â†“ to navigate or 1/2/3 to select, Enter to confirm",
       );
     });
 
@@ -125,7 +125,7 @@ describe("FreeTrialTransitionUI - Rendering and Props Tests", () => {
 
       const frame = lastFrame();
       // Check for box border characters (unicode box drawing)
-      expect(frame).toMatch(/[╭╮╯╰│─]/);
+      expect(frame).toMatch(/[â•­â•®â•¯â•°â”‚â”€]/);
     });
 
     it("displays with proper spacing and formatting", () => {
@@ -155,9 +155,9 @@ describe("FreeTrialTransitionUI - Rendering and Props Tests", () => {
         line.includes("Switch to a different configuration"),
       );
 
-      expect(modelsLine).toContain("➤");
-      expect(apiKeyLine).not.toContain("➤");
-      expect(configLine).not.toContain("➤");
+      expect(modelsLine).toContain("âž¤");
+      expect(apiKeyLine).not.toContain("âž¤");
+      expect(configLine).not.toContain("âž¤");
     });
   });
 

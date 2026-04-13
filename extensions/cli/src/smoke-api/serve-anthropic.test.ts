@@ -1,4 +1,4 @@
-import type { Subprocess } from "execa";
+﻿import type { Subprocess } from "execa";
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
 
 import {
@@ -15,7 +15,7 @@ import {
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 
 describe.skipIf(!ANTHROPIC_API_KEY)(
-  "Smoke: Serve mode → real Anthropic API",
+  "Smoke: Serve mode â†’ real Anthropic API",
   () => {
     let ctx: SmokeTestContext;
     let proc: Subprocess;

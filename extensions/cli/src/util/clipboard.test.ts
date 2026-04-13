@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it, vi } from "vitest";
+﻿import { beforeEach, describe, expect, it, vi } from "vitest";
 
 // Mock child_process
 vi.mock("child_process", () => ({
@@ -69,7 +69,7 @@ describe("clipboard utilities", () => {
     it("should detect image on macOS when PNG format is present", async () => {
       const os = await import("os");
       vi.mocked(os.default.platform).mockReturnValue("darwin");
-      mockExecAsync.mockResolvedValue({ stdout: "«class PNGf»", stderr: "" });
+      mockExecAsync.mockResolvedValue({ stdout: "Â«class PNGfÂ»", stderr: "" });
 
       const result = await checkClipboardForImage();
       expect(result).toBe(true);
@@ -78,7 +78,7 @@ describe("clipboard utilities", () => {
     it("should detect image on macOS when TIFF format is present", async () => {
       const os = await import("os");
       vi.mocked(os.default.platform).mockReturnValue("darwin");
-      mockExecAsync.mockResolvedValue({ stdout: "«class TIFF»", stderr: "" });
+      mockExecAsync.mockResolvedValue({ stdout: "Â«class TIFFÂ»", stderr: "" });
 
       const result = await checkClipboardForImage();
       expect(result).toBe(true);

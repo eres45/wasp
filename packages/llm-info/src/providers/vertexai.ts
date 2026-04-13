@@ -1,4 +1,4 @@
-import { AllMediaTypes, ModelProvider } from "../types.js";
+﻿import { AllMediaTypes, ModelProvider } from "../types.js";
 
 export const Gemini: ModelProvider = {
   models: [

@@ -1,4 +1,4 @@
-import { GetTool } from "../..";
+﻿import { GetTool } from "../..";
 import { loadMarkdownSkills } from "../../config/markdown/loadMarkdownSkills";
 import { BUILT_IN_GROUP_NAME, BuiltInToolNames } from "../builtIn";
 

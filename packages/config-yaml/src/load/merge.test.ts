@@ -1,4 +1,4 @@
-import { describe, expect, it } from "@jest/globals";
+﻿import { describe, expect, it } from "@jest/globals";
 import type { RequestOptions } from "../schemas/models.js";
 import { mergeConfigYamlRequestOptions } from "./merge.js";
 

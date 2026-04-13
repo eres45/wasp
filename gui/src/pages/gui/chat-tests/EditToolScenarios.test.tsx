@@ -1,4 +1,4 @@
-import { BuiltInToolNames } from "core/tools/builtIn";
+﻿import { BuiltInToolNames } from "core/tools/builtIn";
 import { updateConfig } from "../../../redux/slices/configSlice";
 import { renderWithProviders } from "../../../util/test/render";
 import { Chat } from "../Chat";

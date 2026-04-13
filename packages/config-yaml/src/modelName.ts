@@ -1,4 +1,4 @@
-export interface ProxyModelName {
+﻿export interface ProxyModelName {
   ownerSlug: string;
   packageSlug: string;
   provider: string;

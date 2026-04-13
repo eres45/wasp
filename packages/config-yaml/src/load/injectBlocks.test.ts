@@ -1,4 +1,4 @@
-import { Registry } from "../interfaces/index.js";
+﻿import { Registry } from "../interfaces/index.js";
 import { PackageIdentifier } from "../interfaces/slugs.js";
 import { ConfigYaml } from "../schemas/index.js";
 import { unrollBlocks } from "./unroll.js";
@@ -389,7 +389,7 @@ name: Mixed Variables Block
 version: 1.0.0
 schema: v1
 rules:
-  - "Input: \${{ inputs.userSetting }} | Secret: \${{ secrets.apiKey }} | Continue: \${{ continue.workspaceRoot }}"
+  - "Input: \${{ inputs.userSetting }} | Secret: \${{ secrets.apiKey }} | Continue: \${{ waspcode.workspaceRoot }}"
 `;
 
     const blockId: PackageIdentifier = {
@@ -422,14 +422,14 @@ rules:
 
     // Input should be converted to secret and then to FQSN, others should also get FQSN treatment
     expect(ruleText).toBe(
-      "Input: ${{ secrets.//userSetting }} | Secret: ${{ secrets.//apiKey }} | Continue: ${{ continue.workspaceRoot }}",
+      "Input: ${{ secrets.//userSetting }} | Secret: ${{ secrets.//apiKey }} | Continue: ${{ waspcode.workspaceRoot }}",
     );
 
     // Verify only inputs were converted
     const configStr = JSON.stringify(result.config);
     expect(configStr).not.toContain("inputs.userSetting");
     expect(configStr).toContain("secrets.//apiKey");
-    expect(configStr).toContain("continue.workspaceRoot");
+    expect(configStr).toContain("waspcode.workspaceRoot");
   });
 
   it("adds source file information to injected blocks", async () => {

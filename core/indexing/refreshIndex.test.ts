@@ -1,4 +1,4 @@
-import { truncateToLastNBytes } from "./refreshIndex";
+﻿import { truncateToLastNBytes } from "./refreshIndex";
 
 describe("truncateToLastNBytes", () => {
   it("should return full string if maxBytes greater than string byte length", () => {
@@ -20,8 +20,8 @@ describe("truncateToLastNBytes", () => {
   });
 
   it("should handle UTF-8 characters correctly", () => {
-    const input = "👋 Hello";
-    // 👋 is 4 bytes, space is 1 byte
+    const input = "ðŸ‘‹ Hello";
+    // ðŸ‘‹ is 4 bytes, space is 1 byte
     const result = truncateToLastNBytes(input, 5);
     expect(result).toBe("Hello");
   });

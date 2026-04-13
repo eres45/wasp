@@ -1,4 +1,4 @@
-// Cookie Banner Implementation for Continue Documentation
+﻿// Cookie Banner Implementation for Continue Documentation
 // This script implements a cookie consent banner in offline mode
 
 (function () {
@@ -149,7 +149,7 @@
     dialog.innerHTML = `
       <div class="cookie-dialog-header">
         <h2>Cookie Preferences</h2>
-        <button class="cookie-dialog-close" onclick="window.hidePreferencesDialog()">×</button>
+        <button class="cookie-dialog-close" onclick="window.hidePreferencesDialog()">Ã—</button>
       </div>
       <div class="cookie-dialog-body">
         <p>We use cookies and similar technologies to help personalize content and offer a better experience. You can customize your preferences below:</p>

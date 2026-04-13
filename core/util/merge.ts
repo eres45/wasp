@@ -1,4 +1,4 @@
-import { ConfigMergeType } from "../index.js";
+﻿import { ConfigMergeType } from "../index.js";
 
 type JsonObject = { [key: string]: any };
 

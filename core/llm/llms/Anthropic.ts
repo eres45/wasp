@@ -1,4 +1,4 @@
-import {
+﻿import {
   Tool as AnthropicTool,
   ContentBlockParam,
   MessageCreateParams,

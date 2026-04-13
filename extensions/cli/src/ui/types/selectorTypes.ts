@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Type definitions for selectors - compatible with existing hook interfaces
  */
 

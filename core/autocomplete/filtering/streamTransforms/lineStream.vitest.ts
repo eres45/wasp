@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it, Mock, vi } from "vitest";
+﻿import { beforeEach, describe, expect, it, Mock, vi } from "vitest";
 
 import {
   collectAllLines,
@@ -527,9 +527,9 @@ describe("lineStream", () => {
         "",
         "```",
         "debug-test-folder/",
-        "├── AdvancedPage.tsx",
-        "├── Calculator.java",
-        "└── test.ts",
+        "â”œâ”€â”€ AdvancedPage.tsx",
+        "â”œâ”€â”€ Calculator.java",
+        "â””â”€â”€ test.ts",
         "```",
         "```",
       ]);
@@ -546,9 +546,9 @@ describe("lineStream", () => {
         "",
         "```",
         "debug-test-folder/",
-        "├── AdvancedPage.tsx",
-        "├── Calculator.java",
-        "└── test.ts",
+        "â”œâ”€â”€ AdvancedPage.tsx",
+        "â”œâ”€â”€ Calculator.java",
+        "â””â”€â”€ test.ts",
         "```",
       ]);
     });
@@ -561,9 +561,9 @@ describe("lineStream", () => {
         "",
         "```",
         "debug-test-folder/",
-        "├── AdvancedPage.tsx",
-        "├── Calculator.java",
-        "└── test.ts",
+        "â”œâ”€â”€ AdvancedPage.tsx",
+        "â”œâ”€â”€ Calculator.java",
+        "â””â”€â”€ test.ts",
         "```",
         "```",
       ]);
@@ -577,9 +577,9 @@ describe("lineStream", () => {
         "",
         "```",
         "debug-test-folder/",
-        "├── AdvancedPage.tsx",
-        "├── Calculator.java",
-        "└── test.ts",
+        "â”œâ”€â”€ AdvancedPage.tsx",
+        "â”œâ”€â”€ Calculator.java",
+        "â””â”€â”€ test.ts",
         "```",
       ]);
     });

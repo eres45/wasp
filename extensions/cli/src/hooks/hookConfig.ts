@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Hook configuration loader.
  *
  * Loads hooks from settings files in the same locations as Claude Code:

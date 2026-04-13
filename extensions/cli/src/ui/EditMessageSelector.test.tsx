@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @vitest-environment jsdom
  */
 import { render } from "@testing-library/react";
@@ -123,7 +123,7 @@ describe("EditMessageSelector", () => {
         />,
       );
 
-      expect(container.textContent).toContain("↑/↓ to navigate");
+      expect(container.textContent).toContain("â†‘/â†“ to navigate");
       expect(container.textContent).toContain("Enter to edit");
       expect(container.textContent).toContain("Esc to exit");
     });

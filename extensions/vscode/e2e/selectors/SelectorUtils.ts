@@ -1,4 +1,4 @@
-import { By, WebDriver, WebElement, WebView } from "vscode-extension-tester";
+﻿import { By, WebDriver, WebElement, WebView } from "vscode-extension-tester";
 
 export class SelectorUtils {
   /**

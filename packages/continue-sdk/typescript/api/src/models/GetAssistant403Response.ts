@@ -1,4 +1,4 @@
-/* tslint:disable */
+﻿/* tslint:disable */
 /* eslint-disable */
 /**
  * Continue Hub IDE API
@@ -72,3 +72,4 @@ export function GetAssistant403ResponseToJSONTyped(
     message: value["message"],
   };
 }
+

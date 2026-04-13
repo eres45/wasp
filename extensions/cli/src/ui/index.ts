@@ -1,4 +1,4 @@
-import { render, RenderOptions } from "ink";
+﻿import { render, RenderOptions } from "ink";
 import React from "react";
 
 import { enableSigintHandler, setTUIUnmount } from "../index.js";

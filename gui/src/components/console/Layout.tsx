@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import useLLMLog from "../../hooks/useLLMLog";
 import Details from "./Details";
 import List from "./List";
@@ -49,7 +49,7 @@ export default function Layout() {
               onClick={() => setShowTotalUsage(false)}
               className="absolute right-4 top-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-[color:var(--vscode-button-background)] text-[color:var(--vscode-button-foreground)] transition-colors hover:bg-[color:var(--vscode-button-hoverBackground)]"
             >
-              ×
+              Ã—
             </button>
 
             {/* Content container with scroll */}

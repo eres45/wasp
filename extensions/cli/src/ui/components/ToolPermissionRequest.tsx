@@ -1,4 +1,4 @@
-import { Box, Text, useInput } from "ink";
+﻿import { Box, Text, useInput } from "ink";
 import React, { useState } from "react";
 
 interface ToolPermissionRequestProps {
@@ -48,7 +48,7 @@ export const ToolPermissionRequest: React.FC<ToolPermissionRequestProps> = ({
   return (
     <Box flexDirection="column" marginBottom={1}>
       <Box>
-        <Text color="yellow">⚠ </Text>
+        <Text color="yellow">âš  </Text>
         <Text color="yellow" bold>
           Permission Required
         </Text>

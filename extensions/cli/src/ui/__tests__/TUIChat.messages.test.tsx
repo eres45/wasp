@@ -1,4 +1,4 @@
-import { createUITestContext } from "../../test-helpers/ui-test-context.js";
+﻿import { createUITestContext } from "../../test-helpers/ui-test-context.js";
 
 import { testBothModes, renderInMode } from "./TUIChat.dualModeHelper.js";
 
@@ -12,7 +12,7 @@ describe("TUIChat - Message Display Tests", () => {
     expect(frame).toContain("Ask anything");
 
     // Should have box borders (using the actual characters)
-    expect(frame).toContain("│");
+    expect(frame).toContain("â”‚");
 
     // Mode-specific assertions
     if (mode === "remote") {

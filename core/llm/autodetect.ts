@@ -1,4 +1,4 @@
-import {
+﻿import {
   ChatMessage,
   ModelCapability,
   ModelDescription,

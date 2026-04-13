@@ -1,4 +1,4 @@
-import { SystemMessageToolsFramework } from "./types";
+﻿import { SystemMessageToolsFramework } from "./types";
 
 export function detectToolCallStart(
   buffer: string,

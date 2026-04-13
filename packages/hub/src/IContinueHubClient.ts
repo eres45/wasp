@@ -1,4 +1,4 @@
-import {
+﻿import {
   AssistantUnrolled,
   ConfigResult,
   FQSN,

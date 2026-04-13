@@ -1,4 +1,4 @@
-import ReplicateClient from "replicate";
+﻿import ReplicateClient from "replicate";
 
 import { ChatMessage, CompletionOptions, LLMOptions } from "../../index.js";
 import { renderChatMessage } from "../../util/messageContent.js";

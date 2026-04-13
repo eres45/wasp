@@ -1,4 +1,4 @@
-import { type AssistantConfig } from "@continuedev/sdk";
+﻿import { type AssistantConfig } from "@continuedev/sdk";
 import { Box, Text } from "ink";
 import React, { useEffect, useState } from "react";
 
@@ -15,7 +15,7 @@ const truncateDescription = (description: string): string => {
   }
   return (
     Array.from(description).slice(0, MAX_DESCRIPTION_LENGTH).join("").trim() +
-    "…"
+    "â€¦"
   );
 };
 
@@ -117,7 +117,7 @@ const SlashCommandUI: React.FC<SlashCommandUIProps> = ({
 
       <Box marginTop={1}>
         <Text color="gray" dimColor>
-          ↑/↓ to navigate, Enter to select, Tab to complete
+          â†‘/â†“ to navigate, Enter to select, Tab to complete
         </Text>
       </Box>
     </Box>

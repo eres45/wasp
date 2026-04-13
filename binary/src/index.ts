@@ -1,4 +1,4 @@
-process.env.IS_BINARY = "true";
+﻿process.env.IS_BINARY = "true";
 import { Command } from "commander";
 import { Core } from "core/core";
 import { LLMLogFormatter } from "core/llm/logFormatter";

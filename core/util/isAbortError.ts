@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Unified abort error detection.
  * Covers all known abort patterns in the Continue codebase:
  * - String literal "cancel" (streaming cancellation)

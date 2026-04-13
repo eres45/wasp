@@ -1,4 +1,4 @@
-import * as readline from "readline";
+﻿import * as readline from "readline";
 
 /**
  * Creates a promise-based question prompt using readline

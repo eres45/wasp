@@ -1,4 +1,4 @@
-import {
+﻿import {
   CubeIcon,
   ExclamationTriangleIcon,
   GiftIcon,
@@ -40,8 +40,13 @@ export function BlockSettingsTopToolbar() {
 
   const shouldShowError = configError && configError?.length > 0;
 
-  const { creditStatus, isUsingFreeTrial, refreshCreditStatus } =
-    useCreditStatus();
+  const {
+    creditStatus,
+    refreshCreditStatus,
+    redeemPromoCode,
+    shouldShowCreditsUi,
+    wallet,
+  } = useCreditStatus();
 
   const handleRulesClick = () => {
     if (selectedProfile) {
@@ -101,11 +106,13 @@ export function BlockSettingsTopToolbar() {
 
         {!hasActiveContent && (
           <div className="flex items-center gap-1.5">
-            {isUsingFreeTrial && (
+            {shouldShowCreditsUi && (
               <ToolTip content="View remaining starter credits">
                 <StarterCreditsPopover
                   creditStatus={creditStatus}
                   refreshCreditStatus={refreshCreditStatus}
+                  redeemPromoCode={redeemPromoCode}
+                  wallet={wallet}
                 >
                   <HoverItem px={2}>
                     <GiftIcon className="text-description-muted h-3 w-3 hover:brightness-125" />

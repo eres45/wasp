@@ -1,4 +1,4 @@
-import vscode from "vscode";
+﻿import vscode from "vscode";
 class EditDecorationManager {
   private _lastEditor: vscode.TextEditor | undefined;
   private decorationType: vscode.TextEditorDecorationType;
@@ -19,7 +19,7 @@ class EditDecorationManager {
   private updateInEditMode(inEditMode: boolean) {
     vscode.commands.executeCommand(
       "setContext",
-      "continue.inEditMode",
+      "waspcode.inEditMode",
       inEditMode,
     );
   }

@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it, vi } from "vitest";
+﻿import { beforeEach, describe, expect, it, vi } from "vitest";
 import { InternalMcpOptions } from "../..";
 import MCPConnection from "./MCPConnection";
 import { MCPManagerSingleton } from "./MCPManagerSingleton";

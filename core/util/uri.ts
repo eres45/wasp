@@ -1,4 +1,4 @@
-import * as URI from "uri-js";
+﻿import * as URI from "uri-js";
 
 /** Converts any OS path to cleaned up URI path segment format with no leading/trailing slashes
    e.g. \path\to\folder\ -> path/to/folder

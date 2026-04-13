@@ -1,4 +1,4 @@
-import { parseProxyModelName } from "@continuedev/config-yaml";
+﻿import { parseProxyModelName } from "@continuedev/config-yaml";
 import { ModelDescription } from "..";
 
 export const PROVIDER_TOOL_SUPPORT: Record<string, (model: string) => boolean> =
@@ -237,8 +237,8 @@ export const PROVIDER_TOOL_SUPPORT: Record<string, (model: string) => boolean> =
 
       // Exclusions must be checked against both raw and normalized IDs.
       // "mistrallite" catches both "mistrallite" (raw) and "mistral-lite"
-      // (normalized → "mistrallite").  "mistral-openorca" catches both the
-      // hyphenated form and "MistralOpenOrca" (normalized → "mistralopenorca").
+      // (normalized â†’ "mistrallite").  "mistral-openorca" catches both the
+      // hyphenated form and "MistralOpenOrca" (normalized â†’ "mistralopenorca").
       const exclusions = [
         "vision",
         "math",
@@ -258,7 +258,7 @@ export const PROVIDER_TOOL_SUPPORT: Record<string, (model: string) => boolean> =
 
       // Delegate to Ollama's heuristic with raw name first (covers patterns
       // that contain hyphens, e.g. "command-r"), then with the normalized
-      // name (covers LM Studio IDs like "Meta-Llama-3.1-8B" → "llama3.1").
+      // name (covers LM Studio IDs like "Meta-Llama-3.1-8B" â†’ "llama3.1").
       const ollamaFn = PROVIDER_TOOL_SUPPORT["ollama"];
       return ollamaFn(model) || ollamaFn(normalized);
     },

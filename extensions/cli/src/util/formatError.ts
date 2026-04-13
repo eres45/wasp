@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Safely formats an error object into a readable string
  */
 export function formatError(error: any): string {

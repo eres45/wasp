@@ -1,4 +1,4 @@
-// Mock API Client
+﻿// Mock API Client
 export class MockApiClient {
   async getFreeTrialStatus() {
     return {

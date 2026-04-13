@@ -1,4 +1,4 @@
-import { DiffLine } from "../../index";
+﻿import { DiffLine } from "../../index";
 
 /**
  * Checks if a string matches unified diff format by validating:
@@ -77,7 +77,7 @@ export function applyUnifiedDiff(
         diffResult.push({ type: "old", line: srcLine });
         hunkSourcePos++;
       } else {
-        // Context line: use the source line (in case the diff’s context has a minor whitespace error)
+        // Context line: use the source line (in case the diffâ€™s context has a minor whitespace error)
         // and advance the pointer.
         diffResult.push({ type: "same", line: srcLine });
         hunkSourcePos++;
@@ -127,7 +127,7 @@ function parseUnifiedDiff(diffText: string): Hunk[] {
 }
 
 /**
- * Searches for an occurrence of the block of lines (the “before” block) in sourceLines,
+ * Searches for an occurrence of the block of lines (the â€œbeforeâ€ block) in sourceLines,
  * starting at startIndex. Comparison is done by checking if the lines are exactly equal,
  * or if their trimmed versions are equal.
  *

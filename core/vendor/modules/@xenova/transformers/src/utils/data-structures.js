@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Custom data structures.
  *
  * These are only used internally, meaning an end-user shouldn't
@@ -418,3 +418,4 @@ class TokenLatticeNode {
     return n;
   }
 }
+

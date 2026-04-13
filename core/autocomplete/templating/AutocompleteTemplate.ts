@@ -1,4 +1,4 @@
-// Fill in the middle prompts
+﻿// Fill in the middle prompts
 
 import { CompletionOptions } from "../../index.js";
 import {
@@ -162,13 +162,13 @@ const seedCoderFimTemplate: AutocompleteTemplate = {
     "<[fim-prefix]>{{{prefix}}}<[fim-suffix]>{{{suffix}}}<[fim-middle]>",
   completionOptions: {
     stop: [
-      "<[end▁of▁sentence]>",
+      "<[endâ–ofâ–sentence]>",
       "<[fim-prefix]>",
       "<[fim-middle]>",
       "<[fim-suffix]>",
-      "<[PAD▁TOKEN]>",
-      "<[SEP▁TOKEN]>",
-      "<[begin▁of▁sentence]>",
+      "<[PADâ–TOKEN]>",
+      "<[SEPâ–TOKEN]>",
+      "<[beginâ–ofâ–sentence]>",
     ],
   },
 };
@@ -353,14 +353,14 @@ const codeLlamaFimTemplate: AutocompleteTemplate = {
 // https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base
 const deepseekFimTemplate: AutocompleteTemplate = {
   template:
-    "<｜fim▁begin｜>{{{prefix}}}<｜fim▁hole｜>{{{suffix}}}<｜fim▁end｜>",
+    "<ï½œfimâ–beginï½œ>{{{prefix}}}<ï½œfimâ–holeï½œ>{{{suffix}}}<ï½œfimâ–endï½œ>",
   completionOptions: {
     stop: [
-      "<｜fim▁begin｜>",
-      "<｜fim▁hole｜>",
-      "<｜fim▁end｜>",
+      "<ï½œfimâ–beginï½œ>",
+      "<ï½œfimâ–holeï½œ>",
+      "<ï½œfimâ–endï½œ>",
       "//",
-      "<｜end▁of▁sentence｜>",
+      "<ï½œendâ–ofâ–sentenceï½œ>",
     ],
   },
 };

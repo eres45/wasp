@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Tests for the hooks system: config loading, matcher matching,
  * hook execution (command and HTTP), exit code semantics,
  * JSON output parsing, result aggregation, and deduplication.
@@ -285,7 +285,7 @@ describe("hookConfig", () => {
 // hookRunner tests
 // ---------------------------------------------------------------------------
 
-// hookRunner tests spawn /bin/sh subprocesses — skip on Windows where cmd.exe
+// hookRunner tests spawn /bin/sh subprocesses â€” skip on Windows where cmd.exe
 // has incompatible shell syntax (redirections, single-quote echo, sleep, etc.)
 const describeUnix = process.platform === "win32" ? describe.skip : describe;
 

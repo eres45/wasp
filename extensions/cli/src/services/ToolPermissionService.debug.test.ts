@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it } from "vitest";
+﻿import { beforeEach, describe, expect, it } from "vitest";
 
 import { PermissionMode } from "../permissions/types.js";
 
@@ -32,11 +32,11 @@ describe("ToolPermissionService - Debug Tool Permissions", () => {
         if (mode === "plan") {
           // Plan mode should explicitly exclude Write
           expect(writePolicy?.permission).toBe("exclude");
-          console.log(`✓ Write tool correctly excluded in plan mode`);
+          console.log(`âœ“ Write tool correctly excluded in plan mode`);
         } else if (mode === "auto") {
           // Auto mode should allow everything
           expect(wildcardPolicy?.permission).toBe("allow");
-          console.log(`✓ Wildcard allow policy found in auto mode`);
+          console.log(`âœ“ Wildcard allow policy found in auto mode`);
         } else {
           // Normal mode behavior depends on user config
           console.log(

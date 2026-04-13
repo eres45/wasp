@@ -1,4 +1,4 @@
-import { DiffLine } from "core";
+﻿import { DiffLine } from "core";
 
 export function getFirstChangedLine(
   diff: DiffLine[],

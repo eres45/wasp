@@ -1,4 +1,4 @@
-import { InformationCircleIcon } from "@heroicons/react/24/outline";
+﻿import { InformationCircleIcon } from "@heroicons/react/24/outline";
 import React, { ReactNode } from "react";
 import { vscButtonBackground } from "..";
 import { ToolTip } from "./Tooltip";

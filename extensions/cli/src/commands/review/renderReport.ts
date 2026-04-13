@@ -1,4 +1,4 @@
-import chalk from "chalk";
+﻿import chalk from "chalk";
 
 export interface ReviewResult {
   /** Agent slug or local path */
@@ -79,20 +79,20 @@ function renderTextReport(
     (r) => r.status === "fail" || r.status === "error",
   );
 
-  // Only output details for failures/errors — passes are already in the table
+  // Only output details for failures/errors â€” passes are already in the table
   for (const result of failedResults) {
     const durationStr = `(${result.duration.toFixed(1)}s)`;
 
     if (result.status === "error") {
       const header = isTTY
-        ? chalk.red(`## ✗ ${result.name}`) + " " + chalk.dim(durationStr)
-        : `## ✗ ${result.name} ${durationStr}`;
+        ? chalk.red(`## âœ— ${result.name}`) + " " + chalk.dim(durationStr)
+        : `## âœ— ${result.name} ${durationStr}`;
       lines.push(header);
       lines.push(`Error: ${result.error || "Unknown error"}`);
     } else {
       const header = isTTY
-        ? chalk.red(`## ✗ ${result.name}`) + " " + chalk.dim(durationStr)
-        : `## ✗ ${result.name} ${durationStr}`;
+        ? chalk.red(`## âœ— ${result.name}`) + " " + chalk.dim(durationStr)
+        : `## âœ— ${result.name} ${durationStr}`;
       lines.push(header);
       lines.push("");
 
@@ -130,9 +130,9 @@ function renderTextReport(
     lines.push(
       isTTY
         ? chalk.dim(
-            "Tip: Run these automatically on every PR → https://continue.dev",
+            "Tip: Run these automatically on every PR â†’ https://waspcode.dev",
           )
-        : "Tip: Run these automatically on every PR → https://continue.dev",
+        : "Tip: Run these automatically on every PR â†’ https://waspcode.dev",
     );
   }
 

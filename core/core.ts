@@ -1,4 +1,4 @@
-import { fetchwithRequestOptions } from "@continuedev/fetch";
+﻿import { fetchwithRequestOptions } from "@continuedev/fetch";
 import * as URI from "uri-js";
 import { v4 as uuidv4 } from "uuid";
 
@@ -1536,7 +1536,7 @@ export class Core {
         //     .then((userSelection) => {
         //       if (userSelection === toastOption) {
         //         void this.ide.openUrl(
-        //           "https://docs.continue.dev/customize/model-roles/embeddings",
+        //           "https://docs.waspcode.dev/customize/model-roles/embeddings",
         //         );
         //       }
         //     });

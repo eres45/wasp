@@ -1,4 +1,4 @@
-import { expect, test, vi } from "vitest";
+﻿import { expect, test, vi } from "vitest";
 import { DEFAULT_GIT_DIFF_LINE_LIMIT, viewDiffImpl } from "./viewDiff";
 
 // Mock the getDiffsFromCache function

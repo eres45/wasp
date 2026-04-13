@@ -1,4 +1,4 @@
-import { SseError } from "@modelcontextprotocol/sdk/client/sse.js";
+﻿import { SseError } from "@modelcontextprotocol/sdk/client/sse.js";
 import { StreamableHTTPError } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 
 /**

@@ -1,4 +1,4 @@
-import { SyntaxNode } from "web-tree-sitter";
+﻿import { SyntaxNode } from "web-tree-sitter";
 
 import { ChunkWithoutID } from "../../index.js";
 import { countTokensAsync } from "../../llm/countTokens.js";

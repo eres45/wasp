@@ -1,4 +1,4 @@
-// Minimal mock for LLM API (just enough to prevent errors)
+﻿// Minimal mock for LLM API (just enough to prevent errors)
 export class MockLlmApi {
   async chatCompletionStream(): Promise<AsyncIterable<any>> {
     return (async function* () {

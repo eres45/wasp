@@ -1,4 +1,4 @@
-import { Continue, ContinueClient } from "@continuedev/sdk";
+﻿import { Continue, ContinueClient } from "@continuedev/sdk";
 import chalk from "chalk";
 
 import { env } from "./env.js";
@@ -21,7 +21,7 @@ export async function initializeContinueSDK(
   }
 
   try {
-    return await Continue.from({
+    return await waspcode.from({
       apiKey,
       assistant: assistantSlug,
       organizationId,

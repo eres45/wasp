@@ -1,4 +1,4 @@
-import { slugToUri } from "./uriUtils.js";
+﻿import { slugToUri } from "./uriUtils.js";
 import { AuthenticatedConfig, EnvironmentAuthConfig } from "./workos-types.js";
 import {
   getAccessToken,

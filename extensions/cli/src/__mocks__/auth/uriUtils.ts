@@ -1,4 +1,4 @@
-import { vi } from "vitest";
+﻿import { vi } from "vitest";
 
 export const pathToUri = vi.fn((path: string) => path);
 export const slugToUri = vi.fn((slug: string) => slug);

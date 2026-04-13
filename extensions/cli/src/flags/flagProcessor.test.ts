@@ -1,4 +1,4 @@
-import {
+﻿import {
   convertLegacyModeFlags,
   buildPermissionOverrides,
   processCommandFlags,

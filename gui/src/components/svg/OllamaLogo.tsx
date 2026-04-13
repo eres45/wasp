@@ -1,4 +1,4 @@
-import { vscForeground } from "..";
+﻿import { vscForeground } from "..";
 
 interface OllamaLogoProps {
   /** Height of the logo in pixels */

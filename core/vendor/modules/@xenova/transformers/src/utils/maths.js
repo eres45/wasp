@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Helper module for mathematical processing.
  *
  * These functions and classes are only used internally,
@@ -952,3 +952,4 @@ export function round(num, decimals) {
   const pow = Math.pow(10, decimals);
   return Math.round(num * pow) / pow;
 }
+

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * It's helpful to know what functions errors occur in, but absolute
  * file paths are sensitive information, so we want to remove them.
  * @param stack The stack trace to extract minimal information from.

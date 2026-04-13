@@ -1,0 +1,216 @@
+﻿diff --git a/extensions/vscode/src/ContinueGUIWebviewViewProvider.ts b/extensions/vscode/src/ContinueGUIWebviewViewProvider.ts
+index 443275cbd..3a3f73cce 100644
+--- a/extensions/vscode/src/ContinueGUIWebviewViewProvider.ts
++++ b/extensions/vscode/src/ContinueGUIWebviewViewProvider.ts
+@@ -1,4 +1,4 @@
+-import * as vscode from "vscode";
++´╗┐import * as vscode from "vscode";
+ 
+ import { getTheme } from "./util/getTheme";
+ import { getExtensionVersion, getvsCodeUriScheme } from "./util/util";
+@@ -10,7 +10,7 @@ import type { FileEdit } from "core";
+ export class ContinueGUIWebviewViewProvider
+   implements vscode.WebviewViewProvider
+ {
+-  public static readonly viewType = "continue.continueGUIView";
++  public static readonly viewType = "waspcode.waspcodeGUIView";
+   public webviewProtocol: VsCodeWebviewProtocol;
+ 
+   public get isReady(): boolean {
+@@ -25,6 +25,24 @@ export class ContinueGUIWebviewViewProvider
+     this.webviewProtocol.webview = webviewView.webview;
+     this._webviewView = webviewView;
+     this._webview = webviewView.webview;
++    
++    // Set webview options first
++    const extensionUri = getExtensionUri();
++    webviewView.webview.options = {
++      enableScripts: true,
++      localResourceRoots: [
++        vscode.Uri.joinPath(extensionUri, "gui"),
++        vscode.Uri.joinPath(extensionUri, "assets"),
++      ],
++      enableCommandUris: true,
++      portMapping: [
++        {
++          webviewPort: 65433,
++          extensionHostPort: 65433,
++        },
++      ],
++    };
++    
+     webviewView.webview.html = this.getSidebarContent(
+       this.extensionContext,
+       webviewView,
+@@ -71,112 +89,74 @@ export class ContinueGUIWebviewViewProvider
+     edits: FileEdit[] | undefined = undefined,
+     isFullScreen = false,
+   ): string {
+-    const extensionUri = getExtensionUri();
+-    let scriptUri: string;
+-    let styleMainUri: string;
+-    const vscMediaUrl: string = panel.webview
+-      .asWebviewUri(vscode.Uri.joinPath(extensionUri, "gui"))
+-      .toString();
+-
+-    const inDevelopmentMode =
+-      context?.extensionMode === vscode.ExtensionMode.Development;
+-    if (inDevelopmentMode) {
+-      scriptUri = "http://localhost:5173/src/main.tsx";
+-      styleMainUri = "http://localhost:5173/src/index.css";
+-    } else {
+-      scriptUri = panel.webview
+-        .asWebviewUri(vscode.Uri.joinPath(extensionUri, "gui/assets/index.js"))
+-        .toString();
+-      styleMainUri = panel.webview
+-        .asWebviewUri(vscode.Uri.joinPath(extensionUri, "gui/assets/index.css"))
+-        .toString();
+-    }
+-
+-    panel.webview.options = {
+-      enableScripts: true,
+-      localResourceRoots: [
+-        vscode.Uri.joinPath(extensionUri, "gui"),
+-        vscode.Uri.joinPath(extensionUri, "assets"),
+-      ],
+-      enableCommandUris: true,
+-      portMapping: [
+-        {
+-          webviewPort: 65433,
+-          extensionHostPort: 65433,
+-        },
+-      ],
+-    };
+-
++    // Simple test HTML to see if webview works at all
+     const nonce = getNonce();
+-
+-    const currentTheme = getTheme();
+-    vscode.workspace.onDidChangeConfiguration((e) => {
+-      if (
+-        e.affectsConfiguration("workbench.colorTheme") ||
+-        e.affectsConfiguration("window.autoDetectColorScheme") ||
+-        e.affectsConfiguration("window.autoDetectHighContrast") ||
+-        e.affectsConfiguration("workbench.preferredDarkColorTheme") ||
+-        e.affectsConfiguration("workbench.preferredLightColorTheme") ||
+-        e.affectsConfiguration("workbench.preferredHighContrastColorTheme") ||
+-        e.affectsConfiguration("workbench.preferredHighContrastLightColorTheme")
+-      ) {
+-        // Send new theme to GUI to update embedded Monaco themes
+-        void this.webviewProtocol?.request("setTheme", { theme: getTheme() });
+-      }
+-    });
+-
+-    this.webviewProtocol.webview = panel.webview;
+-
++    
+     return `<!DOCTYPE html>
+     <html lang="en">
+       <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-        <script>const vscode = acquireVsCodeApi();</script>
+-        <link href="${styleMainUri}" rel="stylesheet">
+-
+-        <title>Continue</title>
++        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-${nonce}' 'unsafe-inline'; style-src 'unsafe-inline';">
++        <title>Wasp Code Test</title>
++        <style>
++          body { 
++            font-family: Arial, sans-serif; 
++            padding: 20px; 
++            background: #1e1e1e; 
++            color: #fff; 
++          }
++          .test-container {
++            text-align: center;
++            padding: 40px;
++          }
++          .success {
++            color: #4CAF50;
++            font-size: 18px;
++            margin-bottom: 20px;
++          }
++          .info {
++            color: #2196F3;
++            margin-bottom: 10px;
++          }
++        </style>
+       </head>
+       <body>
+-        <div id="root"></div>
+-
+-        ${
+-          inDevelopmentMode
+-            ? `<script type="module">
+-          import RefreshRuntime from "http://localhost:5173/@react-refresh"
+-          RefreshRuntime.injectIntoGlobalHook(window)
+-          window.$RefreshReg$ = () => {}
+-          window.$RefreshSig$ = () => (type) => type
+-          window.__vite_plugin_react_preamble_installed__ = true
+-          </script>`
+-            : ""
+-        }
+-
+-        <script type="module" nonce="${nonce}" src="${scriptUri}"></script>
+-
+-        <script>localStorage.setItem("ide", '"vscode"')</script>
+-        <script>localStorage.setItem("vsCodeUriScheme", '"${getvsCodeUriScheme()}"')</script>
+-        <script>localStorage.setItem("extensionVersion", '"${getExtensionVersion()}"')</script>
+-        <script>window.windowId = "${this.windowId}"</script>
+-        <script>window.vscMachineId = "${getUniqueId()}"</script>
+-        <script>window.vscMediaUrl = "${vscMediaUrl}"</script>
+-        <script>window.ide = "vscode"</script>
+-        <script>window.fullColorTheme = ${JSON.stringify(currentTheme)}</script>
+-        <script>window.colorThemeName = "dark-plus"</script>
+-        <script>window.workspacePaths = ${JSON.stringify(
+-          vscode.workspace.workspaceFolders?.map((folder) =>
+-            folder.uri.toString(),
+-          ) || [],
+-        )}</script>
+-        <script>window.isFullScreen = ${isFullScreen}</script>
+-
+-        ${
+-          edits
+-            ? `<script>window.edits = ${JSON.stringify(edits)}</script>`
+-            : ""
+-        }
+-        ${page ? `<script>window.location.pathname = "${page}"</script>` : ""}
++        <div class="test-container">
++          <div class="success">Ô£à Wasp Code Webview Test</div>
++          <div class="info">If you can see this, the webview is working!</div>
++          <div class="info">Extension Mode: ${context?.extensionMode === vscode.ExtensionMode.Development ? 'Development' : 'Production'}</div>
++          <div class="info">Window ID: ${this.windowId}</div>
++          <div style="margin-top: 30px;">
++            <button onclick="testVscode()" style="padding: 10px 20px; background: #007ACC; color: white; border: none; border-radius: 4px; cursor: pointer;">
++              Test VS Code API
++            </button>
++          </div>
++          <div id="result" style="margin-top: 20px; color: #FFA500;"></div>
++        </div>
++        
++        <script nonce="${nonce}">
++          const vscode = acquireVsCodeApi();
++          
++          function testVscode() {
++            document.getElementById('result').innerHTML = '­ƒöä Testing VS Code API...';
++            try {
++              vscode.postMessage({ type: 'test', message: 'Hello from webview!' });
++              document.getElementById('result').innerHTML = 'Ô£à VS Code API working!';
++            } catch (error) {
++              document.getElementById('result').innerHTML = 'ÔØî VS Code API error: ' + error.message;
++            }
++          }
++          
++          window.addEventListener('message', event => {
++            const message = event.data;
++            console.log('Received message:', message);
++          });
++          
++          console.log('Wasp Code webview loaded successfully!');
++        </script>
+       </body>
+     </html>`;
+   }
+ }
++

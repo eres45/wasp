@@ -1,4 +1,4 @@
-import type { ChatHistoryItem } from "core";
+﻿import type { ChatHistoryItem } from "core";
 
 import { findLastSafeSplitPoint } from "./messageSplitting.js";
 

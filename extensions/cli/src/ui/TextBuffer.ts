@@ -1,4 +1,4 @@
-import { Key } from "ink";
+﻿import { Key } from "ink";
 
 export const COLLAPSE_SIZE = 800; // Characters threshold for collapsing pasted content
 export const RAPID_INPUT_THRESHOLD = 200; // Minimum characters to trigger rapid input detection

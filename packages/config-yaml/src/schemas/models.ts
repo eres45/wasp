@@ -1,4 +1,4 @@
-import { z } from "zod";
+﻿import { z } from "zod";
 
 export const clientCertificateOptionsSchema = z.object({
   cert: z.string(),
@@ -179,6 +179,7 @@ const baseModelFields = {
   name: z.string(),
   model: z.string(),
   apiKey: z.string().optional(),
+  apiKeys: z.array(z.string()).optional(),
   apiBase: z.string().optional(),
   contextLength: z.number().optional(),
   maxStopWords: z.number().optional(),

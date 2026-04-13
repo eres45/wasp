@@ -1,4 +1,4 @@
-// Valid config tab names
+﻿// Valid config tab names
 export type ConfigTab =
   | "models"
   | "rules"

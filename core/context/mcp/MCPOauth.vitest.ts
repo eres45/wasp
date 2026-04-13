@@ -1,4 +1,4 @@
-import fs from "node:fs";
+﻿import fs from "node:fs";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { GlobalContext } from "../../util/GlobalContext";
 import { getGlobalContextFilePath } from "../../util/paths";

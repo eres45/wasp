@@ -1,4 +1,4 @@
-import { postprocessCompletion } from "./index";
+﻿import { postprocessCompletion } from "./index";
 
 describe("postprocessCompletion - removeBackticks", () => {
   const mockLLM = { model: "test-model" } as any;

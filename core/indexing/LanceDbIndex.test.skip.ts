@@ -1,4 +1,4 @@
-import { jest } from "@jest/globals";
+﻿import { jest } from "@jest/globals";
 import lance from "vectordb";
 
 import { testConfigHandler, testIde } from "../test/fixtures";

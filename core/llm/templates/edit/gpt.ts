@@ -1,4 +1,4 @@
-import { PromptTemplateFunction } from "../../..";
+﻿import { PromptTemplateFunction } from "../../..";
 import { dedent } from "../../../util";
 
 const gptInsertionEditPrompt: PromptTemplateFunction = (_, otherData) => {

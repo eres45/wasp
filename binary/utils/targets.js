@@ -1,4 +1,4 @@
-const RIPGREP_VERSION = "14.1.1";
+﻿const RIPGREP_VERSION = "14.1.1";
 
 /**
  * All supported platform-architecture targets

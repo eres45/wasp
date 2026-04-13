@@ -1,4 +1,4 @@
-import * as YAML from "yaml";
+﻿import * as YAML from "yaml";
 import { ZodError } from "zod";
 import { mergeConfigYamlRequestOptions, RequestOptions } from "../browser.js";
 import { PlatformClient, Registry } from "../interfaces/index.js";

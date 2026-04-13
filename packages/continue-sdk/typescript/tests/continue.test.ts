@@ -1,6 +1,6 @@
-import { expect, test } from "@jest/globals";
+﻿import { expect, test } from "@jest/globals";
 import dotenv from "dotenv";
-import { Continue } from "../src/Continue.js";
+import { Continue } from "../src/waspcode.js";
 
 dotenv.config();
 
@@ -26,7 +26,7 @@ test.skip("should make a real API call to the Continue service", async () => {
   const assistantSlug = "peter-parker/assistant1";
   const modelName = "claude-3-7-sonnet-latest";
 
-  const { client, assistant } = await Continue.from({
+  const { client, assistant } = await waspcode.from({
     apiKey,
     assistant: assistantSlug,
     baseURL: "http://localhost:3001",
@@ -53,3 +53,4 @@ test.skip("should make a real API call to the Continue service", async () => {
   expect(response.choices[0].message).toBeDefined();
   expect(response.choices[0].message.content).toBeTruthy();
 });
+

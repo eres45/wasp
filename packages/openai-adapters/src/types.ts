@@ -1,4 +1,4 @@
-import * as z from "zod";
+﻿import * as z from "zod";
 
 export const ClientCertificateOptionsSchema = z.object({
   cert: z.string(),

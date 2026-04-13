@@ -1,4 +1,4 @@
-import { LLMOptions } from "../../index.js";
+﻿import { LLMOptions } from "../../index.js";
 import { LlmApiRequestType } from "../openaiTypeConverters.js";
 
 import OpenAI from "./OpenAI.js";

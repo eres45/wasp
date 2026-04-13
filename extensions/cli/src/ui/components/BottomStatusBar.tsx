@@ -1,4 +1,4 @@
-import { Box, Text } from "ink";
+﻿import { Box, Text } from "ink";
 import React, { useEffect, useState } from "react";
 
 import { setExitMessageCallback, shouldShowExitMessage } from "../../index.js";
@@ -72,7 +72,7 @@ export const BottomStatusBar: React.FC<BottomStatusBarProps> = ({
           <React.Fragment>
             <Text key="context-separator" color="dim">
               {" "}
-              •{" "}
+              â€¢{" "}
             </Text>
             <ContextPercentageDisplay percentage={contextPercentage} />
           </React.Fragment>
@@ -81,7 +81,7 @@ export const BottomStatusBar: React.FC<BottomStatusBarProps> = ({
           <React.Fragment>
             <Text key="cost-separator" color="dim">
               {" "}
-              •{" "}
+              â€¢{" "}
             </Text>
             <Text key="cost-display" color="dim">
               Cost: ${totalCost.toFixed(4)}

@@ -1,4 +1,4 @@
-import { Box, Text, useInput } from "ink";
+﻿import { Box, Text, useInput } from "ink";
 import React, { ReactNode } from "react";
 
 import { defaultBoxStyles } from "./styles.js";
@@ -112,13 +112,13 @@ export function Selector<T extends SelectorOption>({
         color={isSelected ? "blue" : isCurrent ? "green" : "white"}
         bold={isSelected}
       >
-        {isSelected ? "➤ " : "  "}
+        {isSelected ? "âž¤ " : "  "}
         {option.name}
         {option.displaySuffix || ""}
       </Text>
       {isCurrent && (
         <Text bold color="green">
-          {" ✔"}
+          {" âœ”"}
         </Text>
       )}
     </>
@@ -142,7 +142,7 @@ export function Selector<T extends SelectorOption>({
       </Box>
       <Box marginTop={1}>
         <Text color="gray" dimColor>
-          ↑/↓ to navigate, Enter to select, Esc to cancel
+          â†‘/â†“ to navigate, Enter to select, Esc to cancel
         </Text>
       </Box>
     </Box>

@@ -1,4 +1,4 @@
-import {
+﻿import {
   SlashCommand,
   SlashCommandDescription,
   SlashCommandWithSource,

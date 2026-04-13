@@ -1,4 +1,4 @@
-import { Box, Text } from "ink";
+﻿import { Box, Text } from "ink";
 import React from "react";
 
 interface ModelCapabilityWarningProps {
@@ -13,7 +13,7 @@ const ModelCapabilityWarning: React.FC<ModelCapabilityWarningProps> = ({
       <Box flexDirection="row" alignItems="center">
         <Text bold color="white">
           {/* spaces in brackets to prevent prettier from fixing to 1 space */}
-          ⚠️{"  "}Model Capability Warning
+          âš ï¸{"  "}Model Capability Warning
         </Text>
       </Box>
       <Text color="gray">

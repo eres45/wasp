@@ -1,4 +1,4 @@
-import { analyzeError } from "./errorAnalysis";
+﻿import { analyzeError } from "./errorAnalysis";
 
 describe("errorAnalysis", () => {
   describe("analyzeError", () => {
@@ -444,7 +444,7 @@ describe("errorAnalysis", () => {
       });
 
       it("should handle error messages with special characters", () => {
-        const specialMessage = "Error: 中文 🔥 \n\t Special chars";
+        const specialMessage = "Error: ä¸­æ–‡ ðŸ”¥ \n\t Special chars";
         const error = new Error(specialMessage);
         const result = analyzeError(error, null);
 

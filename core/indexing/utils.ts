@@ -1,4 +1,4 @@
-import crypto from "crypto";
+﻿import crypto from "crypto";
 import { IndexTag } from "..";
 
 // Maximum length for table names to stay under OS filename limits

@@ -1,4 +1,4 @@
-import ToggleSwitch from "../../../components/gui/Switch";
+﻿import ToggleSwitch from "../../../components/gui/Switch";
 interface ContinueFeaturesMenuProps {
   enableStaticContextualization: boolean;
   handleEnableStaticContextualizationToggle: (value: boolean) => void;
@@ -11,7 +11,7 @@ export function ContinueFeaturesMenu({
   return (
     <div className="flex w-full flex-col gap-y-4">
       <div className="my-2 text-center text-xs font-medium text-slate-400">
-        🚧 INTERNAL SETTINGS 🚧
+        ðŸš§ INTERNAL SETTINGS ðŸš§
       </div>
       <div className="flex w-full flex-col gap-y-4">
         <ToggleSwitch

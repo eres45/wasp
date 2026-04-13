@@ -1,4 +1,4 @@
-import { decodePackageSlug } from "@continuedev/config-yaml";
+﻿import { decodePackageSlug } from "@continuedev/config-yaml";
 import type { OpenAI } from "openai";
 import { Configuration, DefaultApi } from "../api/dist/index.js";
 import { Assistant } from "./Assistant.js";
@@ -94,7 +94,7 @@ export class Continue {
   static async from(
     options: ContinueClientOptions,
   ): Promise<ContinueClientBase | ContinueClient> {
-    const baseURL = options.baseURL || "https://api.continue.dev/";
+    const baseURL = options.baseURL || "https://api.waspcode.dev/";
 
     const continueClient = new DefaultApi(
       new Configuration({
@@ -145,3 +145,4 @@ export class Continue {
     };
   }
 }
+

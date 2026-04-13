@@ -1,4 +1,4 @@
-import { IDE, Position } from "../..";
+﻿import { IDE, Position } from "../..";
 import { GetLspDefinitionsFunction } from "../../autocomplete/types";
 import { ConfigHandler } from "../../config/ConfigHandler";
 import { isSecurityConcern } from "../../indexing/ignore.js";

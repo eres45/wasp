@@ -1,4 +1,4 @@
-import { expect, test } from "vitest";
+﻿import { expect, test } from "vitest";
 import { formatGrepSearchResults } from "./grepSearch";
 
 // Sample grep output mimicking what would come from ripgrep with the params:

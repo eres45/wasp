@@ -1,4 +1,4 @@
-import { Box, Text } from "ink";
+﻿import { Box, Text } from "ink";
 import React, { memo } from "react";
 
 import { ToolCallTitle } from "src/tools/ToolCallTitle.js";
@@ -87,7 +87,7 @@ export const MemoizedMessage = memo<MemoizedMessageProps>(
           {/* Render assistant message content if any */}
           {message.content && (
             <Box marginBottom={1}>
-              <Text color="white">{hideBullet ? " " : "●"}</Text>
+              <Text color="white">{hideBullet ? " " : "â—"}</Text>
               <Text> </Text>
               <MarkdownRenderer
                 content={formatMessageContentForDisplay(message.content)}
@@ -122,7 +122,7 @@ export const MemoizedMessage = memo<MemoizedMessageProps>(
                               : "white"
                       }
                     >
-                      {isCompleted || isErrored ? "●" : "○"}
+                      {isCompleted || isErrored ? "â—" : "â—‹"}
                     </Text>
                   </Box>
                   <Box flexGrow={1} flexShrink={1} minWidth={0}>
@@ -164,7 +164,7 @@ export const MemoizedMessage = memo<MemoizedMessageProps>(
 
     return (
       <Box key={index} marginBottom={1}>
-        <Text color={isUser ? "blue" : "white"}>{hideBullet ? " " : "●"}</Text>
+        <Text color={isUser ? "blue" : "white"}>{hideBullet ? " " : "â—"}</Text>
         <Text> </Text>
         {isUser ? (
           <Text color="dim">
@@ -175,7 +175,7 @@ export const MemoizedMessage = memo<MemoizedMessageProps>(
             content={formatMessageContentForDisplay(message.content)}
           />
         )}
-        {isStreaming && <Text color="dim">▋</Text>}
+        {isStreaming && <Text color="dim">â–‹</Text>}
       </Box>
     );
   },

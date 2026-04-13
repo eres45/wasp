@@ -1,4 +1,4 @@
-import { z } from "zod";
+﻿import { z } from "zod";
 import { PlatformClient, SecretStore } from "../interfaces/index.js";
 import {
   decodeSecretLocation,
@@ -29,7 +29,7 @@ export async function renderSecrets(
   // 1. First we need to get a list of all the FQSNs that are required to render the config
   const secrets = getTemplateVariables(unrolledConfigContent);
 
-  // 2. Then, we will check which of the secrets are found in the local personal secret store. Here we’re checking for anything that matches the last part of the FQSN, not worrying about the owner/package/owner/package slugs
+  // 2. Then, we will check which of the secrets are found in the local personal secret store. Here weâ€™re checking for anything that matches the last part of the FQSN, not worrying about the owner/package/owner/package slugs
   const secretsTemplateData: Record<string, string> = {};
 
   const unresolvedFQSNs: FQSN[] = secrets.map((secret) => {
@@ -38,10 +38,10 @@ export async function renderSecrets(
 
   // Don't use platform client in local mode
   if (platformClient) {
-    // 3. For any secrets not found, we send the FQSNs to the Continue Platform at the `/ide/sync-secrets` endpoint. This endpoint replies for each of the FQSNs with the following information (`SecretResult`): `foundAt`: tells which secret store it was found in (this is “user”, “org”, “package” or null if not found anywhere). If it’s found in an org or a package, it tells us the `secretLocation`, which is either just an org slug, or is a full org/package slug. If it’s found in “user” secrets, we send back the `value`. Full definition of `SecretResult` at [2]. The method of resolving an FQSN to a `SecretResult` is detailed at [3]
+    // 3. For any secrets not found, we send the FQSNs to the Continue Platform at the `/ide/sync-secrets` endpoint. This endpoint replies for each of the FQSNs with the following information (`SecretResult`): `foundAt`: tells which secret store it was found in (this is â€œuserâ€, â€œorgâ€, â€œpackageâ€ or null if not found anywhere). If itâ€™s found in an org or a package, it tells us the `secretLocation`, which is either just an org slug, or is a full org/package slug. If itâ€™s found in â€œuserâ€ secrets, we send back the `value`. Full definition of `SecretResult` at [2]. The method of resolving an FQSN to a `SecretResult` is detailed at [3]
     const secretResults = await platformClient.resolveFQSNs(unresolvedFQSNs);
 
-    // 4. (back to the client) Any “user” secrets that were returned back are added to the local secret store so we don’t have to request them again
+    // 4. (back to the client) Any â€œuserâ€ secrets that were returned back are added to the local secret store so we donâ€™t have to request them again
     for (const secretResult of secretResults) {
       if (!secretResult) {
         continue;

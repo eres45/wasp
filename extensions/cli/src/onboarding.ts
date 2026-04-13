@@ -1,4 +1,4 @@
-import * as fs from "fs";
+﻿import * as fs from "fs";
 import * as path from "path";
 
 import chalk from "chalk";
@@ -59,7 +59,7 @@ export async function runOnboardingFlow(
   // Step 2: Check for CONTINUE_USE_BEDROCK environment variable first (before test env check)
   if (process.env.CONTINUE_USE_BEDROCK === "1") {
     console.log(
-      chalk.blue("✓ Using AWS Bedrock (CONTINUE_USE_BEDROCK detected)"),
+      chalk.blue("âœ“ Using AWS Bedrock (CONTINUE_USE_BEDROCK detected)"),
     );
     return true;
   }
@@ -75,7 +75,7 @@ export async function runOnboardingFlow(
   if (isTestEnv) {
     // In test/CI environment, check for ANTHROPIC_API_KEY first
     if (process.env.ANTHROPIC_API_KEY) {
-      console.log(chalk.blue("✓ Using ANTHROPIC_API_KEY from environment"));
+      console.log(chalk.blue("âœ“ Using ANTHROPIC_API_KEY from environment"));
       await createOrUpdateConfig(process.env.ANTHROPIC_API_KEY);
       console.log(chalk.gray(`  Config saved to: ${CONFIG_PATH}`));
       return false;
@@ -87,8 +87,8 @@ export async function runOnboardingFlow(
 
   // Step 4: Present user with two options
   console.log(chalk.yellow("How do you want to get started?"));
-  console.log(chalk.white("1. ⏩ Log in with Continue"));
-  console.log(chalk.white("2. 🔑 Enter your Anthropic API key"));
+  console.log(chalk.white("1. â© Log in with Continue"));
+  console.log(chalk.white("2. ðŸ”‘ Enter your Anthropic API key"));
 
   const choice = await questionWithChoices(
     chalk.yellow("\nEnter choice (1): "),
@@ -111,7 +111,7 @@ export async function runOnboardingFlow(
 
     await createOrUpdateConfig(apiKey);
     console.log(
-      chalk.green(`✓ Config file updated successfully at ${CONFIG_PATH}`),
+      chalk.green(`âœ“ Config file updated successfully at ${CONFIG_PATH}`),
     );
 
     return true;

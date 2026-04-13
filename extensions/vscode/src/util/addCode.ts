@@ -1,4 +1,4 @@
-import * as os from "node:os";
+﻿import * as os from "node:os";
 
 import { RangeInFileWithContents } from "core";
 import * as vscode from "vscode";

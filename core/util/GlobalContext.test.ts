@@ -1,4 +1,4 @@
-// core/util/GlobalContext.test.ts
+﻿// core/util/GlobalContext.test.ts
 import fs from "node:fs";
 import { GlobalContext } from "./GlobalContext";
 import { getGlobalContextFilePath } from "./paths";

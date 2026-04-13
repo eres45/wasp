@@ -1,4 +1,4 @@
-import { Extras, type Integration, type Event } from "@sentry/core";
+﻿import { Extras, type Integration, type Event } from "@sentry/core";
 import * as Sentry from "@sentry/node";
 import os from "node:os";
 import { IdeInfo } from "../../index.js";

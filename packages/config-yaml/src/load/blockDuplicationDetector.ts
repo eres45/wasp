@@ -1,4 +1,4 @@
-import { BLOCK_TYPES, BlockType } from "./getBlockType.js";
+﻿import { BLOCK_TYPES, BlockType } from "./getBlockType.js";
 
 export class BlockDuplicationDetector {
   private records: Map<string, Set<string>>;

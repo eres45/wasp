@@ -1,4 +1,4 @@
-import { myersDiff } from "core/diff/myers";
+﻿import { myersDiff } from "core/diff/myers";
 import * as URI from "uri-js";
 import * as vscode from "vscode";
 
@@ -127,7 +127,7 @@ export class VerticalDiffHandler implements vscode.Disposable {
   async clear(accept: boolean) {
     vscode.commands.executeCommand(
       "setContext",
-      "continue.streamingDiff",
+      "waspcode.streamingDiff",
       false,
     );
 

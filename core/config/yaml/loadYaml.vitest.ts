@@ -1,4 +1,4 @@
-import {
+﻿import {
   AssistantUnrolledNonNullable,
   validateConfigYaml,
 } from "@continuedev/config-yaml";

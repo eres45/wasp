@@ -1,4 +1,4 @@
-import { Tool, ToolCallDelta, ToolCallState } from "../..";
+﻿import { Tool, ToolCallDelta, ToolCallState } from "../..";
 import { generateOpenAIToolCallId } from "./systemToolUtils";
 
 export interface SystemMessageToolsFramework {

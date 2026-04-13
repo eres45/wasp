@@ -1,4 +1,4 @@
-import Image from "@tiptap/extension-image";
+﻿import Image from "@tiptap/extension-image";
 import { Paragraph } from "@tiptap/extension-paragraph";
 import { Text } from "@tiptap/extension-text";
 import { JSONContent } from "@tiptap/react";

@@ -1,4 +1,4 @@
-interface DiscordIconProps extends React.SVGProps<SVGSVGElement> {
+﻿interface DiscordIconProps extends React.SVGProps<SVGSVGElement> {
   size?: number;
 }
 

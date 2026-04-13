@@ -1,4 +1,4 @@
-import { getLocalStorage, setLocalStorage } from "../../util/localStorage";
+﻿import { getLocalStorage, setLocalStorage } from "../../util/localStorage";
 import { OnboardingCardState } from "./OnboardingCard";
 
 // Note that there is no "NotStarted" status since the

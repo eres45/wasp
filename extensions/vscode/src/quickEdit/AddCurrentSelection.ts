@@ -1,4 +1,4 @@
-import * as vscode from "vscode";
+﻿import * as vscode from "vscode";
 
 import { VerticalDiffManager } from "../diff/vertical/manager";
 import { getRangeInFileWithContents } from "../util/addCode";

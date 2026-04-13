@@ -1,4 +1,4 @@
-import { createStore } from "@reduxjs/toolkit";
+﻿import { createStore } from "@reduxjs/toolkit";
 import * as Sentry from "@sentry/react";
 import { render, screen } from "@testing-library/react";
 import posthog from "posthog-js";
@@ -51,7 +51,7 @@ vi.mock("../context/Auth", () => ({
   useAuth: () => ({
     session: {
       account: {
-        id: "test@continue.dev", // Mock Continue team member email
+        id: "test@waspcode.dev", // Mock Continue team member email
       },
     },
   }),

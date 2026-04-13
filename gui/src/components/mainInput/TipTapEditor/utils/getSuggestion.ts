@@ -1,4 +1,4 @@
-import { Editor, ReactRenderer } from "@tiptap/react";
+﻿import { Editor, ReactRenderer } from "@tiptap/react";
 import {
   ContextProviderDescription,
   ContextSubmenuItem,
@@ -169,7 +169,7 @@ export function getContextProviderDropdownOptions(
         action: () => {
           ideMessenger.post(
             "openUrl",
-            "https://docs.continue.dev/customization/context-providers#built-in-context-providers",
+            "https://docs.waspcode.dev/customization/context-providers#built-in-context-providers",
           );
         },
         description: "",

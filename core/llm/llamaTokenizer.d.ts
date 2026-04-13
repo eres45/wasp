@@ -1,4 +1,4 @@
-export declare class LlamaTokenizer {
+﻿export declare class LlamaTokenizer {
   vocabById: string[];
   vocabByString: Map<string, number>;
   merges: Map<string, number>;

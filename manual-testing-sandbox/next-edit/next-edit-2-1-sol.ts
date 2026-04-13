@@ -1,4 +1,4 @@
-// A refactored user validation utility following SOLID principles
+﻿// A refactored user validation utility following SOLID principles
 // Solution for next-edit-2-1.ts
 
 type UserData = {

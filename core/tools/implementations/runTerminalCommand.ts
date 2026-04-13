@@ -1,4 +1,4 @@
-import iconv from "iconv-lite";
+﻿import iconv from "iconv-lite";
 import childProcess from "node:child_process";
 import os from "node:os";
 import { ContinueError, ContinueErrorReason } from "../../util/errors";
@@ -11,7 +11,7 @@ function getDecodedOutput(data: Buffer): string {
   if (process.platform === "win32") {
     try {
       let out = iconv.decode(data, "utf-8");
-      if (/�/.test(out)) {
+      if (/ï¿½/.test(out)) {
         out = iconv.decode(data, "gbk");
       }
       return out;

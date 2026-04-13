@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Helper module for mathematical processing.
  *
  * These functions and classes are only used internally,
@@ -323,3 +323,4 @@ declare class NP2FFT {
 }
 export {};
 //# sourceMappingURL=maths.d.ts.map
+

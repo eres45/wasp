@@ -1,4 +1,4 @@
-// This is a simple Express server to serve Swagger UI
+﻿// This is a simple Express server to serve Swagger UI
 import express from "express";
 import fs from "fs";
 import yaml from "js-yaml";
@@ -41,3 +41,4 @@ app.listen(port, () => {
   console.log(`Swagger UI is running at http://localhost:${port}`);
   console.log(`Press Ctrl+C to stop the server`);
 });
+

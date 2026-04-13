@@ -1,4 +1,4 @@
-// src/components/ThinkingBlockPeek.tsx
+﻿// src/components/ThinkingBlockPeek.tsx
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { ChevronUpIcon } from "@heroicons/react/24/solid";
 import { ChatHistoryItem } from "core";

@@ -1,4 +1,4 @@
-import { execSync } from "child_process";
+﻿import { execSync } from "child_process";
 import fs from "fs/promises";
 import path from "path";
 
@@ -15,7 +15,7 @@ import {
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 
 describe.skipIf(!ANTHROPIC_API_KEY)(
-  "Smoke: Headless → all tools round-trip",
+  "Smoke: Headless â†’ all tools round-trip",
   () => {
     let ctx: SmokeTestContext;
 
@@ -51,8 +51,8 @@ describe.skipIf(!ANTHROPIC_API_KEY)(
 1. List: list the files in the current directory "."
 2. Write: create a file called "created.txt" with content "smoke test"
 3. Read: read the file "created.txt"
-4. Edit: edit "created.txt" — replace "smoke test" with "smoke test edited"
-5. MultiEdit: edit "seed.txt" — replace "line one" with "LINE ONE" and "line two" with "LINE TWO"
+4. Edit: edit "created.txt" â€” replace "smoke test" with "smoke test edited"
+5. MultiEdit: edit "seed.txt" â€” replace "line one" with "LINE ONE" and "line two" with "LINE TWO"
 6. Search: search for "LINE" in the current directory "."
 7. Bash: run the command "echo tool-test-ok"
 8. Diff: show the git diff in the current directory

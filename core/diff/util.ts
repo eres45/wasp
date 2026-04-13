@@ -1,4 +1,4 @@
-import { distance } from "fastest-levenshtein";
+﻿import { distance } from "fastest-levenshtein";
 
 import { ChatMessage } from "../index.js";
 import { renderChatMessage } from "../util/messageContent.js";

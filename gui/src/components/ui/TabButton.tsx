@@ -1,4 +1,4 @@
-import { ToolTip } from "../gui/Tooltip";
+﻿import { ToolTip } from "../gui/Tooltip";
 
 interface TabButtonProps {
   label: string;

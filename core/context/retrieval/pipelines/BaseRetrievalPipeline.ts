@@ -1,4 +1,4 @@
-// @ts-ignore
+﻿// @ts-ignore
 import nlp from "wink-nlp-utils";
 
 import {

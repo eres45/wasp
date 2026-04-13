@@ -1,4 +1,4 @@
-// Note: This test file tests the formatArgs function that was used in the old ToolPermissionRequest component
+﻿// Note: This test file tests the formatArgs function that was used in the old ToolPermissionRequest component
 // The function has been moved to ToolPermissionSelector but these tests are still valid for testing the pure function logic
 
 // Extract the formatArgs function for testing
@@ -74,7 +74,7 @@ describe("formatArgs function", () => {
       expect(formatArgs({ path: "/special/chars!@#$%^&*()_+" })).toBe(
         "/special/chars!@#$%^&*()_+",
       );
-      expect(formatArgs({ emoji: "🎉🎊✨" })).toBe("🎉🎊✨");
+      expect(formatArgs({ emoji: "ðŸŽ‰ðŸŽŠâœ¨" })).toBe("ðŸŽ‰ðŸŽŠâœ¨");
     });
   });
 });

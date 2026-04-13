@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Custom spinner since HeroIcons doesn't have a good one
  */
 export default function Spinner() {

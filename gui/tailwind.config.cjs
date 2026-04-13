@@ -108,6 +108,9 @@ module.exports = {
         "vsc-editor-background": varWithFallback("editor-background"), // use "editor" instead
         "vsc-input-border": varWithFallback("input-border"), // use "input-border" instead
       },
+      fontFamily: {
+        sans: ["var(--vscode-font-family)", ...defaultTheme.fontFamily.sans],
+      },
     },
   },
   plugins: [],

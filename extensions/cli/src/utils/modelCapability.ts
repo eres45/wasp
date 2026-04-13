@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Determines if a model is recommended for use with `cn`
  */
 export function isModelCapable(

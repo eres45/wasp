@@ -1,4 +1,4 @@
-import { loadAuthConfig } from "../auth/workos.js";
+﻿import { loadAuthConfig } from "../auth/workos.js";
 import { HookService } from "../hooks/HookService.js";
 import { initializeWithOnboarding } from "../onboarding.js";
 import {

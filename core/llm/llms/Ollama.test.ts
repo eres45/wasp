@@ -1,4 +1,4 @@
-jest.mock("@continuedev/fetch", () => ({
+﻿jest.mock("@continuedev/fetch", () => ({
   streamResponse: jest.fn(),
 }));
 

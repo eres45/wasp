@@ -1,0 +1,22 @@
+{
+  "name": "wasp-code-proxy",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker proxy for Wasp Code extension",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "node test-proxy.js"
+  },
+  "keywords": [
+    "cloudflare",
+    "worker",
+    "proxy",
+    "wasp-code"
+  ],
+  "author": "Wasp Code Team",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

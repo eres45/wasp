@@ -1,4 +1,4 @@
-import { Client } from "@modelcontextprotocol/sdk/client/index.js";
+﻿import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { Transport } from "@modelcontextprotocol/sdk/shared/transport.js";
 import { homedir } from "os";
 import { fileURLToPath } from "url";
@@ -181,8 +181,8 @@ class MCPConnection {
     if (unrendered.length > 0) {
       this.errors.push(
         `${this.options.name} MCP Server has unresolved secrets: ${unrendered.join(", ")}.
-For personal use you can set the secret in the hub at https://continue.dev/settings/secrets.
-Org-level secrets can only be used for MCP by Background Agents (https://docs.continue.dev/hub/agents/overview) when \"Include in Env\" is enabled.`,
+For personal use you can set the secret in the hub at https://waspcode.dev/settings/secrets.
+Org-level secrets can only be used for MCP by Background Agents (https://docs.waspcode.dev/hub/agents/overview) when \"Include in Env\" is enabled.`,
       );
     }
 
@@ -288,7 +288,7 @@ Org-level secrets can only be used for MCP by Background Agents (https://docs.co
               // })
               const capabilities = this.client.getServerCapabilities();
 
-              // Resources <—> Context Provider
+              // Resources <â€”> Context Provider
               if (capabilities?.resources) {
                 try {
                   const { resources } = await this.client.listResources(
@@ -322,7 +322,7 @@ Org-level secrets can only be used for MCP by Background Agents (https://docs.co
                 }
               }
 
-              // Tools <—> Tools
+              // Tools <â€”> Tools
               if (capabilities?.tools) {
                 try {
                   const { tools } = await this.client.listTools(
@@ -339,7 +339,7 @@ Org-level secrets can only be used for MCP by Background Agents (https://docs.co
                 }
               }
 
-              // Prompts <—> Slash commands
+              // Prompts <â€”> Slash commands
               if (capabilities?.prompts) {
                 try {
                   const { prompts } = await this.client.listPrompts(

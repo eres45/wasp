@@ -1,4 +1,4 @@
-export interface CompletionTestCase {
+﻿export interface CompletionTestCase {
   original: string; // Text with |cur| and |till| markers
   completion: string; // Text to insert/overwrite
   appliedCompletion?: string | null;

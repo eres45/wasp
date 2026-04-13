@@ -1,4 +1,4 @@
-import { render } from "ink-testing-library";
+﻿import { render } from "ink-testing-library";
 import React from "react";
 
 import { createUITestContext } from "../../test-helpers/ui-test-context.js";
@@ -32,7 +32,7 @@ describe("TUIChat - Remote Server Tests", () => {
     const frame = lastFrame();
 
     // Should show remote mode in the UI
-    expect(frame).toContain("◉ Remote Mode");
+    expect(frame).toContain("â—‰ Remote Mode");
   });
 
   it("does not show service loading in remote mode", () => {
@@ -80,8 +80,8 @@ describe("TUIChat - Remote Server Tests", () => {
     // Different timing might show different states
     const hasSlashCommandUI = frame
       ? frame.includes("/exit") ||
-        frame.includes("↑/↓ to navigate") ||
-        frame.includes("◉ /") ||
+        frame.includes("â†‘/â†“ to navigate") ||
+        frame.includes("â—‰ /") ||
         frame.includes("/ for slash commands") // Placeholder text is also valid
       : false;
 

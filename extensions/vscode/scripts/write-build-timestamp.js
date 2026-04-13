@@ -1,3 +1,3 @@
-const { writeBuildTimestamp } = require("./utils");
+﻿const { writeBuildTimestamp } = require("./utils");
 
 writeBuildTimestamp();

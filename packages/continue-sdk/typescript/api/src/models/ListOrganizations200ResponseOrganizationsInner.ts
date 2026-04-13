@@ -1,4 +1,4 @@
-/* tslint:disable */
+﻿/* tslint:disable */
 /* eslint-disable */
 /**
  * Continue Hub IDE API
@@ -102,3 +102,4 @@ export function ListOrganizations200ResponseOrganizationsInnerToJSONTyped(
     slug: value["slug"],
   };
 }
+

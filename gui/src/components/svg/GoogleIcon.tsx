@@ -1,4 +1,4 @@
-interface CustomGoogleIconProps extends React.SVGProps<SVGSVGElement> {
+﻿interface CustomGoogleIconProps extends React.SVGProps<SVGSVGElement> {
   size?: number;
 }
 

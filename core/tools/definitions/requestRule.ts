@@ -1,4 +1,4 @@
-import { ConfigDependentToolParams, GetTool } from "../..";
+﻿import { ConfigDependentToolParams, GetTool } from "../..";
 import { BUILT_IN_GROUP_NAME, BuiltInToolNames } from "../builtIn";
 
 export interface RequestRuleArgs {

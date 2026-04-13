@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import {
   DEFAULT_SECURITY_IGNORE_DIRS,
   DEFAULT_SECURITY_IGNORE_FILETYPES,

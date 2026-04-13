@@ -1,4 +1,4 @@
-import { Editor } from "@tiptap/react";
+﻿import { Editor } from "@tiptap/react";
 import { InputModifiers } from "core";
 import { rifWithContentsToContextItem } from "core/commands/util";
 import { MutableRefObject } from "react";

@@ -1,4 +1,4 @@
-import {
+﻿import {
   decodeFQSN,
   decodeFullSlug,
   decodePackageIdentifier,

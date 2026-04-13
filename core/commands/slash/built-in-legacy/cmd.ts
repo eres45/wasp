@@ -1,4 +1,4 @@
-import { streamLines } from "../../../diff/util.js";
+﻿import { streamLines } from "../../../diff/util.js";
 import { SlashCommand } from "../../../index.js";
 import { removeQuotesAndEscapes } from "../../../util/index.js";
 

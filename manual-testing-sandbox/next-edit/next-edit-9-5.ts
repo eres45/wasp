@@ -1,4 +1,4 @@
-// A messy e-commerce product management system with tangled responsibilities
+﻿// A messy e-commerce product management system with tangled responsibilities
 // Difficulty: 5/5
 
 type ProductStatus =

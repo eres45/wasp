@@ -1,4 +1,4 @@
-import { CSSProperties, useEffect, useRef } from "react";
+﻿import { CSSProperties, useEffect, useRef } from "react";
 
 /**
  * useRenderDebug

@@ -1,4 +1,4 @@
-export function longestCommonSubsequence(a: string, b: string) {
+﻿export function longestCommonSubsequence(a: string, b: string) {
   const lengths: number[][] = [];
   for (let i = 0; i <= a.length; i++) {
     lengths[i] = [];

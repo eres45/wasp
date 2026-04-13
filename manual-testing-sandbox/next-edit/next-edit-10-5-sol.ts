@@ -1,4 +1,4 @@
-// Clean, refactored project management application
+﻿// Clean, refactored project management application
 // Demonstrates proper separation of concerns, clean architecture, and SOLID principles
 
 // ===== DOMAIN MODELS =====

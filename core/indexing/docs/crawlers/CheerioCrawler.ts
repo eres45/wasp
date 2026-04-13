@@ -1,4 +1,4 @@
-import { URL } from "node:url";
+﻿import { URL } from "node:url";
 
 import * as cheerio from "cheerio";
 

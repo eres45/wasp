@@ -1,4 +1,4 @@
-import { getLastNUriRelativePathParts } from "../../util/uri";
+﻿import { getLastNUriRelativePathParts } from "../../util/uri";
 import {
   AutocompleteClipboardSnippet,
   AutocompleteCodeSnippet,

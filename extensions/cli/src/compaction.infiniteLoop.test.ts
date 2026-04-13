@@ -1,4 +1,4 @@
-import { ModelConfig } from "@continuedev/config-yaml";
+﻿import { ModelConfig } from "@continuedev/config-yaml";
 import { BaseLlmApi } from "@continuedev/openai-adapters";
 import { convertToUnifiedHistory } from "core/util/messageConversion.js";
 import { describe, expect, it, vi } from "vitest";

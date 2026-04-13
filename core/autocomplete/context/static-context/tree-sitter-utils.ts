@@ -1,4 +1,4 @@
-import * as fs from "fs/promises";
+﻿import * as fs from "fs/promises";
 import Parser from "web-tree-sitter";
 import { getFullLanguageName, getQueryForFile } from "../../../util/treeSitter";
 import { getAst } from "../../util/ast";

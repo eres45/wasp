@@ -1,4 +1,4 @@
-// Clean implementation of e-commerce product management system
+﻿// Clean implementation of e-commerce product management system
 // Following SOLID principles
 
 // Types and Interfaces

@@ -1,4 +1,4 @@
-import { EventEmitter } from "events";
+﻿import { EventEmitter } from "events";
 
 import type { InputHistory } from "../util/inputHistory.js";
 import { logger } from "../util/logger.js";

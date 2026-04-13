@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import { normalizeRepoUrl } from "./repoUrl";
 
 describe("normalizeRepoUrl", () => {
@@ -181,7 +181,7 @@ describe("normalizeRepoUrl", () => {
 
   describe("real-world examples", () => {
     it("should normalize Continue's repository from SSH", () => {
-      expect(normalizeRepoUrl("git@github.com:continuedev/continue.git")).toBe(
+      expect(normalizeRepoUrl("git@github.com:continuedev/waspcode.git")).toBe(
         "https://github.com/continuedev/continue",
       );
     });
@@ -194,17 +194,17 @@ describe("normalizeRepoUrl", () => {
 
     it("should normalize Continue's repository from HTTPS", () => {
       expect(
-        normalizeRepoUrl("https://github.com/continuedev/continue.git"),
+        normalizeRepoUrl("https://github.com/continuedev/waspcode.git"),
       ).toBe("https://github.com/continuedev/continue");
     });
 
     it("should match repositories regardless of input format", () => {
       const formats = [
-        "git@github.com:continuedev/continue.git",
+        "git@github.com:continuedev/waspcode.git",
         "continuedev/continue",
         "https://github.com/continuedev/continue",
-        "https://github.com/continuedev/continue.git",
-        "ssh://git@github.com/continuedev/continue.git",
+        "https://github.com/continuedev/waspcode.git",
+        "ssh://git@github.com/continuedev/waspcode.git",
         "ContinueDev/Continue",
       ];
 

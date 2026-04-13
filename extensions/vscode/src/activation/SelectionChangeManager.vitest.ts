@@ -1,4 +1,4 @@
-import {
+﻿import {
   EditableRegionStrategy,
   getNextEditableRegion,
 } from "core/nextEdit/NextEditEditableRegionCalculator";

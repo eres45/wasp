@@ -1,4 +1,4 @@
-import { GPTAsyncEncoder, LlamaAsyncEncoder } from "./asyncEncoder";
+﻿import { GPTAsyncEncoder, LlamaAsyncEncoder } from "./asyncEncoder";
 
 describe("llama encoder", () => {
   var tokenizer: LlamaAsyncEncoder;

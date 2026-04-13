@@ -1,4 +1,4 @@
-import * as URI from "uri-js";
+﻿import * as URI from "uri-js";
 import * as vscode from "vscode";
 
 import { openEditorAndRevealRange, translate } from "./util/vscode";

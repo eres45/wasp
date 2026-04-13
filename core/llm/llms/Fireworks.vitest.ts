@@ -1,4 +1,4 @@
-import Fireworks from "./Fireworks.js";
+﻿import Fireworks from "./Fireworks.js";
 import { createOpenAISubclassTests } from "./test-utils/openai-test-utils.js";
 
 createOpenAISubclassTests(Fireworks, {

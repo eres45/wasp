@@ -1,4 +1,4 @@
-import * as fs from "fs";
+﻿import * as fs from "fs";
 import * as path from "path";
 
 import { FILE_IGNORE_PATTERNS } from "./filePatterns.js";

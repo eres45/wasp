@@ -1,4 +1,4 @@
-import { vi } from "vitest";
+﻿import { vi } from "vitest";
 
 export const isAuthenticated = vi.fn(() => Promise.resolve(false));
 export const isAuthenticatedConfig = vi.fn(() => false);

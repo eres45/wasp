@@ -1,4 +1,4 @@
-import * as fs from "fs";
+﻿import * as fs from "fs";
 
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
@@ -70,7 +70,7 @@ describe("orgSelection", () => {
   });
 
   describe("autoSelectOrganizationAndConfig scenarios", () => {
-    it("Priority 1: Org with assistants → select first assistant", async () => {
+    it("Priority 1: Org with assistants â†’ select first assistant", async () => {
       mockApiClient.listOrganizations.mockResolvedValue({
         organizations: [
           { id: "org1", name: "Org 1" },
@@ -96,7 +96,7 @@ describe("orgSelection", () => {
       expect(result!.configUri).toBe("slug://owner/assistant1");
     });
 
-    it("Priority 2: No org assistants → personal assistants exist", async () => {
+    it("Priority 2: No org assistants â†’ personal assistants exist", async () => {
       mockApiClient.listOrganizations.mockResolvedValue({
         organizations: [{ id: "org1", name: "Org 1" }],
       });
@@ -121,7 +121,7 @@ describe("orgSelection", () => {
       });
     });
 
-    it("Priority 3: No assistants anywhere → local config.yaml exists", async () => {
+    it("Priority 3: No assistants anywhere â†’ local config.yaml exists", async () => {
       mockApiClient.listOrganizations.mockResolvedValue({
         organizations: [{ id: "org1", name: "Org 1" }],
       });
@@ -135,7 +135,7 @@ describe("orgSelection", () => {
       expect(result!.configUri).toContain("config.yaml");
     });
 
-    it("Priority 4: No assistants, no config.yaml → fallback", async () => {
+    it("Priority 4: No assistants, no config.yaml â†’ fallback", async () => {
       mockApiClient.listOrganizations.mockResolvedValue({
         organizations: [{ id: "org1", name: "Org 1" }],
       });
@@ -149,7 +149,7 @@ describe("orgSelection", () => {
       expect(result!.configUri).toBeUndefined();
     });
 
-    it("Multiple orgs with assistants → pick first one", async () => {
+    it("Multiple orgs with assistants â†’ pick first one", async () => {
       mockApiClient.listOrganizations.mockResolvedValue({
         organizations: [
           { id: "org1", name: "Org 1" },
@@ -177,7 +177,7 @@ describe("orgSelection", () => {
       expect(result!.configUri).toBe("slug://owner1/assistant1");
     });
 
-    it("Personal assistants API fails → fallback to config.yaml", async () => {
+    it("Personal assistants API fails â†’ fallback to config.yaml", async () => {
       mockApiClient.listOrganizations.mockResolvedValue({
         organizations: [{ id: "org1", name: "Org 1" }],
       });
@@ -194,7 +194,7 @@ describe("orgSelection", () => {
       expect(result!.configUri).toContain("config.yaml");
     });
 
-    it("Empty organizations list → check personal assistants", async () => {
+    it("Empty organizations list â†’ check personal assistants", async () => {
       mockApiClient.listOrganizations.mockResolvedValue({
         organizations: [], // No orgs
       });
@@ -209,7 +209,7 @@ describe("orgSelection", () => {
       expect(result!.configUri).toBe("slug://personal/my-assistant");
     });
 
-    it("API error → fallback with error message", async () => {
+    it("API error â†’ fallback with error message", async () => {
       mockApiClient.listOrganizations.mockRejectedValue(
         new Error("Network error"),
       );

@@ -1,4 +1,4 @@
-export function appendPathToUrlIfNotPresent(
+﻿export function appendPathToUrlIfNotPresent(
   urlString: string,
   pathWithoutSlash: string,
 ) {

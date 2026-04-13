@@ -1,4 +1,4 @@
-import type { FromWebviewProtocol } from "core/protocol";
+﻿import type { FromWebviewProtocol } from "core/protocol";
 import type { SuccessWebviewSingleMessage } from "core/protocol/util";
 import { useContext, useEffect, useState } from "react";
 import { IdeMessengerContext } from "../context/IdeMessenger";

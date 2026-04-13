@@ -1,4 +1,4 @@
-// core/llm/toolSupport.test.ts
+﻿// core/llm/toolSupport.test.ts
 import { PROVIDER_TOOL_SUPPORT, isRecommendedAgentModel } from "./toolSupport";
 
 describe("PROVIDER_TOOL_SUPPORT", () => {

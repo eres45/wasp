@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Entry point for the Transformers.js library. Only the exports from this file
  * are available to the end user, and are grouped as follows:
  *
@@ -22,3 +22,4 @@ export * from "./pipelines.js";
 // export * from './utils/image.js';
 // export * from './utils/tensor.js';
 // export * from './utils/maths.js';
+

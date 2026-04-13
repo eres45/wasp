@@ -1,4 +1,4 @@
-import ignore from "ignore";
+﻿import ignore from "ignore";
 
 import { IDE } from "../..";
 import {

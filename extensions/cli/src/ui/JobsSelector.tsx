@@ -1,4 +1,4 @@
-import { Box, Text, useInput } from "ink";
+﻿import { Box, Text, useInput } from "ink";
 import React, { useEffect, useState } from "react";
 
 import {
@@ -173,13 +173,13 @@ export function JobsSelector({ onCancel }: JobsSelectorProps) {
         Background Jobs ({jobs.length})
       </Text>
       <Text color="gray">
-        ↑/↓ to navigate, Enter to view details, Esc to exit
+        â†‘/â†“ to navigate, Enter to view details, Esc to exit
       </Text>
       <Text> </Text>
 
       {jobs.map((job, index) => {
         const isSelected = index === selectedIndex;
-        const prefix = isSelected ? "❯ " : "  ";
+        const prefix = isSelected ? "â¯ " : "  ";
 
         return (
           <Box key={job.id} flexDirection="row" gap={1}>

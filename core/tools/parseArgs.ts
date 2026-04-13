@@ -1,4 +1,4 @@
-import { ToolCallDelta } from "..";
+﻿import { ToolCallDelta } from "..";
 
 export function safeParseToolCallArgs(
   toolCall: ToolCallDelta,

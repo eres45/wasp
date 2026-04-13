@@ -1,4 +1,4 @@
-import { quote } from "shell-quote";
+﻿import { quote } from "shell-quote";
 
 /**
  * Sanitization utilities for preventing injection attacks.

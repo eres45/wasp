@@ -1,4 +1,4 @@
-import * as fs from "fs";
+﻿import * as fs from "fs";
 import * as path from "path";
 
 import { Box, Text, useInput } from "ink";
@@ -182,12 +182,12 @@ const FreeTrialTransitionUI: React.FC<FreeTrialTransitionUIProps> = ({
       try {
         await open(modelsUrl);
         setSuccessMessage(
-          `Browser opened to ${modelsUrl}. After setting up your models subscription, press Enter to continue.`,
+          `Browser opened to ${modelsUrl}. After setting up your models subscription, press Enter to waspcode.`,
         );
         setCurrentStep("success");
       } catch {
         setErrorMessage(
-          `Could not open browser automatically. Please visit: ${modelsUrl}. After setting up your models subscription, press Enter to continue.`,
+          `Could not open browser automatically. Please visit: ${modelsUrl}. After setting up your models subscription, press Enter to waspcode.`,
         );
         setCurrentStep("error");
       }
@@ -210,7 +210,7 @@ const FreeTrialTransitionUI: React.FC<FreeTrialTransitionUIProps> = ({
     try {
       await createOrUpdateConfig(apiKey);
       setSuccessMessage(
-        "✓ API key saved successfully! Switching to local configuration...",
+        "âœ“ API key saved successfully! Switching to local configuration...",
       );
       setCurrentStep("success");
 
@@ -221,7 +221,7 @@ const FreeTrialTransitionUI: React.FC<FreeTrialTransitionUIProps> = ({
       }, 1000);
     } catch (error) {
       setErrorMessage(
-        `❌ Error saving API key: ${error}. Press Enter to try again.`,
+        `âŒ Error saving API key: ${error}. Press Enter to try again.`,
       );
       setCurrentStep("error");
     }
@@ -229,22 +229,22 @@ const FreeTrialTransitionUI: React.FC<FreeTrialTransitionUIProps> = ({
 
   if (currentStep === "choice") {
     const options = [
-      { num: 1, text: "💳 Sign up for models add-on (recommended)" },
-      { num: 2, text: "🔑 Enter your Anthropic API key" },
-      { num: 3, text: "⚙️ Switch to a different configuration" },
+      { num: 1, text: "ðŸ’³ Sign up for models add-on (recommended)" },
+      { num: 2, text: "ðŸ”‘ Enter your Anthropic API key" },
+      { num: 3, text: "âš™ï¸ Switch to a different configuration" },
     ];
 
     if (hasOrganizations) {
       options.push({
         num: 4,
-        text: "🏢 Switch to organization configuration",
+        text: "ðŸ¢ Switch to organization configuration",
       });
     }
 
     return (
       <Box {...defaultBoxStyles("yellow")}>
         <Text bold color="yellow">
-          🚀 Free trial limit reached!
+          ðŸš€ Free trial limit reached!
         </Text>
         <Text>Choose how you'd like to continue:</Text>
         <Text></Text>
@@ -253,14 +253,14 @@ const FreeTrialTransitionUI: React.FC<FreeTrialTransitionUIProps> = ({
             key={option.num}
             color={selectedOption === option.num ? "cyan" : "white"}
           >
-            {selectedOption === option.num ? "➤ " : "  "}
+            {selectedOption === option.num ? "âž¤ " : "  "}
             {option.num}. {option.text}
           </Text>
         ))}
         <Text></Text>
         <Text color="gray">
-          ↑/↓ to navigate or {hasOrganizations ? "1/2/3/4" : "1/2/3"} to select,
-          Enter to confirm
+          â†‘/â†“ to navigate or {hasOrganizations ? "1/2/3/4" : "1/2/3"} to
+          select, Enter to confirm
         </Text>
       </Box>
     );

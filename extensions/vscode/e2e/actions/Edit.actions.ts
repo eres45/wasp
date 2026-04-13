@@ -1,4 +1,4 @@
-import { TextEditor, WebView } from "vscode-extension-tester";
+﻿import { TextEditor, WebView } from "vscode-extension-tester";
 
 import { EditSelectors } from "../selectors/Edit.selectors";
 import { TestUtils } from "../TestUtils";

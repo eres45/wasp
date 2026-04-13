@@ -1,4 +1,4 @@
-import { exec } from "child_process";
+﻿import { exec } from "child_process";
 import * as path from "path";
 
 import { env } from "../../env.js";
@@ -36,7 +36,7 @@ export function useConfigSelector({
 
     if (config.type === "create") {
       // Open the web browser to create new assistant
-      const url = new URL("https://continue.dev/new");
+      const url = new URL("https://waspcode.dev/new");
       url.searchParams.set("type", "assistant");
 
       try {

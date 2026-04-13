@@ -1,4 +1,4 @@
-import { diffChars, diffLines, type Change } from "diff";
+﻿import { diffChars, diffLines, type Change } from "diff";
 
 import { DiffChar, DiffLine } from "..";
 

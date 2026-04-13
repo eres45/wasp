@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import { EditOperation } from "../../tools/definitions/multiEdit";
 import { ContinueErrorReason } from "../../util/errors";
 import { validateMultiEdit } from "./multiEditValidation";

@@ -1,11 +1,11 @@
-export function removeQuotesAndEscapes(input: string): string {
+﻿export function removeQuotesAndEscapes(input: string): string {
   let output = input.trim();
 
   // Replace smart quotes
-  output = output.replaceAll("“", '"');
-  output = output.replaceAll("”", '"');
-  output = output.replaceAll("‘", "'");
-  output = output.replaceAll("’", "'");
+  output = output.replaceAll("â€œ", '"');
+  output = output.replaceAll("â€", '"');
+  output = output.replaceAll("â€˜", "'");
+  output = output.replaceAll("â€™", "'");
 
   // Remove escapes
   output = output.replaceAll('\\"', '"');

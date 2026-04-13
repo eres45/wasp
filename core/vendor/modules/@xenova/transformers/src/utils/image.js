@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Helper module for image processing.
  *
  * These functions and classes are only used internally,
@@ -792,3 +792,4 @@ export class RawImage {
     });
   }
 }
+

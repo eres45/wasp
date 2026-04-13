@@ -1,4 +1,4 @@
-import { spawn } from "child_process";
+﻿import { spawn } from "child_process";
 import * as fs from "fs";
 import * as path from "path";
 
@@ -49,10 +49,10 @@ export async function handleMaxedOutFreeTrial(
   // Clear the screen but don't show ASCII art - keep it minimal since we're resuming a conversation
   console.clear();
 
-  console.log(chalk.yellow("🚀 Free trial limit reached!\n"));
+  console.log(chalk.yellow("ðŸš€ Free trial limit reached!\n"));
   console.log("Choose how you'd like to Continue:");
-  console.log(chalk.white("1. 💳 Sign up for models add-on"));
-  console.log(chalk.white("2. 🔑 Enter your Anthropic API key"));
+  console.log(chalk.white("1. ðŸ’³ Sign up for models add-on"));
+  console.log(chalk.white("2. ðŸ”‘ Enter your Anthropic API key"));
 
   const choice = await questionWithChoices(
     chalk.yellow("\nEnter choice (1): "),
@@ -68,18 +68,18 @@ export async function handleMaxedOutFreeTrial(
 
     try {
       await open(modelsUrl);
-      console.log(chalk.green("\n✓ Browser opened successfully!"));
+      console.log(chalk.green("\nâœ“ Browser opened successfully!"));
       console.log(
         chalk.dim(
-          "After setting up your models subscription, restart the CLI to continue.",
+          "After setting up your models subscription, restart the CLI to waspcode.",
         ),
       );
     } catch {
-      console.log(chalk.yellow("\n⚠ Could not open browser automatically"));
+      console.log(chalk.yellow("\nâš  Could not open browser automatically"));
       console.log(chalk.white(`Please visit: ${modelsUrl}`));
       console.log(
         chalk.dim(
-          "After setting up your models subscription, restart the CLI to continue.",
+          "After setting up your models subscription, restart the CLI to waspcode.",
         ),
       );
     }
@@ -94,14 +94,14 @@ export async function handleMaxedOutFreeTrial(
     );
 
     if (!isValidAnthropicApiKey(apiKey)) {
-      console.log(chalk.red(`❌ ${getApiKeyValidationError(apiKey)}`));
+      console.log(chalk.red(`âŒ ${getApiKeyValidationError(apiKey)}`));
       await gracefulExit(1);
     }
 
     try {
       await createOrUpdateConfig(apiKey);
-      console.log(chalk.green(`✓ API key saved successfully!`));
-      console.log(chalk.green("✓ Switching to local configuration..."));
+      console.log(chalk.green(`âœ“ API key saved successfully!`));
+      console.log(chalk.green("âœ“ Switching to local configuration..."));
 
       // If a reload callback is provided, use it instead of restarting
       if (onReload) {
@@ -109,7 +109,7 @@ export async function handleMaxedOutFreeTrial(
         return;
       }
     } catch (error) {
-      console.log(chalk.red(`❌ Error saving API key: ${error}`));
+      console.log(chalk.red(`âŒ Error saving API key: ${error}`));
       await gracefulExit(1);
     }
   }
@@ -117,7 +117,7 @@ export async function handleMaxedOutFreeTrial(
   // Fallback: restart the CLI if no reload callback was provided
   console.log(
     chalk.green(
-      "\n🔄 Restarting Continue CLI to resume your conversation...\n",
+      "\nðŸ”„ Restarting Continue CLI to resume your conversation...\n",
     ),
   );
 

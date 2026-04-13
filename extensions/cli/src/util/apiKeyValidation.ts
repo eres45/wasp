@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Validates an Anthropic API key format
  * @param apiKey The API key to validate
  * @returns true if the API key is valid, false otherwise

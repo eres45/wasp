@@ -1,4 +1,4 @@
-import * as childProcess from "node:child_process";
+﻿import * as childProcess from "node:child_process";
 import * as fs from "node:fs";
 import * as os from "node:os";
 import * as path from "node:path";
@@ -633,7 +633,7 @@ describe("runTerminalCommandImpl", () => {
       });
 
       it("should use ide.runCommand for WSL environment", async () => {
-        // WSL is a remote — commands should execute in WSL, not on the host
+        // WSL is a remote â€” commands should execute in WSL, not on the host
         const extras = createMockExtras({ remoteName: "wsl" });
 
         const result = await runTerminalCommandImpl(

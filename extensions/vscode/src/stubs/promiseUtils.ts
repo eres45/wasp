@@ -1,4 +1,4 @@
-import { Disposable, Event, EventEmitter } from "vscode";
+﻿import { Disposable, Event, EventEmitter } from "vscode";
 
 export interface PromiseAdapter<T, U> {
   (

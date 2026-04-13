@@ -1,4 +1,4 @@
-import { useContext } from "react";
+﻿import { useContext } from "react";
 import { IdeMessengerContext } from "../../../../context/IdeMessenger";
 import { useAppDispatch } from "../../../../redux/hooks";
 import { cancelStream } from "../../../../redux/thunks/cancelStream";
@@ -26,7 +26,7 @@ export const IsApplyingToolbar = () => {
         }}
       >
         {/* JetBrains overrides cmd+backspace, so we have to use another shortcut */}
-        {jetbrains ? getAltKeyLabel() : getMetaKeyLabel()} ⌫ Cancel
+        {jetbrains ? getAltKeyLabel() : getMetaKeyLabel()} âŒ« Cancel
       </div>
     </div>
   );

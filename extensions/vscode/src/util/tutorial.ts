@@ -1,4 +1,4 @@
-import { IDE } from "core";
+﻿import { IDE } from "core";
 import * as vscode from "vscode";
 
 import { getExtensionUri } from "./vscode";
@@ -21,7 +21,7 @@ export async function showTutorial(ide: IDE) {
       .replaceAll("[Cmd + L]", "[Ctrl + L]")
       .replaceAll("[Cmd + Shift + L]", "[Ctrl + Shift + L]")
       .replaceAll("[Cmd + I]", "[Ctrl + I]")
-      .replaceAll("⌘", "^");
+      .replaceAll("âŒ˜", "^");
 
     await ide.writeFile(tutorialUri.toString(), tutorialContent);
   }

@@ -1,4 +1,4 @@
-import { expect, test, vi } from "vitest";
+﻿import { expect, test, vi } from "vitest";
 import { ToolExtras } from "../..";
 import * as walkDirModule from "../../indexing/walkDir";
 import { lsToolImpl, resolveLsToolDirPath } from "./lsTool";

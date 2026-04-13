@@ -1,4 +1,4 @@
-import { CheckIcon, XMarkIcon } from "@heroicons/react/24/outline";
+﻿import { CheckIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ApplyState } from "core";
 import { useContext } from "react";
 import { IdeMessengerContext } from "../context/IdeMessenger";
@@ -50,8 +50,8 @@ export default function AcceptRejectAllButtons({
     }
   }
 
-  const rejectShortcut = `${getMetaKeyLabel()}⇧⌫`;
-  const acceptShortcut = `${getMetaKeyLabel()}⇧⏎`;
+  const rejectShortcut = `${getMetaKeyLabel()}â‡§âŒ«`;
+  const acceptShortcut = `${getMetaKeyLabel()}â‡§âŽ`;
 
   return (
     <div

@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+﻿import { describe, it, expect } from "vitest";
 import { evaluateTerminalCommandSecurity, ToolPolicy } from "../src/index.js";
 
 describe("evaluateTerminalCommandSecurity", () => {
@@ -888,7 +888,7 @@ describe("evaluateTerminalCommandSecurity", () => {
     it("should detect commands with unusual spacing", () => {
       const result = evaluateTerminalCommandSecurity(
         "allowedWithoutPermission",
-        "rm　-rf　/",
+        "rmã€€-rfã€€/",
       ); // Using unicode spaces
       expect(result).toBe("disabled");
     });
@@ -1121,7 +1121,7 @@ describe("evaluateTerminalCommandSecurity", () => {
     it("should handle commands with unicode characters", () => {
       const result = evaluateTerminalCommandSecurity(
         "allowedWithPermission",
-        "echo '你好世界'",
+        "echo 'ä½ å¥½ä¸–ç•Œ'",
       );
       expect(result).toBe("allowedWithPermission");
     });
@@ -1129,7 +1129,7 @@ describe("evaluateTerminalCommandSecurity", () => {
     it("should handle commands with emoji", () => {
       const result = evaluateTerminalCommandSecurity(
         "allowedWithPermission",
-        "echo '🚀 Deploy complete'",
+        "echo 'ðŸš€ Deploy complete'",
       );
       expect(result).toBe("allowedWithPermission");
     });

@@ -1,4 +1,4 @@
-import { describe, expect, test } from "vitest";
+﻿import { describe, expect, test } from "vitest";
 
 describe("Config Switching Implementation Test", () => {
   test("ConfigService updateConfigPath method exists with correct signature", async () => {
@@ -116,7 +116,7 @@ describe("Config Switching Implementation Test", () => {
 
     // This confirms our implementation has the right structure for reactive updates
     console.log(
-      "✅ ConfigService.updateConfigPath implementation contains required reactive calls",
+      "âœ… ConfigService.updateConfigPath implementation contains required reactive calls",
     );
   });
 });

@@ -1,4 +1,4 @@
-import { autocompleteEventAllSchema } from "./index.js";
+﻿import { autocompleteEventAllSchema } from "./index.js";
 
 export const autocompleteEventSchema_0_2_0 = autocompleteEventAllSchema.pick({
   // base

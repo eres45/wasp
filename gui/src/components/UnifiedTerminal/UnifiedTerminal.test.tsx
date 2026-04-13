@@ -1,13 +1,13 @@
-import { screen, waitFor } from "@testing-library/react";
+﻿import { screen, waitFor } from "@testing-library/react";
 import { ToolCallState } from "core";
 import { renderWithProviders } from "../../util/test/render";
 import { UnifiedTerminalCommand } from "./UnifiedTerminal";
 
 const MOCK_COMMAND = "npm test";
 const MOCK_OUTPUT = `Running tests...
-✓ Test 1 passed
-✓ Test 2 passed
-✗ Test 3 failed
+âœ“ Test 1 passed
+âœ“ Test 2 passed
+âœ— Test 3 failed
   Error: Expected true but got false
 
 Test Results:
@@ -19,8 +19,8 @@ const LONG_OUTPUT = Array.from({ length: 25 }, (_, i) => `Line ${i + 1}`).join(
 );
 const MOCK_TOOL_CALL_ID = "terminal-call-123";
 
-const MOCK_ANSI_OUTPUT = `\u001b[32m✓\u001b[0m Test passed
-\u001b[31m✗\u001b[0m Test failed
+const MOCK_ANSI_OUTPUT = `\u001b[32mâœ“\u001b[0m Test passed
+\u001b[31mâœ—\u001b[0m Test failed
 \u001b[1mBold text\u001b[0m
 \u001b[4mUnderlined text\u001b[0m`;
 

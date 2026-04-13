@@ -1,4 +1,4 @@
-import { exec } from "node:child_process";
+﻿import { exec } from "node:child_process";
 import { IDE } from "..";
 
 export async function isLemonadeInstalled(): Promise<boolean> {

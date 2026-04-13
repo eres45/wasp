@@ -1,4 +1,4 @@
-declare const LogitsProcessorList_base: new () => {
+﻿declare const LogitsProcessorList_base: new () => {
   (...args: any[]): any;
   _call(...args: any[]): any;
 };
@@ -600,3 +600,4 @@ export type GenerationConfigType = {
 import { Tensor } from "./tensor.js";
 export {};
 //# sourceMappingURL=generation.d.ts.map
+

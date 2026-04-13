@@ -1,4 +1,4 @@
-import { PrecalculatedLruCache } from "./LruCache";
+﻿import { PrecalculatedLruCache } from "./LruCache";
 
 describe("PrecalculatedLruCache", () => {
   const N = 2;

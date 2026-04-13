@@ -1,4 +1,4 @@
-import { editInteractionEventAllSchema } from "./index.js";
+﻿import { editInteractionEventAllSchema } from "./index.js";
 
 export const editInteractionEventSchema_0_2_0 =
   editInteractionEventAllSchema.pick({

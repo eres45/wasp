@@ -1,4 +1,4 @@
-export class ListenableGenerator<T> {
+﻿export class ListenableGenerator<T> {
   private _source: AsyncGenerator<T>;
   private _buffer: T[] = [];
   private _listeners: Set<(value: T) => void> = new Set();

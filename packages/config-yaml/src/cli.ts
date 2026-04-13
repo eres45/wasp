@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 
 import { readFileSync } from "fs";
 import { parseConfigYaml } from "./load/unroll.js";
@@ -20,10 +20,10 @@ async function main() {
     const validationErrors = validateConfigYaml(parsedYaml);
 
     if (validationErrors.length === 0) {
-      console.log("✅ Config file is valid!");
+      console.log("âœ… Config file is valid!");
       process.exit(0);
     } else {
-      console.error("❌ Config file validation failed:");
+      console.error("âŒ Config file validation failed:");
       validationErrors.forEach((error) => {
         console.error(`- ${error.message}`);
       });

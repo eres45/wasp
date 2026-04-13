@@ -1,4 +1,4 @@
-import { Tool } from "../..";
+﻿import { Tool } from "../..";
 import { BUILT_IN_GROUP_NAME, BuiltInToolNames } from "../builtIn";
 
 export const codebaseTool: Tool = {

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Converts OpenAI tool format to Vercel AI SDK format
  */
 

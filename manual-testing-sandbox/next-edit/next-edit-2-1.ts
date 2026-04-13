@@ -1,4 +1,4 @@
-// A simple user validation utility with poor organization
+﻿// A simple user validation utility with poor organization
 // Difficulty: 1 - Easy fixes needed
 
 type UserData = {

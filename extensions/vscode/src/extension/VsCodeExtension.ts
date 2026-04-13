@@ -1,4 +1,4 @@
-import fs from "fs";
+﻿import fs from "fs";
 import path from "path";
 
 import { IContextProvider } from "core";
@@ -142,7 +142,7 @@ export class VsCodeExtension {
             );
           } else if (selection === "Select different model") {
             vscode.commands.executeCommand(
-              "continue.openTabAutocompleteConfigMenu",
+              "waspcode.openTabAutocompleteConfigMenu",
             );
           }
         });
@@ -265,7 +265,7 @@ export class VsCodeExtension {
     // Sidebar
     context.subscriptions.push(
       vscode.window.registerWebviewViewProvider(
-        "continue.continueGUIView",
+        "waspcode.waspcodeGUIView",
         this.sidebar,
         {
           webviewOptions: { retainContextWhenHidden: true },
@@ -414,7 +414,7 @@ export class VsCodeExtension {
 
     context.subscriptions.push(
       vscode.window.registerWebviewViewProvider(
-        "continue.continueConsoleView",
+        "waspcode.waspcodeConsoleView",
         this.consoleView,
       ),
     );
@@ -564,7 +564,7 @@ export class VsCodeExtension {
       if (e.provider.id === env.AUTH_TYPE) {
         void vscode.commands.executeCommand(
           "setContext",
-          "continue.isSignedInToControlPlane",
+          "waspcode.isSignedInToControlPlane",
           true,
         );
 
@@ -575,7 +575,7 @@ export class VsCodeExtension {
       } else {
         void vscode.commands.executeCommand(
           "setContext",
-          "continue.isSignedInToControlPlane",
+          "waspcode.isSignedInToControlPlane",
           false,
         );
 

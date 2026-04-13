@@ -1,4 +1,4 @@
-import { EventEmitter } from "events";
+﻿import { EventEmitter } from "events";
 
 // Event emitter to notify that running terminal command should be moved to background
 class BackgroundSignalManager extends EventEmitter {

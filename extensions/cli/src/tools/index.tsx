@@ -1,4 +1,4 @@
-// @ts-ignore
+﻿// @ts-ignore
 import { ContinueError, ContinueErrorReason } from "core/util/errors.js";
 import { ChatCompletionTool } from "openai/resources.mjs";
 

@@ -1,4 +1,4 @@
-import OpenAI from "./OpenAI";
+﻿import OpenAI from "./OpenAI";
 
 describe("OpenAI", () => {
   test("should identify correct o-series models", () => {

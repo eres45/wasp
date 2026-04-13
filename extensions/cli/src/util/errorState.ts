@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Module to track unhandled errors during CLI execution.
  * This is in a separate file to avoid circular dependencies between
  * index.ts and exit.ts.

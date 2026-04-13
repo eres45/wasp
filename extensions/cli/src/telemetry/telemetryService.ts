@@ -1,4 +1,4 @@
-import os from "os";
+﻿import os from "os";
 
 import { metrics } from "@opentelemetry/api";
 import { OTLPMetricExporter } from "@opentelemetry/exporter-metrics-otlp-http";

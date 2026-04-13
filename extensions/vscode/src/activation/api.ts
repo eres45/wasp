@@ -1,4 +1,4 @@
-import { IContextProvider } from "core";
+﻿import { IContextProvider } from "core";
 
 import { VsCodeExtension } from "../extension/VsCodeExtension";
 

@@ -1,4 +1,4 @@
-import * as fs from "fs";
+﻿import * as fs from "fs";
 import * as path from "path";
 
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
@@ -11,7 +11,7 @@ vi.mock("../../auth/workos.js", () => ({
 }));
 
 vi.mock("../../env.js", () => ({
-  env: { apiBase: "https://api.continue.dev" },
+  env: { apiBase: "https://api.waspcode.dev" },
 }));
 
 vi.mock("../../util/logger.js", () => ({

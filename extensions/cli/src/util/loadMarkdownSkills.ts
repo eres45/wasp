@@ -1,4 +1,4 @@
-import * as fs from "fs";
+﻿import * as fs from "fs";
 import fsPromises from "fs/promises";
 import * as path from "path";
 

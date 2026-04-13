@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Converts OpenAI tool_choice format to Vercel AI SDK toolChoice format
  */
 

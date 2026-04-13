@@ -1,4 +1,4 @@
-type ProcessWithEnv = {
+﻿type ProcessWithEnv = {
   env?: Record<string, string | undefined>;
 };
 

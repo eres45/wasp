@@ -1,4 +1,4 @@
-import { ToolImpl } from ".";
+﻿import { ToolImpl } from ".";
 import { ContinueError, ContinueErrorReason } from "../../util/errors";
 import { getStringArg } from "../parseArgs";
 

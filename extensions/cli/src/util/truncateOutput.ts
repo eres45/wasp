@@ -1,4 +1,4 @@
-// Threshold for snapping to line boundaries during character truncation
+﻿// Threshold for snapping to line boundaries during character truncation
 export const TRUNCATION_LINE_SNAP_THRESHOLD = 1000;
 
 /**

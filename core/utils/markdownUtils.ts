@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Utility functions for working with markdown files and code blocks
  */
 

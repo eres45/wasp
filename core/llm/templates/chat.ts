@@ -1,4 +1,4 @@
-import { ChatMessage } from "../../index.js";
+﻿import { ChatMessage } from "../../index.js";
 import { renderChatMessage } from "../../util/messageContent.js";
 
 function templateFactory(

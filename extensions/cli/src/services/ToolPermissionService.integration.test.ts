@@ -1,4 +1,4 @@
-import { getDefaultToolPolicies } from "../permissions/defaultPolicies.js";
+﻿import { getDefaultToolPolicies } from "../permissions/defaultPolicies.js";
 
 import { ToolPermissionService } from "./ToolPermissionService.js";
 

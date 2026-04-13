@@ -1,4 +1,4 @@
-import { ModelConfig } from "@continuedev/config-yaml";
+﻿import { ModelConfig } from "@continuedev/config-yaml";
 import { BaseLlmApi } from "@continuedev/openai-adapters";
 import type { ChatHistoryItem } from "core/index.js";
 import type { ChatCompletionTool } from "openai/resources/chat/completions.mjs";
@@ -162,7 +162,7 @@ export async function handlePostToolValidation(
       // Compaction failed, cannot continue
       logger.error("Failed to compact history after tool execution overflow");
       throw new Error(
-        "Context limit exceeded and compaction failed. Unable to continue.",
+        "Context limit exceeded and compaction failed. Unable to waspcode.",
       );
     }
   }

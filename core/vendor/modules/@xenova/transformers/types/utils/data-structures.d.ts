@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Custom data structures.
  *
  * These are only used internally, meaning an end-user shouldn't
@@ -228,3 +228,4 @@ declare class TokenLatticeNode {
 }
 export {};
 //# sourceMappingURL=data-structures.d.ts.map
+

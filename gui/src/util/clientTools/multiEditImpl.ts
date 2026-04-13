@@ -1,4 +1,4 @@
-import { validateMultiEdit } from "core/edit/searchAndReplace/multiEditValidation";
+﻿import { validateMultiEdit } from "core/edit/searchAndReplace/multiEditValidation";
 import { executeMultiFindAndReplace } from "core/edit/searchAndReplace/performReplace";
 import { validateSearchAndReplaceFilepath } from "core/edit/searchAndReplace/validateArgs";
 import { v4 as uuid } from "uuid";

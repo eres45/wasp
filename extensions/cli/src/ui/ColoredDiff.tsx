@@ -1,4 +1,4 @@
-import { diffWordsWithSpace, Change } from "diff";
+﻿import { diffWordsWithSpace, Change } from "diff";
 import { Box, Text } from "ink";
 import React, { useMemo } from "react";
 

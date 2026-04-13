@@ -1,4 +1,4 @@
-// Integration tests for free trial transition - simplified version
+﻿// Integration tests for free trial transition - simplified version
 
 describe("TUIChat - Free Trial Transition Integration", () => {
   it("should integrate free trial transition with config selector", () => {

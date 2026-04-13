@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+﻿import { useCallback, useEffect, useState } from "react";
 
 import { getGitBranch, getGitRemoteUrl, isGitRepo } from "../../util/git.js";
 import type { ConfigOption, ModelOption } from "../types/selectorTypes.js";
@@ -59,7 +59,7 @@ export function getResponsiveRepoText(
   }
 
   // Calculate the minimum space needed for different display options
-  const branchSeparator = " ⊦";
+  const branchSeparator = " âŠ¦";
   const branchText = repoInfo.branchName || "";
   const repoText = repoInfo.repoName;
 

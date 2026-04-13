@@ -1,4 +1,4 @@
-import { findSearchMatches } from "./findSearchMatch";
+﻿import { findSearchMatches } from "./findSearchMatch";
 
 describe("findSearchMatches", () => {
   describe("exact match strategy", () => {
@@ -339,8 +339,8 @@ const baz = foo;`;
     });
 
     it("should handle Unicode characters", () => {
-      const content = "const emoji = '🚀 Hello 🌍';";
-      const search = "🚀 Hello 🌍";
+      const content = "const emoji = 'ðŸš€ Hello ðŸŒ';";
+      const search = "ðŸš€ Hello ðŸŒ";
       const matches = findSearchMatches(content, search);
 
       expect(matches).toHaveLength(1);

@@ -1,4 +1,4 @@
-import dns from "dns/promises";
+﻿import dns from "dns/promises";
 import os from "node:os";
 
 import node_machine_id from "node-machine-id";

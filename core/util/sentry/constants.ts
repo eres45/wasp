@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Sentry configuration constants
  */
 export const SENTRY_DSN =

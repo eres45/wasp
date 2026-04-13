@@ -1,4 +1,4 @@
-import { RuleWithSource } from "../..";
+﻿import { RuleWithSource } from "../..";
 import { getRequestRuleDescription } from "./requestRule";
 
 describe("getRequestRuleDescription", () => {

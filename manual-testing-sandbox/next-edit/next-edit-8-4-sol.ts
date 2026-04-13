@@ -1,4 +1,4 @@
-// User management system refactored with SOLID principles
+﻿// User management system refactored with SOLID principles
 // Original difficulty: 4/5
 
 // Types

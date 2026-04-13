@@ -1,4 +1,4 @@
-import { IDE, RangeInFileWithContents } from "../index";
+﻿import { IDE, RangeInFileWithContents } from "../index";
 import { AutocompleteLanguageInfo } from "./constants/AutocompleteLanguageInfo";
 import { AutocompleteCodeSnippet } from "./snippets/types";
 

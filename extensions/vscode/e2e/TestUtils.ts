@@ -1,4 +1,4 @@
-import { expect } from "chai";
+﻿import { expect } from "chai";
 import { Key } from "vscode-extension-tester";
 
 import { access, constants } from "fs/promises";

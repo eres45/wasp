@@ -1,4 +1,4 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+﻿import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { IndexingStatus } from "core";
 
 export type IndexingState = {

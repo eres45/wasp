@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "@continuedev/sdk-generator",
   "version": "0.0.1",
   "description": "SDK Generator for Continue.dev",
@@ -23,3 +23,4 @@
     "typescript": "^5.0.0"
   }
 }
+

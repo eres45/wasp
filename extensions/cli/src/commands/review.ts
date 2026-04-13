@@ -1,4 +1,4 @@
-import { execSync, fork } from "child_process";
+﻿import { execSync, fork } from "child_process";
 
 import chalk from "chalk";
 import React from "react";
@@ -161,12 +161,12 @@ function applyPatches(results: ReviewResult[]): void {
         stdio: ["pipe", "pipe", "pipe"],
       });
       applied++;
-      console.log(chalk.green(`  ✓ Applied patch from ${result.name}`));
+      console.log(chalk.green(`  âœ“ Applied patch from ${result.name}`));
     } catch {
       failed++;
       console.log(
         chalk.red(
-          `  ✗ Could not apply patch from ${result.name} (conflict with working tree)`,
+          `  âœ— Could not apply patch from ${result.name} (conflict with working tree)`,
         ),
       );
     }
@@ -306,7 +306,7 @@ export async function review(options: ReviewOptions = {}): Promise<void> {
         chalk.dim(
           "  2. Or specify an agent: cn review --review-agents org/agent-name\n",
         ) +
-        chalk.dim("  3. Or configure reviews on https://continue.dev\n"),
+        chalk.dim("  3. Or configure reviews on https://waspcode.dev\n"),
     );
     process.exit(0);
   }

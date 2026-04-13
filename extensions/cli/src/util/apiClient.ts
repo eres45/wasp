@@ -1,4 +1,4 @@
-/* eslint-disable max-classes-per-file */
+﻿/* eslint-disable max-classes-per-file */
 import { getAccessToken, loadAuthConfig } from "../auth/workos.js";
 import { env } from "../env.js";
 

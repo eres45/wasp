@@ -1,4 +1,4 @@
-import fs from "fs";
+﻿import fs from "fs";
 
 import { type AssistantConfig } from "@continuedev/sdk";
 import chalk from "chalk";
@@ -37,7 +37,7 @@ async function handleHelp(_args: string[], _assistant: AssistantConfig) {
     chalk.bold("Keyboard Shortcuts:"),
     "",
     chalk.white("Navigation:"),
-    `  ${chalk.cyan("↑/↓")}        Navigate command/file suggestions or history`,
+    `  ${chalk.cyan("â†‘/â†“")}        Navigate command/file suggestions or history`,
     `  ${chalk.cyan("Tab")}        Complete command or file selection`,
     `  ${chalk.cyan("Enter")}      Submit message`,
     `  ${chalk.cyan("Shift+Enter")} New line`,

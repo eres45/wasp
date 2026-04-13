@@ -1,4 +1,4 @@
-import chalk from "chalk";
+﻿import chalk from "chalk";
 
 import { get, post } from "../util/apiClient.js";
 import { gracefulExit } from "../util/exit.js";

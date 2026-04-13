@@ -1,4 +1,4 @@
-import { editOutcomeEventAllSchema } from "./index.js";
+﻿import { editOutcomeEventAllSchema } from "./index.js";
 
 export const editOutcomeEventSchema_0_2_0 = editOutcomeEventAllSchema.pick({
   // base

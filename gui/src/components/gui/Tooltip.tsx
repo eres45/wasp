@@ -1,4 +1,4 @@
-import { cloneElement, CSSProperties, ReactElement, useId } from "react";
+﻿import { cloneElement, CSSProperties, ReactElement, useId } from "react";
 import ReactDOM from "react-dom";
 import { ITooltip, Tooltip } from "react-tooltip";
 import { vscBackground, vscForeground } from "..";

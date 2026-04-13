@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Review worker - runs in a forked process.
  *
  * Receives configuration via IPC, initializes services,
@@ -51,10 +51,10 @@ function buildReviewPrompt(diffContext: DiffContext): string {
 
   let prompt = `You are a code review agent. Your job is to review ONLY the changed lines in the diff below and check them against your review rules.
 
-## Scope — READ THIS CAREFULLY
+## Scope â€” READ THIS CAREFULLY
 - You MUST only review the files and lines shown in the diff.
 - Do NOT read, scan, or report on files outside the diff.
-- Do NOT report pre-existing issues in unchanged code — even in files that appear in the diff, only the changed lines are in scope.
+- Do NOT report pre-existing issues in unchanged code â€” even in files that appear in the diff, only the changed lines are in scope.
 - If you need surrounding context to understand a change, you may read that file, but you must NOT flag issues in the unchanged parts.
 
 ## Changes (base: ${diffContext.baseBranch})
@@ -68,7 +68,7 @@ ${diffContext.diff || "(no diff available)"}
 `;
 
   if (diffContext.truncated) {
-    prompt += `\nNote: The diff was truncated due to size. You may use Read tool to view the full content of the changed files listed above — but do NOT explore beyond them.\n`;
+    prompt += `\nNote: The diff was truncated due to size. You may use Read tool to view the full content of the changed files listed above â€” but do NOT explore beyond them.\n`;
   }
 
   prompt += `

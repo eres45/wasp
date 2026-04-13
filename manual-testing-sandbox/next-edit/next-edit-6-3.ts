@@ -1,4 +1,4 @@
-// A chaotic file upload and management system
+﻿// A chaotic file upload and management system
 // Difficulty: 3 - Moderate refactoring needed
 
 // Types

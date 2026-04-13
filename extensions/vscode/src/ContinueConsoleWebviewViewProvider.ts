@@ -1,4 +1,4 @@
-import { LLMInteractionItem } from "core";
+﻿import { LLMInteractionItem } from "core";
 import { EXTENSION_NAME } from "core/control-plane/env";
 import { LLMLogger } from "core/llm/logger";
 import * as vscode from "vscode";
@@ -17,7 +17,7 @@ const MAX_INTERACTIONS = 50;
 export class ContinueConsoleWebviewViewProvider
   implements vscode.WebviewViewProvider
 {
-  public static readonly viewType = "continue.continueConsoleView";
+  public static readonly viewType = "waspcode.waspcodeConsoleView";
 
   resolveWebviewView(
     webviewView: vscode.WebviewView,

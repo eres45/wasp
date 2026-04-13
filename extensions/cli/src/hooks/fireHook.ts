@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Convenience functions for firing hook events from integration points.
  *
  * These functions build the hook input with common fields and delegate

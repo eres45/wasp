@@ -1,4 +1,4 @@
-/**
+﻿/**
  * E2E test for headless mode permission errors
  * Verifies that when a tool requires permission in headless mode,
  * an appropriate error message is displayed suggesting the --auto flag

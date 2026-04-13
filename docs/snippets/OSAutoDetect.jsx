@@ -1,4 +1,4 @@
-// Auto-selects the appropriate tab based on the user's OS
+﻿// Auto-selects the appropriate tab based on the user's OS
 // Import with: import { OSAutoDetect } from '/snippets/OSAutoDetect.jsx'
 // Usage: <OSAutoDetect /> at the top of a page with OS-specific tabs
 // Tab order: 0 = macOS/Linux, 1 = Windows, 2 = npm (default)

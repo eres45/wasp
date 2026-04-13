@@ -1,4 +1,4 @@
-import { DiffLine } from "..";
+﻿import { DiffLine } from "..";
 import { NEXT_EDIT_MODELS } from "../llm/constants";
 
 export function isNextEditTest(): boolean {

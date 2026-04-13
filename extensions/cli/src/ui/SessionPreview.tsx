@@ -1,4 +1,4 @@
-import type { ChatHistoryItem } from "core/index.js";
+﻿import type { ChatHistoryItem } from "core/index.js";
 import { Box, Text } from "ink";
 import React, { useMemo } from "react";
 

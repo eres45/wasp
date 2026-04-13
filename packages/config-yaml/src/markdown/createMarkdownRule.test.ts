@@ -1,4 +1,4 @@
-import { PackageIdentifier } from "../browser.js";
+﻿import { PackageIdentifier } from "../browser.js";
 import {
   createMarkdownWithFrontmatter,
   createRuleMarkdown,

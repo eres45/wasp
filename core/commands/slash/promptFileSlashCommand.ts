@@ -1,4 +1,4 @@
-import { SlashCommandWithSource } from "../..";
+﻿import { SlashCommandWithSource } from "../..";
 import { parsePromptFile } from "../../promptFiles/parsePromptFile";
 
 export function slashCommandFromPromptFile(

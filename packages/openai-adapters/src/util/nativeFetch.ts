@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Preserve the native fetch implementation before any modules can pollute it.
  * This is critical for @google/genai which requires native fetch behavior.
  *

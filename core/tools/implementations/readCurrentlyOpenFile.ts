@@ -1,4 +1,4 @@
-import { getUriDescription } from "../../util/uri";
+﻿import { getUriDescription } from "../../util/uri";
 
 import { ToolImpl } from ".";
 import { throwIfFileIsSecurityConcern } from "../../indexing/ignore";

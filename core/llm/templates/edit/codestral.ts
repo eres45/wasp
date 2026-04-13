@@ -1,4 +1,4 @@
-import { PromptTemplateFunction } from "../../..";
+﻿import { PromptTemplateFunction } from "../../..";
 import { dedent } from "../../../util";
 
 const codestralInsertionEditPrompt: PromptTemplateFunction = (_, otherData) => {

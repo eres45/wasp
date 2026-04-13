@@ -1,4 +1,4 @@
-import { vi } from "vitest";
+﻿import { vi } from "vitest";
 
 // Mock auth functions
 vi.mock("./auth/workos.js", () => ({
@@ -51,7 +51,7 @@ describe("processPromptOrRule (loadRuleFromHub integration)", () => {
       expect(mockFetch).toHaveBeenCalledWith(
         new URL(
           "v0/continuedev/sentry-nextjs/latest/download",
-          "https://api.continue.dev/",
+          "https://api.waspcode.dev/",
         ),
         { headers: {} },
       );

@@ -1,4 +1,4 @@
-import { JSONContent } from "@tiptap/react";
+﻿import { JSONContent } from "@tiptap/react";
 import { useState } from "react";
 import { getLocalStorage, setLocalStorage } from "../util/localStorage";
 import useUpdatingRef from "./useUpdatingRef";

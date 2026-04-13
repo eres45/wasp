@@ -1,4 +1,4 @@
-import {
+﻿import {
   ArrowRightIcon,
   AtSymbolIcon,
   ChatBubbleLeftIcon,
@@ -503,7 +503,7 @@ const AtMentionDropdown = forwardRef((props: AtMentionDropdownProps, ref) => {
               })
             }
           >
-            ⏎
+            âŽ
           </Button>
         </span>
       ) : (

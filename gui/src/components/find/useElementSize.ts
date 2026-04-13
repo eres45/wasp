@@ -1,4 +1,4 @@
-import { RefObject, useCallback, useEffect, useState } from "react";
+﻿import { RefObject, useCallback, useEffect, useState } from "react";
 
 interface ElementSize {
   clientWidth: number;

@@ -1,4 +1,4 @@
-// A well-structured todo list manager following SOLID principles
+﻿// A well-structured todo list manager following SOLID principles
 // Refactored solution for next-edit-3-2.ts
 
 // Define types for better maintainability

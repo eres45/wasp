@@ -1,4 +1,4 @@
-import * as vscode from "vscode";
+﻿import * as vscode from "vscode";
 
 import { editorToSuggestions } from "../../../suggestions";
 import { getMetaKeyLabel } from "../../../util/util";
@@ -22,19 +22,19 @@ export class SuggestionsCodeLensProvider implements vscode.CodeLensProvider {
       codeLenses.push(
         new vscode.CodeLens(range, {
           title: "Accept",
-          command: "continue.acceptSuggestion",
+          command: "waspcode.acceptSuggestion",
           arguments: [suggestion],
         }),
         new vscode.CodeLens(range, {
           title: "Reject",
-          command: "continue.rejectSuggestion",
+          command: "waspcode.rejectSuggestion",
           arguments: [suggestion],
         }),
       );
       if (codeLenses.length === 2) {
         codeLenses.push(
           new vscode.CodeLens(range, {
-            title: `(${getMetaKeyLabel()}⇧⏎/${getMetaKeyLabel()}⇧⌫ to accept/reject all)`,
+            title: `(${getMetaKeyLabel()}â‡§âŽ/${getMetaKeyLabel()}â‡§âŒ« to accept/reject all)`,
             command: "",
           }),
         );

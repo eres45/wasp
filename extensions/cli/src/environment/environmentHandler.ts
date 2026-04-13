@@ -1,4 +1,4 @@
-import { exec } from "child_process";
+﻿import { exec } from "child_process";
 import { existsSync, readFileSync } from "fs";
 import path from "path";
 import { promisify } from "util";
@@ -73,7 +73,7 @@ export async function runEnvironmentInstall(): Promise<void> {
     });
 
     logger.debug(
-      chalk.green("✓ Environment install script completed successfully"),
+      chalk.green("âœ“ Environment install script completed successfully"),
     );
   } catch (error) {
     logger.error(`Environment install script failed: ${formatError(error)}`);
@@ -102,7 +102,7 @@ export async function runEnvironmentInstallSafe(): Promise<void> {
   try {
     await runEnvironmentInstall();
     logger.debug(
-      chalk.green("✓ Environment install script completed successfully"),
+      chalk.green("âœ“ Environment install script completed successfully"),
     );
   } catch (error) {
     logger.error(

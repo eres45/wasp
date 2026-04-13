@@ -1,4 +1,4 @@
-import {
+﻿import {
   McpUiResourceCsp,
   McpUiResourcePermissions,
   PostMessageTransport,
@@ -145,7 +145,7 @@ export function McpAppRenderer({
   useEffect(() => {
     const bridge = new AppBridge(
       null,
-      { name: "Continue", version: "1.0.0" },
+      { name: "WaspCode", version: "1.0.0" },
       {
         openLinks: {},
         logging: {},
@@ -399,7 +399,7 @@ ${html}
           }`}
         >
           <div className="max-w-[25rem] text-center">
-            <div className="mb-3 text-2xl">⚠️</div>
+            <div className="mb-3 text-2xl">âš ï¸</div>
             <p className="text-foreground mb-2 text-sm font-medium">
               Limited Functionality
             </p>

@@ -1,4 +1,4 @@
-import {
+﻿import {
   NodeViewWrapper as TiptapNodeViewWrapper,
   NodeViewWrapperProps as TiptapNodeViewWrapperProps,
 } from "@tiptap/react";

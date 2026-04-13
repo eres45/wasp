@@ -1,5 +1,5 @@
-/**
- * HookService — service container integration for the hooks system.
+﻿/**
+ * HookService â€” service container integration for the hooks system.
  *
  * Loads hook configuration from settings files and provides a `fireEvent`
  * method that integration points call to trigger hooks.

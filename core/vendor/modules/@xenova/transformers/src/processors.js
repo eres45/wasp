@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Processors are used to prepare non-textual inputs (e.g., image or audio) for a model.
  *
  * **Example:** Using a `WhisperProcessor` to prepare an audio input for a model.
@@ -141,7 +141,7 @@ function post_process_object_detection(
 
 /**
  * Named tuple to indicate the order we are using is (height x width), even though
- * the Graphics’ industry standard is (width x height).
+ * the Graphicsâ€™ industry standard is (width x height).
  * @typedef {[height: number, width: number]} HeightWidth
  */
 
@@ -2063,3 +2063,4 @@ export class AutoProcessor {
   }
 }
 //////////////////////////////////////////////////
+

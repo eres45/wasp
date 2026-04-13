@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Transposes a tensor according to the provided axes.
  * @param {any} tensor The input tensor to transpose.
  * @param {Array} axes The axes to transpose the tensor along.
@@ -322,3 +322,4 @@ declare const DataTypeMap: Readonly<{
 }>;
 export {};
 //# sourceMappingURL=tensor.d.ts.map
+

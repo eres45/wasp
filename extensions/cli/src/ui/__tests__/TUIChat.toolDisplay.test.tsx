@@ -1,4 +1,4 @@
-import { render } from "ink-testing-library";
+﻿import { render } from "ink-testing-library";
 import React from "react";
 
 import { createUITestContext } from "../../test-helpers/ui-test-context.js";
@@ -76,9 +76,9 @@ describe("TUIChat - Tool Display Tests", () => {
     // The slash command menu might show different UI states
     // On Windows, the timing might be different
     const hasSlashCommandIndicator = frame
-      ? frame.includes("↑/↓ to navigate") ||
+      ? frame.includes("â†‘/â†“ to navigate") ||
         frame.includes("/exit") ||
-        frame.includes("◉ /") ||
+        frame.includes("â—‰ /") ||
         frame.includes("/ for slash commands")
       : false;
 

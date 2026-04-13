@@ -1,4 +1,4 @@
-import { Editor, JSONContent } from "@tiptap/core";
+﻿import { Editor, JSONContent } from "@tiptap/core";
 import Document from "@tiptap/extension-document";
 import History from "@tiptap/extension-history";
 import Image from "@tiptap/extension-image";

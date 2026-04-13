@@ -1,4 +1,4 @@
-import { PolicyResponse } from "./client.js";
+﻿import { PolicyResponse } from "./client.js";
 
 export class PolicySingleton {
   private static instance: PolicySingleton;

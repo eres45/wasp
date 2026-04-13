@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 
 import type { ChatCompletionChunk } from "openai/resources/index.js";
 import type {

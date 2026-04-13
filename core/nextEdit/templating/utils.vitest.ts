@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import { Position } from "../..";
 import {
   INSTINCT_EDITABLE_REGION_END_TOKEN,

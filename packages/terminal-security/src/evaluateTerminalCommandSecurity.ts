@@ -1,4 +1,4 @@
-import { parse } from "shell-quote";
+﻿import { parse } from "shell-quote";
 import { ToolPolicy } from "./types.js";
 
 /**

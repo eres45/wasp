@@ -1,4 +1,4 @@
-import { Box, Text } from "ink";
+﻿import { Box, Text } from "ink";
 import React from "react";
 
 import { LoadingAnimation } from "../LoadingAnimation.js";
@@ -31,8 +31,8 @@ const ActionStatus: React.FC<ActionStatusProps> = ({
       <Text color={color}>{message}</Text>
       <Text color="dim">(</Text>
       <Timer startTime={startTime} />
-      <Text color="dim">• esc to interrupt</Text>
-      {additionalHint && <Text color="dim">• {additionalHint}</Text>}
+      <Text color="dim">â€¢ esc to interrupt</Text>
+      {additionalHint && <Text color="dim">â€¢ {additionalHint}</Text>}
       <Text color="dim">)</Text>
     </Box>
   );

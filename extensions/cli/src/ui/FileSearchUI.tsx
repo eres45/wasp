@@ -1,4 +1,4 @@
-import { Box, Text, useInput } from "ink";
+﻿import { Box, Text, useInput } from "ink";
 import React, { useEffect, useState } from "react";
 
 import { useServices } from "../hooks/useService.js";
@@ -53,7 +53,7 @@ const FileSearchContainer: React.FC<{ children: React.ReactNode }> = ({
 
 // Keyboard navigation shortcuts help text
 const KEYBOARD_SHORTCUTS =
-  "↑/↓ to navigate, Enter to select, Tab to complete, Ctrl+r to refresh list";
+  "â†‘/â†“ to navigate, Enter to select, Tab to complete, Ctrl+r to refresh list";
 
 const FileSearchUI: React.FC<FileSearchUIProps> = ({
   filter,

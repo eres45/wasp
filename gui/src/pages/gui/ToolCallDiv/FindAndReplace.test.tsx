@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+﻿import { fireEvent, render, screen } from "@testing-library/react";
 import { ApplyState } from "core";
 import { EditOperation } from "core/tools/definitions/multiEdit";
 import { beforeEach, describe, expect, it, vi } from "vitest";
@@ -24,7 +24,7 @@ vi.mock("core/edit/searchAndReplace/performReplace", () => ({
 }));
 
 vi.mock("./utils", () => ({
-  getStatusIcon: vi.fn(() => <div data-testid="status-icon">✓</div>),
+  getStatusIcon: vi.fn(() => <div data-testid="status-icon">âœ“</div>),
 }));
 
 vi.mock("react", async () => {

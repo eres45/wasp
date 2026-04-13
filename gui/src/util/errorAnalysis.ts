@@ -1,4 +1,4 @@
-import { providers } from "../pages/AddNewModel/configs/providers";
+﻿import { providers } from "../pages/AddNewModel/configs/providers";
 
 export interface ErrorAnalysis {
   parsedError: string;
@@ -144,7 +144,7 @@ export function analyzeError(
 
   // Missing authentication header (no API key configured)
   if (errorText.includes("missing bearer or basic authentication")) {
-    helpUrl = "https://docs.continue.dev/reference#models";
+    helpUrl = "https://docs.waspcode.dev/reference#models";
     customErrorMessage =
       'No API key was sent with the request. Add "apiKey" to your model config.';
   }
@@ -153,7 +153,7 @@ export function analyzeError(
   if (errorText.includes("error parsing tool call")) {
     customErrorMessage =
       "This model produced an invalid tool call that Ollama could not parse. " +
-      "This is a known transient issue — you can resubmit your message to try again. " +
+      "This is a known transient issue â€” you can resubmit your message to try again. " +
       'Enabling "Only use system message tools" in Settings > Experimental ' +
       "may reduce these errors by avoiding Ollama's native tool call parser.";
   }

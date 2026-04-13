@@ -1,4 +1,4 @@
-import { Text } from "ink";
+﻿import { Text } from "ink";
 import React from "react";
 
 import { useServices } from "src/hooks/useService.js";
@@ -26,9 +26,9 @@ const ModeIndicator: React.FC<ModeIndicatorProps> = ({ mode }) => {
   const getModeDisplay = (mode: PermissionMode) => {
     switch (mode) {
       case "plan":
-        return { text: "⏸ plan", color: "blue" };
+        return { text: "â¸ plan", color: "blue" };
       case "auto":
-        return { text: "⏵⏵ auto", color: "green" };
+        return { text: "âµâµ auto", color: "green" };
       default:
         return { text: mode, color: "dim" };
     }

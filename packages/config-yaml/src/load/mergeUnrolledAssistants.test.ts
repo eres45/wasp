@@ -1,4 +1,4 @@
-import { describe, expect, it } from "@jest/globals";
+﻿import { describe, expect, it } from "@jest/globals";
 import { AssistantUnrolled } from "../schemas/index.js";
 import { mergeUnrolledAssistants } from "./merge.js";
 
@@ -224,7 +224,7 @@ describe("mergeUnrolledAssistants", () => {
 
     const result = mergeUnrolledAssistants(base, incoming);
 
-    // Base has unnamed file provider, incoming has named "file-context" — different keys, both kept
+    // Base has unnamed file provider, incoming has named "file-context" â€” different keys, both kept
     expect(result.context).toHaveLength(3);
     expect(result.context?.map((c) => c?.provider)).toEqual([
       "file",

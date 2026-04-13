@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Shared flag processing utilities to eliminate duplication between TUI and headless modes
  */
 

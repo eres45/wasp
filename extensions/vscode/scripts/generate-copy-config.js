@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Generate config.yaml file from template. Also intended to run as a child process.
  */
 

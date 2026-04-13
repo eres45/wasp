@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import { findSearchMatch } from "./findSearchMatch";
 
 describe("findSearchMatch", () => {
@@ -306,8 +306,8 @@ export default MyComponent;`;
 
     // IMPORTANT string.length and string.slice both count UTF-16 units so emojis will count as 2 in both
     it("should handle unicode characters with whitespace differences", () => {
-      const fileContent = `const message = {\n  greeting: "Hello 👋",\n  emoji: "🚀",\n  unicode: "café",\n  symbol: "∑"\n};`;
-      const searchContent = `emoji:"🚀",unicode:"café",symbol:"∑"`;
+      const fileContent = `const message = {\n  greeting: "Hello ðŸ‘‹",\n  emoji: "ðŸš€",\n  unicode: "cafÃ©",\n  symbol: "âˆ‘"\n};`;
+      const searchContent = `emoji:"ðŸš€",unicode:"cafÃ©",symbol:"âˆ‘"`;
       const result = findSearchMatch(fileContent, searchContent);
 
       expect(result).toEqual({
@@ -474,8 +474,8 @@ export default MyComponent;`;
     });
 
     it("should handle unicode characters", () => {
-      const fileContent = "Hello 🌍 World";
-      const searchContent = "🌍";
+      const fileContent = "Hello ðŸŒ World";
+      const searchContent = "ðŸŒ";
       const result = findSearchMatch(fileContent, searchContent);
 
       expect(result).toEqual({

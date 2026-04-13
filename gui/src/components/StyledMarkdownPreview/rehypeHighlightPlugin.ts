@@ -1,4 +1,4 @@
-// Feel free to add more!
+﻿// Feel free to add more!
 // See gui/node_modules/highlight.js/lib/languages for the full available list
 import clojure from "highlight.js/lib/languages/clojure";
 import delphi from "highlight.js/lib/languages/delphi";

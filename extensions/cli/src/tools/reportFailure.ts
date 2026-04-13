@@ -1,4 +1,4 @@
-import { ContinueError, ContinueErrorReason } from "core/util/errors.js";
+﻿import { ContinueError, ContinueErrorReason } from "core/util/errors.js";
 
 import { sentryService } from "../sentry.js";
 import {
@@ -34,7 +34,7 @@ export const reportFailureTool: Tool = {
     properties: {
       errorMessage: {
         type: "string",
-        description: "Explain what went wrong and why you cannot continue.",
+        description: "Explain what went wrong and why you cannot waspcode.",
       },
     },
   },

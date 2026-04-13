@@ -1,4 +1,4 @@
-export function safeParseArgs(
+﻿export function safeParseArgs(
   args: string | undefined,
   errorId?: string,
 ): Record<string, any> {

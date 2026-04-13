@@ -1,4 +1,4 @@
-import path from "path";
+﻿import path from "path";
 
 import { distance } from "fastest-levenshtein";
 import Parser from "web-tree-sitter";
@@ -187,7 +187,7 @@ export async function deterministicApplyLazyEdit({
       const matchingNode = findInAst(
         oldTree.rootNode,
         (node) => programNodeIsSimilar(newTree.rootNode, node),
-        // This isn't perfect—we want the length of the matching code in the old tree
+        // This isn't perfectâ€”we want the length of the matching code in the old tree
         // and the new version could have more lines, or fewer. But should work a lot.
         (node) => node.text.split("\n").length >= newCodeNumLines,
       );

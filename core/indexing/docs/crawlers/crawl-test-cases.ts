@@ -1,4 +1,4 @@
-export const commonDocsRepos: string[] = [
+﻿export const commonDocsRepos: string[] = [
   //   "https://github.com/freeCodeCamp/freeCodeCamp",
   "https://github.com/996icu/996.ICU",
   //   "https://github.com/vuejs/vue",

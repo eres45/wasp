@@ -1,4 +1,4 @@
-import { ModelConfig } from "@continuedev/config-yaml";
+﻿import { ModelConfig } from "@continuedev/config-yaml";
 import { BaseLlmApi } from "@continuedev/openai-adapters";
 import type { ChatHistoryItem } from "core/index.js";
 import type { ChatCompletionChunk } from "openai/resources/chat/completions.mjs";
@@ -279,7 +279,7 @@ describe("processStreamingResponse - content preservation", () => {
         choices: [
           {
             index: 0,
-            delta: { content: "Analyzing repository…" },
+            delta: { content: "Analyzing repositoryâ€¦" },
             finish_reason: null,
           },
         ],
@@ -376,7 +376,7 @@ describe("processStreamingResponse - content preservation", () => {
 
     expect(responsesStream).toHaveBeenCalledTimes(1);
     expect(chatCompletionStream).not.toHaveBeenCalled();
-    expect(result.content).toBe("Analyzing repository…");
+    expect(result.content).toBe("Analyzing repositoryâ€¦");
     expect(result.toolCalls).toHaveLength(1);
     expect(result.toolCalls[0]).toMatchObject({
       id: "call_final",

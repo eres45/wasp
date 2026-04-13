@@ -1,4 +1,4 @@
-export function parseHexColor(hexColor: string): {
+﻿export function parseHexColor(hexColor: string): {
   r: number;
   g: number;
   b: number;

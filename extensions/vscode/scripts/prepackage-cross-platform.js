@@ -1,4 +1,4 @@
-/**
+﻿/**
  * This is an experimental copy of `prepackage.js` that will attempt to build the extension in a fully cross-platform way.
  * This is not what we use for real builds.
  * It is also not complete. Current status is that it is just beginning to be refactored.

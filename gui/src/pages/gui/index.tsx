@@ -1,4 +1,4 @@
-import { History } from "../../components/History";
+﻿import { History } from "../../components/History";
 import { Chat } from "./Chat";
 
 export default function GUI() {

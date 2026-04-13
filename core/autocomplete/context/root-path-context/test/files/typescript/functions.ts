@@ -1,4 +1,4 @@
-// @ts-nocheck
+﻿// @ts-nocheck
 
 function getAddress(person: Person): Address {
   // TODO

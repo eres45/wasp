@@ -1,4 +1,4 @@
-import { RuleMetadata } from "../..";
+﻿import { RuleMetadata } from "../..";
 import { getLastNPathParts } from "../../util/uri";
 
 export function getRuleDisplayName(rule: RuleMetadata): string {

@@ -1,4 +1,4 @@
-import { SUBAGENT_TOOL_META } from "../subagent/index.js";
+﻿import { SUBAGENT_TOOL_META } from "../subagent/index.js";
 
 import { askQuestionTool } from "./askQuestion.js";
 import { editTool } from "./edit.js";

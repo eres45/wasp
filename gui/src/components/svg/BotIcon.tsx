@@ -1,4 +1,4 @@
-interface BotIconProps extends React.SVGProps<SVGSVGElement> {
+﻿interface BotIconProps extends React.SVGProps<SVGSVGElement> {
   size?: number;
 }
 

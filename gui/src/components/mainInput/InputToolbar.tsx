@@ -1,4 +1,4 @@
-import {
+﻿import {
   AtSymbolIcon,
   LightBulbIcon as LightBulbIconOutline,
   PhotoIcon,
@@ -198,10 +198,10 @@ function InputToolbar(props: InputToolbarProps) {
                     useActiveFile
                       ? "Send Without Active File"
                       : "Send With Active File"
-                  } (${getMetaKeyLabel()}⏎)`}
+                  } (${getMetaKeyLabel()}âŽ)`}
                 >
                   <span>
-                    {getMetaKeyLabel()}⏎{" "}
+                    {getMetaKeyLabel()}âŽ{" "}
                     {useActiveFile ? "No active file" : "Active file"}
                   </span>
                 </ToolTip>
@@ -221,7 +221,7 @@ function InputToolbar(props: InputToolbarProps) {
               </span>
             </HoverItem>
           )}
-          <ToolTip place="top" content="Send (⏎)">
+          <ToolTip place="top" content="Send (âŽ)">
             <Button
               variant={props.isMainInput ? "primary" : "secondary"}
               size="sm"
@@ -239,9 +239,9 @@ function InputToolbar(props: InputToolbarProps) {
               disabled={isEnterDisabled}
             >
               <span className="hidden md:inline">
-                ⏎ {props.toolbarOptions?.enterText ?? "Enter"}
+                âŽ {props.toolbarOptions?.enterText ?? "Enter"}
               </span>
-              <span className="md:hidden">⏎</span>
+              <span className="md:hidden">âŽ</span>
             </Button>
           </ToolTip>
         </div>

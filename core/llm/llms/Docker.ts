@@ -1,4 +1,4 @@
-import { Mutex } from "async-mutex";
+﻿import { Mutex } from "async-mutex";
 import { spawn } from "child_process";
 import { LLMOptions, ModelInstaller } from "../../index.js";
 import OpenAI from "./OpenAI.js";

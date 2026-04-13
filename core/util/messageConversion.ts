@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Message conversion utilities for transitioning to unified ChatHistoryItem type.
  *
  * This module provides conversion functions between the OpenAI ChatCompletionMessageParam

@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import "../../../src/index.css";
 import {
   getAltKeyLabel,
@@ -14,20 +14,20 @@ interface ShortcutProps {
 
 const fontSize = getFontSize();
 
-const metaKeys = ["meta", "⌘", "ctrl", "cmd", "^"];
-const altKeys = ["alt", "option", "opt", "⌥"];
+const metaKeys = ["meta", "âŒ˜", "ctrl", "cmd", "^"];
+const altKeys = ["alt", "option", "opt", "âŒ¥"];
 const modifierKeys = [...metaKeys, ...altKeys];
 
 const getSpecialKeyMap = (platform: string): Record<string, string> => ({
-  uparrow: "UpArrow ↑",
-  downarrow: "DownArrow ↓",
-  leftarrow: "LeftArrow ←",
-  rightarrow: "RightArrow →",
-  enter: "Enter ⏎",
+  uparrow: "UpArrow â†‘",
+  downarrow: "DownArrow â†“",
+  leftarrow: "LeftArrow â†",
+  rightarrow: "RightArrow â†’",
+  enter: "Enter âŽ",
   esc: "Esc",
-  backspace: platform === "mac" ? "Delete ⌫" : "Backspace ⌫",
-  delete: platform === "mac" ? "Delete ⌫" : "Backspace ⌫",
-  "⌫": platform === "mac" ? "Delete ⌫" : "Backspace ⌫",
+  backspace: platform === "mac" ? "Delete âŒ«" : "Backspace âŒ«",
+  delete: platform === "mac" ? "Delete âŒ«" : "Backspace âŒ«",
+  "âŒ«": platform === "mac" ? "Delete âŒ«" : "Backspace âŒ«",
 });
 
 const parseShortcut = (shortcut: string, platform: string) => {
@@ -76,7 +76,7 @@ const Shortcut: React.FC<ShortcutProps> = ({ children }) => {
             <React.Fragment key={keyIndex}>
               <kbd
                 className={`keyboard-key ${
-                  !isSingleCharNonModifier(key) || key === "⌫"
+                  !isSingleCharNonModifier(key) || key === "âŒ«"
                     ? "keyboard-key-special"
                     : "keyboard-key-normal"
                 }`}

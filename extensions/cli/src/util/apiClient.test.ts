@@ -1,4 +1,4 @@
-import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
+﻿import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 
 import {
   ApiRequestError,
@@ -18,7 +18,7 @@ vi.mock("../auth/workos.js", () => ({
 
 vi.mock("../env.js", () => ({
   env: {
-    apiBase: "https://api.continue.dev",
+    apiBase: "https://api.waspcode.dev",
   },
 }));
 
@@ -72,7 +72,7 @@ describe("apiClient", () => {
       });
 
       expect(mockFetch).toHaveBeenCalledWith(
-        new URL("test-endpoint", "https://api.continue.dev"),
+        new URL("test-endpoint", "https://api.waspcode.dev"),
         {
           method: "POST",
           headers: {

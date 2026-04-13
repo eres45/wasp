@@ -1,4 +1,4 @@
-import { formatError, formatAnthropicError } from "./formatError.js";
+﻿import { formatError, formatAnthropicError } from "./formatError.js";
 
 describe("formatError", () => {
   it("should format Error objects correctly", () => {

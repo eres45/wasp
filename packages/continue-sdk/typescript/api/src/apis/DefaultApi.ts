@@ -1,4 +1,4 @@
-/* tslint:disable */
+﻿/* tslint:disable */
 /* eslint-disable */
 /**
  * Continue Hub IDE API
@@ -710,3 +710,4 @@ export const ListAssistantsAlwaysUseProxyEnum = {
 } as const;
 export type ListAssistantsAlwaysUseProxyEnum =
   (typeof ListAssistantsAlwaysUseProxyEnum)[keyof typeof ListAssistantsAlwaysUseProxyEnum];
+

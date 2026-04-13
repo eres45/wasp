@@ -1,4 +1,4 @@
-import crypto from "crypto";
+﻿import crypto from "crypto";
 import { exec } from "node:child_process";
 import path from "node:path";
 import { IDE } from "..";

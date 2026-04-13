@@ -1,4 +1,4 @@
-import { CheckIcon, PlayIcon, XMarkIcon } from "@heroicons/react/24/outline";
+﻿import { CheckIcon, PlayIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ApplyState } from "core";
 import { getMetaKeyLabel } from "../../../util";
 import Spinner from "../../gui/Spinner";
@@ -40,7 +40,7 @@ export function ApplyActions(props: ApplyActionsProps) {
             <ToolbarButtonWithTooltip
               data-testid="codeblock-toolbar-reject"
               onClick={onClickReject}
-              tooltipContent={`Reject all (${getMetaKeyLabel()}⇧⌫)`}
+              tooltipContent={`Reject all (${getMetaKeyLabel()}â‡§âŒ«)`}
             >
               <XMarkIcon className="text-error h-3.5 w-3.5 flex-shrink-0 hover:brightness-125" />
             </ToolbarButtonWithTooltip>
@@ -48,7 +48,7 @@ export function ApplyActions(props: ApplyActionsProps) {
             <ToolbarButtonWithTooltip
               data-testid="codeblock-toolbar-accept"
               onClick={props.onClickAccept}
-              tooltipContent={`Accept all (${getMetaKeyLabel()}⇧⏎)`}
+              tooltipContent={`Accept all (${getMetaKeyLabel()}â‡§âŽ)`}
             >
               <CheckIcon className="text-success h-3.5 w-3.5 flex-shrink-0 hover:brightness-125" />
             </ToolbarButtonWithTooltip>

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Helper function to get a file, using either the Fetch API or FileSystem API.
  *
  * @param {URL|string} urlOrPath The URL/path of the file to get.
@@ -164,3 +164,4 @@ declare class FileResponse {
 }
 export {};
 //# sourceMappingURL=hub.d.ts.map
+

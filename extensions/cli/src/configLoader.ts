@@ -1,4 +1,4 @@
-import * as fs from "fs";
+﻿import * as fs from "fs";
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import * as path from "path";

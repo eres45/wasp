@@ -1,4 +1,4 @@
-import { renderInMode, testBothModes } from "./TUIChat.dualModeHelper.js";
+﻿import { renderInMode, testBothModes } from "./TUIChat.dualModeHelper.js";
 import { waitForCondition } from "./TUIChat.testHelper.js";
 
 describe("TUIChat - Slash Commands Tests", () => {

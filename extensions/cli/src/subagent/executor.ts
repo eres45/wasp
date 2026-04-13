@@ -1,4 +1,4 @@
-import type { ChatHistoryItem } from "core";
+﻿import type { ChatHistoryItem } from "core";
 
 import { services } from "../services/index.js";
 import { serviceContainer } from "../services/ServiceContainer.js";

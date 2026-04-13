@@ -1,4 +1,4 @@
-import { ChatMessage, PromptLog, TextMessagePart } from "../..";
+﻿import { ChatMessage, PromptLog, TextMessagePart } from "../..";
 import { normalizeToMessageParts } from "../../util/messageContent";
 import { detectToolCallStart } from "./detectToolCallStart";
 import { createDelta, splitAtCodeblocksAndNewLines } from "./systemToolUtils";

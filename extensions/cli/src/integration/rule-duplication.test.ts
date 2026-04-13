@@ -1,4 +1,4 @@
-import { decodePackageIdentifier } from "@continuedev/config-yaml";
+﻿import { decodePackageIdentifier } from "@continuedev/config-yaml";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import { isStringRule } from "src/hubLoader.js";

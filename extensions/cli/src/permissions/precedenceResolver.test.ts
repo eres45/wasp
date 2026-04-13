@@ -1,4 +1,4 @@
-import { getDefaultToolPolicies } from "./defaultPolicies.js";
+﻿import { getDefaultToolPolicies } from "./defaultPolicies.js";
 import { resolvePermissionPrecedence } from "./precedenceResolver.js";
 
 const DEFAULT_TOOL_POLICIES = getDefaultToolPolicies();

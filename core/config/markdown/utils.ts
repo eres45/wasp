@@ -1,4 +1,4 @@
-import {
+﻿import {
   RULE_FILE_EXTENSION,
   sanitizeRuleName,
 } from "@continuedev/config-yaml";

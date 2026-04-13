@@ -1,4 +1,4 @@
-import { inferResolvedUriFromRelativePath } from "../../util/ideUtils";
+﻿import { inferResolvedUriFromRelativePath } from "../../util/ideUtils";
 
 import { ToolImpl } from ".";
 import { throwIfFileIsSecurityConcern } from "../../indexing/ignore";

@@ -1,4 +1,4 @@
-import { Editor, EditorContent, JSONContent } from "@tiptap/react";
+﻿import { Editor, EditorContent, JSONContent } from "@tiptap/react";
 import { ContextProviderDescription, InputModifiers } from "core";
 import { modelSupportsImages } from "core/llm/autodetect";
 import {

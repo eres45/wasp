@@ -1,4 +1,4 @@
-import { Box, Text } from "ink";
+﻿import { Box, Text } from "ink";
 import React from "react";
 
 interface ChecklistDisplayProps {
@@ -42,7 +42,7 @@ export const ChecklistDisplay: React.FC<ChecklistDisplayProps> = ({
             <Box key={index}>
               <Text>{indent}</Text>
               <Text color={isCompleted ? "green" : "yellow"}>
-                {isCompleted ? "✓" : "○"}
+                {isCompleted ? "âœ“" : "â—‹"}
               </Text>
               <Text> </Text>
               <Text

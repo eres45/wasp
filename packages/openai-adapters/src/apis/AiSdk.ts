@@ -1,4 +1,4 @@
-import { createAnthropic } from "@ai-sdk/anthropic";
+﻿import { createAnthropic } from "@ai-sdk/anthropic";
 import { createGoogleGenerativeAI } from "@ai-sdk/google";
 import { createDeepSeek } from "@ai-sdk/deepseek";
 import { createOpenAI } from "@ai-sdk/openai";

@@ -1,4 +1,4 @@
-import {
+﻿import {
   filterLeadingAndTrailingNewLineInsertion,
   filterLeadingNewline,
   removeTrailingWhitespace,

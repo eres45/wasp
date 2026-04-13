@@ -1,4 +1,4 @@
-import * as child_process from "node:child_process";
+﻿import * as child_process from "node:child_process";
 import { exec } from "node:child_process";
 
 import { Range } from "core";

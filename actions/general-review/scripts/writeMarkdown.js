@@ -1,10 +1,10 @@
-const fs = require("fs");
+﻿const fs = require("fs");
 const path = require("path");
 
 const messages = {
   missing_api_key: `## Code Review Summary
 
-⚠️ AI review skipped: CONTINUE_API_KEY not configured.
+âš ï¸ AI review skipped: CONTINUE_API_KEY not configured.
 
 ### Configuration Required
 - Please set the CONTINUE_API_KEY secret in repository settings
@@ -12,7 +12,7 @@ const messages = {
 `,
   cli_install_failed: `## Code Review Summary
 
-⚠️ AI review skipped: Continue CLI installation failed.
+âš ï¸ AI review skipped: Continue CLI installation failed.
 
 ### Troubleshooting
 - Check that npm installation succeeded
@@ -20,23 +20,23 @@ const messages = {
 `,
   empty_output: `## Code Review Summary
 
-⚠️ Continue CLI returned an empty response. Please check the configuration.
+âš ï¸ Continue CLI returned an empty response. Please check the configuration.
 `,
   cli_not_found: `## Code Review Summary
 
-⚠️ Continue CLI is not properly installed. Please ensure @continuedev/cli is installed globally.
+âš ï¸ Continue CLI is not properly installed. Please ensure @continuedev/cli is installed globally.
 `,
   config_error: `## Code Review Summary
 
-⚠️ Continue configuration error. Please verify that the assistant exists in Continue Hub.
+âš ï¸ Continue configuration error. Please verify that the assistant exists in Continue Hub.
 `,
   auth_error: `## Code Review Summary
 
-⚠️ Continue API authentication failed. Please check your CONTINUE_API_KEY.
+âš ï¸ Continue API authentication failed. Please check your CONTINUE_API_KEY.
 `,
   generic_failure: `## Code Review Summary
 
-⚠️ AI review failed. Please check the Continue API key and configuration.
+âš ï¸ AI review failed. Please check the Continue API key and configuration.
 
 ### Troubleshooting
 - Verify the CONTINUE_API_KEY secret is set correctly

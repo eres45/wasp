@@ -1,4 +1,4 @@
-import { render } from "ink-testing-library";
+﻿import { render } from "ink-testing-library";
 import React from "react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
@@ -180,7 +180,7 @@ describe("TUIChat - Interruption UI (Minimal Test)", () => {
         if (line.includes("Interrupted by user")) {
           foundInterruptionLine = index;
         }
-        if (line.includes("●") || line.includes("▋")) {
+        if (line.includes("â—") || line.includes("â–‹")) {
           foundInputBoxLine = index;
         }
       });

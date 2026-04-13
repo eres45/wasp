@@ -1,4 +1,4 @@
-import { SlashCommandDescWithSource } from "core";
+﻿import { SlashCommandDescWithSource } from "core";
 import { beforeEach, describe, it, vi } from "vitest";
 import {
   MockIdeMessenger,

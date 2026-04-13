@@ -1,4 +1,4 @@
-import { Tool } from "../..";
+﻿import { Tool } from "../..";
 
 import { ToolPolicy } from "@continuedev/terminal-security";
 import { ResolvedPath, resolveInputPath } from "../../util/pathResolver";

@@ -1,4 +1,4 @@
-import { RuleObject } from "../schemas/index.js";
+﻿import { RuleObject } from "../schemas/index.js";
 
 export enum RuleType {
   Always = "Always",

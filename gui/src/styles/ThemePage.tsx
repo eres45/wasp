@@ -1,4 +1,4 @@
-import {
+﻿import {
   CheckCircleIcon,
   ExclamationCircleIcon,
   ExclamationTriangleIcon,
@@ -103,7 +103,7 @@ function ThemePage() {
         className="flex cursor-pointer flex-row items-center gap-2"
         onClick={() => navigate(ROUTES.HOME)}
       >
-        <span className="">←</span>
+        <span className="">â†</span>
         Back to Chat
       </span>
       <h2 className="mb-2 mt-0 p-0 text-center text-xl font-semibold">

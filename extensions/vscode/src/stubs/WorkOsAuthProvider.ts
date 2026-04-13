@@ -1,4 +1,4 @@
-import crypto from "crypto";
+﻿import crypto from "crypto";
 import { EventEmitter as NodeEventEmitter } from "node:events";
 
 import {
@@ -472,7 +472,7 @@ export class WorkOsAuthProvider implements AuthenticationProvider, Disposable {
     return await window.withProgress<string>(
       {
         location: ProgressLocation.Notification,
-        title: "Signing in to Continue...",
+        title: "Signing in to waspcode...",
         cancellable: true,
       },
       async (_, token) => {

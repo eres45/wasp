@@ -1,4 +1,4 @@
-// A disorganized shopping cart implementation
+﻿// A disorganized shopping cart implementation
 // Difficulty: 3 - Moderate refactoring needed
 
 // Product catalog

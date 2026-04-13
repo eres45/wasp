@@ -1,4 +1,4 @@
-const { spawn } = require("child_process");
+﻿const { spawn } = require("child_process");
 const path = require("path");
 const fs = require("fs");
 const fsPromises = require("fs/promises");
@@ -29,10 +29,10 @@ function runCommand(command, cwd, packageName) {
 
     child.on("close", (code) => {
       if (code === 0) {
-        console.log(`✅ ${packageName}: ${command} completed successfully`);
+        console.log(`âœ… ${packageName}: ${command} completed successfully`);
         resolve({ packageName, command, stdout, stderr });
       } else {
-        console.error(`❌ ${packageName}: ${command} failed with code ${code}`);
+        console.error(`âŒ ${packageName}: ${command} failed with code ${code}`);
         console.error(`stderr: ${stderr}`);
         console.error(`stdout: ${stdout}`);
         reject(
@@ -42,7 +42,7 @@ function runCommand(command, cwd, packageName) {
     });
 
     child.on("error", (error) => {
-      console.error(`❌ ${packageName}: Failed to start ${command}:`, error);
+      console.error(`âŒ ${packageName}: Failed to start ${command}:`, error);
       reject(error);
     });
   });
@@ -59,7 +59,7 @@ async function buildPackage(packageName, cleanNodeModules = false) {
   if (cleanNodeModules) {
     const nodeModulesPath = path.join(packagePath, "node_modules");
     if (fs.existsSync(nodeModulesPath)) {
-      console.log(`🧹 Cleaning node_modules for ${packageName}`);
+      console.log(`ðŸ§¹ Cleaning node_modules for ${packageName}`);
       await fsPromises.rm(nodeModulesPath, { recursive: true, force: true });
     }
   }
@@ -78,7 +78,7 @@ async function buildPackagesInParallel(packages, cleanNodeModules = false) {
 
 async function main() {
   try {
-    console.log("🚀 Starting package builds...\n");
+    console.log("ðŸš€ Starting package builds...\n");
 
     // Phase 1: Build foundation packages (no local dependencies)
     await buildPackagesInParallel(["config-types", "terminal-security"]);
@@ -89,9 +89,9 @@ async function main() {
     // Phase 3: Build packages that depend on other local packages
     await buildPackagesInParallel(["openai-adapters", "continue-sdk"]);
 
-    console.log("🎉 All packages built successfully!");
+    console.log("ðŸŽ‰ All packages built successfully!");
   } catch (error) {
-    console.error("💥 Build failed:", error.message);
+    console.error("ðŸ’¥ Build failed:", error.message);
     process.exit(1);
   }
 }

@@ -1,4 +1,4 @@
-import { fdir } from "fdir";
+﻿import { fdir } from "fdir";
 import { AsyncFzf, FzfResultItem } from "fzf";
 
 import { FILE_IGNORE_PATTERNS } from "../util/filePatterns.js";

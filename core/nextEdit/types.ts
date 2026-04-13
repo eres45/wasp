@@ -1,4 +1,4 @@
-import {
+﻿import {
   DiffLine,
   Position,
   Range,

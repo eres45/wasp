@@ -1,4 +1,4 @@
-import { vi } from "vitest";
+﻿import { vi } from "vitest";
 
 export const getAllSlashCommands = vi.fn(async () => [
   { name: "help", description: "Show help", category: "system" },

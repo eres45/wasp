@@ -1,4 +1,4 @@
-import * as fs from "fs";
+﻿import * as fs from "fs";
 import { URL } from "node:url";
 
 import { Handler, HTTPResponse, Page } from "puppeteer";

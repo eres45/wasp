@@ -1,4 +1,4 @@
-import { ChatMessage, IDE, PromptLog } from "core";
+﻿import { ChatMessage, IDE, PromptLog } from "core";
 import type {
   FromWebviewProtocol,
   ToCoreProtocol,

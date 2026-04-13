@@ -1,4 +1,4 @@
-import { fileURLToPath, pathToFileURL } from "node:url";
+﻿import { fileURLToPath, pathToFileURL } from "node:url";
 import * as path from "path";
 import untildify from "untildify";
 import { IDE } from "..";

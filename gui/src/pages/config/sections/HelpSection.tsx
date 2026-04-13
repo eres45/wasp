@@ -1,4 +1,4 @@
-import {
+﻿import {
   DocumentArrowUpIcon,
   LinkIcon,
   NumberedListIcon,
@@ -52,7 +52,7 @@ const vscodeShortcuts: Omit<KeyboardShortcutProps, "isEven">[] = [
   {
     shortcut: "cmd L",
     description:
-      "New Chat / New Chat With Selected Code / Close Continue Sidebar If Chat Already In Focus",
+      "New chat / New chat with selected code / Close WaspCode panel if chat is already focused",
   },
   {
     shortcut: "cmd backspace",
@@ -65,7 +65,7 @@ const vscodeShortcuts: Omit<KeyboardShortcutProps, "isEven">[] = [
   {
     shortcut: "cmd shift L",
     description:
-      "Focus Current Chat / Add Selected Code To Current Chat / Close Continue Sidebar If Chat Already In Focus",
+      "Focus current chat / Add selected code to current chat / Close WaspCode panel if chat is already focused",
   },
   {
     shortcut: "cmd shift R",
@@ -113,7 +113,7 @@ const jetbrainsShortcuts: Omit<KeyboardShortcutProps, "isEven">[] = [
   {
     shortcut: "cmd J",
     description:
-      "New Chat / New Chat With Selected Code / Close Continue Sidebar If Chat Already In Focus",
+      "New chat / New chat with selected code / Close WaspCode panel if chat is already focused",
   },
   {
     shortcut: "cmd backspace",
@@ -126,7 +126,7 @@ const jetbrainsShortcuts: Omit<KeyboardShortcutProps, "isEven">[] = [
   {
     shortcut: "cmd shift J",
     description:
-      "Focus Current Chat / Add Selected Code To Current Chat / Close Continue Sidebar If Chat Already In Focus",
+      "Focus current chat / Add selected code to current chat / Close WaspCode panel if chat is already focused",
   },
   {
     shortcut: "cmd shift backspace",
@@ -181,33 +181,30 @@ export function HelpSection() {
             <div className="flex flex-col">
               <ConfigRow
                 title="Documentation"
-                description="Learn how to configure and use Continue"
+                description="Learn how to configure and use WaspCode"
                 icon={LinkIcon}
                 onClick={() =>
-                  ideMessenger.post("openUrl", "https://docs.continue.dev/")
+                  ideMessenger.post("openUrl", "https://docs.waspcode.dev/")
                 }
               />
 
               <ConfigRow
-                title="Have an issue?"
-                description="Let us know on GitHub and we'll do our best to resolve it"
+                title="WaspCode Website"
+                description="Open the main WaspCode site for downloads, updates, and support"
                 icon={LinkIcon}
                 onClick={() =>
-                  ideMessenger.post(
-                    "openUrl",
-                    "https://github.com/continuedev/continue/issues/new/choose",
-                  )
+                  ideMessenger.post("openUrl", "https://waspcode.dev/")
                 }
               />
 
               <ConfigRow
-                title="Join the community!"
-                description="Join us on GitHub Discussions to stay up-to-date on the latest developments"
+                title="Setup Guides"
+                description="Browse WaspCode setup and model configuration guides"
                 icon={LinkIcon}
                 onClick={() =>
                   ideMessenger.post(
                     "openUrl",
-                    "https://github.com/continuedev/continue/discussions",
+                    "https://docs.waspcode.dev/customize/model-providers",
                   )
                 }
               />

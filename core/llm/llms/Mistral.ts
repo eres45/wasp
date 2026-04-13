@@ -1,4 +1,4 @@
-import { ChatMessage, LLMOptions } from "../../index.js";
+﻿import { ChatMessage, LLMOptions } from "../../index.js";
 import { codestralEditPrompt } from "../templates/edit/codestral.js";
 
 import OpenAI from "./OpenAI.js";

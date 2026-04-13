@@ -1,4 +1,4 @@
-export enum AutocompleteSnippetType {
+﻿export enum AutocompleteSnippetType {
   Code = "code",
   Diff = "diff",
   Clipboard = "clipboard",

@@ -1,4 +1,4 @@
-import { Position } from "../..";
+﻿import { Position } from "../..";
 import {
   INSTINCT_CONTEXT_FILE_TOKEN,
   INSTINCT_EDITABLE_REGION_END_TOKEN,

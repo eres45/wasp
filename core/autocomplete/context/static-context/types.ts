@@ -1,4 +1,4 @@
-import { Tree } from "web-tree-sitter";
+﻿import { Tree } from "web-tree-sitter";
 import { Range } from "../../..";
 
 export interface TypeSpanAndSourceFile {

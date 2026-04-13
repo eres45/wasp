@@ -1,4 +1,4 @@
-export interface APIError extends Error {
+﻿export interface APIError extends Error {
   response?: Response;
 }
 

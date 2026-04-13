@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it, vi } from "vitest";
+﻿import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import { processRule } from "../hubLoader.js";
 
@@ -142,9 +142,9 @@ describe("prependPrompt", () => {
 
     it("should handle strings with special characters", () => {
       const prepend = "Special: @#$%^&*()";
-      const original = "Unicode: 🚀 ∑ ∆";
+      const original = "Unicode: ðŸš€ âˆ‘ âˆ†";
       const result = prependPrompt(prepend, original);
-      expect(result).toBe("Special: @#$%^&*()\n\nUnicode: 🚀 ∑ ∆");
+      expect(result).toBe("Special: @#$%^&*()\n\nUnicode: ðŸš€ âˆ‘ âˆ†");
     });
   });
 

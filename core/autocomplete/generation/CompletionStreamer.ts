@@ -1,4 +1,4 @@
-import { CompletionOptions, ILLM } from "../..";
+﻿import { CompletionOptions, ILLM } from "../..";
 import { StreamTransformPipeline } from "../filtering/streamTransforms/StreamTransformPipeline";
 import { HelperVars } from "../util/HelperVars";
 

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+﻿import { useContext } from "react";
 import styled from "styled-components";
 import { IdeMessengerContext } from "../../../../context/IdeMessenger";
 import { getFontSize } from "../../../../util";
@@ -30,7 +30,7 @@ export function TtsActiveToolbar() {
           ideMessenger.post("tts/kill", undefined);
         }}
       >
-        ■ Stop TTS
+        â–  Stop TTS
       </StopButton>
     </Container>
   );

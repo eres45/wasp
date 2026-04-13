@@ -1,4 +1,4 @@
-import socketIOClient, { Socket } from "socket.io-client";
+﻿import socketIOClient, { Socket } from "socket.io-client";
 
 import { ChatMessage, CompletionOptions, LLMOptions } from "../../index.js";
 import { renderChatMessage } from "../../util/messageContent.js";

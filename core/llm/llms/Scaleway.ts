@@ -1,4 +1,4 @@
-import OpenAI from "./OpenAI";
+﻿import OpenAI from "./OpenAI";
 
 import { LLMOptions, CompletionOptions, ChatMessage } from "../../index.js";
 import { ChatCompletionCreateParams } from "openai/resources/index";

@@ -1,4 +1,4 @@
-// Adapted from SlashCommand extension (@tiptap/extension-mention/src/mention.ts)
+﻿// Adapted from SlashCommand extension (@tiptap/extension-mention/src/mention.ts)
 
 import { Node } from "@tiptap/core";
 import { PluginKey } from "@tiptap/pm/state";

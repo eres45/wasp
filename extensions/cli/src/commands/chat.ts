@@ -1,4 +1,4 @@
-import { ModelConfig } from "@continuedev/config-yaml";
+﻿import { ModelConfig } from "@continuedev/config-yaml";
 import { BaseLlmApi } from "@continuedev/openai-adapters";
 import chalk from "chalk";
 import { ChatHistoryItem, Session } from "core";
@@ -257,7 +257,7 @@ async function handleAutoCompaction(
             }) + "\n",
           );
         }
-      } else if (message.includes("✓")) {
+      } else if (message.includes("âœ“")) {
         if (!isHeadless) {
           console.info(chalk.green(message));
         } else if (format === "json") {

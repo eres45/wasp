@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Comprehensive tests for formatOpenedFilesContext.ts
  *
  */

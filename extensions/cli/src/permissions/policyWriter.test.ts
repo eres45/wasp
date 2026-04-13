@@ -1,4 +1,4 @@
-import { generatePolicyRule } from "./policyWriter.js";
+﻿import { generatePolicyRule } from "./policyWriter.js";
 
 describe("policyWriter", () => {
   describe("generatePolicyRule", () => {

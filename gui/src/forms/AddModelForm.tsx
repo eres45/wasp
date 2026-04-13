@@ -1,4 +1,4 @@
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+﻿import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { useContext, useEffect, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Button, Input, StyledActionButton } from "../components";
@@ -13,7 +13,7 @@ import {
   ProviderInfo,
   providers,
 } from "../pages/AddNewModel/configs/providers";
-import { useAppDispatch } from "../redux/hooks";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { updateSelectedModelByRole } from "../redux/thunks/updateSelectedModelByRole";
 
 interface AddModelFormProps {
@@ -22,58 +22,80 @@ interface AddModelFormProps {
 }
 
 const MODEL_PROVIDERS_URL =
-  "https://docs.continue.dev/customize/model-providers";
+  "https://docs.waspcode.dev/customize/model-providers";
 const CODESTRAL_URL = "https://console.mistral.ai/codestral";
-const CONTINUE_SETUP_URL = "https://docs.continue.dev/setup/overview";
+const WASPCODE_PROVIDER_KEYS = [
+  "cometapi",
+  "openai",
+  "anthropic",
+  "gemini",
+  "minimax",
+  "mistral",
+  "groq",
+  "ollama",
+  "moonshot",
+  "zAI",
+  "mimo",
+  "deepseek",
+  "xAI",
+] as const;
 
 export function AddModelForm({
   onDone,
   hideFreeTrialLimitMessage,
 }: AddModelFormProps) {
-  const [selectedProvider, setSelectedProvider] = useState<ProviderInfo>(
-    providers["openai"]!,
-  );
   const dispatch = useAppDispatch();
+  const config = useAppSelector((state) => state.config.config);
   const { selectedProfile } = useAuth();
-  const [selectedModel, setSelectedModel] = useState(
-    selectedProvider.packages[0],
-  );
   const formMethods = useForm();
   const ideMessenger = useContext(IdeMessengerContext);
+
+  const configuredProviderKeys = Array.from(
+    new Set(
+      Object.values(config.modelsByRole)
+        .flat()
+        .map((model) => model.provider)
+        .filter(Boolean),
+    ),
+  );
+
+  const visibleProviderKeys =
+    configuredProviderKeys.length > 0
+      ? configuredProviderKeys
+      : [...WASPCODE_PROVIDER_KEYS];
+
+  const visibleProviders = visibleProviderKeys
+    .map((providerKey) => providers[providerKey])
+    .filter((provider): provider is ProviderInfo => !!provider)
+    .sort((a, b) => a.title.localeCompare(b.title));
+
+  const defaultProvider = visibleProviders[0] ?? providers["openai"]!;
+
+  const [selectedProvider, setSelectedProvider] =
+    useState<ProviderInfo>(defaultProvider);
+  const [selectedModel, setSelectedModel] = useState(
+    defaultProvider.packages[0],
+  );
 
   // Initialize OpenRouter models from API on component mount
   useEffect(() => {
     void initializeOpenRouterModels();
   }, []);
 
-  const popularProviderTitles = [
-    providers["openai"]?.title || "",
-    providers["anthropic"]?.title || "",
-    providers["mistral"]?.title || "",
-    providers["gemini"]?.title || "",
-    providers["azure"]?.title || "",
-    providers["ollama"]?.title || "",
-    providers["openrouter"]?.title || "",
-  ];
-
-  const allProviders = Object.entries(providers)
-    .filter(([key]) => !["openai-aiohttp"].includes(key))
-    .map(([, provider]) => provider)
-    .filter((provider) => !!provider)
-    .map((provider) => provider!); // for type checking
-
-  const popularProviders = allProviders
-    .filter((provider) => popularProviderTitles.includes(provider.title))
-    .sort((a, b) => a.title.localeCompare(b.title));
-
-  const otherProviders = allProviders
-    .filter((provider) => !popularProviderTitles.includes(provider.title))
-    .sort((a, b) => a.title.localeCompare(b.title));
-
   const selectedProviderApiKeyUrl =
     selectedModel && selectedModel.params.model.startsWith("codestral")
       ? CODESTRAL_URL
       : selectedProvider.apiKeyUrl;
+
+  useEffect(() => {
+    if (
+      !visibleProviders.some(
+        (provider) => provider.provider === selectedProvider.provider,
+      )
+    ) {
+      setSelectedProvider(defaultProvider);
+    }
+  }, [defaultProvider, selectedProvider.provider, visibleProviders]);
 
   function isDisabled() {
     if (selectedProvider.downloadUrl) {
@@ -151,7 +173,7 @@ export function AddModelForm({
     <FormProvider {...formMethods}>
       <form onSubmit={formMethods.handleSubmit(onSubmit)}>
         <div className="mx-auto max-w-md p-6">
-          <h1 className="mb-0 text-center text-2xl">Add Chat model</h1>
+          <h1 className="mb-0 text-center text-2xl">Add WaspCode model</h1>
 
           <div className="my-8 flex flex-col gap-6">
             <div>
@@ -159,28 +181,28 @@ export function AddModelForm({
               <ModelSelectionListbox
                 selectedProvider={selectedProvider}
                 setSelectedProvider={(val: DisplayInfo) => {
-                  const match = [...popularProviders, ...otherProviders].find(
+                  const match = visibleProviders.find(
                     (provider) => provider.title === val.title,
                   );
                   if (match) {
                     setSelectedProvider(match);
                   }
                 }}
-                topOptions={popularProviders}
-                otherOptions={otherProviders}
+                topOptions={visibleProviders}
                 searchPlaceholder="Search providers..."
               />
               <span className="text-description-muted mt-1 block text-xs">
-                Don't see your provider?{" "}
+                {configuredProviderKeys.length > 0
+                  ? "Showing only providers already configured in your WaspCode profile."
+                  : "Showing the curated WaspCode provider catalog."}{" "}
                 <a
                   className="cursor-pointer text-inherit underline hover:text-inherit"
                   onClick={() =>
                     ideMessenger.post("openUrl", MODEL_PROVIDERS_URL)
                   }
                 >
-                  Click here
-                </a>{" "}
-                to view the full list
+                  View setup docs
+                </a>
               </span>
             </div>
 

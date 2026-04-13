@@ -1,4 +1,4 @@
-/* tslint:disable */
+﻿/* tslint:disable */
 /* eslint-disable */
 /**
  * Continue Hub IDE API
@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-export const BASE_PATH = "https://api.continue.dev".replace(/\/+$/, "");
+export const BASE_PATH = "https://api.waspcode.dev".replace(/\/+$/, "");
 
 export interface ConfigurationParameters {
   basePath?: string; // override base path
@@ -527,3 +527,4 @@ export class TextApiResponse {
     return await this.raw.text();
   }
 }
+

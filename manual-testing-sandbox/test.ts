@@ -1,4 +1,4 @@
-class Calculator {
+﻿class Calculator {
   private result: number;
 
   constructor() {

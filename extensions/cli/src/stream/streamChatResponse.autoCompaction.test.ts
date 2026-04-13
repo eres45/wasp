@@ -1,4 +1,4 @@
-import type { ChatHistoryItem } from "core/index.js";
+﻿import type { ChatHistoryItem } from "core/index.js";
 import { convertToUnifiedHistory } from "core/util/messageConversion.js";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 

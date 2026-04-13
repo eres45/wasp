@@ -1,4 +1,4 @@
-import { act } from "@testing-library/react";
+﻿import { act } from "@testing-library/react";
 import { ChatMessage } from "core";
 import { renderWithProviders } from "../../../util/test/render";
 import { sendInputWithMockedResponse } from "../../../util/test/utils";

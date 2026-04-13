@@ -1,4 +1,4 @@
-import { ToolImpl } from ".";
+﻿import { ToolImpl } from ".";
 import { ContextItem } from "../..";
 import { ContinueError, ContinueErrorReason } from "../../util/errors";
 import { formatGrepSearchResults } from "../../util/grepSearch";

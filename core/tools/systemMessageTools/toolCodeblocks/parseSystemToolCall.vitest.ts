@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it } from "vitest";
+﻿import { beforeEach, describe, expect, it } from "vitest";
 import { getInitialToolCallParseState, ToolCallParseState } from "../types";
 import { handleToolCallBuffer } from "./parseSystemToolCall";
 

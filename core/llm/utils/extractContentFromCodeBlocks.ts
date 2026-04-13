@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Extracts content from code blocks with given path
  * @param content The full message content
  * @param path The file path to look for

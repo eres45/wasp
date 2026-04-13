@@ -1,4 +1,4 @@
-export class PrecalculatedLruCache<V> {
+﻿export class PrecalculatedLruCache<V> {
   private items: [string, V][] = [];
   constructor(
     private readonly calculateValue: (key: string) => Promise<V | null>,

@@ -1,4 +1,4 @@
-import { render } from "ink-testing-library";
+﻿import { render } from "ink-testing-library";
 import React from "react";
 import { vi } from "vitest";
 
@@ -360,7 +360,7 @@ describe("TUIChat - Tool Permission Tests", () => {
     const messageOutput = messageFrame();
 
     // Verify the red dot appears (for failed tool call)
-    expect(messageOutput).toContain("●");
+    expect(messageOutput).toContain("â—");
 
     // Verify the tool name appears
     expect(messageOutput).toContain("Edit");

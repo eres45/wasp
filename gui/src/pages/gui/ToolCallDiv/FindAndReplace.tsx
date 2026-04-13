@@ -1,4 +1,4 @@
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+﻿import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { ApplyState } from "core";
 import { trimEmptyLines } from "core/edit/searchAndReplace/findAndReplaceUtils";
 import { executeFindAndReplace } from "core/edit/searchAndReplace/performReplace";
@@ -33,7 +33,7 @@ const MAX_SAME_LINES = 2;
 function EllipsisLine() {
   return (
     <div className="text-description-muted px-3 py-1 text-left font-mono">
-      ⋯
+      â‹¯
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { JSONSchema7Object } from "json-schema";
+﻿import { JSONSchema7Object } from "json-schema";
 import { ChatCompletionTool } from "openai/resources/index.mjs";
 
 // https://ai.google.dev/api/generate-content

@@ -1,4 +1,4 @@
-import { Chunk, IDE } from "core";
+﻿import { Chunk, IDE } from "core";
 import { languageForFilepath } from "core/autocomplete/constants/AutocompleteLanguageInfo";
 import { DEFAULT_IGNORE_DIRS } from "core/indexing/ignore";
 import { deduplicateArray } from "core/util";

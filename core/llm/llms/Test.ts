@@ -1,4 +1,4 @@
-import { ChatMessage, CompletionOptions } from "../../index.js";
+﻿import { ChatMessage, CompletionOptions } from "../../index.js";
 import { BaseLLM } from "../index.js";
 
 const HARDCODED_CHAT_RESPONSE = "THIS IS A HARDCODED RESPONSE";

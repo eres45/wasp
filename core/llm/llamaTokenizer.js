@@ -1,13 +1,13 @@
-/**
+﻿/**
  * MIT LICENSE
  *
  * Copyright 2023 belladore.ai
  *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the â€œSoftwareâ€), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  *
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  *
- * THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ * THE SOFTWARE IS PROVIDED â€œAS ISâ€, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
  */
 
@@ -167,7 +167,7 @@ export class LlamaTokenizer {
    * The row number of the token (indexing from 0) represents the id of the token in LLaMA tokenizer.
    *
    * Most tokens look like this: "ic" (without the quotes) (representing the "i" character followed by the "c" character)
-   * Some tokens are special. In particular, spaces are replaced with the "▁" character and line-break is represented as "<0x0A>".
+   * Some tokens are special. In particular, spaces are replaced with the "â–" character and line-break is represented as "<0x0A>".
    *
    * This helper function returns the vocabulary as an array that contains Strings representing tokens:
    *
@@ -181,8 +181,8 @@ export class LlamaTokenizer {
    *  "<0x0A>"  // Byte-level token representing '\n' (line break). This is one of the few byte-level tokens that appear to be actually needed in practice.
    *  ...       // More byte-level tokens
    *  "<0xFF>"  // Byte-level token ...
-   *  "▁▁"     // Token representing 2 consecutive spaces.
-   *  "▁t"     // Token representing the space character followed by the "t" character.
+   *  "â–â–"     // Token representing 2 consecutive spaces.
+   *  "â–t"     // Token representing the space character followed by the "t" character.
    *  "er"      // Token representing the "e" character followed by the "r" character. Most tokens look like this.
    *  ...       // 32000 tokens
    */
@@ -204,7 +204,7 @@ export class LlamaTokenizer {
     if (add_preceding_space) {
       prompt = " " + prompt;
     }
-    // Special: spaces are represented as thick underscore ▁ (id 29871)
+    // Special: spaces are represented as thick underscore â– (id 29871)
     const promptAltered = prompt.replaceAll(" ", this.vocabById[29871]);
     // We need to use Array.from to iterate over characters in order to support UTF-8 multipoint characters
     const charArray = Array.from(promptAltered);
@@ -445,18 +445,18 @@ export class LlamaTokenizer {
     testCase("ax\n####\nboo", [1, 4853, 13, 4136, 13, 833, 29877]);
 
     // UTF-8 multipoint character that should be found in vocabulary
-    testCase("镇", [1, 29871, 30411]);
+    testCase("é•‡", [1, 29871, 30411]);
 
     // UTF-8 multipoint character that should NOT be found in vocabulary, fallback to MULTIPLE byte tokens
-    testCase("🦙", [1, 29871, 243, 162, 169, 156]);
+    testCase("ðŸ¦™", [1, 29871, 243, 162, 169, 156]);
 
     // Consecutive UTF-8 multipoint characters that are NOT found in a vocabulary and use DIFFERENT number of bytes
-    testCase("🦙Ꙋ", [1, 29871, 243, 162, 169, 156, 237, 156, 141]);
-    testCase("Ꙋ🦙", [1, 29871, 237, 156, 141, 243, 162, 169, 156]);
+    testCase("ðŸ¦™ê™Š", [1, 29871, 243, 162, 169, 156, 237, 156, 141]);
+    testCase("ê™ŠðŸ¦™", [1, 29871, 237, 156, 141, 243, 162, 169, 156]);
 
     // Larger text input with various special characters sprinkled in
     testCase(
-      'The llama (/ˈlɑːmə/; 🦙Spanish pronunciation: [ˈʎama]) (Lama glama) is a domesticated South American camelid, widely used as a meat and pack animal by Andean cultures since the Pre-Columbian era. Llamas are social animals and live with others as a herd. Their wool is soft and contains only a small amount of lanolin.[2] Llamas can learn simple tasks after a few repetitions. When using a pack, they can carry about 25 to 30% of their body weight for 8 to 13 km (5–8 miles).[3] The name llama (in the past also spelled "lama" or "glama") was adopted by European settlers from native Peruvians.[4] The ancestors of llamas are thought to have originated from the Great Plains of North America about 40 million years ago, and subsequently migrated to South America about three million years ago during the Great American Interchange. By the end of the last ice age (10,000–12,000 years ago), camelids were extinct in North America.[3] As of 2007, there were over seven million llamas and alpacas in South America and over 158,000 llamas and 100,000Ꙋ🦙 alpacas, descended from progenitors imported late in the 20th century, in the United States and Canada.[5] In Aymara mythology, llamas are important beings. The Heavenly Llama is said to drink water from the ocean and urinates as it rains.[6] According to Aymara eschatology, llamas will return to the water springs and lagoons where they come from at the end of time.[6]',
+      'The llama (/ËˆlÉ‘ËmÉ™/; ðŸ¦™Spanish pronunciation: [ËˆÊŽama]) (Lama glama) is a domesticated South American camelid, widely used as a meat and pack animal by Andean cultures since the Pre-Columbian era. Llamas are social animals and live with others as a herd. Their wool is soft and contains only a small amount of lanolin.[2] Llamas can learn simple tasks after a few repetitions. When using a pack, they can carry about 25 to 30% of their body weight for 8 to 13 km (5â€“8 miles).[3] The name llama (in the past also spelled "lama" or "glama") was adopted by European settlers from native Peruvians.[4] The ancestors of llamas are thought to have originated from the Great Plains of North America about 40 million years ago, and subsequently migrated to South America about three million years ago during the Great American Interchange. By the end of the last ice age (10,000â€“12,000 years ago), camelids were extinct in North America.[3] As of 2007, there were over seven million llamas and alpacas in South America and over 158,000 llamas and 100,000ê™ŠðŸ¦™ alpacas, descended from progenitors imported late in the 20th century, in the United States and Canada.[5] In Aymara mythology, llamas are important beings. The Heavenly Llama is said to drink water from the ocean and urinates as it rains.[6] According to Aymara eschatology, llamas will return to the water springs and lagoons where they come from at the end of time.[6]',
       [
         1, 450, 11148, 3304, 20374, 30176, 29880, 30426, 30215, 29885, 30184,
         29914, 29936, 29871, 243, 162, 169, 156, 15495, 728, 11504, 11173, 362,

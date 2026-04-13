@@ -1,4 +1,4 @@
-import { JSONContent } from "@tiptap/core";
+﻿import { JSONContent } from "@tiptap/core";
 import { AssistantChatMessage, InputModifiers, PromptLog } from "core";
 import { describe, expect, it, vi } from "vitest";
 import { createMockStore } from "../../util/test/mockStore";

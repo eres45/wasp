@@ -1,4 +1,4 @@
-import { detectLanguage } from "./SyntaxHighlighter.js";
+﻿import { detectLanguage } from "./SyntaxHighlighter.js";
 
 describe("detectLanguage", () => {
   it("should detect JavaScript from import statements", () => {

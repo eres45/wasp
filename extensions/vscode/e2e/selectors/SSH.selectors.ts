@@ -1,4 +1,4 @@
-import { By, SideBarView } from "vscode-extension-tester";
+﻿import { By, SideBarView } from "vscode-extension-tester";
 
 export class SSHSelectors {
   public static async connectedToRemoteConfirmationMessage() {

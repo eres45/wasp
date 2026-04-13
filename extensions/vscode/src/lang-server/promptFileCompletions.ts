@@ -1,4 +1,4 @@
-import { IDE } from "core";
+﻿import { IDE } from "core";
 import { getUriPathBasename, getLastNPathParts } from "core/util/uri";
 import vscode from "vscode";
 

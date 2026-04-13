@@ -1,4 +1,4 @@
-import { IndexTag } from "..";
+﻿import { IndexTag } from "..";
 import { tagToString } from "./utils";
 
 test("tagToString returns full tag string when under length limit", () => {

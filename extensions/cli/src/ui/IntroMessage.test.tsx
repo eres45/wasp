@@ -1,4 +1,4 @@
-import { Text } from "ink";
+﻿import { Text } from "ink";
 import { render } from "ink-testing-library";
 import React from "react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";

@@ -1,4 +1,4 @@
-import { CheckIcon, ClipboardIcon } from "@heroicons/react/24/outline";
+﻿import { CheckIcon, ClipboardIcon } from "@heroicons/react/24/outline";
 import HeaderButtonWithToolTip from "./HeaderButtonWithToolTip";
 import useCopy from "../../hooks/useCopy";
 

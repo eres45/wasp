@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Install node modules for the VS Code extension and gui. This is also intended to run as a child process.
  */
 
@@ -13,6 +13,8 @@ async function installNodeModulesInGui() {
   process.chdir(path.join(continueDir, "gui"));
   execCmdSync("npm install");
   console.log("[info] npm install in gui completed");
+  execCmdSync("npm run build");
+  console.log("[info] npm run build in gui completed");
 }
 
 async function installNodeModulesInVscode() {

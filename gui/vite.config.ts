@@ -9,14 +9,14 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    sentryVitePlugin({
-      org: "continue-xd",
-      project: "continue",
-    }),
+    // sentryVitePlugin({
+    //   org: "continue-xd",
+    //   project: "continue",
+    // }),
   ],
   build: {
     sourcemap: true,
-
+    cssCodeSplit: false,
     // Change the output .js filename to not include a hash
     rollupOptions: {
       input: {
@@ -26,9 +26,18 @@ export default defineConfig({
       output: {
         entryFileNames: `assets/[name].js`,
         chunkFileNames: `assets/[name].js`,
-        assetFileNames: `assets/[name].[ext]`,
+        assetFileNames: (assetInfo) => {
+          // Rename style.css to index.css
+          if (assetInfo.name === "style.css") {
+            return "assets/index.css";
+          }
+          return "assets/[name].[ext]";
+        },
       },
     },
+  },
+  css: {
+    postcss: true,
   },
   server: {
     cors: {

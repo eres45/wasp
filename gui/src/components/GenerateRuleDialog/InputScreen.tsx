@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Button } from "../ui";
 import { RuleTemplateChip } from "./RuleTemplateChip";
 import { RuleTemplate, ruleTemplates } from "./ruleTemplates";

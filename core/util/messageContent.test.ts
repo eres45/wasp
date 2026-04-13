@@ -1,4 +1,4 @@
-import {
+﻿import {
   stripImages,
   renderChatMessage,
   renderContextItems,

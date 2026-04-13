@@ -1,4 +1,4 @@
-import { LLMOptions } from "../../index.js";
+﻿import { LLMOptions } from "../../index.js";
 import { osModelsEditPrompt } from "../templates/edit.js";
 
 import OpenAI from "./OpenAI.js";

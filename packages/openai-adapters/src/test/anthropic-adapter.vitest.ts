@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, test, vi } from "vitest";
+﻿import { afterEach, describe, expect, test, vi } from "vitest";
 import { runAdapterTest } from "./adapter-test-utils.js";
 
 // Mock the fetch package

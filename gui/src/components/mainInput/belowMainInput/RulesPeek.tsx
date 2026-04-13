@@ -1,4 +1,4 @@
-import { DocumentTextIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
+﻿import { DocumentTextIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
 import { RuleMetadata } from "core";
 import { getRuleSourceDisplayName } from "core/llm/rules/rules-utils";
 import { ComponentType, useMemo } from "react";

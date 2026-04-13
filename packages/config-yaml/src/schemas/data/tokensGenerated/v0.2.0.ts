@@ -1,4 +1,4 @@
-import { tokensGeneratedEventAllSchema } from "./index.js";
+﻿import { tokensGeneratedEventAllSchema } from "./index.js";
 
 export const tokensGeneratedEventSchema_0_2_0 =
   tokensGeneratedEventAllSchema.pick({

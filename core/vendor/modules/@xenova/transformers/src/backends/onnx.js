@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Handler file for choosing the correct version of ONNX Runtime, based on the environment.
  * Ideally, we could import the `onnxruntime-web` and `onnxruntime-node` packages only when needed,
  * but dynamic imports don't seem to work with the current webpack version and/or configuration.
@@ -49,3 +49,4 @@ if (typeof process !== "undefined" && process?.release?.name === "node") {
     ONNX.env.wasm.simd = false;
   }
 }
+

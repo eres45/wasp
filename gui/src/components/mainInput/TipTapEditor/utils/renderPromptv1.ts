@@ -1,4 +1,4 @@
-import {
+﻿import {
   ContextProviderName,
   RangeInFile,
   SlashCommandDescWithSource,

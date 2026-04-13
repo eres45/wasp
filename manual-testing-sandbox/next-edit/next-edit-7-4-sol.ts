@@ -1,4 +1,4 @@
-// Refactored event processing system with proper separation of concerns
+﻿// Refactored event processing system with proper separation of concerns
 // Solution for next-edit-7-4.ts
 
 // Types

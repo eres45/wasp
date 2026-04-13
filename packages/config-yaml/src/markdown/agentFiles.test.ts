@@ -1,4 +1,4 @@
-import {
+﻿import {
   AgentFile,
   parseAgentFile,
   parseAgentFileTools,

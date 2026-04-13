@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Base interface for command options that are shared across multiple commands
  * Uses command-line flag names for direct compatibility
  */

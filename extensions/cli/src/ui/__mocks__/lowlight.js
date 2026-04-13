@@ -1,4 +1,4 @@
-// Mock for lowlight
+﻿// Mock for lowlight
 export const common = {};
 
 export function createLowlight() {

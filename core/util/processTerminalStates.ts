@@ -1,4 +1,4 @@
-import { ChildProcess } from "child_process";
+﻿import { ChildProcess } from "child_process";
 
 // Track which processes have been backgrounded
 const processTerminalBackgroundStates = new Map<string, boolean>();

@@ -1,4 +1,4 @@
-import { ChatMessage, IDE, PromptLog } from "core";
+﻿import { ChatMessage, IDE, PromptLog } from "core";
 import { AuthType } from "core/control-plane/AuthTypes";
 import {
   FromWebviewProtocol,

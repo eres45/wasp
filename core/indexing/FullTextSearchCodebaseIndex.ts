@@ -1,4 +1,4 @@
-import { BranchAndDir, Chunk, IndexTag, IndexingProgressUpdate } from "../";
+﻿import { BranchAndDir, Chunk, IndexTag, IndexingProgressUpdate } from "../";
 import { RETRIEVAL_PARAMS } from "../util/parameters";
 import { getUriPathBasename } from "../util/uri";
 

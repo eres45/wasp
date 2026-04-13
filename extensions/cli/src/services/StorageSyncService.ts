@@ -1,4 +1,4 @@
-import chalk from "chalk";
+﻿import chalk from "chalk";
 
 import { env } from "../env.js";
 import { formatError } from "../util/formatError.js";

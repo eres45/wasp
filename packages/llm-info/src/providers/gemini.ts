@@ -1,4 +1,4 @@
-import { AllMediaTypes, ModelProvider } from "../types.js";
+﻿import { AllMediaTypes, ModelProvider } from "../types.js";
 
 // See https://ai.google.dev/gemini-api/docs/models
 export const Gemini: ModelProvider = {

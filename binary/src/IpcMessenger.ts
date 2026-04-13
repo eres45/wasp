@@ -1,4 +1,4 @@
-import { IProtocol } from "core/protocol/index.js";
+﻿import { IProtocol } from "core/protocol/index.js";
 import { IMessenger, type Message } from "core/protocol/messenger";
 import { ChildProcessWithoutNullStreams } from "node:child_process";
 import * as fs from "node:fs";

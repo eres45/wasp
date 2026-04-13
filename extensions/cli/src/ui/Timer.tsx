@@ -1,4 +1,4 @@
-import { Text } from "ink";
+﻿import { Text } from "ink";
 import React, { useEffect, useState } from "react";
 
 interface TimerProps {

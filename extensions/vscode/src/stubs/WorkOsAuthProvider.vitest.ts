@@ -1,4 +1,4 @@
-// @ts-nocheck
+﻿// @ts-nocheck
 import fetch from "node-fetch";
 import { afterEach, beforeEach, expect, it, vi } from "vitest";
 import { EventEmitter } from "vscode";
@@ -36,8 +36,8 @@ vi.mock("node-fetch", () => {
 vi.mock("core/control-plane/env", () => ({
   getControlPlaneEnvSync: vi.fn(() => ({
     AUTH_TYPE: "workos",
-    APP_URL: "https://continue.dev",
-    CONTROL_PLANE_URL: "https://api.continue.dev",
+    APP_URL: "https://waspcode.dev",
+    CONTROL_PLANE_URL: "https://api.waspcode.dev",
     WORKOS_CLIENT_ID: "client_123",
   })),
 }));

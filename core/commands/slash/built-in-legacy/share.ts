@@ -1,4 +1,4 @@
-import { fileURLToPath } from "node:url";
+﻿import { fileURLToPath } from "node:url";
 import path from "path";
 
 import { SlashCommand } from "../../../index.js";

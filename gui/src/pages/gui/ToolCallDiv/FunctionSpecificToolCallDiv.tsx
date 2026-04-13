@@ -1,4 +1,4 @@
-import { ToolCallState } from "core";
+﻿import { ToolCallState } from "core";
 import { BuiltInToolNames } from "core/tools/builtIn";
 import { EditOperation } from "core/tools/definitions/multiEdit";
 import { CreateFile } from "./CreateFile";

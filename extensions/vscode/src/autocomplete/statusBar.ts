@@ -1,4 +1,4 @@
-import { ILLM } from "core";
+﻿import { ILLM } from "core";
 import { EXTENSION_NAME } from "core/control-plane/env";
 import * as vscode from "vscode";
 
@@ -147,7 +147,7 @@ export function setupStatusBar(
 
   statusBarItem.text = statusBarItemText(status, loading, statusBarError);
   statusBarItem.tooltip = statusBarItemTooltip(status ?? statusBarStatus);
-  statusBarItem.command = "continue.openTabAutocompleteConfigMenu";
+  statusBarItem.command = "waspcode.openTabAutocompleteConfigMenu";
 
   statusBarItem.show();
   if (status !== undefined) {

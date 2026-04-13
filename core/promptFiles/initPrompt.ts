@@ -1,8 +1,8 @@
-import { SlashCommandWithSource } from "..";
+﻿import { SlashCommandWithSource } from "..";
 import { RULES_MARKDOWN_FILENAME } from "../llm/rules/constants";
 import { BuiltInToolNames } from "../tools/builtIn";
 
-const initFilename = "CONTINUE.md";
+const initFilename = "waspcode.md";
 
 // Prompt for init slash command
 export const INIT_PROMPT_CONTENT = `

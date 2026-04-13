@@ -1,4 +1,4 @@
-/* tslint:disable */
+﻿/* tslint:disable */
 /* eslint-disable */
 /**
  * Continue Hub IDE API
@@ -73,3 +73,4 @@ export function GetModelsAddOnCheckoutUrl200ResponseToJSONTyped(
     url: value["url"],
   };
 }
+

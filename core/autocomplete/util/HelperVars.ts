@@ -1,4 +1,4 @@
-import { IDE, TabAutocompleteOptions } from "../..";
+﻿import { IDE, TabAutocompleteOptions } from "../..";
 import {
   countTokens,
   pruneLinesFromBottom,

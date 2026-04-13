@@ -1,4 +1,4 @@
-import { By, WebDriver } from "vscode-extension-tester";
+﻿import { By, WebDriver } from "vscode-extension-tester";
 
 export class NextEditSelectors {
   /**

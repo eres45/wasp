@@ -1,4 +1,4 @@
-import type { ChatHistoryItem } from "core/index.js";
+﻿import type { ChatHistoryItem } from "core/index.js";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import { ChatHistoryService } from "./ChatHistoryService.js";

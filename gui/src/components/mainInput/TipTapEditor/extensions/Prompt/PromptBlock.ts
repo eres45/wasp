@@ -1,4 +1,4 @@
-import { mergeAttributes, Node } from "@tiptap/core";
+﻿import { mergeAttributes, Node } from "@tiptap/core";
 import { Node as ProseMirrorNode } from "@tiptap/pm/model";
 import { ReactNodeViewRenderer } from "@tiptap/react";
 import { ContextItemWithId } from "core";

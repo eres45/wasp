@@ -1,4 +1,4 @@
-import * as fs from "fs";
+﻿import * as fs from "fs";
 
 import { validateMultiEdit } from "core/edit/searchAndReplace/multiEditValidation.js";
 import { executeMultiFindAndReplace } from "core/edit/searchAndReplace/performReplace.js";

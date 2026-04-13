@@ -1,4 +1,4 @@
-import { render } from "ink-testing-library";
+﻿import { render } from "ink-testing-library";
 import React from "react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
@@ -180,7 +180,7 @@ describe("TUIChat - ActionStatus", () => {
 
       let frame = lastFrame();
       expect(frame).toContain("Compacting history");
-      expect(frame).not.toContain("⠀⠁⠃⠇⠏⠟⠿⣿"); // No spinner chars when only compacting
+      expect(frame).not.toContain("â €â â ƒâ ‡â â Ÿâ ¿â£¿"); // No spinner chars when only compacting
 
       // Transition to response waiting
       const responseStartTime = Date.now();

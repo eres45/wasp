@@ -1,4 +1,4 @@
-import { EventEmitter } from "node:events";
+﻿import { EventEmitter } from "node:events";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { IDE, ToolExtras } from "../..";
 import { runTerminalCommandImpl } from "./runTerminalCommand";
@@ -171,7 +171,7 @@ describe("runTerminalCommand timeout functionality", () => {
     // Let initial setup complete
     await vi.runOnlyPendingTimersAsync();
 
-    // Advance to trigger main timeout (120s) — SIGTERM sent, SIGKILL timer started
+    // Advance to trigger main timeout (120s) â€” SIGTERM sent, SIGKILL timer started
     await vi.advanceTimersByTimeAsync(120_000);
     expect(mockChildProc.kill).toHaveBeenCalledWith("SIGTERM");
     expect(mockChildProc.kill).toHaveBeenCalledTimes(1);

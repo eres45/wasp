@@ -1,4 +1,4 @@
-import { extractCommand } from "./commandExtractor";
+﻿import { extractCommand } from "./commandExtractor";
 
 describe("extractCommand", () => {
   // Test basic command extraction

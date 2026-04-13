@@ -1,4 +1,4 @@
-import { EditOperation } from "../../tools/definitions/multiEdit";
+﻿import { EditOperation } from "../../tools/definitions/multiEdit";
 import { ContinueError, ContinueErrorReason } from "../../util/errors";
 import { SearchMatchResult, findSearchMatches } from "./findSearchMatch";
 

@@ -1,4 +1,4 @@
-import {
+﻿import {
   ArrowRightStartOnRectangleIcon,
   Cog6ToothIcon,
   UserCircleIcon as UserCircleIconOutline,
@@ -82,7 +82,7 @@ export function AccountDropdown() {
 
               <ListboxOption
                 onClick={() =>
-                  ideMessenger.post("openUrl", "https://continue.dev/settings")
+                  ideMessenger.post("openUrl", "https://waspcode.dev/settings")
                 }
                 value="manage-account"
               >

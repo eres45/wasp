@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Classes, functions, and utilities for generation.
  *
  * @todo Describe how to create a custom `GenerationConfig`.
@@ -891,3 +891,4 @@ class BeamSearchSampler extends Sampler {
     });
   }
 }
+

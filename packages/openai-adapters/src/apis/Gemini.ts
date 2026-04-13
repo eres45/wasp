@@ -1,4 +1,4 @@
-// IMPORTANT: Import nativeFetch FIRST to preserve native fetch before any pollution
+﻿// IMPORTANT: Import nativeFetch FIRST to preserve native fetch before any pollution
 import { withNativeFetch } from "../util/nativeFetch.js";
 import { GoogleGenAI } from "@google/genai";
 import { OpenAI } from "openai/index";

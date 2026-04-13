@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import { NEXT_EDIT_MODELS } from "../../llm/constants";
 import {
   INSTINCT_USER_PROMPT_PREFIX,

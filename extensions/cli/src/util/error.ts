@@ -1,4 +1,4 @@
-export function getErrorString(error: unknown) {
+﻿export function getErrorString(error: unknown) {
   if (error instanceof Error) {
     return error.message;
   }

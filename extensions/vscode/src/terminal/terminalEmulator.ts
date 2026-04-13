@@ -1,4 +1,4 @@
-/* Terminal emulator - commented because node-pty is causing problems. */
+﻿/* Terminal emulator - commented because node-pty is causing problems. */
 
 import * as os from "node:os";
 
@@ -203,7 +203,7 @@ export class CapturedTerminal {
               (line) =>
                 line.trim().length > 0 &&
                 line.trim() !== "%" &&
-                line.trim() !== "⏎",
+                line.trim() !== "âŽ",
             );
           const lastLine = strippedLines[strippedLines.length - 1] || "";
           const lines = lastLine
@@ -212,7 +212,7 @@ export class CapturedTerminal {
               (line) =>
                 line.trim().length > 0 &&
                 line.trim() !== "%" &&
-                line.trim() !== "⏎",
+                line.trim() !== "âŽ",
             );
           const commandPromptString = (lines[lines.length - 1] || "").trim();
           if (
@@ -234,7 +234,7 @@ export class CapturedTerminal {
       }
 
       // Pass data through to terminal
-      data = data.replace(/⏎[\s\S]+⏎/g, "").replace(/⏎/g, "");
+      data = data.replace(/âŽ[\s\S]+âŽ/g, "").replace(/âŽ/g, "");
       this.writeEmitter.fire(data);
 
       this.splitByCommandsListener(data);

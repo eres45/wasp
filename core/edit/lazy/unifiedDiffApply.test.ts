@@ -1,4 +1,4 @@
-import { applyUnifiedDiff, isUnifiedDiffFormat } from "./unifiedDiffApply";
+﻿import { applyUnifiedDiff, isUnifiedDiffFormat } from "./unifiedDiffApply";
 
 describe("isUnifiedDiffFormat", () => {
   it("should return true for valid unified diff format", () => {
@@ -65,7 +65,7 @@ describe("applyUnifiedDiff", () => {
     fmt.Println("  *  : Multiplication")
     fmt.Println("  /  : Division")
     fmt.Println("  ^  : Power")
-    fmt.Println("  √  : Square root (use only one number)")
+    fmt.Println("  âˆš  : Square root (use only one number)")
 }
 // End of file`;
 
@@ -74,7 +74,7 @@ describe("applyUnifiedDiff", () => {
 @@ -30,6 +30,7 @@
      fmt.Println("  /  : Division")
      fmt.Println("  ^  : Power")
-     fmt.Println("  √  : Square root (use only one number)")
+     fmt.Println("  âˆš  : Square root (use only one number)")
 +    fmt.Println("  log: Logarithm (use 'log base number')")
  }`;
 
@@ -94,7 +94,7 @@ describe("applyUnifiedDiff", () => {
       { type: "same", line: '    fmt.Println("  ^  : Power")' },
       {
         type: "same",
-        line: '    fmt.Println("  √  : Square root (use only one number)")',
+        line: '    fmt.Println("  âˆš  : Square root (use only one number)")',
       },
       {
         type: "new",
@@ -175,9 +175,9 @@ func main() {
 	fmt.Println("  *  : Multiplication")
 	fmt.Println("  /  : Division")
 	fmt.Println("  ^  : Power")
-	fmt.Println("  √  : Square root (use only one number)")
+	fmt.Println("  âˆš  : Square root (use only one number)")
 	for {
-		fmt.Print("Enter calculation (e.g., 5 + 3 or √ 16) or 'q' to quit: ")
+		fmt.Print("Enter calculation (e.g., 5 + 3 or âˆš 16) or 'q' to quit: ")
 		scanner.Scan()
 		input := scanner.Text()
 		if strings.ToLower(input) == "q" {
@@ -195,9 +195,9 @@ func main() {
 func calculate(input string) (float64, error) {
 	parts := strings.Fields(input)
 	if len(parts) < 2 {
-		return 0, fmt.Errorf("invalid input format: please use 'number operator number' or '√ number'")
+		return 0, fmt.Errorf("invalid input format: please use 'number operator number' or 'âˆš number'")
 	}
-	if parts[0] == "√" {
+	if parts[0] == "âˆš" {
 		if len(parts) != 2 {
 			return 0, fmt.Errorf("square root operation requires exactly one number")
 		}
@@ -237,7 +237,7 @@ func calculate(input string) (float64, error) {
 	case "^":
 		return math.Pow(num1, num2), nil
 	default:
-		return 0, fmt.Errorf("invalid operator: must be +, -, *, /, ^, or √")
+		return 0, fmt.Errorf("invalid operator: must be +, -, *, /, ^, or âˆš")
 	}
 }
 func TestCalculate(t *testing.T) {
@@ -251,16 +251,16 @@ func TestCalculate(t *testing.T) {
 		{"4 * 3", 12, false},
 		{"15 / 3", 5, false},
 		{"2 ^ 3", 8, false},
-		{"√ 16", 4, false},
+		{"âˆš 16", 4, false},
 		{"2 + a", 0, true},
 		{"15 / 0", 0, true},
-		{"√ -4", 0, true},
+		{"âˆš -4", 0, true},
 		{"3 $ 4", 0, true},
 		{"", 0, true},
 		{"1", 0, true},
 		{"1 +", 0, true},
 		{"+ 1", 0, true},
-		{"√ 2 3", 0, true},
+		{"âˆš 2 3", 0, true},
 	}
 	for _, test := range tests {
 		result, err := calculate(test.input)
@@ -293,7 +293,7 @@ func TestSpecialCases(t *testing.T) {
 	if math.Abs(result-expected) > 0.0001 {
 		t.Errorf("Power operation failed: expected %f, got %f", expected, result)
 	}
-	result, err = calculate("√ 2")
+	result, err = calculate("âˆš 2")
 	if err != nil {
 		t.Errorf("Unexpected error for square root: %v", err)
 	}
@@ -339,11 +339,11 @@ func TestLargeNumbers(t *testing.T) {
 @@ -30,6 +30,7 @@
    fmt.Println("  /  : Division")
  	 fmt.Println("  ^  : Power")
- 	 fmt.Println("  √  : Square root (use only one number)")
+ 	 fmt.Println("  âˆš  : Square root (use only one number)")
 +  fmt.Println("  log: Logarithm (use 'log base number')")
 +  fmt.Println("       Base must be > 0 and != 1, number must be > 0")
    for {
-	   fmt.Print("Enter calculation (e.g., 5 + 3 or √ 16) or 'q' to quit: ")
+	   fmt.Print("Enter calculation (e.g., 5 + 3 or âˆš 16) or 'q' to quit: ")
 @@ -73,6 +74,8 @@
  	   }
  	   return math.Sqrt(num), nil
@@ -389,7 +389,7 @@ func TestLargeNumbers(t *testing.T) {
     expect(result[0].line).toEqual("package main");
     // 1st block
     expect(result[18].line).toEqual(
-      '\tfmt.Println("  √  : Square root (use only one number)")',
+      '\tfmt.Println("  âˆš  : Square root (use only one number)")',
     );
     expect(result[19].line).toEqual(
       "  fmt.Println(\"  log: Logarithm (use 'log base number')\")",

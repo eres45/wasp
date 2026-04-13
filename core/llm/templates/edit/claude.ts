@@ -1,4 +1,4 @@
-import { PromptTemplateFunction } from "../../..";
+﻿import { PromptTemplateFunction } from "../../..";
 
 export const claudeEditPrompt: PromptTemplateFunction = (_, otherData) => {
   if (otherData?.codeToEdit?.trim().length === 0) {

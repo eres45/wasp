@@ -1,4 +1,4 @@
-const fs = require("fs");
+﻿const fs = require("fs");
 const path = require("path");
 
 const ncp = require("ncp").ncp;
@@ -158,8 +158,12 @@ void (async () => {
   if (!fs.existsSync(path.join("dist", "assets", "index.js"))) {
     throw new Error("gui build did not produce index.js");
   }
-  if (!fs.existsSync(path.join("dist", "assets", "index.css"))) {
-    throw new Error("gui build did not produce index.css");
+  // Check for either index.css or style.css
+  const hasCss =
+    fs.existsSync(path.join("dist", "assets", "index.css")) ||
+    fs.existsSync(path.join("dist", "assets", "style.css"));
+  if (!hasCss) {
+    throw new Error("gui build did not produce index.css or style.css");
   }
 
   // Copy over native / wasm modules //

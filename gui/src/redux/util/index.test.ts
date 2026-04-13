@@ -1,4 +1,4 @@
-import { ToolCallState, ToolStatus } from "core";
+﻿import { ToolCallState, ToolStatus } from "core";
 import { ChatHistoryItemWithMessageId } from "../slices/sessionSlice";
 import {
   findAllCurToolCalls,

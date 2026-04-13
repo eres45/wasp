@@ -1,4 +1,4 @@
-import fs from "fs";
+﻿import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -823,9 +823,9 @@ Basic prompt`;
 
       it("should handle UTF-8 encoded content", async () => {
         const utf8Content = `---
-name: Agent with émojis 🚀
+name: Agent with Ã©mojis ðŸš€
 ---
-Héllo wörld`;
+HÃ©llo wÃ¶rld`;
 
         mockPathResolve.mockReturnValue("/resolved/utf8.md");
         mockReadFileSync.mockReturnValue(utf8Content);
@@ -836,8 +836,8 @@ Héllo wörld`;
 
         const result = await agentFileService.getAgentFile("./utf8.md");
 
-        expect(result.name).toBe("Agent with émojis 🚀");
-        expect(result.prompt).toBe("Héllo wörld");
+        expect(result.name).toBe("Agent with Ã©mojis ðŸš€");
+        expect(result.prompt).toBe("HÃ©llo wÃ¶rld");
         expect(mockReadFileSync).toHaveBeenCalledWith(
           "/resolved/utf8.md",
           "utf-8",

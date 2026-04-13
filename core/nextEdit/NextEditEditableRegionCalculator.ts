@@ -1,4 +1,4 @@
-import Parser from "web-tree-sitter";
+﻿import Parser from "web-tree-sitter";
 import { Chunk, IDE, ILLM, Position, Range, RangeInFile } from "..";
 import { getAst } from "../autocomplete/util/ast";
 import { NEXT_EDIT_MODELS } from "../llm/constants";

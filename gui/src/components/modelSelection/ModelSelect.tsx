@@ -1,4 +1,4 @@
-import {
+﻿import {
   ArrowPathIcon,
   ChevronDownIcon,
   Cog6ToothIcon,
@@ -285,7 +285,7 @@ function ModelSelect() {
               </div>
             ) : hasNoModels ? (
               <div className="text-description-muted px-2 py-4 text-center text-sm">
-                No models configured
+                No WaspCode models configured
               </div>
             ) : (
               sortedOptions.map((option, idx) => (
@@ -314,7 +314,7 @@ function ModelSelect() {
                   >
                     <span className="text-description text-2xs flex flex-row items-center">
                       <PlusIcon className="mr-1.5 h-3.5 w-3.5" />
-                      Add Chat model
+                      Add WaspCode model
                     </span>
                   </ListboxOption>
                 </>

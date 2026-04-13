@@ -1,4 +1,4 @@
-const FUNCTIONS = [
+﻿const FUNCTIONS = [
   {
     nodeType: "function_declaration with a param and a return type",
     fileName: "typescript/functions.ts",

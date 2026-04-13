@@ -1,4 +1,4 @@
-import { Position, Range, RangeInFile, TabAutocompleteOptions } from "../..";
+﻿import { Position, Range, RangeInFile, TabAutocompleteOptions } from "../..";
 import { AutocompleteCodeSnippet } from "../snippets/types";
 
 export type RecentlyEditedRange = RangeInFile & {

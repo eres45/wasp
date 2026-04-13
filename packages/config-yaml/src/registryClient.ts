@@ -1,4 +1,4 @@
-import * as fs from "node:fs";
+﻿import * as fs from "node:fs";
 import * as path from "node:path";
 import { Registry } from "./interfaces/index.js";
 import { FullSlug, PackageIdentifier } from "./interfaces/slugs.js";
@@ -16,7 +16,7 @@ export class RegistryClient implements Registry {
 
   constructor(options: RegistryClientOptions = {}) {
     this.accessToken = options.accessToken;
-    this.apiBase = options.apiBase ?? "https://api.continue.dev/";
+    this.apiBase = options.apiBase ?? "https://api.waspcode.dev/";
     this.rootPath = options.rootPath;
     if (!this.apiBase.endsWith("/")) {
       this.apiBase += "/";

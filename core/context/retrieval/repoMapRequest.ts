@@ -1,4 +1,4 @@
-import { Chunk, ContinueConfig, IDE, ILLM } from "../..";
+﻿import { Chunk, ContinueConfig, IDE, ILLM } from "../..";
 import { getModelByRole } from "../../config/util";
 import generateRepoMap from "../../util/generateRepoMap";
 import { resolveRelativePathInDir } from "../../util/ideUtils";

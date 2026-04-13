@@ -1,4 +1,4 @@
-import { ChatMessage } from "../..";
+﻿import { ChatMessage } from "../..";
 import { dedent } from "../../util";
 
 export const UNCHANGED_CODE = "UNCHANGED CODE";

@@ -1,4 +1,4 @@
-import { NEXT_EDIT_MODELS } from "../llm/constants.js";
+﻿import { NEXT_EDIT_MODELS } from "../llm/constants.js";
 import { BaseNextEditModelProvider } from "./providers/BaseNextEditProvider.js";
 import { InstinctProvider } from "./providers/InstinctNextEditProvider.js";
 import { MercuryCoderProvider } from "./providers/MercuryCoderNextEditProvider.js";

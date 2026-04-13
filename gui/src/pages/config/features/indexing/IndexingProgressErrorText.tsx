@@ -1,4 +1,4 @@
-import {
+﻿import {
   ArrowTopRightOnSquareIcon,
   ChevronRightIcon,
   ClipboardIcon,
@@ -34,11 +34,11 @@ function IndexingProgressErrorText({ update }: IndexingProgressErrorTextProps) {
           Add an Embeddings model to enable codebase indexing. See the docs for
           examples:
           <a
-            href="https://docs.continue.dev/walkthroughs/codebase-embeddings#embeddings-providers"
+            href="https://docs.waspcode.dev/walkthroughs/codebase-embeddings#embeddings-providers"
             target="_blank"
             className="cursor-pointer text-inherit underline hover:text-inherit"
           >
-            https://docs.continue.dev/walkthroughs/codebase-embeddings#embeddings-providers
+            https://docs.waspcode.dev/walkthroughs/codebase-embeddings#embeddings-providers
           </a>
         </span>
       </div>
@@ -77,7 +77,7 @@ function IndexingProgressErrorText({ update }: IndexingProgressErrorTextProps) {
           <div className="space-y-1">
             {update.warnings.map((warning, index) => (
               <div key={index} className="text-xs">
-                • {warning}
+                â€¢ {warning}
               </div>
             ))}
           </div>

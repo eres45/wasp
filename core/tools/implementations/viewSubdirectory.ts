@@ -1,4 +1,4 @@
-import generateRepoMap from "../../util/generateRepoMap";
+﻿import generateRepoMap from "../../util/generateRepoMap";
 import { resolveInputPath } from "../../util/pathResolver";
 
 import { ToolImpl } from ".";

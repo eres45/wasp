@@ -1,4 +1,4 @@
-const fs = require("fs");
+﻿const fs = require("fs");
 const path = require("path");
 
 function main() {
@@ -62,7 +62,7 @@ function main() {
     "- Bugs that will cause failures or incorrect behavior",
     "- Security vulnerabilities (exposed secrets, injection risks)",
     "- Breaking changes that affect other parts of the system",
-    "- Performance issues with real impact (memory leaks, O(n²) algorithms)",
+    "- Performance issues with real impact (memory leaks, O(nÂ²) algorithms)",
     "- Missing tests for new features or bug fixes",
     "- Missing documentation for APIs or complex logic",
     "",

@@ -1,4 +1,4 @@
-declare const TokenizerModel_base: new () => {
+﻿declare const TokenizerModel_base: new () => {
   (...args: any[]): any;
   _call(...args: any[]): any;
 };
@@ -409,7 +409,7 @@ export class EsmTokenizer extends PreTrainedTokenizer {}
  *
  * No Language Left Behind (NLLB) is a first-of-its-kind, AI breakthrough project
  * that open-sources models capable of delivering high-quality translations directly
- * between any pair of 200+ languages — including low-resource languages like Asturian,
+ * between any pair of 200+ languages â€” including low-resource languages like Asturian,
  * Luganda, Urdu and more. It aims to help people communicate with anyone, anywhere,
  * regardless of their language preferences. For more information, check out their
  * [paper](https://arxiv.org/abs/2207.04672).
@@ -971,3 +971,4 @@ declare class AddedToken {
 import { Tensor } from "./utils/tensor.js";
 export {};
 //# sourceMappingURL=tokenizers.d.ts.map
+

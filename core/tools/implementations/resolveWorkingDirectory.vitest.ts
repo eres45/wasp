@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import { fileURLToPath } from "node:url";
 
 /**
@@ -70,7 +70,7 @@ describe("resolveWorkingDirectory", () => {
       const result = resolveWorkingDirectory([
         "vscode-remote://wsl+Ubuntu/home/user/%E4%B8%AD%E6%96%87%E8%B7%AF%E5%BE%84",
       ]);
-      expect(result).toBe("/home/user/中文路径");
+      expect(result).toBe("/home/user/ä¸­æ–‡è·¯å¾„");
     });
 
     it("should handle different WSL distro names", () => {

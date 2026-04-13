@@ -1,4 +1,4 @@
-// A simple utility function with minor issues
+﻿// A simple utility function with minor issues
 // Difficulty: 1 - Easy fixes needed
 
 // Function to calculate total price with discount

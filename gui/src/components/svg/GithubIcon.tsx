@@ -1,4 +1,4 @@
-interface GithubIconProps extends React.SVGProps<SVGSVGElement> {
+﻿interface GithubIconProps extends React.SVGProps<SVGSVGElement> {
   size?: number;
 }
 

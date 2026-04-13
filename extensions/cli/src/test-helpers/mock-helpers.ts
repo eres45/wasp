@@ -1,4 +1,4 @@
-import nock from "nock";
+﻿import nock from "nock";
 import { ChatCompletionMessageParam } from "openai/resources";
 
 export interface MockAPIOptions {

@@ -1,4 +1,4 @@
-import { render } from "ink-testing-library";
+﻿import { render } from "ink-testing-library";
 import React from "react";
 import { vi } from "vitest";
 
@@ -443,7 +443,7 @@ export function expectRemoteMode(frame: string | undefined) {
   if (!frame) throw new Error("Frame is undefined");
 
   // Should show cyan color and remote indicator
-  expect(frame).toContain("◉");
+  expect(frame).toContain("â—‰");
   expect(frame).toContain("Remote Mode");
 }
 
@@ -454,7 +454,7 @@ export function expectNormalMode(frame: string | undefined) {
   if (!frame) throw new Error("Frame is undefined");
 
   // Should show normal indicator
-  expect(frame).toContain("●");
+  expect(frame).toContain("â—");
   expect(frame).toContain("Continue CLI");
 }
 

@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it } from "vitest";
+﻿import { beforeEach, describe, expect, it } from "vitest";
 import { SystemMessageToolCodeblocksFramework } from ".";
 import { AssistantChatMessage, ChatMessage, PromptLog } from "../../..";
 import { interceptSystemToolCalls } from "../interceptSystemToolCalls";

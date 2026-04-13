@@ -1,4 +1,4 @@
-import type { ChatHistoryItem } from "core/index.js";
+﻿import type { ChatHistoryItem } from "core/index.js";
 import { describe, expect, it } from "vitest";
 
 import { calculateDiffStats, extractSummary } from "./metadata.js";

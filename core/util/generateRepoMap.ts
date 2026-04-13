@@ -1,4 +1,4 @@
-import fs from "node:fs";
+﻿import fs from "node:fs";
 
 import { IDE, ILLM } from "..";
 import { CodeSnippetsCodebaseIndex } from "../indexing/CodeSnippetsIndex";

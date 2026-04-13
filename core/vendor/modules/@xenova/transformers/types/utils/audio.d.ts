@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Helper function to read audio from a path/URL.
  * @param {string|URL} url The path/URL to load the audio from.
  * @param {number} sampling_rate The sampling rate to use when decoding the audio.
@@ -162,3 +162,4 @@ export function window_function(
   },
 ): Float64Array;
 //# sourceMappingURL=audio.d.ts.map
+

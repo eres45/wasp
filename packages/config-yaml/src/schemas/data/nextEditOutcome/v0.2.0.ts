@@ -1,4 +1,4 @@
-import { nextEditOutcomeEventAllSchema } from "./index.js";
+﻿import { nextEditOutcomeEventAllSchema } from "./index.js";
 
 export const nextEditOutcomeEventSchema_0_2_0 =
   nextEditOutcomeEventAllSchema.pick({

@@ -1,10 +1,10 @@
-/**
+﻿/**
  * Live API test for Anthropic prompt caching.
  *
  * Validates that the systemAndTools caching strategy produces real cache hits
  * when making sequential requests with the same prefix to the Anthropic API.
  *
- * Guarded by ANTHROPIC_API_KEY env var — skipped if not set.
+ * Guarded by ANTHROPIC_API_KEY env var â€” skipped if not set.
  * Uses claude-haiku-4-5-20251001 to minimize cost.
  *
  * IMPORTANT: Haiku 4.5 requires a minimum of 4096 tokens for caching.
@@ -208,279 +208,279 @@ The following is the full directory structure of the workspace:
 
 \`\`\`
 my-app/
-├── .github/
-│   ├── workflows/
-│   │   ├── ci.yml
-│   │   ├── deploy.yml
-│   │   ├── release.yml
-│   │   ├── codeql-analysis.yml
-│   │   └── dependency-review.yml
-│   ├── CODEOWNERS
-│   ├── pull_request_template.md
-│   ├── ISSUE_TEMPLATE/
-│   │   ├── bug_report.md
-│   │   ├── feature_request.md
-│   │   └── config.yml
-│   └── dependabot.yml
-├── .vscode/
-│   ├── settings.json
-│   ├── extensions.json
-│   ├── launch.json
-│   └── tasks.json
-├── docs/
-│   ├── api/
-│   │   ├── authentication.md
-│   │   ├── endpoints.md
-│   │   ├── rate-limiting.md
-│   │   ├── websockets.md
-│   │   ├── pagination.md
-│   │   └── error-codes.md
-│   ├── architecture/
-│   │   ├── overview.md
-│   │   ├── database-schema.md
-│   │   ├── deployment.md
-│   │   ├── caching-strategy.md
-│   │   ├── event-sourcing.md
-│   │   └── microservices.md
-│   ├── guides/
-│   │   ├── getting-started.md
-│   │   ├── contributing.md
-│   │   ├── code-review.md
-│   │   ├── testing.md
-│   │   └── debugging.md
-│   └── adr/
-│       ├── 001-use-typescript.md
-│       ├── 002-monorepo-structure.md
-│       ├── 003-database-choice.md
-│       ├── 004-auth-strategy.md
-│       └── 005-api-versioning.md
-├── packages/
-│   ├── core/
-│   │   ├── src/
-│   │   │   ├── auth/
-│   │   │   │   ├── index.ts
-│   │   │   │   ├── jwt.ts
-│   │   │   │   ├── oauth.ts
-│   │   │   │   ├── middleware.ts
-│   │   │   │   ├── rbac.ts
-│   │   │   │   ├── session.ts
-│   │   │   │   └── types.ts
-│   │   │   ├── database/
-│   │   │   │   ├── index.ts
-│   │   │   │   ├── connection.ts
-│   │   │   │   ├── migrations/
-│   │   │   │   │   ├── 001_create_users.ts
-│   │   │   │   │   ├── 002_create_projects.ts
-│   │   │   │   │   ├── 003_create_teams.ts
-│   │   │   │   │   ├── 004_create_notifications.ts
-│   │   │   │   │   └── 005_create_audit_log.ts
-│   │   │   │   ├── models/
-│   │   │   │   │   ├── User.ts
-│   │   │   │   │   ├── Project.ts
-│   │   │   │   │   ├── Team.ts
-│   │   │   │   │   ├── TeamMember.ts
-│   │   │   │   │   ├── Notification.ts
-│   │   │   │   │   ├── AuditLog.ts
-│   │   │   │   │   └── index.ts
-│   │   │   │   └── seeds/
-│   │   │   │       ├── development.ts
-│   │   │   │       └── test.ts
-│   │   │   ├── services/
-│   │   │   │   ├── user.service.ts
-│   │   │   │   ├── project.service.ts
-│   │   │   │   ├── team.service.ts
-│   │   │   │   ├── notification.service.ts
-│   │   │   │   ├── analytics.service.ts
-│   │   │   │   ├── email.service.ts
-│   │   │   │   ├── cache.service.ts
-│   │   │   │   └── search.service.ts
-│   │   │   ├── events/
-│   │   │   │   ├── index.ts
-│   │   │   │   ├── emitter.ts
-│   │   │   │   ├── handlers/
-│   │   │   │   │   ├── user.handler.ts
-│   │   │   │   │   ├── project.handler.ts
-│   │   │   │   │   └── notification.handler.ts
-│   │   │   │   └── types.ts
-│   │   │   ├── queue/
-│   │   │   │   ├── index.ts
-│   │   │   │   ├── workers/
-│   │   │   │   │   ├── email.worker.ts
-│   │   │   │   │   ├── analytics.worker.ts
-│   │   │   │   │   └── cleanup.worker.ts
-│   │   │   │   └── types.ts
-│   │   │   └── utils/
-│   │   │       ├── logger.ts
-│   │   │       ├── errors.ts
-│   │   │       ├── validation.ts
-│   │   │       ├── crypto.ts
-│   │   │       ├── date.ts
-│   │   │       └── retry.ts
-│   │   ├── tests/
-│   │   │   ├── auth.test.ts
-│   │   │   ├── services.test.ts
-│   │   │   ├── events.test.ts
-│   │   │   ├── queue.test.ts
-│   │   │   └── utils.test.ts
-│   │   ├── package.json
-│   │   └── tsconfig.json
-│   ├── api/
-│   │   ├── src/
-│   │   │   ├── routes/
-│   │   │   │   ├── users.ts
-│   │   │   │   ├── projects.ts
-│   │   │   │   ├── teams.ts
-│   │   │   │   ├── webhooks.ts
-│   │   │   │   ├── health.ts
-│   │   │   │   ├── search.ts
-│   │   │   │   └── admin.ts
-│   │   │   ├── middleware/
-│   │   │   │   ├── auth.ts
-│   │   │   │   ├── rateLimit.ts
-│   │   │   │   ├── cors.ts
-│   │   │   │   ├── requestId.ts
-│   │   │   │   ├── logging.ts
-│   │   │   │   └── validation.ts
-│   │   │   ├── websocket/
-│   │   │   │   ├── index.ts
-│   │   │   │   ├── handlers.ts
-│   │   │   │   └── types.ts
-│   │   │   └── index.ts
-│   │   ├── tests/
-│   │   │   ├── routes/
-│   │   │   │   ├── users.test.ts
-│   │   │   │   ├── projects.test.ts
-│   │   │   │   └── teams.test.ts
-│   │   │   └── middleware/
-│   │   │       ├── auth.test.ts
-│   │   │       └── rateLimit.test.ts
-│   │   ├── package.json
-│   │   └── tsconfig.json
-│   ├── web/
-│   │   ├── src/
-│   │   │   ├── components/
-│   │   │   │   ├── common/
-│   │   │   │   │   ├── Button.tsx
-│   │   │   │   │   ├── Input.tsx
-│   │   │   │   │   ├── Modal.tsx
-│   │   │   │   │   ├── Table.tsx
-│   │   │   │   │   ├── Toast.tsx
-│   │   │   │   │   └── Loading.tsx
-│   │   │   │   ├── layout/
-│   │   │   │   │   ├── Header.tsx
-│   │   │   │   │   ├── Footer.tsx
-│   │   │   │   │   ├── Sidebar.tsx
-│   │   │   │   │   └── Layout.tsx
-│   │   │   │   ├── dashboard/
-│   │   │   │   │   ├── Dashboard.tsx
-│   │   │   │   │   ├── ProjectCard.tsx
-│   │   │   │   │   ├── ActivityFeed.tsx
-│   │   │   │   │   └── Stats.tsx
-│   │   │   │   ├── settings/
-│   │   │   │   │   ├── Settings.tsx
-│   │   │   │   │   ├── ProfileForm.tsx
-│   │   │   │   │   ├── SecuritySettings.tsx
-│   │   │   │   │   └── NotificationPrefs.tsx
-│   │   │   │   └── team/
-│   │   │   │       ├── TeamList.tsx
-│   │   │   │       ├── TeamDetail.tsx
-│   │   │   │       ├── MemberList.tsx
-│   │   │   │       └── InviteForm.tsx
-│   │   │   ├── hooks/
-│   │   │   │   ├── useAuth.ts
-│   │   │   │   ├── useApi.ts
-│   │   │   │   ├── useTheme.ts
-│   │   │   │   ├── useWebSocket.ts
-│   │   │   │   ├── useDebounce.ts
-│   │   │   │   └── usePagination.ts
-│   │   │   ├── pages/
-│   │   │   │   ├── index.tsx
-│   │   │   │   ├── login.tsx
-│   │   │   │   ├── register.tsx
-│   │   │   │   ├── dashboard.tsx
-│   │   │   │   ├── settings.tsx
-│   │   │   │   ├── project/[id].tsx
-│   │   │   │   └── team/[id].tsx
-│   │   │   ├── store/
-│   │   │   │   ├── index.ts
-│   │   │   │   ├── authSlice.ts
-│   │   │   │   ├── projectSlice.ts
-│   │   │   │   └── uiSlice.ts
-│   │   │   ├── styles/
-│   │   │   │   ├── globals.css
-│   │   │   │   ├── theme.ts
-│   │   │   │   └── animations.css
-│   │   │   ├── lib/
-│   │   │   │   ├── api.ts
-│   │   │   │   ├── auth.ts
-│   │   │   │   └── utils.ts
-│   │   │   └── App.tsx
-│   │   ├── public/
-│   │   │   ├── favicon.ico
-│   │   │   └── manifest.json
-│   │   ├── tests/
-│   │   │   ├── components/
-│   │   │   └── pages/
-│   │   ├── package.json
-│   │   └── tsconfig.json
-│   └── shared/
-│       ├── src/
-│       │   ├── types/
-│       │   │   ├── user.ts
-│       │   │   ├── project.ts
-│       │   │   ├── team.ts
-│       │   │   ├── api.ts
-│       │   │   └── index.ts
-│       │   ├── constants/
-│       │   │   ├── permissions.ts
-│       │   │   ├── errors.ts
-│       │   │   └── config.ts
-│       │   └── validators/
-│       │       ├── user.ts
-│       │       ├── project.ts
-│       │       └── team.ts
-│       ├── package.json
-│       └── tsconfig.json
-├── infrastructure/
-│   ├── terraform/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   ├── outputs.tf
-│   │   └── modules/
-│   │       ├── vpc/
-│   │       ├── ecs/
-│   │       ├── rds/
-│   │       └── redis/
-│   ├── docker/
-│   │   ├── Dockerfile.api
-│   │   ├── Dockerfile.web
-│   │   └── docker-compose.prod.yml
-│   └── k8s/
-│       ├── deployment.yaml
-│       ├── service.yaml
-│       ├── ingress.yaml
-│       └── configmap.yaml
-├── scripts/
-│   ├── deploy.sh
-│   ├── setup.sh
-│   ├── seed-db.ts
-│   ├── migrate.ts
-│   ├── generate-api-docs.ts
-│   └── health-check.sh
-├── .env.example
-├── .eslintrc.js
-├── .gitignore
-├── .prettierrc
-├── docker-compose.yml
-├── docker-compose.test.yml
-├── Dockerfile
-├── Makefile
-├── package.json
-├── pnpm-workspace.yaml
-├── README.md
-├── CHANGELOG.md
-├── LICENSE
-└── tsconfig.base.json
+â”œâ”€â”€ .github/
+â”‚   â”œâ”€â”€ workflows/
+â”‚   â”‚   â”œâ”€â”€ ci.yml
+â”‚   â”‚   â”œâ”€â”€ deploy.yml
+â”‚   â”‚   â”œâ”€â”€ release.yml
+â”‚   â”‚   â”œâ”€â”€ codeql-analysis.yml
+â”‚   â”‚   â””â”€â”€ dependency-review.yml
+â”‚   â”œâ”€â”€ CODEOWNERS
+â”‚   â”œâ”€â”€ pull_request_template.md
+â”‚   â”œâ”€â”€ ISSUE_TEMPLATE/
+â”‚   â”‚   â”œâ”€â”€ bug_report.md
+â”‚   â”‚   â”œâ”€â”€ feature_request.md
+â”‚   â”‚   â””â”€â”€ config.yml
+â”‚   â””â”€â”€ dependabot.yml
+â”œâ”€â”€ .vscode/
+â”‚   â”œâ”€â”€ settings.json
+â”‚   â”œâ”€â”€ extensions.json
+â”‚   â”œâ”€â”€ launch.json
+â”‚   â””â”€â”€ tasks.json
+â”œâ”€â”€ docs/
+â”‚   â”œâ”€â”€ api/
+â”‚   â”‚   â”œâ”€â”€ authentication.md
+â”‚   â”‚   â”œâ”€â”€ endpoints.md
+â”‚   â”‚   â”œâ”€â”€ rate-limiting.md
+â”‚   â”‚   â”œâ”€â”€ websockets.md
+â”‚   â”‚   â”œâ”€â”€ pagination.md
+â”‚   â”‚   â””â”€â”€ error-codes.md
+â”‚   â”œâ”€â”€ architecture/
+â”‚   â”‚   â”œâ”€â”€ overview.md
+â”‚   â”‚   â”œâ”€â”€ database-schema.md
+â”‚   â”‚   â”œâ”€â”€ deployment.md
+â”‚   â”‚   â”œâ”€â”€ caching-strategy.md
+â”‚   â”‚   â”œâ”€â”€ event-sourcing.md
+â”‚   â”‚   â””â”€â”€ microservices.md
+â”‚   â”œâ”€â”€ guides/
+â”‚   â”‚   â”œâ”€â”€ getting-started.md
+â”‚   â”‚   â”œâ”€â”€ contributing.md
+â”‚   â”‚   â”œâ”€â”€ code-review.md
+â”‚   â”‚   â”œâ”€â”€ testing.md
+â”‚   â”‚   â””â”€â”€ debugging.md
+â”‚   â””â”€â”€ adr/
+â”‚       â”œâ”€â”€ 001-use-typescript.md
+â”‚       â”œâ”€â”€ 002-monorepo-structure.md
+â”‚       â”œâ”€â”€ 003-database-choice.md
+â”‚       â”œâ”€â”€ 004-auth-strategy.md
+â”‚       â””â”€â”€ 005-api-versioning.md
+â”œâ”€â”€ packages/
+â”‚   â”œâ”€â”€ core/
+â”‚   â”‚   â”œâ”€â”€ src/
+â”‚   â”‚   â”‚   â”œâ”€â”€ auth/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ index.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ jwt.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ oauth.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ middleware.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ rbac.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ session.ts
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ types.ts
+â”‚   â”‚   â”‚   â”œâ”€â”€ database/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ index.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ connection.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ migrations/
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ 001_create_users.ts
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ 002_create_projects.ts
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ 003_create_teams.ts
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ 004_create_notifications.ts
+â”‚   â”‚   â”‚   â”‚   â”‚   â””â”€â”€ 005_create_audit_log.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ models/
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ User.ts
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ Project.ts
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ Team.ts
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ TeamMember.ts
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ Notification.ts
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ AuditLog.ts
+â”‚   â”‚   â”‚   â”‚   â”‚   â””â”€â”€ index.ts
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ seeds/
+â”‚   â”‚   â”‚   â”‚       â”œâ”€â”€ development.ts
+â”‚   â”‚   â”‚   â”‚       â””â”€â”€ test.ts
+â”‚   â”‚   â”‚   â”œâ”€â”€ services/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ user.service.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ project.service.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ team.service.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ notification.service.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ analytics.service.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ email.service.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ cache.service.ts
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ search.service.ts
+â”‚   â”‚   â”‚   â”œâ”€â”€ events/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ index.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ emitter.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ handlers/
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ user.handler.ts
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ project.handler.ts
+â”‚   â”‚   â”‚   â”‚   â”‚   â””â”€â”€ notification.handler.ts
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ types.ts
+â”‚   â”‚   â”‚   â”œâ”€â”€ queue/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ index.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ workers/
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ email.worker.ts
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ analytics.worker.ts
+â”‚   â”‚   â”‚   â”‚   â”‚   â””â”€â”€ cleanup.worker.ts
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ types.ts
+â”‚   â”‚   â”‚   â””â”€â”€ utils/
+â”‚   â”‚   â”‚       â”œâ”€â”€ logger.ts
+â”‚   â”‚   â”‚       â”œâ”€â”€ errors.ts
+â”‚   â”‚   â”‚       â”œâ”€â”€ validation.ts
+â”‚   â”‚   â”‚       â”œâ”€â”€ crypto.ts
+â”‚   â”‚   â”‚       â”œâ”€â”€ date.ts
+â”‚   â”‚   â”‚       â””â”€â”€ retry.ts
+â”‚   â”‚   â”œâ”€â”€ tests/
+â”‚   â”‚   â”‚   â”œâ”€â”€ auth.test.ts
+â”‚   â”‚   â”‚   â”œâ”€â”€ services.test.ts
+â”‚   â”‚   â”‚   â”œâ”€â”€ events.test.ts
+â”‚   â”‚   â”‚   â”œâ”€â”€ queue.test.ts
+â”‚   â”‚   â”‚   â””â”€â”€ utils.test.ts
+â”‚   â”‚   â”œâ”€â”€ package.json
+â”‚   â”‚   â””â”€â”€ tsconfig.json
+â”‚   â”œâ”€â”€ api/
+â”‚   â”‚   â”œâ”€â”€ src/
+â”‚   â”‚   â”‚   â”œâ”€â”€ routes/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ users.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ projects.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ teams.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ webhooks.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ health.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ search.ts
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ admin.ts
+â”‚   â”‚   â”‚   â”œâ”€â”€ middleware/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ auth.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ rateLimit.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ cors.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ requestId.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ logging.ts
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ validation.ts
+â”‚   â”‚   â”‚   â”œâ”€â”€ websocket/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ index.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ handlers.ts
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ types.ts
+â”‚   â”‚   â”‚   â””â”€â”€ index.ts
+â”‚   â”‚   â”œâ”€â”€ tests/
+â”‚   â”‚   â”‚   â”œâ”€â”€ routes/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ users.test.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ projects.test.ts
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ teams.test.ts
+â”‚   â”‚   â”‚   â””â”€â”€ middleware/
+â”‚   â”‚   â”‚       â”œâ”€â”€ auth.test.ts
+â”‚   â”‚   â”‚       â””â”€â”€ rateLimit.test.ts
+â”‚   â”‚   â”œâ”€â”€ package.json
+â”‚   â”‚   â””â”€â”€ tsconfig.json
+â”‚   â”œâ”€â”€ web/
+â”‚   â”‚   â”œâ”€â”€ src/
+â”‚   â”‚   â”‚   â”œâ”€â”€ components/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ common/
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ Button.tsx
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ Input.tsx
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ Modal.tsx
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ Table.tsx
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ Toast.tsx
+â”‚   â”‚   â”‚   â”‚   â”‚   â””â”€â”€ Loading.tsx
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ layout/
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ Header.tsx
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ Footer.tsx
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ Sidebar.tsx
+â”‚   â”‚   â”‚   â”‚   â”‚   â””â”€â”€ Layout.tsx
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ dashboard/
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ Dashboard.tsx
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ ProjectCard.tsx
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ ActivityFeed.tsx
+â”‚   â”‚   â”‚   â”‚   â”‚   â””â”€â”€ Stats.tsx
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ settings/
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ Settings.tsx
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ ProfileForm.tsx
+â”‚   â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ SecuritySettings.tsx
+â”‚   â”‚   â”‚   â”‚   â”‚   â””â”€â”€ NotificationPrefs.tsx
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ team/
+â”‚   â”‚   â”‚   â”‚       â”œâ”€â”€ TeamList.tsx
+â”‚   â”‚   â”‚   â”‚       â”œâ”€â”€ TeamDetail.tsx
+â”‚   â”‚   â”‚   â”‚       â”œâ”€â”€ MemberList.tsx
+â”‚   â”‚   â”‚   â”‚       â””â”€â”€ InviteForm.tsx
+â”‚   â”‚   â”‚   â”œâ”€â”€ hooks/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ useAuth.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ useApi.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ useTheme.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ useWebSocket.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ useDebounce.ts
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ usePagination.ts
+â”‚   â”‚   â”‚   â”œâ”€â”€ pages/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ index.tsx
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ login.tsx
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ register.tsx
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ dashboard.tsx
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ settings.tsx
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ project/[id].tsx
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ team/[id].tsx
+â”‚   â”‚   â”‚   â”œâ”€â”€ store/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ index.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ authSlice.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ projectSlice.ts
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ uiSlice.ts
+â”‚   â”‚   â”‚   â”œâ”€â”€ styles/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ globals.css
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ theme.ts
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ animations.css
+â”‚   â”‚   â”‚   â”œâ”€â”€ lib/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ api.ts
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ auth.ts
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ utils.ts
+â”‚   â”‚   â”‚   â””â”€â”€ App.tsx
+â”‚   â”‚   â”œâ”€â”€ public/
+â”‚   â”‚   â”‚   â”œâ”€â”€ favicon.ico
+â”‚   â”‚   â”‚   â””â”€â”€ manifest.json
+â”‚   â”‚   â”œâ”€â”€ tests/
+â”‚   â”‚   â”‚   â”œâ”€â”€ components/
+â”‚   â”‚   â”‚   â””â”€â”€ pages/
+â”‚   â”‚   â”œâ”€â”€ package.json
+â”‚   â”‚   â””â”€â”€ tsconfig.json
+â”‚   â””â”€â”€ shared/
+â”‚       â”œâ”€â”€ src/
+â”‚       â”‚   â”œâ”€â”€ types/
+â”‚       â”‚   â”‚   â”œâ”€â”€ user.ts
+â”‚       â”‚   â”‚   â”œâ”€â”€ project.ts
+â”‚       â”‚   â”‚   â”œâ”€â”€ team.ts
+â”‚       â”‚   â”‚   â”œâ”€â”€ api.ts
+â”‚       â”‚   â”‚   â””â”€â”€ index.ts
+â”‚       â”‚   â”œâ”€â”€ constants/
+â”‚       â”‚   â”‚   â”œâ”€â”€ permissions.ts
+â”‚       â”‚   â”‚   â”œâ”€â”€ errors.ts
+â”‚       â”‚   â”‚   â””â”€â”€ config.ts
+â”‚       â”‚   â””â”€â”€ validators/
+â”‚       â”‚       â”œâ”€â”€ user.ts
+â”‚       â”‚       â”œâ”€â”€ project.ts
+â”‚       â”‚       â””â”€â”€ team.ts
+â”‚       â”œâ”€â”€ package.json
+â”‚       â””â”€â”€ tsconfig.json
+â”œâ”€â”€ infrastructure/
+â”‚   â”œâ”€â”€ terraform/
+â”‚   â”‚   â”œâ”€â”€ main.tf
+â”‚   â”‚   â”œâ”€â”€ variables.tf
+â”‚   â”‚   â”œâ”€â”€ outputs.tf
+â”‚   â”‚   â””â”€â”€ modules/
+â”‚   â”‚       â”œâ”€â”€ vpc/
+â”‚   â”‚       â”œâ”€â”€ ecs/
+â”‚   â”‚       â”œâ”€â”€ rds/
+â”‚   â”‚       â””â”€â”€ redis/
+â”‚   â”œâ”€â”€ docker/
+â”‚   â”‚   â”œâ”€â”€ Dockerfile.api
+â”‚   â”‚   â”œâ”€â”€ Dockerfile.web
+â”‚   â”‚   â””â”€â”€ docker-compose.prod.yml
+â”‚   â””â”€â”€ k8s/
+â”‚       â”œâ”€â”€ deployment.yaml
+â”‚       â”œâ”€â”€ service.yaml
+â”‚       â”œâ”€â”€ ingress.yaml
+â”‚       â””â”€â”€ configmap.yaml
+â”œâ”€â”€ scripts/
+â”‚   â”œâ”€â”€ deploy.sh
+â”‚   â”œâ”€â”€ setup.sh
+â”‚   â”œâ”€â”€ seed-db.ts
+â”‚   â”œâ”€â”€ migrate.ts
+â”‚   â”œâ”€â”€ generate-api-docs.ts
+â”‚   â””â”€â”€ health-check.sh
+â”œâ”€â”€ .env.example
+â”œâ”€â”€ .eslintrc.js
+â”œâ”€â”€ .gitignore
+â”œâ”€â”€ .prettierrc
+â”œâ”€â”€ docker-compose.yml
+â”œâ”€â”€ docker-compose.test.yml
+â”œâ”€â”€ Dockerfile
+â”œâ”€â”€ Makefile
+â”œâ”€â”€ package.json
+â”œâ”€â”€ pnpm-workspace.yaml
+â”œâ”€â”€ README.md
+â”œâ”€â”€ CHANGELOG.md
+â”œâ”€â”€ LICENSE
+â””â”€â”€ tsconfig.base.json
 \`\`\`
 
 # Instructions

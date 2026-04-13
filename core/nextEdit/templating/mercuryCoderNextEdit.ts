@@ -1,4 +1,4 @@
-import { Position, Range } from "../..";
+﻿import { Position, Range } from "../..";
 import {
   MERCURY_CODE_TO_EDIT_CLOSE,
   MERCURY_CODE_TO_EDIT_OPEN,

@@ -1,4 +1,4 @@
-import { describe, expect, test } from "vitest";
+﻿import { describe, expect, test } from "vitest";
 
 describe("Local Config Switching Investigation", () => {
   test("understands local vs remote config paths", () => {

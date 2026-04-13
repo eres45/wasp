@@ -1,4 +1,4 @@
-export const BRACKETS: { [key: string]: string } = {
+﻿export const BRACKETS: { [key: string]: string } = {
   "(": ")",
   "{": "}",
   "[": "]",

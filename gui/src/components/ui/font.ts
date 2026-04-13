@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+﻿import { useMemo } from "react";
 import { useLocalStorage } from "../../context/LocalStorage";
 
 export type FontSizeModifier = number | ((fontSize: number) => number);
