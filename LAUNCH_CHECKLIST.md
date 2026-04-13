@@ -56,7 +56,7 @@
 
 - [x] Created Cloudflare Worker proxy
 - [x] Deployed to: `https://wasp-code-proxy.waspproxy.workers.dev`
-- [x] Implemented rate limiting (100 req/hour per user)
+- [x] Implemented rate limiting (10 req/minute per user)
 - [x] Added CORS support
 - [x] Implemented error handling
 - [x] Added usage tracking
@@ -216,7 +216,7 @@ irm https://raw.githubusercontent.com/eres45/wasp/main/install.ps1 | iex
 | **Extension Size**    | 73.9 MB             |
 | **AI Models**         | 20                  |
 | **Providers**         | 9                   |
-| **Rate Limit**        | 100 requests/hour   |
+| **Rate Limit**        | 10 requests/minute  |
 | **Proxy Cost**        | FREE (3M req/month) |
 | **Installation Time** | ~30 seconds         |
 | **Setup Required**    | NONE                |
@@ -232,7 +232,7 @@ irm https://raw.githubusercontent.com/eres45/wasp/main/install.ps1 | iex
 ✅ **Zero Setup** - No API keys needed
 ✅ **One-Command Install** - Like Claude Code
 ✅ **Sidebar Chat** - Like GitHub Copilot
-✅ **Rate Limited** - 100 requests/hour per user
+✅ **Rate Limited** - 10 requests/minute per user
 ✅ **Global Network** - Cloudflare powered
 ✅ **DDoS Protected** - Enterprise security
 ✅ **Free Forever** - 3M requests/month included

@@ -67,7 +67,7 @@ Wasp Code v1.0.0
 ├── Sidebar Chat (like Copilot)
 ├── One-Command Install
 ├── Zero Setup
-├── Rate Limited (100 req/hour)
+├── Rate Limited (10 req/minute)
 └── Cloudflare Powered
 ```
 
@@ -75,14 +75,14 @@ Wasp Code v1.0.0
 
 ## ✨ Key Stats
 
-| Metric            | Value        |
-| ----------------- | ------------ |
-| Extension Size    | 70.49 MB     |
-| AI Models         | 20           |
-| Installation Time | ~30 seconds  |
-| Setup Required    | NONE         |
-| Cost              | FREE         |
-| Rate Limit        | 100 req/hour |
+| Metric            | Value         |
+| ----------------- | ------------- |
+| Extension Size    | 70.49 MB      |
+| AI Models         | 20            |
+| Installation Time | ~30 seconds   |
+| Setup Required    | NONE          |
+| Cost              | FREE          |
+| Rate Limit        | 10 req/minute |
 
 ---
 

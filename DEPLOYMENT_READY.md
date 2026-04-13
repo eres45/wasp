@@ -25,7 +25,7 @@ All components are built, tested, and ready for distribution.
 - **URL**: `https://wasp-code-proxy.waspproxy.workers.dev`
 - **Status**: ✅ Deployed and tested
 - **Features**:
-  - Rate limiting (100 req/hour per user)
+  - Rate limiting (10 req/minute per user)
   - CORS support
   - API key management
   - Usage tracking
@@ -125,7 +125,7 @@ Or manually:
 | Extension Size    | 73.9 MB                 |
 | AI Models         | 20                      |
 | Providers         | 9                       |
-| Rate Limit        | 100 req/hour            |
+| Rate Limit        | 10 req/minute           |
 | Proxy Cost        | FREE (3M req/month)     |
 | Installation Time | ~30 seconds             |
 | Setup Required    | None (proxy handles it) |
@@ -136,7 +136,7 @@ Or manually:
 
 ✅ **Zero Setup** - No API keys needed
 ✅ **20 Models** - Top providers included
-✅ **Rate Limited** - 100 requests/hour per user
+✅ **Rate Limited** - 10 requests/minute per user
 ✅ **Cloudflare Proxy** - Global network, DDoS protected
 ✅ **One-Command Install** - Like Claude Code
 ✅ **Sidebar Chat** - Like GitHub Copilot

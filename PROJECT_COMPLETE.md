@@ -101,7 +101,7 @@ Share on:
 | **Extension Size**    | 73.9 MB                        |
 | **AI Models**         | 20                             |
 | **Model Providers**   | 9                              |
-| **Rate Limit**        | 100 requests/hour per user     |
+| **Rate Limit**        | 10 requests/minute per user    |
 | **Proxy Cost**        | FREE (3M req/month)            |
 | **Installation Time** | ~30 seconds                    |
 | **Setup Required**    | NONE                           |
@@ -118,7 +118,7 @@ Share on:
 ✅ **Zero Setup** - No API keys needed
 ✅ **One-Command Install** - Like Claude Code
 ✅ **Sidebar Chat** - Like GitHub Copilot
-✅ **Rate Limited** - 100 requests/hour per user
+✅ **Rate Limited** - 10 requests/minute per user
 ✅ **Global Network** - Cloudflare powered
 ✅ **DDoS Protected** - Enterprise security
 ✅ **Free Forever** - 3M requests/month included
@@ -223,7 +223,7 @@ irm https://raw.githubusercontent.com/eres45/wasp/main/install.ps1 | iex
 
 - Sidebar chat interface
 - 20 model options
-- Rate limited (100 req/hour)
+- Rate limited (10 req/minute)
 - Cloudflare powered
 - Global network
 - DDoS protected
@@ -233,7 +233,7 @@ irm https://raw.githubusercontent.com/eres45/wasp/main/install.ps1 | iex
 ## 🔐 Security
 
 - **No API Keys in Extension** - Proxy handles authentication
-- **Rate Limiting** - 100 requests/hour per user
+- **Rate Limiting** - 10 requests/minute per user
 - **CORS Protected** - Only VS Code can access proxy
 - **User Isolation** - Each user tracked separately
 - **Cloudflare DDoS Protection** - Built-in security

@@ -66,7 +66,7 @@ Wasp Code v1.0.0
 │   └── MiniMax (1)
 ├── Zero Setup (no API keys)
 ├── Sidebar Chat
-├── Rate Limited (100 req/hour)
+├── Rate Limited (10 req/minute)
 └── Cloudflare Powered
 ```
 
@@ -114,7 +114,7 @@ Should:
 | Setup Time   | 0 min (zero setup) |
 | Install Time | ~30 sec            |
 | Cost         | FREE               |
-| Rate Limit   | 100 req/hour       |
+| Rate Limit   | 10 req/minute      |
 
 ---
 

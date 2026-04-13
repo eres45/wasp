@@ -14,8 +14,8 @@
 
 // Rate limiting: Store user request counts
 const rateLimits = new Map();
-const RATE_LIMIT = 100; // requests per hour
-const RATE_WINDOW = 3600000; // 1 hour in milliseconds
+const RATE_LIMIT = 10; // requests per minute (Frenix API limit)
+const RATE_WINDOW = 60000; // 1 minute in milliseconds
 
 // Usage tracking
 const usageStats = new Map();
@@ -64,15 +64,15 @@ export default {
       if (!checkRateLimit(userId)) {
         return new Response(
           JSON.stringify({
-            error: "Rate limit exceeded. Maximum 100 requests per hour.",
-            retryAfter: 3600,
+            error: "Rate limit exceeded. Maximum 10 requests per minute.",
+            retryAfter: 60,
           }),
           {
             status: 429,
             headers: {
               ...corsHeaders,
               "Content-Type": "application/json",
-              "Retry-After": "3600",
+              "Retry-After": "60",
             },
           },
         );
@@ -151,7 +151,7 @@ function checkRateLimit(userId) {
   const now = Date.now();
   const userRequests = rateLimits.get(userId) || [];
 
-  // Remove requests older than 1 hour
+  // Remove requests older than 1 minute
   const recentRequests = userRequests.filter(
     (time) => now - time < RATE_WINDOW,
   );

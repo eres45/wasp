@@ -25,7 +25,7 @@ irm https://raw.githubusercontent.com/eres45/wasp/main/install.ps1 | iex
 - **20 AI Models** from top providers
 - **Zero Setup** - Cloudflare proxy handles API access
 - **Sidebar Chat** - Like GitHub Copilot
-- **Rate Limiting** - 100 requests/hour per user
+- **Rate Limiting** - 10 requests/minute per user
 - **No API Keys** - Proxy manages authentication
 - **Fast & Reliable** - Cloudflare global network
 
@@ -95,7 +95,7 @@ Models are configured in `~/.continue/config.json`:
                ▼
 ┌─────────────────────────────────────────┐
 │   Cloudflare Worker Proxy               │
-│  - Rate limiting (100 req/hour)         │
+│  - Rate limiting (10 req/minute)        │
 │  - CORS handling                        │
 │  - API key management                   │
 │  - Usage tracking                       │
@@ -182,7 +182,7 @@ Output: `build/wasp-code-1.0.0.vsix`
 ## 🔐 Security
 
 - **No API Keys in Extension** - Proxy handles authentication
-- **Rate Limiting** - Prevents abuse (100 req/hour per user)
+- **Rate Limiting** - Respects Frenix API limit (10 req/minute per user)
 - **CORS Protected** - Only VS Code can access proxy
 - **User Isolation** - Each user tracked separately
 - **Cloudflare DDoS Protection** - Built-in security
@@ -216,7 +216,7 @@ Contributions welcome! Please:
 ## 📊 Stats
 
 - **Models**: 20 from 9 providers
-- **Rate Limit**: 100 requests/hour
+- **Rate Limit**: 10 requests/minute
 - **Proxy Cost**: FREE for 3M requests/month
 - **Extension Size**: 73.9 MB
 - **Build Time**: ~2 minutes
