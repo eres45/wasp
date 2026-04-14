@@ -1,6 +1,6 @@
 {
   "name": "wasp-code-download",
   "version": "1.0.0",
-  "description": "Wasp Code download page",
+  "description": "Wasp Code VS Code Extension Download Page",
   "private": true
 }

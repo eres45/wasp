@@ -1,3 +1,10 @@
 {
-  "public": "."
+  "buildCommand": "echo 'No build needed'",
+  "outputDirectory": ".",
+  "rewrites": [
+    {
+      "source": "/install.ps1",
+      "destination": "/install.ps1"
+    }
+  ]
 }
